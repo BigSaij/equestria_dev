@@ -6,8 +6,8 @@ state={
 		760 943 6024 6132 6836 9764 9797 11102 11834 11875 13279
 	}
 
-	manpower=240895
-	state_category=rural
+	manpower=440895
+	state_category=town
 	buildings_max_level_factor=1.00
 
 	history={
