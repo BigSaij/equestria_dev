@@ -73,6 +73,20 @@ leader_traits = {
 		}
 	}
 	
+	buffalo_warrior = {
+		random = no
+		army_speed_factor = 0.1
+		out_of_supply_factor = -0.1
+		army_morale_factor = 0.05
+		
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	syndicate  = {
 		random = no		
 	}
