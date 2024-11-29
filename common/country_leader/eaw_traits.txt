@@ -38,6 +38,41 @@
 @air_command_factor_2 = 0.60
 @air_command_factor_3 = 0.80
 leader_traits = {
+	princesses_of_ponies = {
+		random = no
+		stability_factor = 0.1
+		political_power_gain = 0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	princess_of_ponies = {
+		random = no
+		stability_factor = 0.1
+		political_power_gain = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	yakyakistan_prince = {
+		random = no
+		army_attack_factor = 0.1
+		supply_consumption_factor = -0.1
+		war_support_factor = 0.05
+		experience_gain_army = @experience_gain_medium
+		
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	syndicate  = {
 		random = no		
 	}
@@ -888,27 +923,6 @@ leader_traits = {
 	#ai_focus_naval_factor
 	#ai_focus_naval_air_factor
 	#ai_focus_aviation_factor
-
-
-	princesses_of_ponies = {
-		random = no
-		stability_factor = 0.1
-		political_power_gain = 0.25
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	princess_of_ponies = {
-		random = no
-		stability_factor = 0.1
-		political_power_gain = 0.2
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	god_king = {
 		random = no
