@@ -780,9 +780,6 @@ shared_focus = { #Equestria Games (PP Buff)
 	ai_will_do = {
 		factor = 10
 	}
-	bypass = {
-		has_global_flag  = friendship_games_flag
-	}
 	available = {
 		has_government = democratic
 		has_war = no

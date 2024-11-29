@@ -42,10 +42,15 @@ opinion_modifiers = {
 	trade_treaty = { trade = yes value = 50 }
 	trade_treaty_major = { trade = yes value = 100 }
 
-	########################
+	#########################
 	####### MODDED###########
 	#########################
+	
 	###### EQUESTRIAN FOCUS TREE ##########
+	EQS_equestria_games_participant = { value = 10 }
+	
+	EQS_friendship_treaty = { value = 40 }
+	
 	pinkie_envoy = { value = 35 months = 50 decay = 1 }
 
 	supported_somehow = { value = 35 months = 20 decay = 1 }
