@@ -630,7 +630,13 @@ shared_focus = {
 	relative_position_id = EQS_princess_levy
 	cost = 8
 	prerequisite = {
+		focus = EQS_technologial_catchup
+	}
+	prerequisite = {
 		focus = EQS_princess_levy
+	}
+	prerequisite = {
+		focus = EQS_army_reform_plan
 	}
 	ai_will_do = {
 		factor = 80
