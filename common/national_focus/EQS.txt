@@ -209,6 +209,185 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = EQS_united_ponies_alliance
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony
+	x = 0
+	y = 1
+	relative_position_id = EQS_our_friends_abroad
+	cost = 8
+	prerequisite = {
+		focus = EQS_our_friends_abroad
+	}
+	ai_will_do = {
+		factor = 80
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_united_ponies_alliance"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = EQS_aid_crystal_empire
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony
+	x = 0
+	y = 1
+	relative_position_id = EQS_united_ponies_alliance
+	cost = 8
+	prerequisite = {
+		focus = EQS_united_ponies_alliance
+	}
+	ai_will_do = {
+		factor = 80
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_aid_crystal_empire"
+	}
+}
+
+shared_focus = {
+	id = EQS_anti_sombra_measures
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony
+	x = -1
+	y = 1
+	relative_position_id = EQS_aid_crystal_empire
+	cost = 8
+	prerequisite = {
+		focus = EQS_aid_crystal_empire
+	}
+	ai_will_do = {
+		factor = 80
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_anti_sombra_measures"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = EQS_industrialize_rainbow_falls
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony
+	x = 1
+	y = 1
+	relative_position_id = EQS_aid_crystal_empire
+	cost = 8
+	prerequisite = {
+		focus = EQS_aid_crystal_empire
+	}
+	ai_will_do = {
+		factor = 80
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_industrialize_rainbow_falls"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = EQS_land_of_griffons
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony
+	x = -3
+	y = 1
+	relative_position_id = EQS_united_ponies_alliance
+	cost = 8
+	prerequisite = {
+		focus = EQS_united_ponies_alliance
+	}
+	ai_will_do = {
+		factor = 80
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_land_of_griffons"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = EQS_fund_recovery
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony
+	x = 0
+	y = 1
+	relative_position_id = EQS_land_of_griffons
+	cost = 8
+	prerequisite = {
+		focus = EQS_land_of_griffons
+	}
+	ai_will_do = {
+		factor = 80
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_fund_recovery"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = EQS_dominion_of_puerto_caballo
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony
+	x = 3
+	y = 1
+	relative_position_id = EQS_united_ponies_alliance
+	cost = 8
+	prerequisite = {
+		focus = EQS_united_ponies_alliance
+	}
+	ai_will_do = {
+		factor = 80
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_dominion_of_puerto_caballo"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = EQS_expand_ports
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony
+	x = 3
+	y = 1
+	relative_position_id = EQS_dominion_of_puerto_caballo
+	cost = 8
+	prerequisite = {
+		focus = EQS_dominion_of_puerto_caballo
+	}
+	ai_will_do = {
+		factor = 80
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_expand_ports"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = EQS_upa_training_exercises
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony
+	x = 1
+	y = 1
+	relative_position_id = EQS_anti_sombra_measures
+	cost = 8
+	prerequisite = {
+		focus = EQS_fund_recovery
+	}
+	prerequisite = {
+		focus = EQS_anti_sombra_measures
+	}
+	prerequisite = {
+		focus = EQS_industrialize_rainbow_falls
+	}
+	prerequisite = {
+		focus = EQS_expand_ports
+	}
+	ai_will_do = {
+		factor = 80
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_upa_training_exercises"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
 	id = EQS_dragons_and_buffalo
 	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony
 	x = 3
@@ -350,7 +529,7 @@ shared_focus = {
 	id = EQS_ministry_of_defence
 	icon = GFX_goal_eqs_ministry_of_defence
 	x = 3
-	y = 0
+	y = 1
 	relative_position_id = EQS_equestria_games
 	cost = 10
 	prerequisite = {
