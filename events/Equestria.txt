@@ -8,6 +8,7 @@ country_event = {
 	desc = equestria.1.d
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.1.a
 		every_other_country = {
@@ -104,6 +105,7 @@ country_event = {
 	desc = equestria.2.d
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.2.a
 		add_stability = 0.05
@@ -131,6 +133,7 @@ country_event = {
 	desc = equestria.3.d
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.3.a
 	}
@@ -143,6 +146,7 @@ country_event = {
 	desc = equestria.4.d
 	picture = GFX_event_unicorn_academy
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.4.a
 	}
@@ -155,6 +159,7 @@ country_event = {
 	desc = equestria.5.d
 	picture = GFX_event_luna_nova
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.5.a
 		YAK = {
@@ -201,6 +206,7 @@ country_event = {
 	desc = equestria.6.d
 	picture = GFX_event_school
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.6.a
 		add_opinion_modifier = { target = EQS modifier = EQS_reconcilation }
@@ -228,6 +234,7 @@ country_event = {
 	desc = equestria.7.d
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.7.a
 		set_country_flag = EQS_dealt_with_stalliongrad
@@ -241,6 +248,7 @@ country_event = {
 	desc = equestria.8.d
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.8.a
 		set_country_flag = EQS_STG_reconcilation_denied
@@ -292,6 +300,7 @@ country_event = {
 	desc = equestria.9.d
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.9.a
 	}
@@ -304,6 +313,7 @@ country_event = {
 	desc = equestria.10.d
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.10.a
 		STG = {
@@ -338,6 +348,7 @@ country_event = {
 	desc = equestria.11.d
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.11.a
 		custom_effect_tooltip = EQS_game_over_warning_tt
@@ -366,6 +377,7 @@ country_event = {
 	desc = equestria.12.d
 	picture = GFX_event_buffalo_relations
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.12.a
 		annex_country = {
@@ -399,6 +411,7 @@ country_event = {
 	desc = equestria.13.d
 	picture = GFX_event_we_can_do_it
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.13.a
 	}
@@ -425,6 +438,7 @@ country_event = {
 	desc = equestria.14.d
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = equestria.14.a
 		BUF = {
@@ -462,71 +476,97 @@ country_event = {
 	}
 }
 
-country_event = { ### STG declines research
+country_event = {
 	id = equestria.15
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.15"}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria.15" }
 	title = equestria.15.t
 	desc = equestria.15.d
 	picture = GFX_event_canterlot
-
 	is_triggered_only = yes
-
+	fire_only_once = yes
 	option = {
 		name = equestria.15.a
+		add_political_power = 100
+		add_stability = 0.05
+		EQS = {
+			transfer_state = 17
+			country_event = equestria.16
+		}
+	}
+	option = {
+		name = equestria.15.b
+		EQS = {
+			country_event = equestria.17
+		}
 	}
 }
+
+#country_event = {
+	#id = equestria.16
+	#immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.16"}
+	#title = equestria.16.t
+	#desc = equestria.16.d
+	#picture = GFX_event_we_can_do_it
+
+	#is_triggered_only = yes
+
+	#option = {
+		#name = equestria.16.a
+		#trigger = {
+			#has_idea = harmonic_stagnation2
+		#}
+		#swap_ideas = { remove_idea = harmonic_stagnation2 add_idea = harmonic_stagnation3 }
+	#}
+	#option = {
+		#name = equestria.16.a
+		#trigger = {
+			#has_idea = harmonic_stagnation3
+		#}
+		#remove_ideas = harmonic_stagnation3
+	#}
+#}
+
 country_event = {
 	id = equestria.16
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.16"}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria.16" }
 	title = equestria.16.t
 	desc = equestria.16.d
 	picture = GFX_event_we_can_do_it
-
 	is_triggered_only = yes
-
+	fire_only_once = yes
 	option = {
 		name = equestria.16.a
-		trigger = {
-			has_idea = harmonic_stagnation2
-		}
-		swap_ideas = { remove_idea = harmonic_stagnation2 add_idea = harmonic_stagnation3 }
-	}
-	option = {
-		name = equestria.16.a
-		trigger = {
-			has_idea = harmonic_stagnation3
-		}
-		remove_ideas = harmonic_stagnation3
 	}
 }
 
-country_event = { #### STG agrees research
+country_event = {
 	id = equestria.17
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.17"}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria.17" }
 	title = equestria.17.t
 	desc = equestria.17.d
 	picture = GFX_event_canterlot
-
 	is_triggered_only = yes
-
+	fire_only_once = yes
 	option = {
 		name = equestria.17.a
+		add_political_power = 50
 	}
-
 }
-country_event = { #### DRG denies badlands right away
+
+country_event = {
 	id = equestria.18
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.18"}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria.18" }
 	title = equestria.18.t
 	desc = equestria.18.d
 	picture = GFX_event_pony_statue
-
 	is_triggered_only = yes
-
+	fire_only_once = yes
 	option = {
 		name = equestria.18.a
+		add_manpower = 10000
 	}
 }
+
 country_event = { #### DRG accepts badlands right away
 	id = equestria.19
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.19"}
