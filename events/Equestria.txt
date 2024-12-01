@@ -531,6 +531,7 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria.16.a
+		set_country_flag = EQS_badlands_negotiated
 	}
 }
 

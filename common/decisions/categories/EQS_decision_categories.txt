@@ -11,6 +11,18 @@ EQS_prewar_diplomacy_category = {
 	}
 }
 
+EQS_construction_projects = {
+	icon = generic_economy
+	allowed = {
+		original_tag = EQS
+	}
+	visible = {
+		has_completed_focus = EQS_trans_equestria_railway
+	}
+	priority = {
+		base = 70
+	}
+}
 
 EQS_celestia_evil_meter_category = {
 	allowed = {
@@ -75,15 +87,7 @@ EQS_militias = {
 		base = 100
 	}
 }
-EQS_construction_projects = {
-	icon = generic_economy
-	allowed = {
-		original_tag = EQS
-	}
-	priority = {
-		base = 70
-	}
-}
+
 EQS_foreign_affairs = {
 	icon = harmony_cat
 	allowed = {
