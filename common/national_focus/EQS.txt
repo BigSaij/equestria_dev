@@ -325,7 +325,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_dotted_line_report"
 		add_political_power = 150
-		country_event = equestria.3
+		country_event = equestria.38
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -345,6 +345,16 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_industry_innovation"
+		add_timed_idea = {
+			idea = EQS_innovating_industry
+			days = 365
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1.0
+			uses = 2
+			category = industry
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
