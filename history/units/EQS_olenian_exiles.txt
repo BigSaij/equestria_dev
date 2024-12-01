@@ -1,0 +1,53 @@
+﻿division_template = {
+	name = "Olenian Exiles"
+	is_locked = yes
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		artillery_brigade = { x = 3 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		field_hospital = { x = 0 y = 2 }
+		recon = { x = 0 y = 3 }
+	}
+}
+
+units = {
+    division = {
+		name = "Olenian Exiles 1"
+		location = 585
+		division_template = "Olenian Exiles"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0 
+	}
+	division = {
+		name = "Olenian Exiles 2"
+		location = 585
+		division_template = "Olenian Exiles"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Olenian Exiles 3"
+		location = 7077
+		division_template = "Olenian Exiles"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Olenian Exiles 4"
+		location = 9677
+		division_template = "Olenian Exiles"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+}

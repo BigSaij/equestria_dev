@@ -1342,7 +1342,7 @@ country_event = { ## Activated Crystals
 					limit = {
 						has_completed_focus = EQS_united_ponies_alliance
 					}
-					country_event = equestria.21
+					country_event = equestria.20
 				}
 			}
 		}
@@ -1423,7 +1423,7 @@ country_event = { # The club information
 					limit = {
 						has_completed_focus = EQS_united_ponies_alliance
 					}
-					country_event = equestria.21
+					country_event = equestria.20
 				}
 			}
 		}

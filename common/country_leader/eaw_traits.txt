@@ -87,6 +87,43 @@ leader_traits = {
 		}
 	}
 	
+	olenian_queen = {
+		random = no
+		war_support_factor = 0.1
+		political_power_gain = 0.1
+		war_stability_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	dragon_lord_warrior = {
+		random = no
+		army_attack_factor = 0.1
+		army_speed_factor = 0.1
+		army_morale_factor = 0.1
+		experience_gain_army = @army_chief_factor_2
+		
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	hippogriffian_queen = {
+		random = no
+		political_power_gain = 0.1
+		party_popularity_stability_factor = 0.1
+		industrial_capacity_dockyard = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	syndicate  = {
 		random = no		
 	}
