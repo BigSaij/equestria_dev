@@ -4954,10 +4954,6 @@ spriteTypes = {
 		textureFile = "gfx/leaders/EQS/Luna.tga"
 	}
 	spriteType = {
-		name = "GFX_CelestiaLuna"
-		textureFile = "gfx/leaders/EQS/CelestiaLuna.tga"
-	}
-	spriteType = {
 		name = "GFX_Neighsay"
 		textureFile = "gfx/leaders/EQS/Naysay.tga"
 	}
