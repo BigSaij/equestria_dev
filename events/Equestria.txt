@@ -3249,6 +3249,7 @@ country_event = {
 			NLR = {
 				change_tag_from = ROOT
 			}
+			load_focus_tree = EQS_civilwar_tree
 		}
 	}
 	option = {
@@ -3260,6 +3261,7 @@ country_event = {
 			country_event = { id = equestria.91 days = 13 }
 			country_event = { id = equestria.92 days = 14 }
 			country_event = { id = equestria.184 days = 30 }
+			load_focus_tree = EQS_civilwar_tree
 		}
 	}
 }
@@ -3423,6 +3425,11 @@ country_event = {
 		trigger = {
 			tag = EQS
 		}
+		swap_ruler_traits = {
+			remove = princesses_of_ponies
+			add = absent_princess
+		}
+		remove_country_leader_trait = stout_defender
 	}
 	option = {
 		name = equestria.85.b

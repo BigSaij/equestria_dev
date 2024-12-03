@@ -1,9 +1,7 @@
 focus_tree = {
 	id = EQS_prewar_tree
-
 	country = {
 		factor = 0
-
 		modifier = {
 			add = 10
 			tag = EQS
@@ -11,8 +9,21 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 550 y = 1800 }
-	
 	shared_focus = EQS_equestria_games
+}
+
+focus_tree = {
+	id = EQS_civilwar_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EQS
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+	shared_focus = EQS_civil_war_start
 }
 
 ##################
@@ -1037,5 +1048,63 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_a_true_equal_diarchy"
 		country_event = equestria.84
+	}
+}
+
+shared_focus = {
+	id = EQS_civil_war_start
+	icon = GFX_goal_news
+	x = 12
+	y = 0
+	cost = 8
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_civil_war_start"
+	}
+}
+
+shared_focus = {
+	id = EQS_rapid_equestrian_overhaul
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_civil_war_start
+	cost = 8
+	prerequisite = {
+		focus = EQS_civil_war_start
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_rapid_equestrian_overhaul"
+		swap_ideas = {
+			remove_idea = EQS_harmonic_stagnation
+			add_idea = EQS_harmonic_stagnation_3
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_emergency_military_reorganization
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_civil_war_start
+	cost = 8
+	prerequisite = {
+		focus = EQS_civil_war_start
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_emergency_military_reorganization"
+		swap_ideas = {
+			remove_idea = EQS_outdated_military
+			add_idea = EQS_outdated_military_2
+		}
 	}
 }
