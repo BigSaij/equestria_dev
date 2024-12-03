@@ -933,7 +933,7 @@ shared_focus = {
 	relative_position_id = EQS_dotted_line_report
 	cost = 8
 	allow_branch = {
-		has_country_flag = EQS_moonshine_reforms_shared
+		has_country_flag = EQS_post_luna_reforms
 	}
 	prerequisite = {
 		focus = EQS_dotted_line_report
