@@ -1683,6 +1683,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_help_the_refugees"
+		country_event = equestria_civwar.17
 	}
 }
 
@@ -1701,6 +1702,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_wartime_administration"
+		country_event = equestria_civwar.18
 	}
 }
 
@@ -1719,6 +1721,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_wartime_laws"
+		country_event = equestria_civwar.19
 	}
 }
 
@@ -1740,6 +1743,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_together_against_nightmare"
+		country_event = equestria_civwar.20
 	}
 }
 
