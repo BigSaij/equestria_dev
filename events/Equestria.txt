@@ -1763,6 +1763,7 @@ country_event = {
 	option = {
 		name = equestria.50.a
 		add_ideas = EQS_full_thestral_integration
+		set_country_flag = EQS_moonshine_resolved
 	}
 }
 
@@ -3303,6 +3304,7 @@ country_event = {
 			remove = princesses_of_ponies
 			add = princesses_of_ponies_2
 		}
+		set_country_flag = EQS_moonshine_resolved
 	}
 }
 
