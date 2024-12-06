@@ -77,6 +77,7 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = EQS_prince_blueblood
+			cost = 50
 			allowed = {
 				original_tag = EQS
 			}
@@ -119,169 +120,6 @@ characters = {
 		}
 		gender = female
 	}
-	EQS_soarin={
-		name=EQS_soarin
-		portraits={
-			army={
-				large="gfx/leaders/EQS/Soarin.tga"
-				small="GFX_idea_EQS_soarin"
-			}
-		}
-		corps_commander={
-			traits={ media_personality air_force_commander pony_race_trait }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=3
-			legacy_id=2
-			desc = EQS_soarin_desc
-		}
-	}
-	EQS_fast_clip={
-		name=EQS_fast_clip
-		portraits={
-			army={
-				large="gfx/leaders/EQS/FastClip.tga"
-				small="GFX_idea_EQS_fast_clip"
-			}
-		}
-		corps_commander={
-			traits={ career_officer trait_engineer pony_race_trait }
-			skill=2
-			attack_skill=1
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=3
-			desc = EQS_fast_clip_desc
-		}
-	}
-	EQS_whiplash={
-		name=EQS_whiplash
-		portraits={
-			army={
-				large="gfx/leaders/EQS/Whiplash.tga"
-				small="GFX_idea_EQS_whiplash"
-			}
-		}
-		corps_commander={
-			traits={ old_guard career_officer pony_race_trait }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=4
-			desc = EQS_whiplash_desc
-		}
-	}
-	EQS_madoor_stronghammer={
-		name=EQS_madoor_stronghammer
-		portraits={
-			army={
-				large="gfx/leaders/EQS/Madoor.tga"
-				small="GFX_idea_EQS_madoor_stronghammer"
-			}
-		}
-		navy_leader={
-			traits={ sea_and_sky pony_race_trait }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			maneuvering_skill=2
-			coordination_skill=2
-			legacy_id=13
-		}
-	}
-	EQS_evening_squall={
-		name=EQS_evening_squall
-		portraits={
-			army={
-				large="gfx/leaders/EQS/Udy.tga"
-				small="GFX_idea_EQS_evening_squall"
-			}
-		}
-		navy_leader={
-			traits={ pony_race_trait }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=14
-		}
-	}
-	EQS_cynosura={
-		name=EQS_cynosura
-		portraits={
-			army={
-				large="gfx/leaders/EQS/Cynosura.tga"
-				small="GFX_idea_EQS_cynosura"
-			}
-		}
-		navy_leader={
-			traits={ navy_career_officer pony_race_trait ironside }
-			skill=2
-			attack_skill=1
-			defense_skill=4
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=-1
-			desc = EQS_cynosura_desc
-		}
-		advisor = {
-			slot = navy_chief
-			idea_token = cynosura
-			cost = 100
-
-			allowed = {
-				original_tag = EQS
-			}
-			available = {
-			}
-			traits = { navy_chief_decisive_battle_2 }
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	EQS_dust_hoover={
-		name=EQS_dust_hoover
-		portraits={
-			army={
-				large="gfx/leaders/VAN/Admiral.tga"
-				small="GFX_idea_EQS_dust_hoover"
-			}
-		}
-		navy_leader={
-			traits={ navy_media_personality pony_race_trait JAP_communist_sympathizer }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=1
-			legacy_id=15
-		}
-	}
-	EQS_copper_gearheart_cog={
-		name=EQS_copper_gearheart_cog
-		portraits={
-			army={
-				large="gfx/leaders/EQS/Gearheart.tga"
-				small="GFX_idea_EQS_copper"
-			}
-		}
-		navy_leader={
-			traits={ naval_architect pony_race_trait }
-			skill=2
-			attack_skill=2
-			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=-1
-		}
-	}
 	EQS_twilight_sparkle = {
 		name = EQS_twilight_sparkle
 		portraits = {
@@ -292,8 +130,7 @@ characters = {
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = twilight_sparkle
-
+			idea_token = EQS_twilight_sparkle
 			allowed = {
 				original_tag = EQS
 			}
@@ -325,27 +162,9 @@ characters = {
 			skills = {
 				specialization_magical = 2
 			}
-
 			visible = {
 				owner = {
-					hidden_trigger = { is_EQS_SOL = no }
 					has_government = democratic
-					if = {
-						limit = { event_target:solar_empire = { exists = yes } }
-						NOT = {
-							event_target:solar_empire = {
-								has_country_flag = SOL_has_twilight
-							}
-						}
-					}
-					NOT = {
-						any_country_with_original_tag = {
-							original_tag_to_check = CRY
-							exists = yes
-							has_character = EQS_twilight_sparkle
-							has_country_leader = { character = EQS_twilight_sparkle ruling_only = yes }
-						}
-					}
 					NOT = {
 						has_country_flag = EQS_HIP_elements_sent
 						has_country_leader = {
@@ -355,84 +174,9 @@ characters = {
 					}
 				}
 			}
-			
 			desc = twilight_sparkle_desc
 		}
 		gender = female
-	}
-	#Fuck you Paradox
-	EQS_sunrise_sparkle = {
-		name = EQS_SOL_evil_twilight_sparkle
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/CRY/TwilightSunrise.tga"
-				small = "GFX_idea_evil_twilight_sparkle"
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = evil_twilight_sparkle
-			allowed = {
-				original_tag = EQS
-			}
-			visible = {
-				is_EQS_SOL = yes
-			}
-			available = {
-				is_EQS_SOL = yes
-				has_DB_ruler = yes
-				has_global_flag = SOL_twilight_converted
-			}
-			traits = { lady_inquisitor }
-			research_bonus = {
-				magical_tech = 0.1
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		scientist = {
-			traits = { scientist_trait_bright scientist_trait_genius scientist_trait_brilliant_theorist scientist_trait_fast_learner } # TODO GTD balance
-			skills = {
-				specialization_magical = 2
-			}
-
-			visible = {
-				owner = {
-					is_EQS_SOL = yes
-					has_DB_ruler = yes
-					has_global_flag = SOL_twilight_converted
-				}
-			}
-			
-			desc = evil_twilight_sparkle_desc
-		}
-		gender = female
-	}
-	EQS_cocopomell = {
-		name = EQS_cocopommel
-		portraits = {
-			civilian = {
-				small = "GFX_idea_EQS_coco_pommel"
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = ELF_coco_pommel
-			ledger = army
-			allowed = {
-				original_tag = ELF
-			}
-			available = {
-				has_country_flag = ELF_all_inclusive_high_command
-			}
-
-			traits = { uniform_designer }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
 	}
 	EQS_flim_flam = {
 		name = EQS_flim_flam
@@ -458,6 +202,27 @@ characters = {
 			traits = { captains_of_industry }
 		}
 	}
+	EQS_applejack = {
+		name = EQS_applejack
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Applejack.dds"
+				small = "GFX_idea_EQS_applejack"
+			}
+		}
+		gender = female
+		advisor = {
+			slot = political_advisor
+			idea_token = EQS_applejack
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				has_country_flag = EQS_wartime_advisors
+			}
+			traits = { element_of_honesty
+		}
+	}
 	EQS_raven_inkwell = {
 		name = EQS_raven_inkwell
 		portraits = {
@@ -467,8 +232,7 @@ characters = {
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = raven
-
+			idea_token = EQS_raven_inkwell
 			allowed = {
 				original_tag = EQS
 			}
@@ -482,7 +246,6 @@ characters = {
 		}
 		gender = female
 	}
-
 	EQS_fancy_pants = {
 		name = EQS_fancy_pants
 		portraits = {
@@ -494,7 +257,7 @@ characters = {
 
 		advisor = {
 			slot = political_advisor
-			idea_token = fancy_pants
+			idea_token = EQS_fancy_pants
 
 			allowed = {
 				OR = {
@@ -521,7 +284,7 @@ characters = {
 
 		advisor = {
 			slot = political_advisor
-			idea_token = filthy_rich
+			idea_token = EQS_filthy_rich
 
 			allowed = {
 				original_tag = EQS
@@ -549,7 +312,7 @@ characters = {
 			gender = female
 			advisor = {
 				slot = political_advisor
-				idea_token = sweetie_drops
+				idea_token = EQS_sweetie_drops
 				cost = 200
 				allowed = {
 					original_tag = EQS
@@ -557,16 +320,6 @@ characters = {
 				available = {
 					has_intelligence_agency = yes
 					has_government = democratic
-					if = {
-						limit = { event_target:solar_empire = { exists = yes } }
-						OR = {
-							tag = event_target:equestria
-							AND = {
-								tag = event_target:solar_empire
-								NOT = { country_exists = event_target:equestria }
-							}
-						}
-					}
 				}
 				traits = { agent_of_smile_lar }
 			}
@@ -587,86 +340,15 @@ characters = {
 			gender = female
 			advisor = {
 				slot = political_advisor
-				idea_token = sweetie_drops
+				idea_token = EQS_sweetie_drops
 				cost = 200
 				allowed = {
 					original_tag = EQS
 				}
 				available = {
 					has_government = democratic
-					if = {
-						limit = { event_target:solar_empire = { exists = yes } }
-						OR = {
-							tag = event_target:equestria
-							AND = {
-								tag = event_target:solar_empire
-								NOT = { country_exists = event_target:equestria }
-							}
-						}
-					}
 				}
 				traits = { agent_of_smile }
-			}
-		}
-	}
-	EQS_grannysmith = {
-		name = EQS_grannysmith
-		portraits = {
-			army = {
-				small = "GFX_idea_EQS_granny_smith"
-			}
-		}
-
-		advisor = {
-			slot = theorist
-			idea_token = EQS_grannysmith
-			ledger = army
-			cost = 100
-
-			allowed = {
-				original_tag = EQS
-			}
-			available = {
-			}
-
-			traits = { military_theorist }
-		}
-		gender = female
-	}
-	EQS_flakesnow = {
-		name = EQS_flakesnow
-		portraits = {
-			army = {
-				large = "gfx/leaders/scientists/EQS/Flake.tga"
-				small = "GFX_idea_EQS_flakesnow"
-			}
-		}
-
-		advisor = {
-			slot = theorist
-			idea_token = flakesnow
-			ledger = air
-			cost = 100
-
-			allowed = {
-				original_tag = EQS
-			}
-			available = {
-			}
-			research_bonus = {
-				rocketry = 0.15
-			}
-
-			traits = { rocket_scientist }
-		}
-		
-		scientist = {
-			traits = { scientist_trait_rocketry_specialist scientist_trait_brilliant_theorist }
-			skills = {
-				specialization_air = 3
-			}
-			
-			visible = {
 			}
 		}
 	}
@@ -677,19 +359,16 @@ characters = {
 				small = "GFX_idea_EQS_flash_magnus"
 			}
 		}
-
 		advisor = {
 			slot = army_chief
 			idea_token = EQS_flash_magnus
 			cost = 100
-
 			allowed = {
 				original_tag = EQS
 			}
-
 			available = {
+				has_country_flag = EQS_new_royal_captain
 			}
-
 			traits = { army_chief_drill_2 }
 			ai_will_do = {
 				factor = 1
@@ -707,7 +386,6 @@ characters = {
 		advisor = {
 			slot = air_chief
 			idea_token = EQS_rainbowdash
-
 			allowed = {
 				original_tag = EQS
 			}
@@ -715,8 +393,8 @@ characters = {
 				NOT = {
 					has_country_flag = EQS_HIP_elements_sent
 				}
+				has_country_flag = EQS_wartime_advisors
 			}
-
 			traits = { element_of_loyalty }
 			ai_will_do = {
 				factor = 1
@@ -734,7 +412,7 @@ characters = {
 		advisor = {
 			slot = air_chief
 			idea_token = EQS_spitfire
-			cost = 100
+			cost = 50
 			allowed = {
 				original_tag = EQS
 			}
@@ -759,6 +437,7 @@ characters = {
 				original_tag = EQS
 			}
 			available = {
+				has_country_flag = EQS_wartime_advisors
 			}
 			traits = { army_entrenchment_3 }
 			ai_will_do = {
@@ -774,20 +453,17 @@ characters = {
 				large = "gfx/leaders/EQS/MaudPie.tga"
 			}
 		}
-
 		advisor = {
 			slot = high_command
-			idea_token = maudpie
+			idea_token = EQS_maudpie
 			ledger = army
 			cost = 100
-
 			allowed = {
 				original_tag = EQS
 			}
-
 			available = {
+				has_country_flag = EQS_wartime_advisors
 			}
-
 			traits = { alt_army_chief_defensive_2 }
 			ai_will_do = {
 				factor = 7
@@ -802,20 +478,17 @@ characters = {
 				small = "GFX_idea_EQS_limestone"
 			}
 		}
-
 		advisor = {
 			slot = high_command
-			idea_token = limestone
+			idea_token = EQS_limestone
 			ledger = army
 			cost = 50
-
 			allowed = {
 				original_tag = EQS
 			}
-
 			available = {
+				has_country_flag = EQS_wartime_advisors
 			}
-
 			traits = { army_infantry_1 }
 			ai_will_do = {
 				factor = 8
@@ -835,14 +508,13 @@ characters = {
 			idea_token = zecora
 			ledger = army
 			cost = 100
-
 			allowed = {
 				original_tag = EQS
 			}
 			available = {
+				has_country_flag = EQS_wartime_advisors
 			}
-
-			traits = { army_armored_2 }
+			traits = { zebra_of_everfree }
 			ai_will_do = {
 				factor = 1
 			}
@@ -857,13 +529,11 @@ characters = {
 				small = "GFX_portrait_EQS_fluttershy_small"
 			}
 		}
-
 		advisor = {
 			slot = high_command
 			idea_token = EQS_fluttershy
 			ledger = army
 			cost = 100
-
 			allowed = {
 				original_tag = EQS
 			}
@@ -871,48 +541,18 @@ characters = {
 				NOT = {
 					has_country_flag = EQS_HIP_elements_sent
 				}
+				has_country_flag = EQS_wartime_advisors
 			}
-			research_bonus = {
-				nuclear = 0.10
-			}
-			traits = { nuclear_scientist }
+			traits = { element_of_kindness }
 		}
 		scientist = {
 			traits = { scientist_trait_nuclear_specialist scientist_trait_bright }
 			skills = {
 				specialization_nuclear = 3
 			}
-			
-			
 			desc = fluttershy_desc
 			visible = {
 				owner = {
-					if = {
-						limit = { is_original_EQS = yes }
-						has_completed_focus = EQS_WMD
-					}
-					if = {
-						limit = { is_EQS_SOL = yes }
-						has_global_flag = EQS_completed_EQS_WMD
-					}
-					if = {
-						limit = { NOT = { tag = event_target:solar_empire } }
-						has_government = democratic
-					}
-					if = {
-						limit = { event_target:solar_empire = { exists = yes } }
-						OR = {
-							AND = {
-								tag = event_target:solar_empire
-								NOT = { country_exists = event_target:equestria }
-								NOT = {
-									has_country_flag = SOL_harmonic_commanders_leave
-									has_country_flag = SOL_purge_finished
-								}
-							}
-							tag = event_target:equestria
-						}
-					}
 					NOT = {
 						has_country_flag = EQS_HIP_elements_sent
 					}
@@ -931,11 +571,9 @@ characters = {
 				large = "gfx/leaders/CRY/Rarity.tga"
 			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = NLR_rarity_night
-
 			allowed = {
 				original_tag = NLR
 			}
@@ -960,9 +598,8 @@ characters = {
 		}
 		advisor = {
 			slot = high_command
-			idea_token = rarity
+			idea_token = EQS_rarity
 			ledger = army
-
 			allowed = {
 				original_tag = EQS
 			}
@@ -974,23 +611,14 @@ characters = {
 				NOT = {
 					has_country_flag = EQS_HIP_elements_sent
 				}
+				has_country_flag = EQS_wartime_advisors
 			}
-
-			traits = { rarity_the_designer }
+			traits = { element_of_generosity }
 			ai_will_do = {
-				factor = 0
+				factor = 1
 			}
 		}
 		gender = female
-	}
-	EQS_sentinel = {
-		name = EQS_sentinel
-		portraits = {
-			army = {
-				large = "gfx/leaders/EQS/Sentinel.tga"
-				small = "GFX_idea_EQS_thunderbolt"
-			}
-		}
 	}
 	EQS_fizzlepop = {
 		name = EQS_fizzlepop
@@ -1000,25 +628,42 @@ characters = {
 				large = "gfx/leaders/EQS/TempestShadow.tga"
 			}
 		}
-
 		advisor = {
 			slot = high_command
 			idea_token = EQS_fizzlepop
 			ledger = army
-			cost = 50
-
+			cost = 100
 			allowed = {
 				original_tag = EQS
 			}
 			available = {
+				original_tag = EQS_wartime_advisors
 			}
-
-			traits = { alt_army_chief_maneuver_1 }
+			traits = { alt_army_chief_maneuver_2 }
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		gender = female
+	}
+	EQS_soarin = {
+		name = EQS_soarin
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/Soarin.tga"
+				small = "GFX_idea_EQS_soarin"
+			}
+		}
+		corps_commander = {
+			traits = { media_personality air_force_commander pony_race_trait }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+			legacy_id = 2
+			desc = EQS_soarin_desc
+		}
 	}
 	EQS_braeburn = {
 		name = EQS_braeburn
@@ -1878,31 +1523,6 @@ characters = {
 			}
 		}
 	}
-	EQS_applejack = {
-		name = EQS_applejack
-		portraits = {
-			army = {
-				large = "gfx/leaders/EQS/Applejack.dds"
-				small = "GFX_idea_EQS_applejack"
-			}
-		}
-		gender = female
-		corps_commander = {
-			traits = { inflexible_strategist ranger pony_race_trait }
-			skill = 2
-			legacy_id = 5
-			#female = yes
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 1
-			logistics_skill = 1
-			desc = "EQS_appulhors_desc"
-			visible = {
-				has_country_flag = EQS_create_new_commanders_flag
-			}
-		}
-
-	}
 	EQS_allen_spark = {
 		name = EQS_allen_spark
 		portraits = {
@@ -2661,6 +2281,92 @@ characters = {
 				specialization_naval = 2
 			}
 			#desc = EQS_naval_scientist_desc #Just uncomment this when somebody's OC inevitably becomes this
+		}
+	}
+	EQS_cocopomell = {
+		name = EQS_cocopommel
+		portraits = {
+			civilian = {
+				small = "GFX_idea_EQS_coco_pommel"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ELF_coco_pommel
+			ledger = army
+			allowed = {
+				original_tag = ELF
+			}
+			available = {
+				has_country_flag = ELF_all_inclusive_high_command
+			}
+
+			traits = { uniform_designer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	EQS_grannysmith = {
+		name = EQS_grannysmith
+		portraits = {
+			army = {
+				small = "GFX_idea_EQS_granny_smith"
+			}
+		}
+
+		advisor = {
+			slot = theorist
+			idea_token = EQS_grannysmith
+			ledger = army
+			cost = 100
+
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+			}
+
+			traits = { military_theorist }
+		}
+		gender = female
+	}
+	EQS_flakesnow = {
+		name = EQS_flakesnow
+		portraits = {
+			army = {
+				large = "gfx/leaders/scientists/EQS/Flake.tga"
+				small = "GFX_idea_EQS_flakesnow"
+			}
+		}
+
+		advisor = {
+			slot = theorist
+			idea_token = flakesnow
+			ledger = air
+			cost = 100
+
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+			}
+			research_bonus = {
+				rocketry = 0.15
+			}
+
+			traits = { rocket_scientist }
+		}
+		
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_air = 3
+			}
+			
+			visible = {
+			}
 		}
 	}
 }
