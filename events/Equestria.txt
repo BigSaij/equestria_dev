@@ -3927,8 +3927,17 @@ country_event = {
 			remember_old_capital = no
 		}
 		set_country_flag = EQS_western_strategy
-		add_stability = 0.1
-		add_war_support = -0.05
+		if = {
+			limit = {
+				controls_state = 3
+			}
+			add_stability = 0.1
+			add_war_support = -0.05
+		}
+		else = {
+			custom_effect_tooltip = EQS_civwar_strat_locked_tt
+			add_war_support = -0.1
+		}
 	}
 	option = {
 		name = equestria_civwar.13.b
@@ -3937,8 +3946,19 @@ country_event = {
 		}
 		custom_effect_tooltip = EQS_central_strategy_tt
 		set_country_flag = EQS_central_strategy
-		add_war_support = 0.1
-		add_political_power = 75
+		if = {
+			limit = {
+				controls_state = 70
+				controls_state = 74
+			}
+			add_war_support = 0.1
+			add_political_power = 75
+		}
+		else = {
+			custom_effect_tooltip = EQS_central_strat_debuff_tt
+			add_war_support = 0.05
+			add_political_power = 25
+		}
 	}
 }
 
@@ -4135,7 +4155,7 @@ country_event = {
 	}
 	option = {
 		name = equestria_civwar.19.b
-		add_ideas = EQS_wartime_laws
+		add_ideas = EQS_wartime_laws_idea
 	}
 	option = {
 		name = equestria_civwar.19.c
@@ -4215,6 +4235,7 @@ country_event = {
 			ideology = fascism
 			popularity = 0.05
 		}
+		custom_effect_tooltip = EQS_no_return_tt
 	}
 }
 
