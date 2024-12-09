@@ -2256,6 +2256,78 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = EQS_matter_of_vanhoover
+	icon = GFX_goal_news
+	x = -3
+	y = 1
+	relative_position_id = EQS_celestial_monarchy
+	cost = 4
+	prerequisite = {
+		focus = EQS_celestial_monarchy
+	}
+	ai_will_do  ={
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_matter_of_vanhoover"
+	}
+}
+
+shared_focus = {
+	id = EQS_matter_of_las_pegasus
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_celestial_monarchy
+	cost = 4
+	prerequisite = {
+		focus = EQS_celestial_monarchy
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_matter_of_las_pegasus"
+	}
+}
+
+shared_focus = {
+	id = EQS_matter_of_southwest
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_celestial_monarchy
+	cost = 4
+	prerequisite = {
+		focus = EQS_celestial_monarchy
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_matter_of_southwest"
+	}
+}
+
+shared_focus = {
+	id = EQS_matter_of_southeast
+	icon = GFX_goal_news
+	x = 3
+	y = 1
+	relative_position_id = EQS_celestial_monarchy
+	cost = 4
+	prerequisite = {
+		focus = EQS_celestial_monarchy
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_matter_of_southeast"
+	}
+}
+
+shared_focus = {
 	id = EQS_new_equestrian_military
 	icon = GFX_goal_news
 	x = 30
@@ -2320,6 +2392,107 @@ shared_focus = {
 		EQS_princess_celestia = {
 			add_unit_leader_trait = offensive_doctrine
 		}
+	}
+}
+
+shared_focus = {
+	id = EQS_blueblood_doctrine
+	icon = GFX_goal_news
+	x = 2
+	y = 1
+	relative_position_id = EQS_royal_equestrian_army
+	cost = 4
+	prerequisite = {
+		focus = EQS_royal_equestrian_army
+	}
+	mutually_exclusive = {
+		focus = EQS_sunset_doctrine
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_blueblood_doctrine"
+		EQS_princess_celestia = {
+			add_unit_leader_trait = defensive_doctrine
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_equestrian_armored_development
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_sunset_doctrine
+	cost = 4
+	prerequisite = {
+		focus = EQS_sunset_doctrine
+		focus = EQS_blueblood_doctrine
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_equestrian_armored_development"
+	}
+}
+
+shared_focus = {
+	id = EQS_defense_of_homes
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_blueblood_doctrine
+	cost = 4
+	prerequisite = {
+		focus = EQS_sunset_doctrine
+		focus = EQS_blueblood_doctrine
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_defense_of_homes"
+	}
+}
+
+shared_focus = {
+	id = EQS_best_of_the_best
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_equestrian_armored_development
+	cost = 4
+	prerequisite = {
+		focus = EQS_equestrian_armored_development
+	}
+	prerequisite = {
+		focus = EQS_defense_of_homes
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_best_of_the_best"
+	}
+}
+
+shared_focus = {
+	id = EQS_reintegrate_the_lost
+	icon = GFX_goal_news
+	x = 0
+	y = 1
+	relative_position_id = EQS_best_of_the_best
+	cost = 4
+	prerequisite = {
+		focus = EQS_best_of_the_best
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_reintegrate_the_lost"
 	}
 }
 
@@ -2399,25 +2572,118 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = EQS_blueblood_doctrine
+	id = EQS_heroes_of_equestria
 	icon = GFX_goal_news
-	x = 2
+	x = 1
 	y = 1
-	relative_position_id = EQS_royal_equestrian_army
+	relative_position_id = EQS_magitech_proliferation
 	cost = 4
 	prerequisite = {
-		focus = EQS_royal_equestrian_army
+		focus = EQS_magitech_proliferation
 	}
-	mutually_exclusive = {
-		focus = EQS_sunset_doctrine
+	prerequisite = {
+		focus = EQS_reintegrate_the_lost
 	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_blueblood_doctrine"
-		EQS_princess_celestia = {
-			add_unit_leader_trait = defensive_doctrine
-		}
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_heroes_of_equestria"
+	}
+}
+
+shared_focus = {
+	id = EQS_standard_equipment_calibration
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_blueblood_doctrine
+	cost = 4
+	prerequisite = {
+		focus = EQS_blueblood_doctrine
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_standard_equipment_calibration"
+	}
+}
+
+shared_focus = {
+	id = EQS_doctrinal_innovation
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_standard_equipment_calibration
+	cost = 4
+	prerequisite = {
+		focus = EQS_standard_equipment_calibration
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_doctrinal_innovation"
+	}
+}
+
+shared_focus = {
+	id = EQS_overwhelming_firepower
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_standard_equipment_calibration
+	cost = 4
+	prerequisite = {
+		focus = EQS_standard_equipment_calibration
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_overwhelming_firepower"
+	}
+}
+
+shared_focus = {
+	id = EQS_tactical_superiority
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_doctrinal_innovation
+	cost = 4
+	prerequisite = {
+		focus = EQS_doctrinal_innovation
+	}
+	prerequisite = {
+		focus = EQS_overwhelming_firepower
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_tactical_superiority"
+	}
+}
+
+shared_focus = {
+	id = EQS_ponies_at_the_ready
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_tactical_superiority
+	cost = 4
+	prerequisite = {
+		focus = EQS_tactical_superiority
+	}
+	prerequisite = {
+		focus = EQS_reintegrate_the_lost
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_ponies_at_the_ready"
 	}
 }
