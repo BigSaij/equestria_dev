@@ -466,6 +466,7 @@ add_ideas = {
 	EQS_harmonic_stagnation
 	EQS_friendship_magic
 	EQS_outdated_military
+	EQS_princess_luna_idea
 	EQS_thestral_divide
 }
 
@@ -624,7 +625,7 @@ recruit_character = ERE_lyra_heartstrings
 recruit_character = ERE_dandy_charms
 recruit_character = ERE_vinyl_scratch
 
-create_faction = "All_ponies_front"
+create_faction = "EQS_harmonic_accord"
 add_to_faction = CRY
 add_to_faction = EQC
 add_to_faction = PCB
