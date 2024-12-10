@@ -2257,27 +2257,9 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = EQS_matter_of_vanhoover
+	id = EQS_cities_and_deserts
 	icon = GFX_goal_news
-	x = -3
-	y = 1
-	relative_position_id = EQS_celestial_monarchy
-	cost = 4
-	prerequisite = {
-		focus = EQS_celestial_monarchy
-	}
-	ai_will_do  ={
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_matter_of_vanhoover"
-	}
-}
-
-shared_focus = {
-	id = EQS_matter_of_las_pegasus
-	icon = GFX_goal_news
-	x = -1
+	x = -2
 	y = 1
 	relative_position_id = EQS_celestial_monarchy
 	cost = 4
@@ -2288,14 +2270,14 @@ shared_focus = {
 		factor = 5
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_matter_of_las_pegasus"
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_cities_and_deserts"
 	}
 }
 
 shared_focus = {
-	id = EQS_matter_of_southwest
+	id = EQS_jungles_and_mountains
 	icon = GFX_goal_news
-	x = 1
+	x = 2
 	y = 1
 	relative_position_id = EQS_celestial_monarchy
 	cost = 4
@@ -2306,25 +2288,7 @@ shared_focus = {
 		factor = 5
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_matter_of_southwest"
-	}
-}
-
-shared_focus = {
-	id = EQS_matter_of_southeast
-	icon = GFX_goal_news
-	x = 3
-	y = 1
-	relative_position_id = EQS_celestial_monarchy
-	cost = 4
-	prerequisite = {
-		focus = EQS_celestial_monarchy
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_matter_of_southeast"
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_jungles_and_mountains"
 	}
 }
 
