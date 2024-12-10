@@ -1046,7 +1046,7 @@ EQS_prewar_diplomacy_category = {
 	}
 }
 
-EQS_construction_projects = {
+EQS_construction_projects_category = {
 	EQS_central_equestria_railroads = {
 		icon = railroad
 		available = {

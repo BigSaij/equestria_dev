@@ -11,7 +11,7 @@ EQS_prewar_diplomacy_category = {
 	}
 }
 
-EQS_construction_projects = {
+EQS_construction_projects_category = {
 	icon = generic_economy
 	allowed = {
 		original_tag = EQS
