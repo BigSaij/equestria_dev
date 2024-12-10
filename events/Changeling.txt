@@ -447,11 +447,11 @@ country_event = {
 		name = changelings.10.a
 		hidden_effect = {
 			create_wargoal = {
-				target = VAN type = annex_everything
+				target = ROC type = annex_everything
 			}
 		}
 		create_wargoal = {
-			target = VAN type = annex_everything
+			target = ROC type = annex_everything
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -708,7 +708,7 @@ country_event = {  ## War on Equestria HERE
 		}
 		if = {
 			limit = {
-				country_exists = VAN
+				country_exists = ROC
 			}
 			country_event = { id = changelings.10 days = 1 }
 		}

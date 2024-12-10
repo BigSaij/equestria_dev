@@ -1457,7 +1457,7 @@ country_event = { #ten days later, create it, tell Kayzoo
 							transfer_troops = yes
 						}
 						annex_country = {
-							target = VAN
+							target = ROC
 							transfer_troops = yes
 						}
 						annex_country = {
@@ -1486,7 +1486,7 @@ country_event = { #ten days later, create it, tell Kayzoo
 							type = annex_everything
 						}
 						inherit_technology = SCS
-						inherit_technology = VAN
+						inherit_technology = ROC
 						inherit_technology = BAL
 						inherit_technology = NMS
 						inherit_technology = CES
@@ -1522,7 +1522,7 @@ country_event = { #ten days later, create it, tell Kayzoo
 							transfer_troops = yes
 						}
 						annex_country = {
-							target = VAN
+							target = ROC
 							transfer_troops = yes
 						}
 						annex_country = {
@@ -1547,7 +1547,7 @@ country_event = { #ten days later, create it, tell Kayzoo
 						}
 						complete_national_focus = EQS_Civil_War_End
 						inherit_technology = SCS
-						inherit_technology = VAN
+						inherit_technology = ROC
 						inherit_technology = BAL
 						inherit_technology = NMS
 						inherit_technology = CES

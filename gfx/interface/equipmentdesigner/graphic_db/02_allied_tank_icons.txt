@@ -4564,17 +4564,7 @@ LSP = {
 	}
 
 }
-VAN = {
-	#light_tank_chassis_1 = {
-	#	pool = {
-	#		icons = { GFX_ENG_basic_light_td_medium }
-	#		models = {
-	#			"ENG_light_tank_destroyer_brigade_2_entity"
-	#			"ENG_light_tank_destroyer_brigade_0_entity"
-	#			"ENG_light_sp_artillery_brigade_2_entity"
-	#		}
-	#	}
-	#}
+ROC = {
 
 	light_tank_destroyer_chassis_1 = {
 		pool = {

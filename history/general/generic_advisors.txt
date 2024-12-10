@@ -10,7 +10,7 @@ every_possible_country = {
 		# Ideology Advisors
 		if = {
 			limit = {
-				NOT = { tag = VAN }
+				NOT = { tag = ROC }
 				NOT = { tag = POM }
 			}
 

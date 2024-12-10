@@ -878,19 +878,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/BAL/BAL_baltimare_united.dds"
 	}
 
-
-	### VAN ###
-	#VAN - Characters#
-	SpriteType = {
-		name = "GFX_idea_VAN_Admiral_Incharge"
-		texturefile = "gfx/interface/ideas/Advisors/VAN/VAN_Admiral_Incharge.dds"
-	}
-	#VAN - Ideas#
-	SpriteType = {
-		name = "GFX_idea_VAN_dust_idea"
-		texturefile = "gfx/interface/ideas/VAN/VAN_Dust_Idea.dds"
-	}
-
 	#### NCR ####
 	#NCR - Characters#
 	spriteType = {

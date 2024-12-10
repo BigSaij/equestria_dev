@@ -2066,13 +2066,13 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					VAN = {
+					ROC = {
 						exists = yes
 						is_subject = no
 						has_government = communism
 					}
 				}
-				VAN = {
+				ROC = {
 					country_event = {
 						id = lsp.67
 					}
@@ -2150,12 +2150,12 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					VAN = {
+					ROC = {
 						has_government = communism
 						is_in_faction_with = ROOT
 					}
 				}
-				VAN = {
+				ROC = {
 					country_event = {
 						id = lsp.70
 					}
@@ -2463,13 +2463,13 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					VAN = {
+					ROC = {
 						exists = yes
 						is_subject = no
 						has_government = communism
 					}
 				}
-				VAN = {
+				ROC = {
 					country_event = {
 						id = lsp.67
 					}
@@ -2875,7 +2875,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LSP_what_friends_remain"
 			add_to_array = {
-				fragments_se = VAN
+				fragments_se = ROC
 			}
 			add_to_array = {
 				fragments_se = CES
@@ -4201,32 +4201,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 14
 			modifier = {
-				factor = 0
-				NOT = {
-					is_neighbor_of = VAN
-				}
-			}
-			modifier = {
 				factor = 0.1
 				has_war = yes
 			}
-			modifier = {
-				factor = 100
-				VAN = {
-					has_war = yes
-				}
-			}
 		}
-		will_lead_to_war_with = VAN
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LSP_destroy_vanhoover"
-			create_wargoal = {
-				target = VAN
-				type = annex_everything
-			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}

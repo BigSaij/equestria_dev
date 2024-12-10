@@ -863,7 +863,7 @@ SCS = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	light_tank_chassis_4 = {
 		pool = {
 			icons = { 

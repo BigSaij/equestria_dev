@@ -1280,46 +1280,6 @@ country_event = {
 	}
 }
 
-#country_event = { #### 1st Focus
-	#id = equestria.38
-	#immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.38"}
-	#title = equestria.38.t
-	#desc = equestria.38.d
-	#picture = GFX_event_celestia_poster
-	#is_triggered_only = yes
-
-	#fire_only_once = yes
-	#option = { ##
-		#name = equestria.38.a
-		#VAN = {
-			#transfer_state = 14
-			#transfer_state = 45
-			#transfer_state = 72
-			#every_possible_country = {
-				#limit = {
-					#has_character = EQS_dust_hoover
-				#}
-				#EQS_dust_hoover = {
-					#set_nationality = VAN
-				#}
-			#}
-			#hidden_effect = {
-				#country_event = civwar.110
-				#country_event = { id = civwar.3 days = 7 }
-				#CHN = {
-					#if = {
-						#limit = {
-							#exists = yes
-							#has_completed_focus = demand_equestria
-						#}
-						#country_event = { id = changelings.10 days = 1 }
-					#}
-				#}
-			#}
-		#}
-	#}
-#}
-
 country_event = {
 	id = equestria.38
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria.38" }
@@ -3554,6 +3514,10 @@ country_event = {
 					transfer_state = 93
 					transfer_state = 91
 					transfer_state = 92
+					promote_character = {
+						character = BUF_chieftess_strongheart
+						ideology = tribal_federation
+					}
 				}
 			}
 			SCS = {
@@ -3659,6 +3623,10 @@ country_event = {
 					transfer_state = 93
 					transfer_state = 91
 					transfer_state = 92
+					promote_character = {
+						character = BUF_chieftess_strongheart
+						ideology = tribal_federation
+					}
 				}
 			}
 			SCS = {
@@ -3808,22 +3776,22 @@ country_event = {
 	option = {
 		name = equestria_civwar.8.a
 		hidden_effect = {
-			every_possible_country = {
-				limit = {
-					has_character = EQS_dust_hoover
-				}
-				EQS_dust_hoover = {
-					set_nationality = VAN
-				}
-			}
 			news_event = { id = equestria_news.7 hours = 6 }
-			VAN = {
-				transfer_state = 14
-				transfer_state = 45
-				transfer_state = 72
+			NLR = { add_opinion_modifier = { target = ROC modifier = hostility } reverse_add_opinion_modifier = { target = ROC modifier = hostility } }
+			EQS = { add_opinion_modifier = { target = ROC modifier = hostility } reverse_add_opinion_modifier = { target = ROC modifier = hostility } }
+			ROC = {
+				transfer_state = 38
+				transfer_state = 94
+				transfer_state = 87
+				transfer_state = 118
+				transfer_state = 119
+				add_state_core = 38
+				add_state_core = 94
+				add_state_core - 87
+				add_state_core = 118
+				add_state_core = 119
 				country_event = equestria_debug.1
-				add_ideas = VAN_Feer_Uncertainty_And_Doubt
-				add_ideas = VAN_Slumlike_Living_Conditions
+				country_event = equestria_debug.7
 			}
 		}
 	}
@@ -3833,25 +3801,25 @@ country_event = {
 			is_ai = no
 		}
 		hidden_effect = {
-			every_possible_country = {
-				limit = {
-					has_character = EQS_dust_hoover
-				}
-				EQS_dust_hoover = {
-					set_nationality = VAN
-				}
-			}
 			news_event = { id = equestria_news.7 hours = 6 }
-			VAN = {
-				transfer_state = 14
-				transfer_state = 45
-				transfer_state = 72
+			NLR = { add_opinion_modifier = { target = ROC modifier = hostility } reverse_add_opinion_modifier = { target = ROC modifier = hostility } }
+			EQS = { add_opinion_modifier = { target = ROC modifier = hostility } reverse_add_opinion_modifier = { target = ROC modifier = hostility } }
+			ROC = {
+				transfer_state = 38
+				transfer_state = 94
+				transfer_state = 87
+				transfer_state = 118
+				transfer_state = 119
+				add_state_core = 38
+				add_state_core = 94
+				add_state_core - 87
+				add_state_core = 118
+				add_state_core = 119
 				country_event = equestria_debug.1
-				add_ideas = VAN_Feer_Uncertainty_And_Doubt
-				add_ideas = VAN_Slumlike_Living_Conditions
+				country_event = equestria_debug.7
 			}
 		}
-		VAN = {
+		ROC = {
 			change_tag_from = ROOT
 		}
 	}
@@ -4725,47 +4693,7 @@ country_event = { ## LSP question
 		}
 	}
 }
-country_event = { ## VAN question
-	id = equestria.118
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.118"}
-	title = equestria.118.t
-	desc = equestria.118.d
-	picture = GFX_event_celestia_poster
 
-	is_triggered_only = yes
-
-	option = {
-		name = equestria.118.a
-		hidden_effect = {
-			if = {
-				limit = { is_in_faction_with = VAN }
-				remove_from_faction = VAN
-			}
-			modify_country_flag = { flag = celestia_evil_meter value = 1 }
-		}
-		create_wargoal = { target = VAN type = civil_war }
-		ai_chance = {
-			base = 10
-			modifier = {
-				add = 80
-				has_global_flag = EQS_evil_celestia
-			}
-		}
-	}
-
-	option = {
-		name = equestria.118.b
-		VAN = { country_event = { id = civwar.13 days = 1 } }
-
-		ai_chance = {
-			base = 90
-			modifier = {
-				factor = 0
-				has_government = fascism
-			}
-		}
-	}
-}
 country_event = { ## BAL question
 	id = equestria.119
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.119"}
@@ -4914,54 +4842,6 @@ country_event = { ## SCS agrees
 		add_political_power = 100
 		annex_country = { target = SCS transfer_troops = yes }
 		ai_chance = { factor = 70 }
-	}
-}
-country_event = { ## VAN agrees
-	id = equestria.124
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.124"}
-	title = equestria.124.t
-	desc = equestria.124.d
-	picture = GFX_event_celestia_poster
-
-	is_triggered_only = yes
-
-	option = {
-		name = equestria.124.a
-		add_political_power = 50
-		ai_chance = { factor = 0 }
-		puppet = VAN
-	}
-	option = {
-		name = equestria.124.b
-		add_political_power = 50
-		annex_country = { target = VAN transfer_troops = yes }
-		ai_chance = { factor = 100 }
-	}
-}
-country_event = { ## VAN refuses
-	id = equestria.125
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.125"}
-	title = equestria.125.t
-	desc = equestria.125.d
-	picture = GFX_event_celestia_poster
-
-	is_triggered_only = yes
-
-	option = {
-		name = equestria.125.a
-		hidden_effect = {
-			if = {
-				limit = { is_in_faction_with = VAN }
-				remove_from_faction = VAN
-			}
-		}
-		create_wargoal = { target = VAN type = civil_war }
-		ai_chance = { factor = 50 }
-	}
-	option = {
-		name = equestria.125.b
-		add_political_power = 400
-		ai_chance = { factor = 50 }
 	}
 }
 country_event = { ## Annex Jun
@@ -7333,6 +7213,17 @@ country_event = {
 			25 = { set_country_flag = LSP_FASCIST } 
 			25 = { set_country_flag = LSP_COMMUNIST } 
 		}
+	}
+}
+
+country_event = {
+	id = equestria_debug.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_debug.7" }
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		add_manpower = 30000
+		load_oob = "ROC_civil_war"
 	}
 }
 

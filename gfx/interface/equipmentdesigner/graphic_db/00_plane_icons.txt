@@ -4949,7 +4949,7 @@ LSP = {
 	}
 
 }
-VAN = {
+ROC = {
 	small_plane_airframe = {
 		pool = {
 			icons = {

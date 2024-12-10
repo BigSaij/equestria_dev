@@ -1363,7 +1363,6 @@ ideas = {
 					country_with_custom_designers = yes
 					original_tag = MCW
 					original_tag = PCB
-					original_tag = VAN
 					original_tag = WAR
 				}
 			}

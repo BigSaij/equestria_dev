@@ -7007,7 +7007,7 @@ SCS = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	light_tank_chassis_1 = {
 		pool = {
 			weight = 1.1

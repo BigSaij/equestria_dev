@@ -5731,7 +5731,7 @@ shared_focus = {
 	will_lead_to_war_with = PCB
 	will_lead_to_war_with = EQS
 	will_lead_to_war_with = NLR
-	will_lead_to_war_with = VAN
+	will_lead_to_war_with = ROC
 	will_lead_to_war_with = SCS
 	will_lead_to_war_with = BAL
 	will_lead_to_war_with = CES
@@ -5809,10 +5809,10 @@ shared_focus = {
 		}
 		if = {
 			limit = {
-				country_exists = VAN
+				country_exists = ROC
 			}
 			create_wargoal = {
-				target = VAN
+				target = ROC
 				type = annex_everything
 			}
 		}
@@ -9990,7 +9990,7 @@ shared_focus = {
 	}
 	# no BUF because they will be annexed diplomatically through Bovine Unity
 	will_lead_to_war_with = NLR
-	will_lead_to_war_with = VAN
+	will_lead_to_war_with = ROC
 	will_lead_to_war_with = SCS
 	will_lead_to_war_with = BAL
 	will_lead_to_war_with = CES
@@ -10018,10 +10018,10 @@ shared_focus = {
 		}
 		if = {
 			limit = {
-				country_exists = VAN
+				country_exists = ROC
 			}
 			create_wargoal = {
-				target = VAN
+				target = ROC
 				type = annex_everything
 			}
 		}
@@ -10100,7 +10100,7 @@ shared_focus = {
 	# no BUF because they will be annexed diplomatically through Bovine Unity
 	will_lead_to_war_with = EQS
 	will_lead_to_war_with = NLR
-	will_lead_to_war_with = VAN
+	will_lead_to_war_with = ROC
 	will_lead_to_war_with = SCS
 	will_lead_to_war_with = BAL
 	will_lead_to_war_with = CES
@@ -10147,10 +10147,10 @@ shared_focus = {
 		}
 		if = {
 			limit = {
-				country_exists = VAN
+				country_exists = ROC
 			}
 			create_wargoal = {
-				target = VAN
+				target = ROC
 				type = annex_everything
 			}
 		}

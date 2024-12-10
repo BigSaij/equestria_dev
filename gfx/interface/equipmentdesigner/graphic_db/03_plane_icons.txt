@@ -582,7 +582,7 @@ SCS = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	small_plane_airframe_6 = { #EAW used to be airframe_5
 		pool = {
 			limit = {
@@ -16805,7 +16805,7 @@ LSP = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	small_plane_airframe = {
 		pool = {
 			limit = {

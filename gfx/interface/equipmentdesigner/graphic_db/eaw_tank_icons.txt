@@ -2416,7 +2416,7 @@ LSP = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	amphibious_tank_chassis = {
 		pool = {
 			weight = 3

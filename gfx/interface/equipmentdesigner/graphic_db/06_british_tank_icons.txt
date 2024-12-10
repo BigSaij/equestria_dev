@@ -1030,7 +1030,7 @@ LSP = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	light_tank_chassis_1 = {
 		pool = {
 			models = {

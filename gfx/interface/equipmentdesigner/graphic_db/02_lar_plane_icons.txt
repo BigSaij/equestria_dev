@@ -254,7 +254,7 @@ LSP = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	medium_plane_scout_plane_airframe = {
 		pool = {
 			limit = {
