@@ -1021,12 +1021,13 @@ shared_focus = {
 
 	}
 	bypass = {
-	OR = {
-		NOT = {
-			has_government = democratic
-			has_idea = LSP_mass_migration
+		OR = {
+			NOT = {
+				has_government = democratic
+				has_idea = LSP_mass_migration
+			}
+			has_idea = LSP_mass_migration_boosted
 		}
-	}
 	}
 
 	ai_will_do = { factor = 15 }
@@ -1198,7 +1199,15 @@ shared_focus = {
 
 	}
 	bypass = {
-
+		ROC = {
+			OR = {
+				exists = no
+				is_subject = yes
+				has_war_with = EQS
+				has_war_with = LSP
+				is_in_faction_with = LSP
+			}
+		}
 	}
 
 	ai_will_do = { factor = 15 }
@@ -1206,14 +1215,13 @@ shared_focus = {
 	cancel_if_invalid = yes
 	continue_if_invalid = no
 	available_if_capitulated = no
-
-completion_reward = {
-	log = "[GetDateText]: [Root.GetName]: Focus LSP_request_recognition"
+	will_lead_to_war_with = ROC
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus LSP_request_recognition"
 		EQS = {
-			end_puppet = ROOT
-			add_to_faction = ROOT
+			country_event = lsp.126
 		}
-
+		custom_effect_toolip = LSP_will_kill_ROC_tt
 	}
 }
 shared_focus = {
@@ -1662,10 +1670,24 @@ shared_focus = {
 	cancel_if_invalid = yes
 	continue_if_invalid = no
 	available_if_capitulated = no
+	will_lead_to_war_with = ROC
 
-completion_reward = {
-	log = "[GetDateText]: [Root.GetName]: Focus LSP_creep_south"
-		custom_effect_tooltip = LSP_border_war_south
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus LSP_creep_south"
+		if = {
+			limit = {
+				ROC = {
+					exists = yes
+					NOT = {
+						is_in_faction_with = LSP
+					}
+				}
+			}
+			create_wargoal = {
+				target = ROC
+				type = annex_everything
+			}
+		}
 	}
 }
 shared_focus = {
@@ -1685,10 +1707,12 @@ shared_focus = {
 	}
 
 	available = {
-		owns_state = 94
+		ROC = {
+			exists = no
+		}
 		owns_state = 38
 		owns_state = 41
-		owns_state = 119
+		owns_state = 95
 	}
 	mutually_exclusive = {
 	}
@@ -1702,18 +1726,13 @@ shared_focus = {
 	continue_if_invalid = no
 	available_if_capitulated = no
 
-completion_reward = {
-	log = "[GetDateText]: [Root.GetName]: Focus LSP_consolidate_our_grip"
-		94 = {
-			add_core_of = ROOT
-		}
-		38 = {
-			add_core_of = ROOT
-		}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus LSP_consolidate_our_grip"
+		ROC = { add_to_ROOT_potential_original_cores = yes }
 		41 = {
 			add_core_of = ROOT
 		}
-		119 = {
+		95 = {
 			add_core_of = ROOT
 		}
 	}
