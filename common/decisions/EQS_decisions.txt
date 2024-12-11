@@ -1723,15 +1723,6 @@ EQS_celestia_evil_meter_category = {
 	EQS_enact_war_plan_decision = {
 		icon = war_plan_eqs
 		visible = {
-			OR = {
-				is_EQS_SOL = yes
-				has_completed_focus = War_Plan
-			}
-			NOT = {
-				has_idea = war_plan_equestria_mild
-				has_idea = war_plan_equestria
-				has_idea = war_plan_equestria_extreme
-			}
 		}
 		available = {
 			NOT = { has_country_flag = war_plan_timeout }
@@ -1762,18 +1753,6 @@ EQS_celestia_evil_meter_category = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_enact_war_plan_decision"
-			if = {
-				limit = { has_country_flag = EQS_war_plan_equestria_mild }
-				add_ideas = war_plan_equestria_mild
-			}
-			else_if = {
-				limit = { has_country_flag = EQS_war_plan_equestria }
-				add_ideas = war_plan_equestria
-			}
-			else_if = {
-				limit = { has_country_flag = EQS_war_plan_equestria_extreme }
-				add_ideas = war_plan_equestria_extreme
-			}
 			else = {
 				country_event = equestria.152
 				if = {
@@ -1794,11 +1773,6 @@ EQS_celestia_evil_meter_category = {
 	EQS_turn_off_war_plan_decision = {
 		icon = war_plan_eqs
 		visible = {
-			OR = {
-				has_idea = war_plan_equestria_mild
-				has_idea = war_plan_equestria
-				has_idea = war_plan_equestria_extreme
-			}
 		}
 		available = {
 			NOT = { has_country_flag = war_plan_timeout }
@@ -1825,18 +1799,6 @@ EQS_celestia_evil_meter_category = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_turn_off_war_plan_decision"
-			if = {
-				limit = { has_country_flag = EQS_war_plan_equestria_mild }
-				remove_ideas = war_plan_equestria_mild
-			}
-			else_if = {
-				limit = { has_country_flag = EQS_war_plan_equestria }
-				remove_ideas = war_plan_equestria
-			}
-			else_if = {
-				limit = { has_country_flag = EQS_war_plan_equestria_extreme }
-				remove_ideas = war_plan_equestria_extreme
-			}
 			hidden_effect = {
 				set_country_flag = { flag = war_plan_timeout days = 60 value = 1 }
 			}
@@ -2352,12 +2314,6 @@ demobilization = {
 			tag = EQS
 			has_war = no
 			has_country_flag = { flag = celestia_evil_meter value < 34 }
-			OR = {
-				has_idea = eqs_media_control
-				has_idea = eqs_war_law_extreme
-				has_idea = eqs_war_admin_extreme
-				has_idea = eqs_order_idea
-			}
 		}
 		cost = 75
 		ai_will_do = {
@@ -2379,12 +2335,6 @@ demobilization = {
 		days_remove = 60
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_remove_fascism_decision"
-			remove_ideas = {
-				eqs_media_control
-				eqs_war_law_extreme
-				eqs_war_admin_extreme
-				eqs_order_idea
-			}
 		}
 		modifier = {
 			fascism_drift = -0.08
