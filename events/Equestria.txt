@@ -3340,6 +3340,27 @@ country_event = {
 	}
 }
 
+
+
+country_event = { ###THIS IS THE EXACT MOMENT THAT PRINCESS CELESTIA BECOMES EMPRESS DAYBREAKER
+	id = equestria.1000
+	immediate = {log = "[Root.GetName]: event equestria.1000"}#Auto-logging
+	title = equestria.1000.t
+	desc = equestria.1000.d
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { ## yay
+		name = equestria.1000.a
+		hidden_effect = {
+			EQS_SOL_wartime_change = yes
+		}
+	}
+}
+
+
+
 country_event = {
 	id = equestria_flavor.1
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_flavor.1" }

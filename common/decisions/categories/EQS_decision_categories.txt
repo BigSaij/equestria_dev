@@ -50,7 +50,7 @@ EQS_celestia_selfdestruct_category = {
 	}
 }
 
-EQS_celestia_evil_meter_category = {
+EQS_celestia_DB_meter_category = {
 	allowed = {
 		original_tag = EQS
 	}
