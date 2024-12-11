@@ -8548,13 +8548,16 @@ news_event = {
 	option = {
 		name = equestria_news.5.b
 		trigger = {
-			original_tag = EQS
+			OR = {
+				original_tag = EQS
+				tag = NLR
+			}
 		}
 	}
 	option = {
 		name = equestria_news.5.c
 		trigger = {
-			tag = NLR
+			tag = SCS
 		}
 	}
 	option = {
@@ -8614,15 +8617,29 @@ news_event = {
 	option = {
 		name = equestria_news.7.a
 		trigger = {
-			has_government = communism
+			NOT = {
+				tag = ROC
+				original_tag = EQS
+				tag = NLR
+			}
 		}
 	}
 	option = {
 		name = equestria_news.7.b
 		trigger = {
-			NOT = {
-				has_government = communism
-			}
+			tag = ROC
+		}
+	}
+	option = {
+		name = equestria_news.7.c
+		trigger = {
+			original_tag = EQS
+		}
+	}
+	option = {
+		name = equestria_news.7.e
+		trigger = {
+			tag = NLR
 		}
 	}
 }
