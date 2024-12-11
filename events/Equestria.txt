@@ -3624,12 +3624,6 @@ country_event = {
 				country_event = equestria_debug.1
 				country_event = scs.2
 			}
-			BUF = {
-				country_event = {
-					id = bufstate.3
-					days = 2
-				}
-			}
 			if = {
 				limit = {
 					NCR = {
@@ -3732,12 +3726,6 @@ country_event = {
 				}
 				country_event = equestria_debug.1
 				country_event = scs.2
-			}
-			BUF = {
-				country_event = {
-					id = bufstate.3
-					days = 2
-				}
 			}
 			if = {
 				limit = {
@@ -7963,11 +7951,7 @@ country_event = {
 	option = {
 		add_manpower = 10000
 		load_oob = "LSP_Civil_War"
-		random_list = {
-			50 = { set_country_flag = LSP_NEUTRAL } 
-			25 = { set_country_flag = LSP_FASCIST } 
-			25 = { set_country_flag = LSP_COMMUNIST } 
-		}
+		set_country_flag = LSP_NEUTRAL
 	}
 }
 
