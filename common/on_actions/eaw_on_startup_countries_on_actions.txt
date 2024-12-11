@@ -3,8 +3,6 @@ on_actions = {
 		effect = {
 			# Country specific setup
 			EQS = {
-				STG = { add_to_PREV_potential_original_cores = yes }
-				STL = { add_to_PREV_potential_original_cores = yes }
 				save_global_event_target_as = equestria
 				if = {
 					limit = {

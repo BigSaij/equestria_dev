@@ -2488,11 +2488,50 @@ shared_focus = {
 	prerequisite = {
 		focus = EQS_beyond_the_celestial_sea
 	}
+	available = {
+		has_war = no
+	}
+	bypass = {
+		CRY = {
+			OR = {
+				AND = {
+					exists = yes
+					is_in_faction_with = EQS
+				}
+				exists = no
+			}
+		}
+	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_return_to_crystal_empire"
+		if = {
+			limit = {
+				CRY = {
+					exists = yes
+					NOT = {
+						is_in_faction_with = EQS
+					}
+					has_government = democratic
+				}
+			}
+			CRY = {
+				country_event = equestria_celestia.44
+			}
+		}
+		else_if = {
+			limit = {
+				CRY = {
+					exists = yes
+				}
+			}
+			declare_war_on = {
+				target = CRY
+				type = annex_everything
+			}
+		}
 	}
 }
 
@@ -2506,11 +2545,136 @@ shared_focus = {
 	prerequisite = {
 		focus = EQS_beyond_the_celestial_sea
 	}
+	available = {
+		has_war = no
+	}
+	bypass = {
+		STG = {
+			OR = {
+				exists = no
+				is_subject_of = EQS
+			}
+		}
+	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_a_revolution_rectified"
+		declare_war_on = {
+			target = STG
+			type = annex_everything
+		}
+		if = {
+			limit = {
+				STL = {
+					exists = yes
+				}
+			}
+			declare_war_on = {
+				target = STL
+				type = annex_everything
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_ponies_of_severyana
+	icon = GFX_goal_news
+	x = 2
+	y = 1
+	relative_position_id = EQS_a_revolution_rectified
+	cost = 4
+	allow_branch = {
+		has_country_flag = EQS_STG_absolestia_integration
+	}
+	prerequisite = {
+		focus = EQS_a_revolution_rectified
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_ponies_of_severyana"
+		every_owned_state = {
+			limit = {
+				is_core_of = STG
+			}
+			add_compliance = 15
+			add_resistance = -15
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_reinstate_equestrian_representation
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_ponies_of_severyana
+	cost = 4
+	prerequisite = {
+		focus = EQS_ponies_of_severyana
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_reinstate_equestrian_representation"
+		add_timed_idea = {
+			idea = EQS_representative_overhaul
+			days = 90
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_erasing_the_legacy
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_ponies_of_severyana
+	cost = 4
+	prerequisite = {
+		focus = EQS_ponies_of_severyana
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_erasing_the_legacy"
+		153 = {
+			set_state_name = EQS_vp_princessyn
+			add_compliance = 15
+		}
+		set_province_name = {
+			id = 488
+			name = EQS_vp_princessyn
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_end_the_tsardom
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_reinstate_equestrian_representation
+	cost = 4
+	prerequisite = {
+		focus = EQS_reinstate_equestrian_representation
+	}
+	prerequisite = {
+		focus = EQS_erasing_the_legacy
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_end_the_tsardom"
+		STG = { add_to_ROOT_potential_cores = yes }
+		STL = { add_to_ROOT_potential_cores = yes }
 	}
 }
 
