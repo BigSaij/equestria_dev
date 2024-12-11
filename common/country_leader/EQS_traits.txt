@@ -117,6 +117,16 @@ leader_traits = {
 		}
 	}
 	
+	dimensional_traveler = {
+		random = no
+		experience_gain_army = 0.3
+		army_attack_factor = 0.1
+		special_forces_cap = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	element_of_loyalty = {
 		random = no
 		foreign_subversive_activites = -0.15

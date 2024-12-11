@@ -516,6 +516,19 @@ leader_traits = {
 		new_commander_weight = { factor = 0 }
 	}
 	
+	night_guard_captain = {
+		type = all
+		trait_type = personality_trait
+		modifier = {
+			army_morale_factor = 0.05
+			land_reinforce_rate = 0.02
+			night = {
+				attack = 0.1
+				defence = 0.1
+			}
+		}
+	}
+	
 	goddess_of_the_night = {
 		type = field_marshal
 		trait_type = personality_trait
