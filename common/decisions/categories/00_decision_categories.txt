@@ -214,6 +214,14 @@ prospect_for_resources = {
 		NOT = { has_country_flag = CES_shadow_path }
 		NOT = { original_tag = ZAI }
 	}
+	visible = {
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			has_country_flag = EQS_resource_prospecting_unlocked
+		}
+	}
 }
 
 special_projects = {

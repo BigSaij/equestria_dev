@@ -417,7 +417,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_resource_extraction"
-		EQS_resource_prospecting_unlocked_tt
+		custom_effect_tooltip = EQS_resource_prospecting_unlocked_tt
+		set_country_flag = EQS_resource_prospecting_unlocked
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -912,7 +913,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_swaying_the_thestrals"
 		add_timed_idea = {
-			idea = EQS_thestral_friendship_camapign
+			idea = EQS_thestral_friendship_campaign
 			days = 175
 		}
 		hidden_effect = {
@@ -2339,11 +2340,12 @@ shared_focus = {
 			limit = {
 				has_country_flag = EQS_ROC_warunification
 			}
-		custom_effect_tooltip = EQS_ROC_wareffects_tt
-		EQS_princess_celestia = {
-			add_logistics = 1
-			add_unit_leader_trait = trait_engineer
-			add_unit_leader_trait = fortress_buster
+			custom_effect_tooltip = EQS_ROC_wareffects_tt
+			EQS_princess_celestia = {
+				add_logistics = 1
+				add_unit_leader_trait = trait_engineer
+				add_unit_leader_trait = fortress_buster
+			}
 		}
 		if = {
 			limit = {

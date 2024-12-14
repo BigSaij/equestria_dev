@@ -58,6 +58,7 @@ EQS_celestia_DB_meter_category = {
 		NOT = {
 			has_country_flag = EQS_april_fools
 		}
+		has_country_flag = EQS_wartime_equestria
 	}
 	icon = celestia_cat
 	priority = {

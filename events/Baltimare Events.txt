@@ -1868,7 +1868,7 @@ country_event = { #The only winning move is not to play
 
 country_event = { #Dust Hoover Trolling
 	id = baltimare.48
-	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare.48}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baltimare.48"}
 	title = baltimare.48.t
 	desc = {
 		text = baltimare.48.d_eqs

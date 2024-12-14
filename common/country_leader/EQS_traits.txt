@@ -44,7 +44,6 @@ leader_traits = {
 	celestial_monarch = {
 		random = no
 		stability_factor = 0.2
-		war_stability_factor = 0.1
 		political_power_gain = 0.3
 		war_stability_factor = 0.2
 		
@@ -140,9 +139,6 @@ leader_traits = {
 	EQS_wonderbolts_captain = {
 		random = no
 		experience_gain_air = 0.1
-		air_air_superiority_attack_factor = 0.05
-		air_air_superiority_defence_factor = 0.05
-		air_air_superiority_agility_factor = 0.05
 		ai_will_do = {
 			factor = 1
 		}
@@ -195,10 +191,6 @@ leader_traits = {
 		army_attack_factor = 0.1
 		supply_consumption_factor = -0.1
 		war_support_factor = 0.05
-		experience_gain_army = @experience_gain_medium
-		
-		command_cap_increase = @tier2_cp_cap_increase
-		command_power = @tier2_cp_cost
 		
 		ai_will_do = {
 			factor = 1
@@ -210,9 +202,6 @@ leader_traits = {
 		army_speed_factor = 0.1
 		out_of_supply_factor = -0.1
 		army_morale_factor = 0.05
-		
-		command_cap_increase = @tier2_cp_cap_increase
-		command_power = @tier2_cp_cost
 		
 		ai_will_do = {
 			factor = 1
@@ -235,10 +224,6 @@ leader_traits = {
 		army_attack_factor = 0.1
 		army_speed_factor = 0.1
 		army_morale_factor = 0.1
-		experience_gain_army = @army_chief_factor_2
-		
-		command_cap_increase = @tier2_cp_cap_increase
-		command_power = @tier2_cp_cost
 		
 		ai_will_do = {
 			factor = 1

@@ -250,7 +250,7 @@ EQS_prewar_diplomacy_category = {
 				exists = no
 			}
 		}
-		costs = 50
+		cost = 50
 		ai_will_do = {
 			factor = 40
 		}
@@ -2384,7 +2384,6 @@ EQS_celestia_DB_meter_category = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_enact_war_plan_decision"
-			else = {
 				country_event = equestria.152
 				if = {
 					limit = {
@@ -2395,7 +2394,6 @@ EQS_celestia_DB_meter_category = {
 					}
 					add_ideas = war_economy
 				}
-			}
 			hidden_effect = {
 				set_country_flag = { flag = war_plan_timeout days = 60 value = 1 }
 			}
@@ -2938,40 +2936,6 @@ SOL_trolling_chiropterra = {
 		}
     }
 }
-demobilization = {
-	EQS_remove_fascism_decision = {
-		icon = generic_political_actions
-		visible = {
-			tag = EQS
-			has_war = no
-			has_country_flag = { flag = celestia_evil_meter value < 34 }
-		}
-		cost = 75
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				fascism > 0.3
-				factor = 2
-			}
-			modifier = {
-				has_global_flag = EQS_nice_celestia
-				factor = 5
-			}
-			modifier = {
-				has_global_flag = EQS_evil_celestia
-				factor = 0
-			}
-		}
-		fire_only_once = yes
-		days_remove = 60
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_remove_fascism_decision"
-		}
-		modifier = {
-			fascism_drift = -0.08
-		}
-	}
-}
 political_actions = {
 	EQS_oc_general_unlock = {
 		icon = generic_army_support
@@ -3109,17 +3073,6 @@ political_actions = {
 						has_character = EQS_evening_squall
 					}
 					EQS_evening_squall = {
-						set_nationality = ROOT 
-					}
-				}
-			}
-			if = {
-				limit = { NOT = { has_character = EQS_allen_spark } }
-				every_possible_country = {
-					limit = {
-						has_character = EQS_allen_spark
-					}
-					EQS_allen_spark = {
 						set_nationality = ROOT 
 					}
 				}

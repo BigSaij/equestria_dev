@@ -101,8 +101,8 @@ ideas = {
 			}
 		}
 		EQS_outdated_military = {
-			always = {
-				allowed = no
+			allowed = {
+				always = no
 			}
 			allowed_civil_war = {
 				always = yes
@@ -122,8 +122,8 @@ ideas = {
 			}
 		}
 		EQS_outdated_military_2 = {
-			always = {
-				allowed = no
+			allowed = {
+				always = no
 			}
 			allowed_civil_war = {
 				always = yes
@@ -382,7 +382,7 @@ ideas = {
 		}
 		EQS_streamlined_bureaucracy_2 = {
 			allowed = {
-				allowed = no
+				always = no
 			}
 			allowed_civil_war = {
 				always = yes

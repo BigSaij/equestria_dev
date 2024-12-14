@@ -1221,7 +1221,7 @@ shared_focus = {
 		EQS = {
 			country_event = lsp.126
 		}
-		custom_effect_toolip = LSP_will_kill_ROC_tt
+		custom_effect_tooltip = LSP_will_kill_ROC_tt
 	}
 }
 shared_focus = {
@@ -5712,8 +5712,8 @@ shared_focus = {
 	continue_if_invalid = no
 	available_if_capitulated = no
 
-completion_reward = {
-	log = "[GetDateText]: [Root.GetName]: Focus LSP_solidarity_food_donations"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus LSP_solidarity_food_donations"
 		if = {
 			limit = {
 				STG = {
@@ -5767,7 +5767,7 @@ completion_reward = {
 				}
 			}
 			ROC = {
-				country_event = { id = lsp.30
+				country_event = { id = lsp.30 }
 			}
 		}
 	}
