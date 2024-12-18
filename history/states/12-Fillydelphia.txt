@@ -24,7 +24,6 @@ state={
 
 			950 = {
 				naval_base = 5
-				land_facility = 1
 			}
 		}
 	}

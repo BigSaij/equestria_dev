@@ -60,7 +60,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_pony_summit"
 		add_political_power = 25
 		add_stability = 0.05
-		country_event = equestria.1
+		country_event = equestria_prewar.1
 	}
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 }
@@ -348,7 +348,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_raven_inkwell_report"
 		add_political_power = 150
-		country_event = equestria.38
+		country_event = equestria_prewar.3
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -419,6 +419,12 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_resource_extraction"
 		custom_effect_tooltip = EQS_resource_prospecting_unlocked_tt
 		set_country_flag = EQS_resource_prospecting_unlocked
+		add_tech_bonus = {
+			name = WNG_librasia_talocana
+			bonus = 1.0
+			uses = 2
+			category = excavation_tech
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -711,7 +717,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = EQS_technologial_catchup
+	id = EQS_technological_catchup
 	icon = GFX_goal_magical_weapon_focus
 	x = -2
 	y = 1
@@ -775,7 +781,7 @@ shared_focus = {
 	relative_position_id = EQS_princess_levy
 	cost = 8
 	prerequisite = {
-		focus = EQS_technologial_catchup
+		focus = EQS_technological_catchup
 	}
 	prerequisite = {
 		focus = EQS_princess_levy
@@ -1113,7 +1119,7 @@ shared_focus = {
 				add_idea = low_economic_mobilisation
 			}
 		}
-		country_event = equestria.civwar.9
+		country_event = equestria_civwar.9
 	}
 }
 

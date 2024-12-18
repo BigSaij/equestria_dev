@@ -1053,8 +1053,9 @@ EQS_construction_projects_category = {
 		icon = railroad
 		available = {
 			has_war = no
+			num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 35
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -1071,26 +1072,45 @@ EQS_construction_projects_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = -0.1
+			civilian_factory_use = 5
 		}
 		days_remove = 80
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_central_equestria_railroads"
 			set_country_flag = EQS_central_railroads_built
+			build_railway = {
+				level = 1
+				path = { 9375 3381 11372 11414 3884 6930 11856 974 3893 }
+			}
+			build_railway = {
+				level = 1
+				path = { 6023 9148 9068 6886 3833 907 3879 9902 9888 3893 11905 893 6597 754 3575 9334 6808 9806 }
+			}
+			build_railway = {
+				level = 1
+				path = { 849 13282 3851 9921 11081 11115 13205 124 }
+			}
+			build_railway = {
+				level = 1
+				path = { 11100 9216 102 13270 6116 7211 13272 6560 480 13274 6598 }
+			}
+			build_railway = {
+				level = 1
+				path = { 179 13058 6975 3090 188 3093 11100 3111 168 9154 3162 6118 11135 9032 3844 6111 9069 9208 }
+			}
 			every_owned_state = {
 				limit = {
 					OR = {
-						state = 116
-						state = 97
-						state = 121
-						state = 122
-						state = 101
-						state = 119
-						state = 99
-						state = 129
+						state = 103
 						state = 105
+						state = 129
+						state = 126
 						state = 179
-						state = 181
+						state = 178
+						state = 176
+						state = 40
+						state = 177
+						state = 183
 					}
 				}
 				add_building_construction = {
@@ -1100,9 +1120,12 @@ EQS_construction_projects_category = {
 				}
 			}
 			3 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			74 = {
 				add_extra_state_shared_building_slots = 1
 			}
-			106 = {
+			70 = {
 				add_extra_state_shared_building_slots = 1
 			}
 		}
@@ -1111,8 +1134,9 @@ EQS_construction_projects_category = {
 		icon = railroad
 		available = {
 			has_war = no
+			num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 35
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -1129,28 +1153,50 @@ EQS_construction_projects_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = -0.1
+			civilian_factory_use = 5
 		}
 		days_remove = 80
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_eastern_equestria_railroads"
 			set_country_flag = EQS_eastern_railways_built
+			build_railway = {
+				level = 1
+				path = { 3887 857 9870 6936 903 10024 4098 4095 3953 }
+			}
+			build_railway = {
+				level = 1
+				path = { 6598 3447 3402 9561 9725 6962 9723 6931 }
+			}
+			build_railway = {
+				level = 1
+				path = { 9725 11058 11112 6185 11052 3113 11067 9093 6161 1119 12096 }
+			}
+			build_railway = {
+				level = 1
+				path = { 6931 6915 6817 6812 3816 6836 11875 }
+			}
+			build_railway = {
+				level = 1
+				path = { 11877 958 896 6867 12289 6749 11885 6996 }
+			}
+			build_railway = {
+				level = 1
+				path = { 351 11299 6320 3876 11792 3788 784 }
+			}
 			every_owned_state = {
 				limit = {
 					OR = {
 						state = 109
 						state = 107
+						state = 186
 						state = 188
 						state = 40
 						state = 223
+						state = 232
 						state = 349
-						state = 29
-						state = 108
-						state = 185
-						state = 106
-						state = 102
-						state = 227
-						state = 229
+						state = 154
+						state = 158
+						state = 653
 					}
 				}
 				add_building_construction = {
@@ -1162,7 +1208,13 @@ EQS_construction_projects_category = {
 			157 = {
 				add_extra_state_shared_building_slots = 1
 			}
-			349 = {
+			187 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			525 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			231 = {
 				add_extra_state_shared_building_slots = 1
 			}
 		}
@@ -1171,8 +1223,9 @@ EQS_construction_projects_category = {
 		icon = railroad
 		available = {
 			has_war = no
+			num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 35
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -1189,23 +1242,39 @@ EQS_construction_projects_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = -0.1
+			civilian_factory_use = 5
 		}
 		days_remove = 80
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_western_equestria_railroads"
 			set_country_flag = EQS_western_railroads_built
+			build_railway = {
+				level = 1
+				path = { 9806 9871 6938 9579 11272 3313 2085 11353 11220 7554 9351 323 11241 4477 4545 6763 11633 11678 6753 748 }
+			}
+			build_railway = {
+				level = 1
+				path = { 511 6578 522 3580 457 }
+			}
+			build_railway = {
+				level = 1
+				path = { 721 3573 12866 10026 9983 5053 4970 13145 }
+			}
+			build_railway = {
+				level = 1
+				path = { 9677 9696 6768 3752 6292 11271 9396 9241 9351 6293 3668 7624 3774 }
+			}
 			every_owned_state = {
 				limit = {
 					OR = {
-						state = 60
-						state = 175
-						state = 96
+						state = 61
+						state = 73
+						state = 173
 						state = 72
-						state = 126
-						state = 131
 						state = 169
-						state = 172
+						state = 54
+						state = 175
+						state = 174
 					}
 				}
 				add_building_construction = {
@@ -1220,6 +1289,9 @@ EQS_construction_projects_category = {
 			132 = {
 				add_extra_state_shared_building_slots = 1
 			}
+			59 = {
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	EQS_southwestern_equestria_railroads = {
@@ -1227,6 +1299,7 @@ EQS_construction_projects_category = {
 		available = {
 			has_war = no
 			has_country_flag = EQS_buffalo_integrated
+			num_of_civilian_factories_available_for_projects > 4
 		}
 		cost = 25
 		ai_will_do = {
@@ -1245,7 +1318,7 @@ EQS_construction_projects_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = -0.1
+			civilian_factory_use = 5
 		}
 		days_remove = 80
 		remove_effect = {
@@ -1286,6 +1359,7 @@ EQS_construction_projects_category = {
 		available = {
 			has_war = no
 			has_country_flag = EQS_moonshine_resolved
+			num_of_civilian_factories_available_for_projects > 4
 		}
 		cost = 25
 		ai_will_do = {
@@ -1304,7 +1378,7 @@ EQS_construction_projects_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = -0.1
+			civilian_factory_use = 5
 		}
 		days_remove = 80
 		remove_effect = {
