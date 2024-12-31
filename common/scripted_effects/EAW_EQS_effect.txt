@@ -434,10 +434,6 @@ EQS_NLR_civil_war = {
 		country_event = { id = stalliongrad.5 days = 2 }
 	}
 	every_other_country = {
-		limit = { exists = yes is_guaranteed_by = ROOT }
-		ROOT = { diplomatic_relation = { country = PREV relation = guarantee active = no } }
-	}
-	every_other_country = {
 		limit = {
 			OR = {
 				is_subject_of = ROOT
@@ -453,13 +449,8 @@ EQS_NLR_civil_war = {
 		}
 		country_event = { id = solarempire.5 hours = 1 }
 	}
-	every_possible_country = {
-		limit = {
-			has_character = EQS_princess_luna
-		}
-		EQS_princess_luna = {
-			retire = yes
-		}
+	EQS_princess_luna = {
+		retire = yes
 	}
 	set_stability = 0.6
 	add_popularity = {
@@ -506,7 +497,6 @@ EQS_NLR_civil_war = {
 		}
 		add_core_of = NLR
 	}
-
 	every_state = {
 		limit = {
 			NOT = { is_core_of = NLR }
@@ -517,52 +507,14 @@ EQS_NLR_civil_war = {
 		}
 		add_claim_by = NLR
 	}
-
 	every_owned_state = {
 		limit = {
 			is_controlled_by = PREV
-			OR = {
-				region = 33
-				state = 221
-				region = 32
-				state = 83
-				region = 35
-				region = 34
-				region = 43
-				state = 120
-				state = 122
-				state = 111
-				state = 97
-				region = 57
-				state = 1
-				state = 5
-				region = 44
-				region = 42
-				region = 45
-				region = 62
-				state = 182
-				state = 177
-				state = 183
-				region = 69
-				region = 46
-				state = 661
-				state = 662
-				state = 653
-				state = 229
-				state = 167
-				state = 67
-			}
+			is_core_of = NLR
 		}
 		NLR = { transfer_state = PREV }
 	}
 	add_ideas = EQS_civil_war
-	40 = {
-		add_building_construction = {
-			type = air_base
-			level = 1
-			instant_build = yes
-		}
-	}
 	NLR = {
 		every_controlled_state = {
 			teleport_armies = {
@@ -636,31 +588,6 @@ EQS_NLR_civil_war = {
 			amount = -50
 		}
 	}
-
-
-	EQS = {
-		if = {
-			limit = {
-				check_variable = { NMM_partisans = 3 }
-			}
-			add_timed_idea = { idea = EQS_moonshine_partisans_3 days = 180 }
-		}
-		else_if = {
-			limit = {
-				check_variable = { NMM_partisans = 2 }
-			}
-		    add_timed_idea = { idea = EQS_moonshine_partisans_2 days = 180 }
-		}
-		else_if = {
-			limit = {
-				check_variable = { NMM_partisans = 1 }
-			}
-			add_timed_idea = { idea = EQS_moonshine_partisans_1 days = 180 }
-		}
-		else = {
-			add_timed_idea = { idea = EQS_moonshine_partisans_0 days = 180 }
-		}
-	}
 	if = {
 		limit = {
 			BAT = {
@@ -698,32 +625,20 @@ EQS_NLR_civil_war = {
 		}
 	}
 	load_oob = "EQS_Civil_War"
-	EQS = {
-		set_global_flag = EQS_Bipen_created
-		EQS_NLR_bipen = { set_nationality =  NLR }
-		set_global_flag = EQS_Selenite_created
-		EQS_NLR_celenite = { set_nationality = NLR }
-		set_global_flag = EQS_Tempest_Wind_created
-		EQS_NLR_tempest_wind = { set_nationality = NLR }
-		set_global_flag = EQS_Midnight_Oil_created
-		EQS_NLR_midnight_oil = { set_nationality = NLR }
-	}
+	set_global_flag = EQS_Bipen_created
+	EQS_NLR_bipen = { set_nationality =  NLR }
+	set_global_flag = EQS_Selenite_created
+	EQS_NLR_celenite = { set_nationality = NLR }
+	set_global_flag = EQS_Tempest_Wind_created
+	EQS_NLR_tempest_wind = { set_nationality = NLR }
+	set_global_flag = EQS_Midnight_Oil_created
+	EQS_NLR_midnight_oil = { set_nationality = NLR }
 	NLR = {
 		if = {
 			limit = { is_ai = yes }
 			Evil_unicorn_magic = yes
 		}
-		if = {
-			limit = {
-				NOT = {
-					has_game_rule = {
-						rule = equestria_united_status
-						option = EQS_STATUS_CIVIL_WAR
-					}
-				}
-			}
-			country_event = { id = lunas.2 days = 7 }#days to hours applied
-		}
+		country_event = { id = lunas.2 days = 7 }#days to hours applied
 		country_event = equestria_debug.1
 		country_event = { id = equestria_civwar.1 days = 10 } #rarity captured
 		set_stability = 0.7
@@ -739,7 +654,7 @@ EQS_NLR_civil_war = {
 		else = {
 			load_oob = "NLR_Civil_War_air_legacy"
 		}
-		add_ideas = eqs_civil_war
+		add_ideas = EQS_civil_war
 		if = {
 			limit = { country_exists = EQS }
 			hidden_effect = {
@@ -754,71 +669,6 @@ EQS_NLR_civil_war = {
 			add_civil_war_target = EQS
 		}
 		add_ideas = NLR_fragile_rule_1
-		### Moonshine national spirits ###
-		country_event = { id = lunas.1 days = 1 }
-		if = {
-			limit = {
-				EQS = { check_variable = { NMM_weaponstealers = 3 } }
-			}
-			add_timed_idea = { idea = NLR_moonshine_weaponstealers_3 days = 180 }
-		}
-		else_if = {
-			limit = {
-				EQS = { check_variable = { NMM_weaponstealers = 2 } }
-			}
-			add_timed_idea = { idea = NLR_moonshine_weaponstealers_2 days = 180 }
-		}
-		else_if = {
-			limit = {
-				EQS = { check_variable = { NMM_weaponstealers = 1 } }
-			}
-			add_timed_idea = { idea = NLR_moonshine_weaponstealers_1 days = 180 }
-		}
-		else = {
-			add_timed_idea = { idea = NLR_moonshine_weaponstealers_0 days = 180 }
-		}
-		if = {
-			limit = {
-				EQS = { check_variable = { NMM_workers = 3 } }
-			}
-			add_timed_idea = { idea = NLR_moonshine_workers_3 days = 180 }
-		}
-		else_if = {
-			limit = {
-				EQS = { check_variable = { NMM_workers = 2 } }
-			}
-			add_timed_idea = { idea = NLR_moonshine_workers_2 days = 180 }
-		}
-		else_if = {
-			limit = {
-				EQS = { check_variable = { NMM_workers = 1 } }
-			}
-			add_timed_idea = { idea = NLR_moonshine_workers_1 days = 180 }
-		}
-		else = {
-			add_timed_idea = { idea = NLR_moonshine_workers_0 days = 180 }
-		}
-		if = {
-			limit = {
-				EQS = { check_variable = { NMM_bats = 3 } }
-			}
-			add_timed_idea = { idea = NLR_moonshine_bats_3 days = 180 }
-		}
-		else_if = {
-			limit = {
-				EQS = { check_variable = { NMM_bats = 2 } }
-			}
-			add_timed_idea = { idea = NLR_moonshine_bats_2 days = 180 }
-		}
-		else_if = {
-			limit = {
-				EQS = { check_variable = { NMM_bats = 1 } }
-			}
-			add_timed_idea = { idea = NLR_moonshine_bats_1 days = 180 }
-		}
-		else = {
-			add_timed_idea = { idea = NLR_moonshine_bats_0 days = 180 }
-		}
 		create_faction = NLR_lunar_hegemony
 		if = {
 		    limit = {

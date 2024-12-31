@@ -283,21 +283,19 @@ characters = {
 					has_government = democratic
 					has_country_flag = EQS_new_smile_director
 				}
+				visible = {
+					has_country_flag = EQS_new_smile_director
+				}
 				traits = { director_of_smile }
 			}
 		}
 	}
 	#THEORISTS
-	EQS_grannysmith = {
-		name = EQS_grannysmith
-		portraits = {
-			army = {
-				small = "GFX_idea_EQS_granny_smith"
-			}
-		}
+	EQS_stygian = {
+		name = EQS_stygian
 		advisor = {
 			slot = theorist
-			idea_token = EQS_grannysmith
+			idea_token = EQS_stygian
 			ledger = army
 			cost = 100
 			allowed = {
@@ -309,7 +307,6 @@ characters = {
 
 			traits = { military_theorist }
 		}
-		gender = female
 	}
 	EQS_wonderbolts_academy = {
 		name = EQS_wonderbolts_academy
@@ -468,6 +465,9 @@ characters = {
 				}
 				has_country_flag = EQS_wartime_advisors
 			}
+			visible = {
+				has_country_flag = EQS_wartime_advisors
+			}
 			traits = { element_of_loyalty }
 			ai_will_do = {
 				factor = 1
@@ -576,6 +576,53 @@ characters = {
 		}
 		gender = female
 	}
+	EQS_rockhoof = {
+		name = EQS_rockhoof
+		portraits = {
+			army = {
+				small = "GFX_idea_EQS_rockhoof"
+			}
+		}	
+		advisor = {
+			slot = high_command 
+			idea_token = EQS_rockhoof
+			cost = 200
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				has_country_flag = EQS_wartime_advisors
+			}
+			traits = { pillar_strength }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	EQS_meadowbrook = {
+		name = EQS_meadowbrook
+		portraits = {
+			army = {
+				small = "GFX_idea_EQS_meadowbrook"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = EQS_meadowbrook
+			cost = 100
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				has_country_flag = EQS_wartime_advisors
+				owns_state = 27
+			}
+			traits = { pillar_healing }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 	EQS_fizzlepop = {
 		name = EQS_fizzlepop
 		portraits = {
@@ -596,7 +643,7 @@ characters = {
 			available = {
 				has_country_flag = EQS_wartime_advisors
 			}
-			traits = { alt_army_chief_maneuver_2 }
+			traits = { former_storm_commander }
 			ai_will_do = {
 				factor = 1
 			}
@@ -614,29 +661,6 @@ characters = {
 			}
 		}
 		gender = female
-	}
-	EQS_rockhoof = {
-		name = EQS_rockhoof
-		portraits = {
-			army = {
-				small = "GFX_idea_EQS_rockhoof"
-			}
-		}	
-		advisor = {
-			slot = high_command 
-			idea_token = EQS_rockhoof
-			cost = 200
-			allowed = {
-				original_tag = EQS
-			}
-			available = {
-				has_country_flag = EQS_wartime_advisors
-			}
-			traits = { army_entrenchment_3 }
-			ai_will_do = {
-				factor = 1
-			}
-		}
 	}
 	EQS_zecora = {
 		name = EQS_zecora
@@ -728,7 +752,7 @@ characters = {
 			available = {
 				has_country_flag = EQS_wartime_advisors
 			}
-			traits = { alt_army_chief_defensive_2 }
+			traits = { commando_leader }
 			ai_will_do = {
 				factor = 7
 			}
@@ -767,7 +791,7 @@ characters = {
 			available = {
 				has_country_flag = EQS_wartime_advisors
 			}
-			traits = { army_infantry_1 }
+			traits = { earth_pony_commando }
 			ai_will_do = {
 				factor = 8
 			}
@@ -804,7 +828,7 @@ characters = {
 			available = {
 				has_country_flag = EQS_wartime_advisors
 			}
-			traits = { alt_air_chief_safety_2 }
+			traits = { aerial_enthusiast }
 			ai_will_do = {
 				factor = 1
 			}
@@ -913,6 +937,16 @@ characters = {
 		}
 	}
 	#SCIENTISTS
+	EQS_starswirl = {
+		name = EQS_starswirl
+		scientist = {
+			traits = { scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_magical = 2
+			}
+			desc = EQS_STARSWIRL_SCIENTIST_DESC
+		}
+	}
 	EQS_miss_harshwhinny = {
 		name = EQS_miss_harshwhinny
 		gender = female
@@ -925,6 +959,9 @@ characters = {
 			traits = { scientist_trait_armored_specialist scientist_trait_resourceful } 
 			skills = {
 				specialization_land = 2
+			}
+			visible = {
+				has_country_flag = EQS_land_warfare_facility_built
 			}
 			desc = EQS_miss_harshwhinny
 		}

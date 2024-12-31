@@ -1323,6 +1323,10 @@ spriteTypes = {
 		name = "GFX_idea_EQS_sunset_shimmer"
 		texturefile = "gfx/interface/ideas/Advisors/EQS/EQS_sunset_shimmer.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_EQS_meadowbrook"
+		texturefile = "gfx/interface/ideas/Advisors/EQS/EQS_meadowbrook.tga"
+	}
 	SpriteType = {
 		name = "GFX_idea_EQS_madoor_stronghammer"
 		textureFile = "gfx/interface/ideas/Advisors/EQS/EQS_madoor_stronghammer.dds"

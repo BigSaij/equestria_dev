@@ -25,14 +25,6 @@ starting_train_buffer = 4
 save_global_event_target_as = equestria
 
 add_breakthrough_progress = {
-	specialization = specialization_naval
-	value = 0.6
-}
-add_breakthrough_progress = {
-	specialization = specialization_air
-	value = 0.5
-}
-add_breakthrough_progress = {
 	specialization = specialization_magical
 	value = 1.0
 }
@@ -216,10 +208,7 @@ if = {
 	else = {
 		set_technology = {
 			early_fighter = 1
-			cv_early_fighter = 1
-			cv_naval_bomber1 = 1
-			naval_bomber1 = 1
-			early_bomber = 1
+			airships1 = 1
 			early_transport_plane = 1
 		}
 		set_air_oob = "EQS_1007_air_legacy"
@@ -363,14 +352,12 @@ if = {
 		NOT = { has_dlc = "Man the Guns" }
 	}
 	set_technology = {
-		early_submarine = 1
 		early_destroyer = 1
 		basic_destroyer = 1
 		early_light_cruiser = 1
 		basic_light_cruiser = 1
 		early_heavy_cruiser = 1
 		early_battleship = 1
-		basic_battleship = 1
 		early_battlecruiser = 1
 		early_carrier = 1
 		early_light_carrier = 1
@@ -442,6 +429,9 @@ set_politics = {
 set_country_flag = has_custom_advisors
 
 set_country_flag = has_custom_spymaster
+set_country_flag = hide_surpress_communism
+set_country_flag = hide_surpress_neutral
+set_country_flag = hide_surpress_fascism
 add_ideas = {
 	EQS_harmonic_stagnation
 	EQS_friendship_magic
@@ -520,6 +510,7 @@ recruit_character = EQS_flash_magnus
 recruit_character = EQS_rainbowdash
 recruit_character = EQS_captain_artemis
 recruit_character = EQS_kittyhawk
+recruit_character = EQS_starswirl
 recruit_character = EQS_maudpie
 recruit_character = EQS_limestone
 recruit_character = EQS_zecora
@@ -527,7 +518,8 @@ recruit_character = EQS_rarity
 recruit_character = EQS_wonderbolts
 recruit_character = EQS_sentinel
 recruit_character = EQS_fizzlepop
-recruit_character = EQS_grannysmith
+recruit_character = EQS_stygian
+recruit_character = EQS_meadowbrook
 recruit_character = EQS_spitfire
 recruit_character = EQS_fluttershy
 recruit_character = EQS_flakesnow

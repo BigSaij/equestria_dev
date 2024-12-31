@@ -1,5 +1,7 @@
 add_namespace = equestria
 add_namespace = equestria_prewar
+add_namespace = equestria_education
+add_namespace = equestria_moonshine
 add_namespace = equestria_flavor
 add_namespace = equestria_journal
 add_namespace = equestria_civwar
@@ -49,6 +51,479 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_prewar.3.a
+	}
+}
+
+
+
+country_event = {
+	id = equestria_prewar.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_prewar.5" }
+	title = equestria_prewar.5.t
+	desc = equestria_prewar.5.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_prewar.5.a
+		set_country_flag = EQS_new_smile_director
+	}
+}
+
+country_event = {
+	id = equestria_education.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_education.1" }
+	title = equestria_education.1.t
+	desc = equestria_education.1.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_education.1.a
+		set_country_flag = EQS_education_reforms_started
+		custom_effect_tooltip = EQS_neighsay_unlocked_tt
+		hidden_effect = {
+			country_event = {
+				id = equestria_education.2
+				days = 15
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_education.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_education.2" }
+	title = equestria_education.2.t
+	desc = equestria_education.2.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_education.2.a
+		add_ideas = EQS_education_reform_1
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = EQS_neighsay
+				}
+				country_event = {
+					id = equestria_education.7
+					days = 240
+				}
+			}
+			else = {
+				country_event = {
+					id = equestria_education.7
+					days = 360
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_education.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_education.7" }
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		if = {
+			limit = {
+				has_war = no
+			}
+			if = {
+				limit = {
+					has_idea = EQS_education_reform_1
+				}
+				country_event = equestria_education.3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.1" }
+	title = equestria_moonshine.1.t
+	desc = equestria_moonshine.1.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.1.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.2
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.2" }
+	title = equestria_moonshine.2.t
+	desc = equestria_moonshine.2.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.2.a
+		custom_effect_tooltip = EQS_luna_reforms_support_tt
+		set_country_flag = EQS_moonshine_reforms_shared
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = equestria_moonshine.2.b
+		custom_effect_tooltip = EQS_luna_reforms_independent_tt
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.3
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.3" }
+	title = equestria_moonshine.3.t
+	desc = equestria_moonshine.3.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.3.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.4
+				days = 30
+			}
+		}
+	}
+	option = {
+		name = equestria_moonshine.3.b
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.4
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.4" }
+	title = equestria_moonshine.4.t
+	desc = equestria_moonshine.4.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.4.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.5
+				days = 30
+			}
+		}
+	}
+	option = {
+		name = equestria_moonshine.4.b
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.5
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.5" }
+	title = equestria_moonshine.5.t
+	desc = equestria_moonshine.5.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.5.a
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = EQS_new_smile_director
+				}
+				country_event = {
+					id = equestria_moonshine.6
+					days = 15
+				}
+			}
+			else = {
+				country_event = {
+					id = equestria_moonshine.9
+					days = 30
+				}
+			}
+		}
+	}
+	option = {
+		name = equestria_moonshine.5.b
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = EQS_new_smile_director
+				}
+				country_event = {
+					id = equestria_moonshine.6
+					days = 15
+				}
+			}
+			else = {
+				country_event = {
+					id = equestria_moonshine.9
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.6" }
+	title = equestria_moonshine.6.t
+	desc = equestria_moonshine.6.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.6.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.7
+				days = 10
+			}
+		}
+	}
+	option = {
+		name = equestria_moonshine.6.b
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.9
+				days = 15
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.7" }
+	title = equestria_moonshine.7.t
+	desc = equestria_moonshine.7.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.7.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.8
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.8" }
+	title = equestria_moonshine.8.t
+	desc = equestria_moonshine.8.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.8.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.12
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.9" }
+	title = equestria_moonshine.9.t
+	desc = equestria_moonshine.9.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.9.a
+		hidden_effect = {
+			country_event = equestria_moonshine.10
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.10" }
+	title = equestria_moonshine.10.t
+	desc = equestria_moonshine.10.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.10.a
+		hidden_effect = {
+			country_event = equestria_moonshine.11
+		}
+	}
+	option = {
+		name = equestria_moonshine.10.b
+		hidden_effect = {
+			country_event = equestria_moonshine.13
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.11" }
+	title = equestria_moonshine.11.t
+	desc = equestria_moonshine.11.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.11.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.12
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.12" }
+	title = equestria_moonshine.12.t
+	desc = equestria_moonshine.12.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.12.a
+		custom_effect_tooltip = EQS_side_equestria_tt
+		hidden_effect = {
+			EQS_NLR_civil_war = yes
+			country_event = { id = equestria_civwar.6 days = 11 }
+			country_event = { id = equestria_civwar.7 days = 13 }
+			country_event = { id = equestria_civwar.8 days = 14 }
+			load_focus_tree = EQS_civilwar_tree
+			complete_national_focus = EQS_civil_war_start
+		}
+	}
+	option = {
+		name = equestria_moonshine.12.b
+		trigger = { is_ai = no }
+		custom_effect_tooltip = EQS_side_lunar_empire_tt
+		hidden_effect = {
+			EQS_NLR_civil_war = yes
+			NLR = {
+				country_event = { id = equestria_civwar.6 days = 10 }
+				country_event = { id = equestria_civwar.7 days = 12 }
+				country_event = { id = equestria_civwar.8 days = 13 }
+			}
+			NLR = {
+				change_tag_from = ROOT
+			}
+			load_focus_tree = EQS_civilwar_tree
+			complete_national_focus = EQS_civil_war_start
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.13" }
+	title = equestria_moonshine.13.t
+	desc = equestria_moonshine.13.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.13.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_moonshine.14
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.14" }
+	title = equestria_moonshine.14.t
+	desc = equestria_moonshine.14.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.14.a
+		add_country_leader_role = {
+			character = EQS_princess_celestia_and_luna
+			promote_leader = yes
+			country_leader = {
+				desc = "POLITICS_CELESTIA_LUNA_DESC"
+				ideology = alicornrule
+				expire = "1965.1.1.1"
+				traits = { princesses_of_ponies }
+			}
+		}
+		swap_ideas = {
+			remove_idea = EQS_thestral_divide
+			add_idea = EQS_full_thestral_integration
+		}
+		add_ideas = EQS_political_disorder
+		add_stability = -0.2
+		custom_effect_tooltip = EQS_additional_foci_tt
+		set_country_flag = EQS_post_luna_reforms
+		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			set_global_flag = equestria_diarchy_formed
+			BAT = {
+				country_event = bat.16
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_moonshine.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.15" }
+	title = equestria_moonshine.15.t
+	desc = equestria_moonshine.15.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_moonshine.15.a
 	}
 }
 

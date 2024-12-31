@@ -193,6 +193,61 @@ leader_traits = {
 		experience_gain_air = @chief_experience_gain_high
 		foreign_subversive_activites = -0.15
 		army_bonus_air_superiority_factor = 0.15
+		command_cap_increase = @tier3_cp_cap_increase
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	element_of_generosity = {
+		random = no
+		army_morale_factor = 0.05
+		winter_attrition_factor = -0.1
+		heat_attrition_factor = -0.1
+		command_cap_increase = @tier1_cp_cap_increase
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	element_of_kindness = {
+		random = no
+		attrition = -0.1
+		experience_gain_army_unit_factor = 0.1
+		experience_loss_factor = -0.1
+		command_cap_increase = @tier1_cp_cap_increase
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	pillar_strength = {
+		random = no
+		dig_in_speed_factor = 0.25
+		pocket_penalty = -0.1
+		command_cap_increase = @tier2_cp_cap_increase
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	pillar_healing = {
+		random = no
+		supply_consumption_factor = -0.1
+		out_of_supply_factor = -0.1
+		army_morale_factor = 0.05
+		command_cap_increase = @tier1_cp_cap_increase
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	former_storm_commander = {
+		random = no
+		air_superiority_bonus_in_combat = 0.1
+		army_speed_factor = 0.1
+		org_loss_when_moving = -0.1
+		command_cap_increase = @tier2_cp_cap_increase
 		ai_will_do = {
 			factor = 1
 		}
@@ -204,26 +259,7 @@ leader_traits = {
 		army_org_factor = 0.05
 		land_night_attack = 0.05
 		army_speed_factor = 0.05
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	element_of_kindness = {
-		random = no
-		attrition = -0.1
-		experience_gain_army_unit_factor = 0.1
-		experience_loss_factor = -0.1
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	element_of_generosity = {
-		random = no
-		army_morale_factor = 0.05
-		winter_attrition_factor = -0.1
-		heat_attrition_factor = -0.1
+		command_cap_increase = @tier1_cp_cap_increase
 		ai_will_do = {
 			factor = 1
 		}
@@ -232,9 +268,42 @@ leader_traits = {
 	element_of_laughter = {
 		random = no
 		max_dig_in_factor = 0.1
-		supply_consumption_factor = -0.1
-		army_artillery_attack_factor = 0.05
+		army_artillery_attack_factor = 0.1
 		army_artillery_defence_factor = 0.1
+		command_cap_increase = @tier2_cp_cap_increase
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	commando_leader = {
+		random = no
+		special_forces_attack_factor = 0.1
+		special_forces_defence_factor = 0.1
+		special_forces_out_of_supply_factor = -0.1
+		command_cap_increase = @tier3_cp_cap_increase
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	earth_pony_commando = {
+		random = no
+		army_infantry_attack_factor = 0.1
+		army_infantry_defence_factor = 0.1
+		org_loss_at_low_org_factor = -0.1
+		command_cap_increase = @tier2_cp_cap_increase
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	aerial_enthusiast = {
+		random = no
+		air_accidents_factor = -0.1
+		air_home_defence_factor = 0.1
+		air_untrained_pilots_penalty_factor = -0.1
+		command_cap_increase = @tier1_cp_cap_increase
 		ai_will_do = {
 			factor = 1
 		}

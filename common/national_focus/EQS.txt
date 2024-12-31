@@ -39,6 +39,7 @@ focus_tree = {
 	continuous_focus_position = { x = 1800 y = 1800 }
 	shared_focus = EQS_equestria_survives
 	shared_focus = EQS_new_equestrian_military
+	shared_focus = EQS_new_equestrian_economy
 }
 
 ##################
@@ -368,9 +369,20 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_industry_innovation"
-		add_timed_idea = {
-			idea = EQS_innovating_industry
-			days = 365
+		if = {
+			limit = {
+				has_idea = EQS_flim_flam
+			}
+			add_timed_idea = {
+				idea = EQS_innovating_industry
+				days = 540
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = EQS_innovating_industry
+				days = 365
+			}
 		}
 		add_tech_bonus = {
 			name = industrial_bonus
@@ -467,6 +479,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_military_industry_projects"
+		custom_effect_tooltip = EQS_milfactories_unlocked_tt
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -529,13 +542,13 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_modernize_education"
-		country_event = equestria.39
+		country_event = equestria_education.1
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
-	id = EQS_streamline_bureaucracy
+	id = EQS_expand_bureaucracy
 	icon = GFX_goal_ease_EEA
 	x = 2
 	y = 1
@@ -544,11 +557,14 @@ shared_focus = {
 	prerequisite = {
 		focus = EQS_princesses_and_ponies
 	}
+	available = {
+		has_country_flag = EQS_bureaucratic_overhaul_started
+	}
 	ai_will_do = {
 		factor = 80
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_streamline_bureaucracy"
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_expand_bureaucracy"
 		country_event = equestria.43
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -559,13 +575,13 @@ shared_focus = {
 	icon = GFX_goal_EEA
 	x = -1
 	y = 1
-	relative_position_id = EQS_streamline_bureaucracy
+	relative_position_id = EQS_expand_bureaucracy
 	cost = 8
 	prerequisite = {
 		focus = EQS_modernize_education
 	}
 	prerequisite = {
-		focus = EQS_streamline_bureaucracy
+		focus = EQS_expand_bureaucracy
 	}
 	ai_will_do = {
 		factor = 80
@@ -582,10 +598,10 @@ shared_focus = {
 	icon = GFX_goal_eqc_shelter_celestia
 	x = 1
 	y = 1
-	relative_position_id = EQS_streamline_bureaucracy
+	relative_position_id = EQS_expand_bureaucracy
 	cost = 8
 	prerequisite = {
-		focus = EQS_streamline_bureaucracy
+		focus = EQS_expand_bureaucracy
 	}
 	ai_will_do = {
 		factor = 80
@@ -629,6 +645,9 @@ shared_focus = {
 	cost = 10
 	prerequisite = {
 		focus = EQS_pony_summit
+	}
+	available = {
+		has_country_flag = EQS_new_royal_captain
 	}
 	ai_will_do = {
 		factor = 200
@@ -1938,7 +1957,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_equestria_survives
 	icon = GFX_goal_news
-	x = 12
+	x = 18
 	y = 0
 	cost = 4
 	ai_will_do = {
@@ -3062,6 +3081,137 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = EQS_new_equestrian_economy
+	icon = GFX_goal_news
+	x = 8
+	y = 0
+	cost = 4
+	available = {
+		has_completed_focus = EQS_celestial_monarchy
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_new_equestrian_economy"
+	}
+}
+
+shared_focus = {
+	id = EQS_integrate_EEA
+	icon = GFX_goal_news
+	x = -2
+	y = 1
+	relative_position_id = EQS_new_equestrian_economy
+	cost = 4
+	prerequisite = {
+		focus = EQS_new_equestrian_economy
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_integrate_EEA"
+	}
+}
+
+shared_focus = {
+	id = EQS_industrial_revitalization
+	icon = GFX_goal_news
+	x = 0
+	y = 1
+	relative_position_id = EQS_new_equestrian_economy
+	cost = 4
+	prerequisite = {
+		focus = EQS_new_equestrian_economy
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_industrial_revitalization"
+	}
+}
+
+shared_focus = {
+	id = EQS_military_rd_facilities
+	icon = GFX_goal_news
+	x = 2
+	y = 1
+	relative_position_id = EQS_new_equestrian_economy
+	cost = 4
+	prerequisite = {
+		focus = EQS_new_equestrian_economy
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_military_rd_facilities"
+	}
+}
+
+shared_focus = {
+	id = EQS_foreign_magical_studies
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_integrate_EEA
+	cost = 4
+	prerequisite = {
+		focus = EQS_integrate_EEA
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_foreign_magical_studies"
+	}
+}
+
+shared_focus = {
+	id = EQS_economic_reunification
+	icon = GFX_goal_news
+	x = 0
+	y = 1
+	relative_position_id = EQS_industrial_revitalization
+	cost = 4
+	prerequisite = {
+		focus = EQS_integrate_EEA
+	}
+	prerequisite = {
+		focus = EQS_industrial_revitalization
+	}
+	prerequisite = {
+		focus = EQS_military_rd_facilities
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_economic_reunification"
+	}
+}
+
+shared_focus = {
+	id = EQS_defensive_infrastructure
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_military_rd_facilities
+	cost = 4
+	prerequisite = {
+		focus = EQS_military_rd_facilities
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_defensive_infrastructure"
+	}
+}
+
+shared_focus = {
 	id = EQS_new_equestrian_military
 	icon = GFX_goal_news
 	x = 30
@@ -3233,7 +3383,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_magitech_expertise
 	icon = GFX_goal_news
-	x = -2
+	x = -1
 	y = 1
 	relative_position_id = EQS_sunset_doctrine
 	cost = 4
