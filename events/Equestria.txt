@@ -54,7 +54,21 @@ country_event = {
 	}
 }
 
-
+country_event = {
+	id = equestria_prewar.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_prewar.4" }
+	title = equestria_prewar.4.t
+	desc = equestria_prewar.4.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_prewar.4.a
+		set_country_flag = EQS_new_royal_captain
+		custom_effect_tooltip = EQS_flashmagnus_stats_tt
+		custom_effect_tooltip = EQS_smile_decision_unlocked_tt
+	}
+}
 
 country_event = {
 	id = equestria_prewar.5
@@ -67,6 +81,7 @@ country_event = {
 	option = {
 		name = equestria_prewar.5.a
 		set_country_flag = EQS_new_smile_director
+		custom_effect_tooltip = EQS_sweetiedrops_unlocked_tt
 	}
 }
 
@@ -171,6 +186,9 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
+		trigger = {
+			has_country_flag = EQS_PHOENIX_POSTRELEASE
+		}
 		name = equestria_moonshine.2.a
 		custom_effect_tooltip = EQS_luna_reforms_support_tt
 		set_country_flag = EQS_moonshine_reforms_shared
@@ -198,6 +216,8 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_moonshine.3.a
+		custom_effect_tooltip = EQS_moonshine_ecolaw_tt
+		set_country_flag = EQS_moonshine_ecolaw_upgrade
 		hidden_effect = {
 			country_event = {
 				id = equestria_moonshine.4
@@ -207,6 +227,8 @@ country_event = {
 	}
 	option = {
 		name = equestria_moonshine.3.b
+		custom_effect_tooltip = EQS_moonshine_production_tt
+		set_country_flag = EQS_moonshine_production_upgrade
 		hidden_effect = {
 			country_event = {
 				id = equestria_moonshine.4
@@ -226,6 +248,8 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_moonshine.4.a
+		custom_effect_tooltip = EQS_moonshine_moblaw_tt
+		set_country_flag = EQS_moonshine_moblaw_upgrade
 		hidden_effect = {
 			country_event = {
 				id = equestria_moonshine.5
@@ -235,6 +259,8 @@ country_event = {
 	}
 	option = {
 		name = equestria_moonshine.4.b
+		custom_effect_tooltip = EQS_moonshine_militia_tt
+		set_country_flag = EQS_moonshine_militia_upgrade
 		hidden_effect = {
 			country_event = {
 				id = equestria_moonshine.5
@@ -254,6 +280,8 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_moonshine.5.a
+		custom_effect_tooltip = EQS_moonshine_aircraft_tt
+		set_country_flag = EQS_moonshine_aircraft_upgrade
 		hidden_effect = {
 			if = {
 				limit = {
@@ -274,6 +302,8 @@ country_event = {
 	}
 	option = {
 		name = equestria_moonshine.5.b
+		custom_effect_tooltip = EQS_moonshine_infiltrators_tt
+		set_country_flag = EQS_moonshine_infiltrators_upgrade
 		hidden_effect = {
 			if = {
 				limit = {
@@ -304,6 +334,8 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_moonshine.6.a
+		add_political_power = 100
+		custom_effect_tooltip = EQS_moonshine_investigation_tt
 		hidden_effect = {
 			country_event = {
 				id = equestria_moonshine.7
@@ -313,6 +345,7 @@ country_event = {
 	}
 	option = {
 		name = equestria_moonshine.6.b
+		custom_effect_tooltip = EQS_moonshine_normal_tt
 		hidden_effect = {
 			country_event = {
 				id = equestria_moonshine.9
@@ -332,6 +365,19 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_moonshine.7.a
+		add_stability = -0.1
+		add_political_power = -50
+		if = {
+			limit = {
+				has_idea = EQS_sweetie_drops
+			}
+			custom_effect_tooltip = EQS_moonshine_equestriabuff_tt
+			set_country_flag = EQS_moonshine_investigation_upgrade
+		}
+		else = {
+			custom_effect_tooltip = EQS_moonshine_negation_tt
+			set_country_flag = EQS_moonshine_investigation_normal
+		}
 		hidden_effect = {
 			country_event = {
 				id = equestria_moonshine.8
@@ -351,6 +397,8 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_moonshine.8.a
+		remove_ideas = EQS_princess_luna_idea
+		set_country_flag = EQS_civwar_canterlot_start
 		hidden_effect = {
 			country_event = {
 				id = equestria_moonshine.12
@@ -421,7 +469,14 @@ country_event = {
 	id = equestria_moonshine.12
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_moonshine.12" }
 	title = equestria_moonshine.12.t
-	desc = equestria_moonshine.12.d
+	desc = {
+		text = equestria_moonshine.12.d1
+		trigger = { NOT = { has_country_flag = EQS_civwar_canterlot_start } }
+	}
+	desc = {
+		text = equestria_moonshine.12.d2
+		trigger = { has_country_flag = EQS_civwar_canterlot_start }
+	}
 	picture = GFX_event_autumn
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3800,23 +3855,6 @@ country_event = {
 		set_country_flag = EQS_moonshine_resolved
 	}
 }
-
-country_event = {
-	id = equestria.85
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria.85" }
-	title = equestria.85.t
-	desc = equestria.85.d
-	picture = GFX_event_canterlot
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria.85.a
-		set_country_flag = EQS_new_royal_captain
-		custom_effect_tooltip = EQS_flashmagnus_stats_tt
-	}
-}
-
-
 
 country_event = { ###THIS IS THE EXACT MOMENT THAT PRINCESS CELESTIA BECOMES EMPRESS DAYBREAKER
 	id = equestria.1000

@@ -248,7 +248,6 @@ characters = {
 			advisor = {
 				slot = political_advisor
 				idea_token = EQS_sweetie_drops
-				cost = 200
 				allowed = {
 					original_tag = EQS
 				}
@@ -275,7 +274,6 @@ characters = {
 			advisor = {
 				slot = political_advisor
 				idea_token = EQS_sweetie_drops
-				cost = 200
 				allowed = {
 					original_tag = EQS
 				}

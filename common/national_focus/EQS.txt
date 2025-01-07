@@ -49,7 +49,7 @@ focus_tree = {
 shared_focus = {
 	id = EQS_pony_summit
 	icon = GFX_goal_crystal_heart
-	x = 12
+	x = 8
 	y = 0
 	cost = 8
 	
@@ -73,6 +73,9 @@ shared_focus = {
 	y = 1
 	relative_position_id = EQS_pony_summit
 	cost = 8
+	allow_branch = {
+		has_country_flag = EQS_PHOENIX_POSTRELEASE
+	}
 	prerequisite = {
 		focus = EQS_pony_summit
 	}
@@ -642,7 +645,10 @@ shared_focus = {
 	x = 8
 	y = 1
 	relative_position_id = EQS_pony_summit
-	cost = 10
+	cost = 8
+	allow_branch = {
+		has_country_flag = EQS_PHOENIX_POSTRELEASE
+	}
 	prerequisite = {
 		focus = EQS_pony_summit
 	}
