@@ -2485,4 +2485,8 @@ spriteTypes = {
 		name = "GFX_event_ponyville"
 		texturefile = "gfx/event_pictures/event_ponyville.tga"
 	}
+	spriteType = {
+		name = "GFX_event_rock_farmers"
+		texturefile = "gfx/event_pictures/ROC/event_rock_farmers.tga"
+	}
 }

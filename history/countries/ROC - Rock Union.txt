@@ -3,12 +3,16 @@
 set_research_slots = 3
 
 add_ideas = {
+	ROC_stoicism
+	ROC_learn_to_code
 	pony_race
 	modern_society
 	proper_science_base
 	no_lack_of_scientists
 	no_poverty
 }
+
+set_country_flag = has_custom_advisors
 
 set_technology = {
 	pony_race = 1
@@ -241,6 +245,10 @@ recruit_character = ROC_council_socialists
 recruit_character = ROC_igneous_rock_pie
 recruit_character = ROC_angry_southerners
 recruit_character = ROC_cloudy_quartz
+
+recruit_character = ROC_tuff_going
+recruit_character = ROC_rusty_tenure
+recruit_character = ROC_grrm_reference
 
 set_rule = {
 	can_generate_female_aces = yes

@@ -3,11 +3,11 @@ characters={
 		name = ROC_council_socialists
 		portraits = {
 			civilian = {
-				large="gfx/leaders/leader_unknown.dds"
+				large="gfx/leaders/ROC/Rock_Farmers.tga"
 			}
 		}
 		country_leader = {
-			ideology = leninism
+			ideology = primitive_communism
 			expire = "1965.1.1.1"
 			id = -1
 		}
@@ -16,13 +16,14 @@ characters={
 		name = ROC_igneous_rock_pie
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/leader_unknown.dds"
+				large = "gfx/leaders/ROC/Igneous.tga"
 			}
 		}
 		country_leader = {
-			ideology = despotism
+			ideology = theocracy_subideology
 			expire = "1965.1.1.1"
 			id = -1
+			traits = { ROC_patriarch }
 		}
 	}
 	ROC_angry_southerners = {
@@ -33,7 +34,7 @@ characters={
 			}
 		}
 		country_leader = {
-			ideology = nazism
+			ideology = fascism_ideology
 			expire = "1965.1.1.1"
 			id = -1
 		}
@@ -46,9 +47,54 @@ characters={
 			}
 		}
 		country_leader = {
-			ideology = conservatism
+			ideology = harmonic_theocracy
 			expire = "1965.1.1.1"
 			id = -1
+		}
+		gender = female
+	}
+	ROC_rusty_tenure = {
+		name = ROC_rusty_tenure
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ROC_rusty_tenure
+			allowed = {
+				original_tag = ROC
+			}
+			traits = {
+				ROC_rockology_dean
+			}
+		}
+	}
+	ROC_grrm_reference = {
+		name = ROC_grrm_reference
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ROC_grrm_reference
+			allowed = {
+				original_tag = ROC
+			}
+			traits = {
+				ROC_dealbroker
+			}
+		}
+	}
+	ROC_tuff_going = {
+		name = ROC_tuff_going
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
 		}
 		gender = female
 	}
