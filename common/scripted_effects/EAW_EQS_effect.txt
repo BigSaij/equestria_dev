@@ -1,3 +1,352 @@
+#ROOT is EQS
+EQS_NLR_civil_war = {
+	set_global_flag = equestrian_civil_war
+	news_event = { hours = 6 id = equestria_news.3 }
+	STG = {
+		country_event = { id = stalliongrad.5 days = 2 }
+	}
+	every_other_country = {
+		limit = {
+			OR = {
+				is_subject_of = ROOT
+				AND = { is_in_faction_with = ROOT is_subject = no }
+			}
+			NOT = {
+				original_tag = NLR
+			}
+		}
+		if = {
+			limit = { is_subject = yes is_ai = no }
+			set_rule = { can_decline_call_to_war = yes }
+		}
+		country_event = { id = solarempire.5 hours = 1 }
+	}
+	EQS_princess_luna = {
+		retire = yes
+	}
+	set_stability = 0.6
+	add_popularity = {
+		ideology = fascism
+		popularity = 0.1
+	}
+	add_popularity = {
+		ideology = communism
+		popularity = 0.1
+	}
+	every_state = {
+		limit = {
+			OR = {
+				region = 33
+				state = 221
+				region = 32
+				state = 83
+				region = 35
+				region = 34
+				region = 43
+				state = 120
+				state = 122
+				state = 111
+				state = 97
+				region = 57
+				state = 1
+				state = 5
+				region = 44
+				region = 42
+				region = 45
+				region = 62
+				state = 182
+				state = 177
+				state = 183
+				region = 69
+				region = 46
+				state = 661
+				state = 662
+				state = 653
+				state = 229
+				state = 167
+			}
+		}
+		add_core_of = NLR
+	}
+	every_state = {
+		limit = {
+			NOT = { is_core_of = NLR }
+			OR = {
+				is_core_of = EQS
+				is_claimed_by = EQS
+			}
+		}
+		add_claim_by = NLR
+	}
+	every_owned_state = {
+		limit = {
+			is_controlled_by = PREV
+			is_core_of = NLR
+		}
+		NLR = { transfer_state = PREV }
+	}
+	add_ideas = EQS_civil_war
+	NLR = {
+		every_controlled_state = {
+			teleport_armies = {
+				limit = { tag = EQS }
+			}
+		}
+	}
+	EQS = {
+		transfer_ship = {
+    		type = battle_cruiser
+    		target = NLR
+		}
+		transfer_ship = {
+    		type = battle_cruiser
+    		target = NLR
+		}
+		transfer_ship = {
+    		type = light_cruiser
+    		target = NLR
+		}
+		transfer_ship = {
+    		type = light_cruiser
+    		target = NLR
+		}
+		transfer_ship = {
+   			type = destroyer
+   	 		target = NLR
+		}
+		transfer_ship = {
+	    	type = destroyer
+	    	target = NLR
+		}
+		transfer_ship = {
+   			type = destroyer
+   			target = NLR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = NLR
+		}
+		transfer_ship = {
+   			type = destroyer
+   			target = NLR
+		}
+		transfer_ship = {
+			type = destroyer
+			target = NLR
+		}
+		transfer_ship = {
+   			type = destroyer
+   			target = NLR
+		}
+		transfer_ship = {
+	    	type = destroyer
+	    	target = NLR
+		}
+		add_equipment_to_stockpile = {
+			type = train_equipment_1
+			amount = -50
+		}
+	}
+	if = {
+		limit = {
+			BAT = {
+				has_country_flag = BAT_infiltrated_urban_centers
+			}
+		}
+		EQS = {
+			add_timed_idea = {
+				idea = BAT_infiltrate_urban_centers_idea
+				days = 180
+			}
+		}
+    }
+	if = {
+		limit = {
+			BAT = {
+				has_country_flag = BAT_academia_infiltration
+			}
+		}
+		EQS = {
+			add_timed_idea = {
+			    idea = BAT_academic_infiltration_idea
+				days = 180
+			}
+		}
+	}
+	if = {
+		limit = {
+			BAT = {
+				has_country_flag = BAT_terror_bombs
+			}
+		}
+		EQS = {
+			add_ideas = BAT_terror_bombing_idea
+		}
+	}
+	load_oob = "EQS_Civil_War"
+	EQS_NLR_bipen = { set_nationality =  NLR }
+	EQS_NLR_celenite = { set_nationality = NLR }
+	EQS_NLR_tempest_wind = { set_nationality = NLR }
+	EQS_NLR_midnight_oil = { set_nationality = NLR }
+	NLR = {
+		if = {
+			limit = { is_ai = yes }
+			Evil_unicorn_magic = yes
+		}
+		country_event = { id = lunas.2 days = 7 } #days to hours applied
+		country_event = equestria_debug.1
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+		load_oob = "NLR_Civil_War"
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			load_oob = "NLR_Civil_War_air_bba"
+		}
+		else = {
+			load_oob = "NLR_Civil_War_air_legacy"
+		}
+		add_ideas = EQS_civil_war
+		if = {
+			limit = { country_exists = EQS }
+			hidden_effect = {
+				create_wargoal = {
+					type = civil_war
+					target = EQS
+				}
+			}
+			declare_war_on = {
+				target = EQS type = civil_war
+			}
+			add_civil_war_target = EQS
+		}
+		add_ideas = NLR_fragile_rule_1
+		create_faction = NLR_lunar_hegemony
+		if = {
+		    limit = {
+			   	BAT = {
+				    has_country_flag = BAT_supplies
+				}
+			}
+			add_ideas = BAT_focus_on_supplies_idea
+		}
+		if = {
+		    limit = {
+			    BAT = {
+				    has_country_flag = BAT_weapons
+				}
+			}
+			add_ideas = BAT_focus_on_weaponry_idea
+		}
+		if = {
+		   	limit = {
+		    	BAT = {
+			    	has_country_flag = BAT_send_resources
+				}
+			}
+			add_offsite_building = {
+		           type = arms_factory
+		           level = 3
+			}
+		}
+		if = {
+	    	limit = {
+		   	    BAT = {
+			    	has_country_flag = BAT_sent_officers
+				}
+			}
+			every_unit_leader = {
+			    add_logistics = 1
+				add_planning = 1
+                add_defense = 1
+				add_attack = 1
+			}
+		}
+		if = {
+			limit = {
+				EQS = {
+					NOT = {
+						has_country_flag = EQS_moonshine_investigation_upgrade
+						has_country_flag = EQS_moonshine_investigation_normal
+					}
+				}
+			}
+			if = {
+				limit = {
+					EQS = {
+						has_country_flag = EQS_moonshine_ecolaw_upgrade
+					}
+				}
+				add_ideas = partial_economic_mobilisation
+			}
+			else_if = {
+				limit = {
+					EQS = {
+						has_country_flag = EQS_moonshine_production_upgrade
+					}
+				}
+				add_timed_idea = {
+					idea = EQS_NLR_moonshine_production_idea
+					days = 180
+				}
+			}
+			if = {
+				limit = {
+					EQS = {
+						has_country_flag = EQS_moonshine_moblaw_upgrade
+					}
+				}
+				add_ideas = limited_conscription
+			}
+			else_if = {
+				limit = {
+					EQS = {
+						has_country_flag = EQS_moonshine_militia_upgrade
+					}
+				}
+				load_oob = "NLR_moonshine_militia"
+			}
+			if = {
+				limit = {
+					EQS = {
+						has_country_flag = EQS_moonshine_aircraft_upgrade
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 50
+				}
+			}
+			else_if = {
+				limit = {
+					EQS = {
+						has_country_flag = EQS_moonshine_infiltrators_upgrade
+					}
+				}
+				load_oob = "NLR_moonshine_infiltrators"
+			}
+		}
+		else_if = {
+			limit = {
+				EQS = {
+					has_country_flag = EQS_moonshine_investigation_upgrade
+				}
+			}
+			add_timed_idea = {
+				idea = EQS_NLR_moonshine_debuff_idea
+				days = 180
+			}
+		}
+	}
+	BAT = {
+		country_event = {
+			id = bat.15
+		}
+	}
+	set_variable = { EQS_celestia_DB_meter = 3 }
+}
+
 EQS_remove_civil_war_ideas = {
 	remove_ideas = eqs_civil_war
 	hidden_effect = {
@@ -423,308 +772,6 @@ EQS_SOL_civil_war = {
 		#CES = { load_focus_tree = celestial_state_civil_war_focus }
 	}
 	#EQS_SOL_show_advisors = yes
-}
-
-#ROOT is EQS
-EQS_NLR_civil_war = {
-	set_global_flag = equestrian_civil_war
-	news_event = { hours = 6 id = equestria_news.3 }
-	country_event = { id = equestria_civwar.1 days = 10 }
-	STG = {
-		country_event = { id = stalliongrad.5 days = 2 }
-	}
-	every_other_country = {
-		limit = {
-			OR = {
-				is_subject_of = ROOT
-				AND = { is_in_faction_with = ROOT is_subject = no }
-			}
-			NOT = {
-				original_tag = NLR
-			}
-		}
-		if = {
-			limit = { is_subject = yes is_ai = no }
-			set_rule = { can_decline_call_to_war = yes }
-		}
-		country_event = { id = solarempire.5 hours = 1 }
-	}
-	EQS_princess_luna = {
-		retire = yes
-	}
-	set_stability = 0.6
-	add_popularity = {
-		ideology = fascism
-		popularity = 0.1
-	}
-	add_popularity = {
-		ideology = communism
-		popularity = 0.1
-	}
-	every_state = {
-		limit = {
-			OR = {
-				region = 33
-				state = 221
-				region = 32
-				state = 83
-				region = 35
-				region = 34
-				region = 43
-				state = 120
-				state = 122
-				state = 111
-				state = 97
-				region = 57
-				state = 1
-				state = 5
-				region = 44
-				region = 42
-				region = 45
-				region = 62
-				state = 182
-				state = 177
-				state = 183
-				region = 69
-				region = 46
-				state = 661
-				state = 662
-				state = 653
-				state = 229
-				state = 167
-				state = 67
-			}
-		}
-		add_core_of = NLR
-	}
-	every_state = {
-		limit = {
-			NOT = { is_core_of = NLR }
-			OR = {
-				is_core_of = EQS
-				is_claimed_by = EQS
-			}
-		}
-		add_claim_by = NLR
-	}
-	every_owned_state = {
-		limit = {
-			is_controlled_by = PREV
-			is_core_of = NLR
-		}
-		NLR = { transfer_state = PREV }
-	}
-	add_ideas = EQS_civil_war
-	NLR = {
-		every_controlled_state = {
-			teleport_armies = {
-				limit = { tag = EQS }
-			}
-		}
-	}
-	EQS = {
-		transfer_ship = {
-    		type = battleship
-    		target = NLR
-		}
-		transfer_ship = {
-    		type = battleship
-    		target = NLR
-		}
-		transfer_ship = {
-    		type = battle_cruiser
-    		target = NLR
-		}
-		transfer_ship = {
-    		type = battle_cruiser
-    		target = NLR
-		}
-		transfer_ship = {
-    		type = light_cruiser
-    		target = NLR
-		}
-		transfer_ship = {
-   			type = destroyer
-   	 		target = NLR
-		}
-		transfer_ship = {
-	    	type = destroyer
-	    	target = NLR
-		}
-		transfer_ship = {
-   			type = destroyer
-   			target = NLR
-		}
-		transfer_ship = {
-			type = destroyer
-			target = NLR
-		}
-		transfer_ship = {
-   			type = destroyer
-   			target = NLR
-		}
-		transfer_ship = {
-			type = destroyer
-			target = NLR
-		}
-		transfer_ship = {
-   			type = destroyer
-   			target = NLR
-		}
-		transfer_ship = {
-	    	type = destroyer
-	    	target = NLR
-		}
-		transfer_ship = {
-   			type = destroyer
-   	 		target = NLR
-		}
-		transfer_ship = {
-	    	type = destroyer
-	    	target = NLR
-		}
-		add_equipment_to_stockpile = {
-			type = train_equipment_1
-			amount = -50
-		}
-	}
-	if = {
-		limit = {
-			BAT = {
-				has_country_flag = BAT_infiltrated_urban_centers
-			}
-		}
-		EQS = {
-			add_timed_idea = {
-				idea = BAT_infiltrate_urban_centers_idea
-				days = 180
-			}
-		}
-    }
-	if = {
-		limit = {
-			BAT = {
-				has_country_flag = BAT_academia_infiltration
-			}
-		}
-		EQS = {
-			add_timed_idea = {
-			    idea = BAT_academic_infiltration_idea
-				days = 180
-			}
-		}
-	}
-	if = {
-		limit = {
-			BAT = {
-				has_country_flag = BAT_terror_bombs
-			}
-		}
-		EQS = {
-			add_ideas = BAT_terror_bombing_idea
-		}
-	}
-	load_oob = "EQS_Civil_War"
-	set_global_flag = EQS_Bipen_created
-	EQS_NLR_bipen = { set_nationality =  NLR }
-	set_global_flag = EQS_Selenite_created
-	EQS_NLR_celenite = { set_nationality = NLR }
-	set_global_flag = EQS_Tempest_Wind_created
-	EQS_NLR_tempest_wind = { set_nationality = NLR }
-	set_global_flag = EQS_Midnight_Oil_created
-	EQS_NLR_midnight_oil = { set_nationality = NLR }
-	NLR = {
-		if = {
-			limit = { is_ai = yes }
-			Evil_unicorn_magic = yes
-		}
-		country_event = { id = lunas.2 days = 7 }#days to hours applied
-		country_event = equestria_debug.1
-		country_event = { id = equestria_civwar.1 days = 10 } #rarity captured
-		set_stability = 0.7
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.1
-		}
-		load_oob = "NLR_Civil_War"
-		if = {
-			limit = { has_dlc = "By Blood Alone" }
-			load_oob = "NLR_Civil_War_air_bba"
-		}
-		else = {
-			load_oob = "NLR_Civil_War_air_legacy"
-		}
-		add_ideas = EQS_civil_war
-		if = {
-			limit = { country_exists = EQS }
-			hidden_effect = {
-				create_wargoal = {
-					type = civil_war
-					target = EQS
-				}
-			}
-			declare_war_on = {
-				target = EQS type = civil_war
-			}
-			add_civil_war_target = EQS
-		}
-		add_ideas = NLR_fragile_rule_1
-		create_faction = NLR_lunar_hegemony
-		if = {
-		    limit = {
-			   	BAT = {
-				    has_country_flag = BAT_supplies
-				}
-			}
-			NLR = {
-				add_ideas = BAT_focus_on_supplies_idea
-			}
-		}
-		if = {
-		    limit = {
-			    BAT = {
-				    has_country_flag = BAT_weapons
-				}
-			}
-			NLR = {
-				add_ideas = BAT_focus_on_weaponry_idea
-			}
-		}
-		if = {
-		   	limit = {
-		    	BAT = {
-			    	has_country_flag = BAT_send_resources
-				}
-			}
-			NLR = {
-				add_offsite_building = {
-		           	type = arms_factory
-		           	level = 3
-				}
-			}
-		}
-		if = {
-	    	limit = {
-		   	    BAT = {
-			    	has_country_flag = BAT_sent_officers
-				}
-			}
-			NLR = {
-				every_unit_leader = {
-			       	add_logistics = 1
-				   	add_planning = 1
-                   	add_defense = 1
-				   	add_attack = 1
-			    }
-			}
-		}
-	}
-	BAT = {
-		country_event = {
-			id = bat.15
-		}
-	}
-	set_variable = { EQS_celestia_DB_meter = 3 }
 }
 
 add_to_war_EQS_against_SOL = {

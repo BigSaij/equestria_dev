@@ -1,0 +1,51 @@
+on_actions = {
+	#FROM - Country (owner)
+	#ROOT - leader
+	#FROMFROM - original owner for exiled leaders
+	on_unit_leader_level_up = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { has_trait = rainbowdash_trait }
+				}
+				ROOT = {
+					add_attack = 1
+					add_defense = 1
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_trait = pinkie_pie_bae }
+				}
+				ROOT = {
+					add_logistics = 1
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_trait = rock_girl }
+				}
+				ROOT = {
+					add_defense = 1
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_trait = rock_farmer }
+				}
+				if = {
+					limit = {
+						has_character_flag = rock_farmer_upgrade_flag
+					}
+					ROOT = {
+						add_defense = 1
+					}
+					clr_character_flag = rock_farmer_upgrade_flag
+				}
+				else = {
+					set_character_flag = rock_farmer_upgrade_flag
+				}
+			}
+		}
+	}
+}

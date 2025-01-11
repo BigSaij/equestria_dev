@@ -42,7 +42,18 @@ leader_traits = {
 	absent_princess = {
 		random = no
 		stability_factor = -0.1
+		political_power_gain = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	absent_princess_2 = {
+		random = no
 		political_power_gain = -0.1
+		war_support_factor = 0.1
+		political_advisor_cost_factor = -0.1
 		
 		ai_will_do = {
 			factor = 1

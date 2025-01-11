@@ -412,8 +412,8 @@ leader_traits = {
 		trait_type = personality_trait
 		modifier = {
 			army_speed_factor = 0.1
-			modifier_army_sub_unit_pegasi_attack_factor = 0.05
-			modifier_army_sub_unit_pegasi_defence_factor = 0.05
+			modifier_army_sub_unit_pegasi_attack_factor = 0.1
+			modifier_army_sub_unit_pegasi_defence_factor = 0.1
 		}
 		new_commander_weight = { factor = 0 }
 	}
@@ -423,10 +423,10 @@ leader_traits = {
 		trait_type = personality_trait
 		
 		corps_commander_modifier = {
-			army_morale_factor = 0.05
-			terrain_penalty_reduction = 0.05
-			max_planning = -0.1
-			max_commander_army_size = -12
+			terrain_penalty_reduction = 0.1
+			max_planning = -0.2
+			max_commander_army_size = -18
+			custom_modifier_tooltip = EQS_rainbowdash_trait_tt
 		}
 	}
 	
@@ -434,9 +434,9 @@ leader_traits = {
 		type = all
 		trait_type = personality_trait
 		modifier = {
-			land_reinforce_rate = 0.05
 			army_morale_factor = 0.05
 			army_speed_factor = 0.1
+			custom_modifier_tooltip = EQS_pinkiepie_trait_tt
 		}
 		new_commander_weight = { factor = 0 }
 	}
@@ -447,8 +447,8 @@ leader_traits = {
 
 		modifier = {
 			dig_in_speed_factor = 0.1
-			land_reinforce_rate = 0.02
-			max_dig_in_factor = 0.125
+			max_dig_in_factor = 0.15
+			custom_modifier_tooltip = EQS_rocksci_trait_tt
 		}
 
 		new_commander_weight = { factor = 0 }
@@ -460,6 +460,7 @@ leader_traits = {
 		modifier = {
 			dig_in_speed_factor = 0.05
 			max_dig_in_factor = 0.1
+			custom_modifier_tooltip = EQS_rockfarmer_trait_tt
 		}
 		new_commander_weight = { factor = 0 }
 	}
