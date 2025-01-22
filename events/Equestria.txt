@@ -621,6 +621,19 @@ country_event = {
 			add = absent_princess
 		}
 		remove_country_leader_trait = stout_defender
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = EQS_new_smile_director
+					}
+				}
+				country_event = {
+					id = equestria_civwar.30
+					days = 7
+				}
+			}
+		}			
 	}
 	option = {
 		name = equestria_civwar.1.b
@@ -1201,8 +1214,7 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_civwar.16.a
-		add_stability = 0.05
-		add_war_support = 0.05
+		add_stability = 0.1
 		add_political_power = -50
 	}
 	option = {
@@ -1211,7 +1223,7 @@ country_event = {
 			ideology = fascism
 			popularity = 0.05
 		}
-		add_ideas = EQS_absolute_order
+		add_ideas = EQS_securing_order
 	}
 }
 
@@ -1219,74 +1231,29 @@ country_event = {
 	id = equestria_civwar.17
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.17" }
 	title = equestria_civwar.17.t
-	desc = {
-		text = equestria_civwar.17.d1
-		trigger = {
-			has_country_flag = EQS_western_strategy
-		}
-	}
-	desc = {
-		text = equestria_civwar.17.d2
-		trigger = {
-			has_country_flag = EQS_central_strategy
-		}
-	}
+	desc = equestria_civwar.17.d
 	picture = GFX_event_lunar_republic
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestria_civwar.17.a
-		if = {
+		every_owned_state = {
 			limit = {
-				has_country_flag = EQS_western_strategy
-			}
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 170
-						state = 132
-						state = 126
-						state = 169
-					}
+				OR = {
+					state = 170
+					state = 132
+					state = 126
+					state = 169
 				}
-				add_manpower = 15000
 			}
+			add_manpower = 15000
 		}
-		else_if = {
-			limit = {
-				has_country_flag = EQS_central_strategy
-			}
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 170
-						state = 132
-						state = 126
-						state = 169
-					}
-				}
-				add_manpower = 8000
-			}
-		}
-		add_stability = 0.05
-		add_political_power = -25
+		add_stability = 0.1
 	}
 	option = {
 		name = equestria_civwar.17.b
 		add_war_support = 0.1
-		add_stability = -0.05
-		if = {
-			limit = {
-				has_country_flag = EQS_western_strategy
-			}
-			add_manpower = 50000
-		}
-		else_if = {
-			limit = {
-				has_country_flag = EQS_central_strategy
-			}
-			add_manpower = 25000
-		}
+		add_manpower = 50000
 	}
 }
 
@@ -1300,22 +1267,17 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_civwar.18.a
-		add_political_power = -150
+		add_political_power = 75
 		add_stability = 0.1
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.05
-		}
 	}
 	option = {
 		name = equestria_civwar.18.b
-		add_stability = 0.05
-		add_war_support = 0.05
+		add_political_power = -50
 		add_ideas = EQS_wartime_administration
 	}
 	option = {
 		name = equestria_civwar.18.c
-		add_political_power = 100
+		add_political_power = -150
 		add_ideas = EQS_militarized_administration
 		add_popularity = {
 			ideology = fascism
@@ -1335,7 +1297,7 @@ country_event = {
 	option = {
 		name = equestria_civwar.19.a
 		add_political_power = 50
-		add_stability = 0.05
+		add_war_support = 0.1
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.05
@@ -1347,8 +1309,8 @@ country_event = {
 	}
 	option = {
 		name = equestria_civwar.19.c
-		add_political_power = -50
-		add_stability = -0.05
+		add_political_power = -100
+		add_war_support = -0.1
 		add_ideas = EQS_militarized_laws
 		add_popularity = {
 			ideology = fascism
@@ -1735,6 +1697,21 @@ country_event = {
 }
 
 country_event = {
+	id = equestria_civwar.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.30" }
+	title = equestria_civwar.30.t
+	desc = equestria_civwar.30.d
+	picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_civwar.30.a
+		set_country_flag = EQS_new_smile_director
+		custom_effect_tooltip = EQS_sweetiedrops_unlocked_tt
+	}
+}
+
+country_event = {
 	id = equestria_civwar_flavor.1
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar_flavor.1" }
 	title = equestria_civwar_flavor.1.t
@@ -1783,6 +1760,95 @@ country_event = {
 }
 
 country_event = {
+	id = equestria_civwar_flavor.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar_flavor.3" }
+	title = equestria_civwar_flavor.3.t
+	desc = equestria_civwar_flavor.3.d
+	picture = GFX_event_foggy_forest
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_civwar_flavor.3.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_civwar_flavor.8
+				days = 50
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_civwar_flavor.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar_flavor.4" }
+	title = equestria_civwar_flavor.4.t
+	desc = equestria_civwar_flavor.4.d
+	picture = GFX_event_foggy_forest
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_civwar_flavor.4.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_civwar_flavor.8
+				days = 50
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_civwar_flavor.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar_flavor.5" }
+	title = equestria_civwar_flavor.5.t
+	desc = equestria_civwar_flavor.5.d
+	picture = GFX_event_foggy_forest
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_civwar_flavor.5.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_civwar_flavor.8
+				days = 50
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_civwar_flavor.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar_flavor.6" }
+	title = equestria_civwar_flavor.6.t
+	desc = equestria_civwar_flavor.6.d
+	picture = GFX_event_foggy_forest
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_civwar_flavor.6.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_civwar_flavor.8
+				days = 50
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_civwar_flavor.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar_flavor.7" }
+	title = equestria_civwar_flavor.7.t
+	desc = equestria_civwar_flavor.7.d
+	picture = GFX_event_foggy_forest
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_civwar_flavor.7.a
+	}
+}
+
+country_event = {
 	id = equestria_civwar_flavor.8
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar_flavor.8" }
 	hidden = yes
@@ -1808,7 +1874,73 @@ country_event = {
 						EQS_civwar_manesix_counter = 1
 					}
 				}
-				country_event = equestria_civwar_flavor.2
+				if = {
+					limit = {
+						NLR = {
+							controls_state = 75
+						}
+					}
+					country_event = equestria_civwar_flavor.2
+				}
+				else = {
+					add_to_variable = {
+						var = EQS_civwar_manesix_counter
+						value = 1
+					}
+					country_event = equestria_civwar_flavor.3
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						EQS_civwar_manesix_counter = 2
+					}
+				}
+				country_event = equestria_civwar_flavor.3
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						EQS_civwar_manesix_counter = 3
+					}
+				}
+				country_event = equestria_civwar_flavor.4
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						EQS_civwar_manesix_counter = 4
+					}
+				}
+				if = {
+					limit = {
+						controls_state = 2
+					}
+					country_event = equestria_civwar_flavor.5
+				}
+				else = {
+					add_to_variable = {
+						var = EQS_civwar_manesix_counter
+						value = 1
+					}
+					country_event = equestria_civwar_flavor.6
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						EQS_civwar_manesix_counter = 5
+					}
+				}
+				country_event = equestria_civwar_flavor.6
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						EQS_civwar_manesix_counter = 6
+					}
+				}
+				country_event = equestria_civwar_flavor.7
 			}
 			add_to_variable = {
 				var = EQS_civwar_manesix_counter

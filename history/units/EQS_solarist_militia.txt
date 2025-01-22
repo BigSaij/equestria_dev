@@ -17,62 +17,33 @@
 	support = {
 		engineer = { x = 0 y = 0 }
 		artillery = { x = 0 y = 1 }
-		recon = { x = 0 y = 2 }
 	}
 }
 
 units = {
     division = {
-		name = "Solarist Militia 1"
+		name = "Solarist Militia"
 		location = 6280
 		division_template = "Solarist Militia"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "Solarist Militia 2"
+		name = "Solarist Militia"
 		location = 6280
 		division_template = "Solarist Militia"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "Solarist Militia 3"
+		name = "Solarist Militia"
 		location = 6280
 		division_template = "Hippogriffian Exiles"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "Solarist Militia 4"
-		location = 6280
-		division_template = "Solarist Militia"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "Solarist Militia 5"
-		location = 6280
-		division_template = "Solarist Militia"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "Solarist Militia 6"
-		location = 6280
-		division_template = "Solarist Militia"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "Solarist Militia 7"
-		location = 6280
-		division_template = "Solarist Militia"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "Solarist Militia 8"
+		name = "Solarist Militia"
 		location = 6280
 		division_template = "Solarist Militia"
 		start_experience_factor = 0.3

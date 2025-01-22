@@ -613,12 +613,12 @@ ideas = {
 			removal_cost = -1
 			picture = EQS_war_plan_equestria
 			modifier = {
+				stability_factor = -0.1
 				consumer_goods_factor = -0.1
 				conversion_cost_civ_to_mil_factor = -0.1
 				production_speed_arms_factory_factor = 0.1
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
-				war_support_factor = 0.1
 			}
 		}
 		EQS_warplan_normal = {
@@ -635,13 +635,12 @@ ideas = {
 			picture = EQS_war_plan_equestria
 			modifier = {
 				consumer_goods_factor = -0.2
-				conscription = 0.01
 				conversion_cost_civ_to_mil_factor = -0.15
 				production_speed_arms_factory_factor = 0.15
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
-				war_support_weekly = -0.0025
-				stability_weekly = -0.0025
+				war_support_weekly = -0.005
+				stability_weekly = -0.005
 			}
 		}
 		EQS_warplan_extreme = {
@@ -659,17 +658,16 @@ ideas = {
 			modifier = {
 				fascism_drift = 0.05
 				consumer_goods_factor = -0.3
-				conscription = 0.03
 				conversion_cost_civ_to_mil_factor = -0.2
 				production_speed_arms_factory_factor = 0.2
-				industrial_capacity_factory = 0.15
-				industrial_capacity_dockyard = 0.15
-				local_resources_factor = 0.05
-				war_support_weekly = -0.005
-				stability_weekly = -0.005
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				local_resources_factor = 0.1
+				war_support_weekly = -0.01
+				stability_weekly = -0.01
 			}
 		}
-		EQS_absolute_order = {
+		EQS_securing_order = {
 			allowed = {
 				always = no
 			}
@@ -685,12 +683,11 @@ ideas = {
 			removal_cost = -1
 			picture = EQS_order
 			modifier = {
-				fascism_drift = 0.05
-				conscription_factor = 0.05
+				conscription_factor = -0.1
 				resistance_target = -0.1
-				stability_factor = 0.15
+				stability_factor = 0.1
 				war_support_factor = 0.1
-				training_time_army_factor = -0.05
+				training_time_army_factor = -0.1
 			}
 		}
 		EQS_wartime_administration = {
@@ -707,10 +704,10 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			modifier = {
 				political_power_gain = 0.1
-				political_advisor_cost_factor = -0.1
-				economy_cost_factor = -0.1
-				trade_laws_cost_factor = -0.1
-				mobilization_laws_cost_factor = -0.1
+				army_chief_cost_factor = -0.2
+				navy_chief_cost_factor = -0.2
+				air_chief_cost_factor = -0.2
+				high_command_cost_factor = -0.2
 			}
 		}
 		EQS_militarized_administration = {
@@ -727,11 +724,11 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			modifier = {
 				fascism_drift = 0.05
-				political_power_gain = 0.1
-				political_advisor_cost_factor = -0.2
-				economy_cost_factor = -0.2
-				trade_laws_cost_factor = -0.2
-				mobilization_laws_cost_factor = -0.2
+				political_power_gain = 0.2
+				army_chief_cost_factor = -0.5
+				navy_chief_cost_factor = -0.5
+				air_chief_cost_factor = -0.5
+				high_command_cost_factor = -0.5
 				command_power_gain = 0.2
 			}
 		}
@@ -750,8 +747,7 @@ ideas = {
 			modifier = {
 				resistance_damage_to_garrison = -0.1
 				war_stability_factor = 0.1
-				war_support_factor = 0.1
-				mobilization_speed = 0.05
+				mobilization_speed = 0.1
 			}
 		}
 		EQS_militarized_laws = {
@@ -767,14 +763,11 @@ ideas = {
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			modifier = {
-				surrender_limit = 0.05
-				war_support_factor = 0.15
-				war_stability_factor = 0.2
 				fascism_drift = 0.05
 				resistance_damage_to_garrison = -0.2
-				mobilization_speed = 0.1
-				army_core_defence_factor = 0.05
-				conscription_factor = 0.1
+				war_stability_factor = 0.2
+				mobilization_speed = 0.2
+				surrender_limit = 0.05
 			}
 		}
 		EQS_friendship_warfare = {
