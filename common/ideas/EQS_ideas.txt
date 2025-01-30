@@ -111,7 +111,10 @@ ideas = {
 				air_doctrine_cost_factor = 1
 				army_attack_factor = -0.1
 				army_org_factor = -0.1
-				army_leader_cost_factor = 2
+				max_command_power = -50
+				army_chief_cost_factor = -0.666
+				navy_chief_cost_factor = -0.666
+				air_chief_cost_factor = -0.666
 				custom_modifier_tooltip = ZES_military_blocked_tp
 			}
 			on_remove = {
@@ -131,8 +134,7 @@ ideas = {
 				naval_doctrine_cost_factor = 0.5
 				air_doctrine_cost_factor = 0.5
 				army_attack_factor = -0.1
-				army_org_factor = -0.1
-				army_leader_cost_factor = 1
+				max_command_power = -20
 			}
 		}
 		EQS_princess_luna_idea = {
@@ -784,10 +786,9 @@ ideas = {
 			picture = EQS_friendly_harmony
 			modifier = {
 				stability_factor = 0.1
-				army_defence_factor = 0.05
-				army_org_factor = 0.1
-				army_morale_factor = 0.1
 				war_support_factor = 0.1
+				army_morale_factor = 0.1
+				army_defence_factor = 0.05
 			}
 		}
 		EQS_thestral_military_integration = {
@@ -854,29 +855,6 @@ ideas = {
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			modifier = {
-				production_factory_max_efficiency_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.1
-				production_speed_arms_factory_factor = 0.1
-			}
-		}
-		EQS_civilwar_industry_bonus_temp = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			available = {
-				has_government = democratic
-				has_country_leader = {
-					ruling_only = yes
-					character = EQS_princess_celestia
-				}
-				has_war = yes
-			}
-			removal_cost = -1
-			picture = generic_pp_unity_bonus
-			modifier = {
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.2
 				production_speed_arms_factory_factor = 0.2
@@ -900,59 +878,12 @@ ideas = {
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			modifier = {
-				weekly_manpower = 200
-				mobilization_speed = 0.1
-				conscription_factor = 0.1
-			}
-		}
-		EQS_civilwar_conscription_bonus_temp = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			available = {
-				has_government = democratic
-				has_country_leader = {
-					ruling_only = yes
-					character = EQS_princess_celestia
-				}
-				has_war = yes
-			}
-			removal_cost = -1
-			picture = generic_pp_unity_bonus
-			modifier = {
 				weekly_manpower = 500
 				mobilization_speed = 0.25
 				conscription_factor = 0.2
 			}
 		}
 		EQS_civilwar_combat_bonus = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			available = {
-				has_government = democratic
-				has_country_leader = {
-					ruling_only = yes
-					character = EQS_princess_celestia
-				}
-				has_war = yes
-			}
-			removal_cost = -1
-			picture = generic_pp_unity_bonus
-			modifier = {
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
-				army_speed_factor = 0.1
-				breakthrough_factor = 0.01
-			}
-		}
-		EQS_civilwar_combat_bonus_temp = {
 			allowed = {
 				always = no
 			}

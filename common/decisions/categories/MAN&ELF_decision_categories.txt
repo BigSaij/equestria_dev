@@ -233,10 +233,7 @@ ELF_advisory_elections = {
 ELF_ask_for_states_back = {
 	icon = generic_political_actions
 	allowed = {
-		OR = {
-			original_tag = ELF
-			original_tag = EQS
-		}
+		original_tag = ELF
 	}
 	visible = {
 		NOT = {

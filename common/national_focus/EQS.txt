@@ -1104,7 +1104,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_civil_war_start
-	icon = GFX_goal_news
+	icon = GFX_goal_BAT_Her_Terrible_Swift_Sword
 	x = 12
 	y = 0
 	cost = 4
@@ -1118,7 +1118,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_rapid_equestrian_overhaul
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_factory
 	x = -1
 	y = 1
 	relative_position_id = EQS_civil_war_start
@@ -1150,7 +1150,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_emergency_military_reorganization
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_army
 	x = 1
 	y = 1
 	relative_position_id = EQS_civil_war_start
@@ -1183,7 +1183,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_military_government
-	icon = GFX_goal_news
+	icon = GFX_goal_eqc_shelter_celestia
 	x = 1
 	y = 1
 	relative_position_id = EQS_rapid_equestrian_overhaul
@@ -1199,13 +1199,46 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_military_government"
+		custom_effect_tooltip = EQS_staff_chiefs_upgrade_tt
+		hidden_effect = {
+			remove_trait = {
+				character = EQS_prince_blueblood
+				slot = army_chief
+				trait = ceremonial_officer
+			}
+			add_trait = {
+				character = EQS_prince_blueblood
+				slot = army_chief
+				trait = royal_officer
+			}
+			remove_trait = {
+				character = EQS_cranky_doodle
+				slot = navy_chief
+				trait = retired_captain
+			}
+			add_trait = {
+				character = EQS_cranky_doodle
+				slot = navy_chief
+				trait = fleet_admiral
+			}
+			remove_trait = {
+				character = EQS_spitfire
+				slot = air_chief
+				trait = wonderbolts_captain
+			}
+			add_trait = {
+				character = EQS_spitfire
+				slot = air_chief
+				trait = wonderbolts_captain_2
+			}
+		}
 		country_event = equestria_civwar.12
 	}
 }
 
 shared_focus = {
 	id = EQS_war_industry
-	icon = GFX_goal_news
+	icon = GFX_goal_eqs_star_energy
 	x = -3
 	y = 1
 	relative_position_id = EQS_military_government
@@ -1293,7 +1326,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_defense_of_equestria
-	icon = GFX_goal_news
+	icon = GFX_goal_support_equestria
 	x = -1
 	y = 1
 	relative_position_id = EQS_war_industry
@@ -1354,7 +1387,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_end_the_stagnation
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_pony_labour
 	x = 1
 	y = 1
 	relative_position_id = EQS_war_industry
@@ -1374,7 +1407,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_equestrian_warplan
-	icon = GFX_goal_news
+	icon = GFX_goal_eqs_warplan
 	x = 1
 	y = 1
 	relative_position_id = EQS_defense_of_equestria
@@ -1396,7 +1429,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_guns_against_nightmare
-	icon = GFX_goal_news
+	icon = GFX_goal_magical_weapon_focus
 	x = 0
 	y = 1
 	relative_position_id = EQS_equestrian_warplan
@@ -1409,30 +1442,16 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_guns_against_nightmare"
-		if = {
-			limit = {
-				has_country_flag = EQS_western_strategy
-			}
-			add_ideas = EQS_civilwar_industry_bonus
-		}
-		else_if = {
-			limit = {
-				has_country_flag = EQS_central_strategy
-			}
-			add_timed_idea = {
-				idea = EQS_civilwar_industry_bonus_temp
-				days = 150
-			}
-		}
-		else = {
-			custom_effect_tooltip = EQS_dependent_effects_tt
+		add_timed_idea = {
+			idea = EQS_civilwar_industry_bonus
+			days = 150
 		}
 	}
 }
 
 shared_focus = {
 	id = EQS_chaos_and_order
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_soldier
 	x = 0
 	y = 1
 	relative_position_id = EQS_military_government
@@ -1451,7 +1470,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_help_the_refugees
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_harmony
 	x = 0
 	y = 1
 	relative_position_id = EQS_chaos_and_order
@@ -1470,7 +1489,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_wartime_administration
-	icon = GFX_goal_news
+	icon = GFX_goal_ease_EEA
 	x = -1
 	y = 1
 	relative_position_id = EQS_help_the_refugees
@@ -1489,7 +1508,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_wartime_laws
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_nobility
 	x = 1
 	y = 1
 	relative_position_id = EQS_help_the_refugees
@@ -1508,7 +1527,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_together_against_nightmare
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_servicemare
 	x = 1
 	y = 1
 	relative_position_id = EQS_wartime_administration
@@ -1530,7 +1549,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_new_general_staff
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_unicorn
 	x = 3
 	y = 1
 	relative_position_id = EQS_military_government
@@ -1552,7 +1571,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_matter_of_thestrals
-	icon = GFX_goal_news
+	icon = GFX_goal_NLR_Indys_Breakdown
 	x = -1
 	y = 1
 	relative_position_id = EQS_new_general_staff
@@ -1571,7 +1590,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_deal_with_radicals
-	icon = GFX_goal_news
+	icon = GFX_goal_celestia_raising_the_sun
 	x = 1
 	y = 1
 	relative_position_id = EQS_new_general_staff
@@ -1590,7 +1609,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_aid_the_loyalists
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_ordnance
 	x = 1
 	y = 1
 	relative_position_id = EQS_matter_of_thestrals
@@ -1615,7 +1634,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_ponies_against_nightmare
-	icon = GFX_goal_news
+	icon = GFX_goal_derpy_conscription_eqs
 	x = 0
 	y = 1
 	relative_position_id = EQS_aid_the_loyalists
@@ -1628,30 +1647,16 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_ponies_against_nightmare"
-		if = {
-			limit = {
-				has_country_flag = EQS_western_strategy
-			}
-			add_ideas = EQS_civilwar_conscription_bonus
-		}
-		else_if = {
-			limit = {
-				has_country_flag = EQS_central_strategy
-			}
-			add_timed_idea = {
-				idea = EQS_civilwar_conscription_bonus_temp
-				days = 150
-			}
-		}
-		else = {
-			custom_effect_tooltip = EQS_dependent_effects_tt
+		add_timed_idea = {
+			idea = EQS_civilwar_conscription_bonus
+			days = 150
 		}
 	}
 }
 
 shared_focus = {
 	id = EQS_to_save_equestria
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_rising
 	x = 0
 	y = 1
 	relative_position_id = EQS_together_against_nightmare
@@ -1670,23 +1675,9 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_to_save_equestria"
-		if = {
-			limit = {
-				has_country_flag = EQS_western_strategy
-			}
-			add_ideas = EQS_civilwar_combat_bonus
-		}
-		else_if = {
-			limit = {
-				has_country_flag = EQS_central_strategy
-			}
-			add_timed_idea = {
-				idea = EQS_civilwar_combat_bonus_temp
-				days = 150
-			}
-		}
-		else = {
-			custom_effect_tooltip = EQS_dependent_effects_tt
+		add_timed_idea = {
+			idea = EQS_civilwar_combat_bonus
+			days = 150
 		}
 	}
 }

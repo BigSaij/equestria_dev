@@ -10141,7 +10141,6 @@ ELF_ask_for_states_back = {
 		allowed = {
 			OR = {
 				original_tag = ELF
-				original_tag = EQS
 				original_tag = CES
 			}
 		}

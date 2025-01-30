@@ -353,7 +353,7 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = EQS_prince_blueblood
-			cost = 50
+			cost = 150
 			allowed = {
 				original_tag = EQS
 			}
@@ -388,7 +388,7 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = EQS_sunset_shimmer
-			cost = 200
+			cost = 150
 			allowed = {
 				original_tag = EQS
 			}
@@ -404,7 +404,7 @@ characters = {
 		advisor = {
 			slot = navy_chief
 			idea_token = EQS_cranky_doodle
-			cost = 50
+			cost = 150
 			allowed = {
 				original_tag = EQS
 			}
@@ -423,7 +423,7 @@ characters = {
 		advisor = {
 			slot = air_chief
 			idea_token = EQS_spitfire
-			cost = 50
+			cost = 150
 			allowed = {
 				original_tag = EQS
 			}
@@ -478,7 +478,7 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			desc = EQS_RAINBOWDASH_GENERAL_DESC
+			desc = EQS_RAINBOW_GENERAL_DESC
 			visible = {
 				has_country_flag = EQS_wartime_generals
 				NOT = {
@@ -584,7 +584,7 @@ characters = {
 		advisor = {
 			slot = high_command 
 			idea_token = EQS_rockhoof
-			cost = 200
+			cost = 100
 			allowed = {
 				original_tag = EQS
 			}
@@ -782,7 +782,7 @@ characters = {
 			slot = high_command
 			idea_token = EQS_limestone
 			ledger = army
-			cost = 50
+			cost = 100
 			allowed = {
 				original_tag = EQS
 			}

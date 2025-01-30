@@ -621,6 +621,10 @@ country_event = {
 			add = absent_princess
 		}
 		remove_country_leader_trait = stout_defender
+		set_country_leader_description = {
+			ideology = democratic
+			desc = POLITICS_CELESTIA_CIVWAR_DESC
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -1155,11 +1159,11 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_civwar.13.a
+		add_political_power = 100
 		swap_ruler_traits = {
 			remove = absent_princess
 			add = absent_princess_2
 		}
-		add_political_power = 100
 	}
 }
 
@@ -1443,11 +1447,23 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.25" }
 	title = equestria_civwar.25.t
 	desc = equestria_civwar.25.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestria_civwar.25.a
+		every_state = {
+			limit = {
+				is_core_of = NLR
+			}
+			remove_core_of = NLR
+		}
+		every_state = {
+			limit = {
+				is_claimed_by = NLR
+			}
+			remove_claim_by = NLR
+		}
 		country_event = {
 			id = equestria_civwar.26
 			days = 2
@@ -1460,20 +1476,12 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.26" }
 	title = equestria_civwar.26.t
 	desc = equestria_civwar.26.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestria_civwar.26.a
-		if = {
-			limit = {
-				has_country_flag = EQS_western_strategy
-			}
-			set_capital = {
-				state = 3
-				remember_old_capital = no
-			}
-		}
+		remove_country_leader_trait = absent_princess_2
 		remove_ideas = EQS_civil_war
 		if = {
 			limit = {
@@ -1491,8 +1499,8 @@ country_event = {
 			remove_ideas = EQS_harmonic_stagnation_3
 		}
 		add_ideas = EQS_equestria_fractured
-		add_stability = -0.3
-		add_war_support = -0.3
+		set_stability = 0.6
+		set_war_support = 0.4
 		load_focus_tree = EQS_celestia_tree
 		complete_national_focus = EQS_equestria_survives
 	}
@@ -1729,7 +1737,10 @@ country_event = {
 		}
 		set_portraits = {
 			character = EQS_rainbowdash
-			army = { large ="gfx/leaders/EQS/RainbowDashWartime.tga" }
+			army = { large = "gfx/leaders/EQS/RainbowDashWartime.tga" }
+		}
+		EQS_rainbowdash = {
+			set_leader_description = EQS_RAINBOW_WARTIME_GENERAL_DESC
 		}
 		hidden_effect = {
 			country_event = {
@@ -6880,7 +6891,7 @@ country_event = {
 			limit = {
 				OR = {
 					is_core_of = EQS
-					is_claim_of = EQS
+					is_claimed_by = EQS
 				}
 			}
 			transfer_state_to = EQS
