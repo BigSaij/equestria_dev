@@ -1088,6 +1088,18 @@ ideas = {
 				mobilization_laws_cost_factor = -0.5
 			}
 		}
+		EQS_smile_empowered = {
+			allowed = {
+				always = no
+			}
+			available = {
+			}
+			removal_cost = -1
+			picture = EQS_smile_empowered
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
 		EQS_LSP_administrative_integration = {
 			allowed = {
 				always = no

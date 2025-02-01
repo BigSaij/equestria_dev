@@ -1294,6 +1294,10 @@ spriteTypes = {
 		name = "GFX_idea_EQS_wonderbolt_concern"
 		texturefile = "gfx/interface/ideas/EQS/EQS_wonderbolt_concern.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_EQS_smile_empowered"
+		texturefile = "gfx/interface/ideas/EQS/EQS_smile_empowered.tga"
+	}
 	#EQS - Characters#
 	spriteType = {
 		name = "GFX_idea_EQS_cel_executive"

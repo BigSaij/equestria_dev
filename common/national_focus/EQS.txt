@@ -1742,7 +1742,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = EQS_fate_of_industrialists
+	id = EQS_royal_capitalism
 	icon = GFX_goal_news
 	x = 1
 	y = 1
@@ -1755,7 +1755,7 @@ shared_focus = {
 		factor = 5
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_fate_of_industrialists"
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_royal_capitalism"
 		country_event = equestria_celestia.1
 	}
 }
@@ -1771,26 +1771,37 @@ shared_focus = {
 		focus = EQS_academic_revival
 	}
 	prerequisite = {
-		focus = EQS_fate_of_industrialists
+		focus = EQS_royal_capitalism
 	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_harmonized_economics"
-		hidden_effect = {
-			add_dynamic_modifier = {
-				modifier = EQS_harmonized_economics_dynmod
-			}
-		}
-		custom_effect_tooltip = EQS_dynamic_economics_tt
 		add_ideas = EQS_harmonized_economics_law
-		set_variable = { EQS_harmonecon_PEG = 0.05 }
 	}
 }
 
 shared_focus = {
-	id = EQS_royal_authority
+	id = EQS_administrative_reorganization
+	icon = GFX_goal_news
+	x = -2
+	y = 1
+	relative_position_id = EQS_equestria_survives
+	cost = 4
+	prerequisite = {
+		focus = EQS_equestria_survives
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_administrative_reorganization"
+	}
+}
+
+shared_focus = {
+	id = EQS_smile_new_role
 	icon = GFX_goal_news
 	x = 0
 	y = 1
@@ -1803,65 +1814,68 @@ shared_focus = {
 		factor = 5
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_royal_authority"
-		country_event = equestria_celestia.2
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_smile_new_role"
+		add_ideas = EQS_smile_empowered
 	}
 }
 
 shared_focus = {
-	id = EQS_fate_of_disloyal
+	id = EQS_total_thestral_integration
 	icon = GFX_goal_news
-	x = -1
+	x = 2
 	y = 1
-	relative_position_id = EQS_royal_authority
+	relative_position_id = EQS_equestria_survives
 	cost = 4
 	prerequisite = {
-		focus = EQS_royal_authority
+		focus = EQS_equestria_survives
 	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_fate_of_disloyal"
-		country_event = equestria_celestia.3
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_total_thestral_integration"
 	}
 }
 
 shared_focus = {
-	id = EQS_fate_of_radicals
+	id = EQS_punish_radicals
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_smile_new_role
+	cost = 4
+	prerequisite = {
+		focus = EQS_administrative_reorganization
+	}
+	prerequisite = {
+		focus = EQS_smile_new_role
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_punish_radicals"
+	}
+}
+
+shared_focus = {
+	id = EQS_release_lunar_pows
 	icon = GFX_goal_news
 	x = 1
 	y = 1
-	relative_position_id = EQS_royal_authority
+	relative_position_id = EQS_smile_new_role
 	cost = 4
 	prerequisite = {
-		focus = EQS_royal_authority
+		focus = EQS_smile_new_role
+	}
+	prerequisite = {
+		focus = EQS_total_thestral_integration
 	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_fate_of_radicals"
-		country_event = equestria_celestia.4
-	}
-}
-
-shared_focus = {
-	id = EQS_loyal_subjects
-	icon = GFX_goal_news
-	x = -1
-	y = 1
-	relative_position_id = EQS_fate_of_disloyal
-	cost = 4
-	prerequisite = {
-		focus = EQS_fate_of_disloyal
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_loyal_subjects"
-		country_event = equestria_celestia.5
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_release_lunar_pows"
 	}
 }
 
@@ -1870,39 +1884,19 @@ shared_focus = {
 	icon = GFX_goal_news
 	x = 1
 	y = 1
-	relative_position_id = EQS_fate_of_disloyal
+	relative_position_id = EQS_punish_radicals
 	cost = 4
 	prerequisite = {
-		focus = EQS_fate_of_disloyal
+		focus = EQS_punish_radicals
 	}
 	prerequisite = {
-		focus = EQS_fate_of_radicals
+		focus = EQS_release_lunar_pows
 	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_tale_of_two_sisters"
-		country_event = equestria_celestia.6
-	}
-}
-
-shared_focus = {
-	id = EQS_total_thestral_integration
-	icon = GFX_goal_news
-	x = 1
-	y = 1
-	relative_position_id = EQS_fate_of_radicals
-	cost = 4
-	prerequisite = {
-		focus = EQS_fate_of_radicals
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_total_thestral_integration"
-		country_event = equestria_celestia.7
 	}
 }
 
@@ -1996,13 +1990,7 @@ shared_focus = {
 		focus = EQS_harmonized_economics
 	}
 	prerequisite = {
-		focus = EQS_loyal_subjects
-	}
-	prerequisite = {
 		focus = EQS_tale_of_two_sisters
-	}
-	prerequisite = {
-		focus = EQS_total_thestral_integration
 	}
 	prerequisite = {
 		focus = EQS_nothing_left_to_learn
