@@ -1756,7 +1756,11 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_royal_capitalism"
-		country_event = equestria_celestia.1
+		add_political_power = -50
+		two_random_industrial_complex = yes
+		two_random_arms_factory = yes
+		two_random_industrial_complex = yes
+		two_random_arms_factory = yes
 	}
 }
 
@@ -1797,6 +1801,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_administrative_reorganization"
+		country_event = equestria_celestia.1
 	}
 }
 
@@ -1815,7 +1820,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_smile_new_role"
-		add_ideas = EQS_smile_empowered
+		country_event = equestria_celestia.2
 	}
 }
 
@@ -1834,6 +1839,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_total_thestral_integration"
+		country_event = equestria_celestia.3
 	}
 }
 
@@ -1855,6 +1861,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_punish_radicals"
+		country_event = equestria_celestia.5
 	}
 }
 
@@ -1876,6 +1883,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_release_lunar_pows"
+		country_event = equestria_celestia.6
 	}
 }
 
@@ -1897,6 +1905,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_tale_of_two_sisters"
+		country_event = equestria_celestia.8
 	}
 }
 
@@ -1915,7 +1924,17 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_lead_from_the_front"
-		country_event = equestria_celestia.8
+		add_field_marshal_role = {
+			character = EQS_princess_celestia
+			traits = { alicorn_of_the_sun pony_race_trait inspirational_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			#desc =
+		}
+		custom_effect_tooltip = EQS_celestia_stats_tt
 	}
 }
 
@@ -1975,7 +1994,11 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_nothing_left_to_learn"
-		country_event = equestria_celestia.11
+		EQS_princess_celestia = {
+			add_skill_level = 1
+			add_unit_leader_trait = organisational_leader
+		}
+		custom_effect_tooltip = EQS_celestia_stat_increases_tt
 	}
 }
 
@@ -2004,7 +2027,7 @@ shared_focus = {
 			remove = princess_of_ponies
 			add = celestial_monarch
 		}
-		country_event = equestria_celestia.12
+		country_event = equestria_celestia.11
 	}
 }
 

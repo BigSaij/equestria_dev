@@ -1503,6 +1503,12 @@ country_event = {
 		set_war_support = 0.4
 		load_focus_tree = EQS_celestia_tree
 		complete_national_focus = EQS_equestria_survives
+		hidden_effect = {
+			country_event = {
+				id = equestria_civwar_flavor.9
+				days = 6
+			}
+		}
 	}
 }
 
@@ -1957,6 +1963,1726 @@ country_event = {
 				var = EQS_civwar_manesix_counter
 				value = 1
 			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_civwar_flavor.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar_flavor.9" }
+	title = equestria_civwar_flavor.9.t
+	desc = equestria_civwar_flavor.9.d
+	#picture = GFX_event_foggy_forest
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_civwar_flavor.9.a
+	}
+}
+
+##############
+###CELESTIA###
+##############
+
+country_event = {
+	id = equestria_celestia.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.1" }
+	title = equestria_celestia.1.t
+	desc = equestria_celestia.1.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.1.a
+		add_political_power = 100
+		add_timed_idea = {
+			idea = EQS_reorg_administration
+			days = 150
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.2" }
+	title = equestria_celestia.2.t
+	desc = equestria_celestia.2.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.2.a
+		add_ideas = EQS_smile_empowered
+	}
+}
+
+country_event = {
+	id = equestria_celestia.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.3" }
+	title = equestria_celestia.3.t
+	desc = equestria_celestia.3.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.3.a
+		if = {
+			limit = {
+				has_idea = EQS_thestral_military_integration
+			}
+			swap_ideas = {
+				remove_idea = EQS_thestral_military_integration
+				add_idea = EQS_full_thestral_integration
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = equestria_celestia.4
+				days = 365
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.4" }
+	title = equestria_celestia.4.t
+	desc = equestria_celestia.4.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.4.a
+	}
+}
+
+country_event = {
+	id = equestria_celestia.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.5" }
+	title = equestria_celestia.6.t
+	desc = equestria_celestia.6.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.5.a
+		add_manpower = -25000
+		if = {
+			limit = {
+				has_idea = EQS_equestria_fractured
+			}
+			swap_ideas = {
+				remove_idea = EQS_equestria_fractured
+				add_idea = EQS_equestria_fractured_2
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = EQS_equestria_fractured_2
+				add_idea = EQS_equestria_fractured_3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.6" }
+	title = equestria_celestia.6.t
+	desc = equestria_celestia.6.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.6.a
+		add_timed_idea = {
+			idea = EQS_lunarist_reintegration
+			days = 200
+		}
+		if = {
+			limit = {
+				has_idea = EQS_equestria_fractured
+			}
+			swap_ideas = {
+				remove_idea = EQS_equestria_fractured
+				add_idea = EQS_equestria_fractured_2
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = EQS_equestria_fractured_2
+				add_idea = EQS_equestria_fractured_3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.7" }
+	title = equestria_celestia.7.t
+	desc = equestria_celestia.7.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.7.a
+		add_manpower = -1000
+	}
+}
+
+country_event = {
+	id = equestria_celestia.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.8" }
+	title = equestria_celestia.8.t
+	desc = equestria_celestia.8.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.8.a
+		add_ideas = EQS_rememberance_of_luna
+		swap_ideas = {
+			remove_idea = EQS_equestria_fractured_3
+			add_idea = EQS_equestria_fractured_4
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.9" }
+	title = equestria_celestia.9.t
+	desc = equestria_celestia.9.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.9.a
+		EQS_princess_celestia = {
+			add_defense = 1
+			add_planning = 1
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.10" }
+	title = equestria_celestia.10.t
+	desc = equestria_celestia.10.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.10.a
+		EQS_princess_celestia = {
+			add_attack = 1
+			add_logistics = 1
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.11" }
+	title = equestria_celestia.11.t
+	desc = equestria_celestia.11.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.11.a
+		set_country_flag = EQS_celestia_selfdestruct_enabled
+		custom_effect_tooltip = EQS_celestia_selfkill_tt
+	}
+}
+
+country_event = {
+	id = equestria_celestia.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.12" }
+	title = equestria_celestia.12.t
+	desc = equestria_celestia.12.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.12.a
+	}
+}
+
+country_event = {
+	id = equestria_celestia.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.13" }
+	title = equestria_celestia.13.t
+	desc = equestria_celestia.13.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.13.a
+		LSP = {
+			country_event = {
+				id = equestria_celestia.14
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = equestria_celestia.13.b
+		LSP = {
+			country_event = {
+				id = equestria_celestia.15
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = equestria_celestia.13.c
+		LSP = {
+			country_event = {
+				id = equestria_celestia.16
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.14" }
+	title = equestria_celestia.14.t
+	desc = equestria_celestia.14.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.14.a
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = EQS_game_over_warning_tt
+		EQS = {
+			annex_country = {
+				target = LSP
+				transfer_troops = no
+			}
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+		}
+	}
+	option = {
+		name = equestria_celestia.14.b
+		EQS = {
+			country_event = equestria_celestia.17
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.15" }
+	title = equestria_celestia.15.t
+	desc = equestria_celestia.15.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.15.a
+		EQS = {
+			set_country_flag = EQS_LSP_diploannex
+			annex_country = {
+				target = LSP
+				transfer_troops = no
+			}
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+		}
+	}
+	option = {
+		name = equestria_celestia.15.b
+		EQS = {
+			country_event = equestria_celestia.17
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.16" }
+	title = equestria_celestia.16.t
+	desc = equestria_celestia.16.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.16.a
+		EQS = {
+			puppet = LSP
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+			set_country_flag = EQS_LSP_diplosubject
+		}
+	}
+	option = {
+		name = equestria_celestia.16.b
+		EQS = {
+			country_event = equestria_celestia.17
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.17" }
+	title = equestria_celestia.17.t
+	desc = equestria_celestia.17.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.16.a
+		declare_war_on = {
+			target = LSP
+			type = annex_everything
+		}
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+		set_country_flag = EQS_LSP_warunification
+	}
+}
+
+country_event = {
+	id = equestria_celestia.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.18" }
+	title = equestria_celestia.18.t
+	desc = equestria_celestia.18.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.18.a
+		ROC = {
+			country_event = {
+				id = equestria_celestia.19
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = equestria_celestia.18.b
+		ROC = {
+			country_event = {
+				id = equestria_celestia.20
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = equestria_celestia.18.c
+		ROC = {
+			country_event = {
+				id = equestria_celestia.21
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.19" }
+	title = equestria_celestia.19.t
+	desc = equestria_celestia.19.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.19.a
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = EQS_game_over_warning_tt
+		EQS = {
+			annex_country = {
+				target = ROC
+				transfer_troops = no
+			}
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+		}
+	}
+	option = {
+		name = equestria_celestia.19.b
+		EQS = {
+			country_event = equestria_celestia.22
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.20" }
+	title = equestria_celestia.20.t
+	desc = equestria_celestia.20.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.20.a
+		EQS = {
+			set_country_flag = EQS_ROC_diploannex
+			annex_country = {
+				target = ROC
+				transfer_troops = no
+			}
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+		}
+	}
+	option = {
+		name = equestria_celestia.20.b
+		EQS = {
+			country_event = equestria_celestia.22
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.21" }
+	title = equestria_celestia.21.t
+	desc = equestria_celestia.21.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.21.a
+		EQS = {
+			puppet = ROC
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+			set_country_flag = EQS_ROC_diplosubject
+		}
+	}
+	option = {
+		name = equestria_celestia.21.b
+		EQS = {
+			country_event = equestria_celestia.22
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.22" }
+	title = equestria_celestia.22.t
+	desc = {
+		text = equestria_celestia.22.d1
+		trigger = {
+			NOT = {
+				ROC = {
+					is_in_faction_with = STG
+					is_guaranteed_by = STG
+				}
+			}
+		}
+	}
+	desc = {
+		text = equestria_celestia.22.d2
+		trigger = {
+			ROC = {
+				OR = {
+					is_in_faction_with = STG
+					is_guaranteed_by = STG
+				}
+			}
+		}
+	}
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.22.a
+		trigger = {
+			NOT = {
+				ROC = {
+					is_in_faction_with = STG
+					is_guaranteed_by = STG
+				}
+			}
+		}
+		declare_war_on = {
+			target = ROC
+			type = annex_everything
+		}
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+		set_country_flag = EQS_ROC_warunification
+	}
+	option = {
+		name = equestria_celestia.22.b
+		trigger = {
+			ROC = {
+				OR = {
+					is_in_faction_with = STG
+					is_guaranteed_by = STG
+				}
+			}
+		}
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+	}
+}
+
+country_event = {
+	id = equestria_celestia.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.23" }
+	title = equestria_celestia.23.t
+	desc = equestria_celestia.23.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.23.a
+		SCS = {
+			country_event = {
+				id = equestria_celestia.24
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.24" }
+	title = equestria_celestia.24.t
+	desc = equestria_celestia.24.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.24.a
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = EQS_game_over_warning_tt
+		EQS = {
+			annex_country = {
+				target = SCS
+				transfer_troops = no
+			}
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+		}
+	}
+	option = {
+		name = equestria_celestia.24.b
+		EQS = {
+			country_event = equestria_celestia.25
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.25" }
+	title = equestria_celestia.25.t
+	desc = equestria_celestia.25.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.25.a
+		declare_war_on = {
+			target = SCS
+			type = annex_everything
+		}
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+		set_country_flag = EQS_SCS_warunification
+	}
+}
+
+country_event = {
+	id = equestria_celestia.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.26" }
+	title = equestria_celestia.26.t
+	desc = equestria_celestia.26.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.26.a
+		BUF = {
+			country_event = {
+				id = equestria_celestia.27
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = equestria_celestia.26.b
+		BUF = {
+			country_event = {
+				id = equestria_celestia.28
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.27" }
+	title = equestria_celestia.27.t
+	desc = equestria_celestia.27.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.27.a
+		EQS = {
+			set_country_flag = EQS_BUF_diploannex
+			annex_country = {
+				target = BUF
+				transfer_troops = no
+			}
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+		}
+	}
+	option = {
+		name = equestria_celestia.27.b
+		EQS = {
+			country_event = equestria_celestia.29
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.28" }
+	title = equestria_celestia.28.t
+	desc = equestria_celestia.28.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.28.a
+		EQS = {
+			puppet = BUF
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+			set_country_flag = EQS_BUF_diplosubject
+		}
+	}
+	option = {
+		name = equestria_celestia.28.b
+		EQS = {
+			country_event = equestria_celestia.29
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.29" }
+	title = equestria_celestia.29.t
+	desc = equestria_celestia.29.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.29.a
+		declare_war_on = {
+			target = BUF
+			type = annex_everything
+		}
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+		set_country_flag = EQS_BUF_warunification
+	}
+}
+
+country_event = {
+	id = equestria_celestia.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.30" }
+	title = equestria_celestia.30.t
+	desc = equestria_celestia.30.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.30.a
+		annex_country = {
+			target = CES
+			transfer_troops = no
+		}
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+	}
+	option = {
+		name = equestria_celestia.30.b
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+	}
+}
+
+country_event = {
+	id = equestria_celestia.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.31" }
+	title = equestria_celestia.31.t
+	desc = equestria_celestia.31.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.31.a
+		JUN = {
+			country_event = {
+				id = equestria_celestia.32
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = equestria_celestia.31.b
+		JUN = {
+			country_event = {
+				id = equestria_celestia.33
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.32" }
+	title = equestria_celestia.32.t
+	desc = equestria_celestia.32.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.32.a
+		EQS = {
+			set_country_flag = EQS_JUN_diploannex
+			annex_country = {
+				target = JUN
+				transfer_troops = no
+			}
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+		}
+	}
+	option = {
+		name = equestria_celestia.32.b
+		EQS = {
+			country_event = equestria_celestia.34
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.33" }
+	title = equestria_celestia.33.t
+	desc = equestria_celestia.33.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.33.a
+		EQS = {
+			puppet = JUN
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+			set_country_flag = EQS_JUN_diplosubject
+		}
+	}
+	option = {
+		name = equestria_celestia.33.b
+		EQS = {
+			country_event = equestria_celestia.34
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.34
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.34" }
+	title = equestria_celestia.34.t
+	desc = equestria_celestia.34.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.34.a
+		declare_war_on = {
+			target = JUN
+			type = annex_everything
+		}
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+		set_country_flag = EQS_southeast_warunification
+	}
+}
+
+country_event = {
+	id = equestria_celestia.35
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.35" }
+	title = equestria_celestia.35.t
+	desc = equestria_celestia.35.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.35.a
+		NMS = {
+			country_event = {
+				id = equestria_celestia.36
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = equestria_celestia.35.b
+		NMS = {
+			country_event = {
+				id = equestria_celestia.37
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.36
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.36" }
+	title = equestria_celestia.36.t
+	desc = equestria_celestia.36.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.36.a
+		EQS = {
+			set_country_flag = EQS_NMS_diploannex
+			annex_country = {
+				target = NMS
+				transfer_troops = no
+			}
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+		}
+	}
+	option = {
+		name = equestria_celestia.36.b
+		EQS = {
+			country_event = equestria_celestia.38
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.37
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.37" }
+	title = equestria_celestia.37.t
+	desc = equestria_celestia.37.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.37.a
+		EQS = {
+			puppet = NMS
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+			set_country_flag = EQS_NMS_diplosubject
+		}
+	}
+	option = {
+		name = equestria_celestia.37.b
+		EQS = {
+			country_event = equestria_celestia.38
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.38" }
+	title = equestria_celestia.38.t
+	desc = equestria_celestia.38.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.38.a
+		declare_war_on = {
+			target = NMS
+			type = annex_everything
+		}
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+		set_country_flag = EQS_southeast_warunification
+	}
+}
+
+country_event = {
+	id = equestria_celestia.39
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.39" }
+	title = equestria_celestia.39.t
+	desc = equestria_celestia.39.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.39.a
+		BAL = {
+			country_event = {
+				id = equestria_celestia.40
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.40" }
+	title = equestria_celestia.40.t
+	desc = equestria_celestia.40.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.40.a
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = EQS_game_over_warning_tt
+		EQS = {
+			annex_country = {
+				target = BAL
+				transfer_troops = no
+			}
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+		}
+	}
+	option = {
+		name = equestria_celestia.40.b
+		EQS = {
+			country_event = equestria_celestia.41
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.41
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.41" }
+	title = equestria_celestia.41.t
+	desc = {
+		text = equestria_celestia.d1
+		trigger = {
+			NOT = {
+				BAL = {
+					is_in_faction_with = STG
+					is_guaranteed_by = STG
+				}
+			}
+		}
+	}
+	desc = {
+		text = equestria_celestia.41.d2
+		trigger = {
+			BAL = {
+				OR = {
+					is_in_faction_with = STG
+					is_guaranteed_by = STG
+				}
+			}
+		}
+	}
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.41.a
+		trigger = {
+			NOT = {
+				BAL = {
+					is_in_faction_with = STG
+					is_guaranteed_by = STG
+				}
+			}
+		}
+		declare_war_on = {
+			target = BAL
+			type = annex_everything
+		}
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+		set_country_flag = EQS_southeast_warunification
+	}
+	option = {
+		name = equestria_celestia.41.b
+		trigger = {
+			BAL = {
+				OR = {
+					is_in_faction_with = STG
+					is_guaranteed_by = STG
+				}
+			}
+		}
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+	}
+}
+
+country_event = {
+	id = equestria_celestia.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.42" }
+	title = equestria_celestia.42.t
+	desc = equestria_celestia.42.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.42.a
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = EQS_game_over_warning_tt
+		EQS = {
+			annex_country = {
+				target = PCB
+				transfer_troops = no
+			}
+			clr_country_flag = EQS_breakaway_negotiations_ongoing
+			1193 = {
+				add_core_of = EQS
+			}
+			1194 = {
+				add_core_of = EQS
+			}
+		}
+	}
+	option = {
+		name = equestria_celestia.42.b
+		EQS = {
+			country_event = equestria_celestia.43
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.43" }
+	title = equestria_celestia.43.t
+	desc = equestria_celestia.43.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.43.a
+		if = {
+			limit = {
+				PCB = {
+					is_subject_of = EQS
+				}
+			}
+			PCB = {
+				end_puppet_this = yes
+			}
+		}
+		if = {
+			limit = {
+				PCB = {
+					is_in_faction_with = EQS
+				}
+			}
+			PCB = {
+				leave_faction = yes
+			}
+		}
+		declare_war_on = {
+			target = PCB
+			type = annex_everything
+		}
+		PCB = { add_to_ROOT_potential_cores = yes }
+		clr_country_flag = EQS_breakaway_negotiations_ongoing
+	}
+}
+
+country_event = {
+	id = equestria_celestia.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.44" }
+	title = equestria_celestia.44.t
+	desc = equestria_celestia.44.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.44.a
+		EQS = {
+			puppet = CRY
+		}
+	}
+	option = {
+		name = equestria_celestia.44.b
+		EQS = {
+			country_event = equestria_celestia.45
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.45
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.45" }
+	title = equestria_celestia.45.t
+	desc = equestria_celestia.45.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.45.a
+		declare_war_on = {
+			target = CRY
+			type = puppet_wargoal_focus
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.46
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.46" }
+	title = equestria_celestia.46.t
+	desc = equestria_celestia.46.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.46.a
+		EQS = {
+			add_to_faction = CCN
+		}
+	}
+	option = {
+		name = equestria_celestia.46.b
+		EQS = {
+			country_event = equestria_celestia.47
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.47
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.47" }
+	title = equestria_celestia.47.t
+	desc = equestria_celestia.47.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.47.a
+		declare_war_on = {
+			target = CCN
+			type = puppet_wargoal_focus
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.48
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.48" }
+	title = equestria_celestia.48.t
+	desc = equestria_celestia.48.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.48.a
+		release_puppet = CHN
+		set_autonomy = {
+			target = CHN
+			autonomy_state = autonomy_dominion
+		}
+		CHN = {
+			set_cosmetic_tag = CHN_VES_EQS
+			set_party_name = {
+				ideology = democratic
+				long_name = CHN_VES_EQS_harmony_party_long
+				name = CHN_VES_EQS_harmony_party
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 65
+				fascism = 10
+				communism = 5
+				neutrality = 20
+			}
+			load_focus_tree = { tree = generic_focus keep_completed = yes }
+		}
+		create_dynamic_country = {
+			original_tag = CHN
+			set_AI_strategies_on_every_possible_country_delayed = yes
+			set_research_slots = 3
+			ROOT = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 262
+							state = 264
+							state = 314
+							state = 311
+							state = 315
+							state = 320
+							state = 323
+							state = 322
+						}
+					}
+					transfer_state_to = PREV.PREV
+					add_core_of = PREV.PREV
+				}
+				puppet = PREV
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_dominion
+				}
+			}
+			set_cosmetic_tag = CHN_SOR
+			every_possible_country = {
+				limit = {
+					has_character = CHN_queen_yaria
+				}
+				CHN_queen_yaria = {
+					set_nationality = PREV.PREV
+				}
+			}
+			add_country_leader_role = {
+				character = CHN_queen_yaria
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = conservatism
+				}
+				promote_leader = yes
+			}
+			add_ideas = no_poverty
+			add_ideas = modern_society
+			add_ideas = no_lack_of_scientists
+			add_ideas = proper_science_base
+			add_ideas = changeling_race
+			set_party_name = {
+				ideology = democratic
+				long_name = CHN_SOR_harmony_party_long
+				name = CHN_SOR_harmony_party
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 55
+				fascism = 4
+				communism = 1
+				neutrality = 40
+			}
+			load_focus_tree = { tree = generic_focus keep_completed = yes }
+			set_capital = {
+				state = 262
+			}
+		}
+		create_dynamic_country = {
+			original_tag = CHN
+			set_AI_strategies_on_every_possible_country_delayed = yes
+			set_research_slots = 3
+			ROOT = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 252
+							state = 304
+							state = 261
+							state = 305
+							state = 306
+							state = 312
+							state = 313
+						}
+					}
+					transfer_state_to = PREV.PREV
+					add_core_of = PREV.PREV
+				}
+				puppet = PREV
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_dominion
+				}
+			}
+			set_cosmetic_tag = CHN_DIT
+			every_possible_country = {
+				limit = {
+					has_character = CHN_queen_helvia
+				}
+				CHN_queen_helvia = {
+					set_nationality = PREV.PREV
+				}
+			}	
+			add_country_leader_role = {
+				character = CHN_queen_helvia
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = conservatism
+				}
+				promote_leader = yes
+			}
+			add_ideas = no_poverty
+			add_ideas = modern_society
+			add_ideas = no_lack_of_scientists
+			add_ideas = proper_science_base
+			add_ideas = changeling_race
+			set_party_name = {
+				ideology = democratic
+				long_name = CHN_DIT_harmony_party_long
+				name = CHN_DIT_harmony_party
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 55
+				fascism = 1
+				communism = 19
+				neutrality = 25
+			}
+			load_focus_tree = { tree = generic_focus keep_completed = yes }
+			set_capital = {
+				state = 252
+			}
+		}
+		create_dynamic_country = {
+			original_tag = CHN
+			set_AI_strategies_on_every_possible_country_delayed = yes
+			set_research_slots = 3
+			ROOT = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 259
+							state = 250
+							state = 249
+							state = 321
+							state = 310
+						}
+					}
+					transfer_state_to = PREV.PREV
+					add_core_of = PREV.PREV
+				}
+				puppet = PREV
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_dominion
+				}
+			}
+			set_cosmetic_tag = CHN_VRK
+			every_possible_country = {
+				limit = {
+					has_character = CHN_queen_argynnis
+				}
+				CHN_queen_argynnis = {
+					set_nationality = PREV.PREV
+				}
+			}
+			add_country_leader_role = {
+				character = CHN_queen_argynnis
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = conservatism
+				}
+				promote_leader = yes
+			}
+			add_ideas = no_poverty
+			add_ideas = modern_society
+			add_ideas = no_lack_of_scientists
+			add_ideas = proper_science_base
+			add_ideas = changeling_race
+			set_party_name = {
+				ideology = democratic
+				long_name = CHN_VRK_harmony_party_long
+				name = CHN_VRK_harmony_party
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 50
+				fascism = 35
+				communism = 1
+				neutrality = 14
+			}
+			load_focus_tree = { tree = generic_focus keep_completed = yes }
+			set_capital = {
+				state = 259
+			}
+		}
+		create_dynamic_country = {
+			original_tag = CHN
+			set_AI_strategies_on_every_possible_country_delayed = yes
+			set_research_slots = 3
+			ROOT = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 309
+							state = 303
+							state = 260
+							state = 308
+							state = 258
+							state = 307
+						}
+					}
+					transfer_state_to = PREV.PREV
+					add_core_of = PREV.PREV
+				}
+				puppet = PREV
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_puppet
+				}
+			}
+			set_cosmetic_tag = CHN_LYC_EQS
+			every_possible_country = {
+				limit = {
+					has_character = EQS_sunset_shimmer_extra
+				}
+				EQS_sunset_shimmer_extra = {
+					set_nationality = PREV.PREV
+				}
+			}	
+			add_country_leader_role = {
+				character = EQS_sunset_shimmer_extra
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = khakistocracy
+				}
+				promote_leader = yes
+			}
+			add_ideas = no_poverty
+			add_ideas = modern_society
+			add_ideas = no_lack_of_scientists
+			add_ideas = proper_science_base
+			add_ideas = changeling_race
+			set_party_name = {
+				ideology = neutrality
+				long_name = CHN_LYC_EQS_neutrality_party_long
+				name = CHN_LYC_EQS_neutrality_party
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 25
+				fascism = 25
+				communism = 5
+				neutrality = 45
+			}
+			load_focus_tree = { tree = generic_focus keep_completed = yes }
+			set_capital = {
+				state = 309
+			}
+		}
+		create_dynamic_country = {
+			original_tag = CHN
+			set_AI_strategies_on_every_possible_country_delayed = yes
+			set_research_slots = 3
+			ROOT = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 316
+							state = 319
+							state = 247
+							state = 248
+							state = 291
+							state = 246
+						}
+					}
+					transfer_state_to = PREV.PREV
+					add_core_of = PREV.PREV
+				}
+				puppet = PREV
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_puppet
+				}
+			}
+			set_cosmetic_tag = CHN_VLI_EQS
+			every_possible_country = {
+				limit = {
+					has_character = EQS_blueblood_extra
+				}
+				EQS_blueblood_extra = {
+					set_nationality = PREV.PREV
+				}
+			}	
+			add_country_leader_role = {
+				character = EQS_blueblood_extra
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = khakistocracy
+				}
+				promote_leader = yes
+			}
+			add_ideas = no_poverty
+			add_ideas = modern_society
+			add_ideas = no_lack_of_scientists
+			add_ideas = proper_science_base
+			add_ideas = changeling_race
+			set_party_name = {
+				ideology = neutrality
+				long_name = CHN_VLI_EQS_neutrality_party_long
+				name = CHN_VLI_EQS_neutrality_party
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 25
+				fascism = 35
+				communism = 5
+				neutrality = 35
+			}
+			load_focus_tree = { tree = generic_focus keep_completed = yes }
+			set_capital = {
+				state = 316
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.49
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.49" }
+	title = equestria_celestia.49.t
+	desc = equestria_celestia.49.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.49.a
+		EQS = {
+			add_to_faction = ROOT
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = EQS
+					is_claimed_by = EQS
+				}
+			}
+			transfer_state_to = EQS
+		}
+	}
+	option = {
+		name = equestria_celestia.49.b
+		EQS = {
+			country_event = equestria_celestia.50
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.50
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.50" }
+	title = equestria_celestia.50.t
+	desc = equestria_celestia.50.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.50.a
+		declare_war_on = {
+			target = FROM
+			type = puppet_wargoal_focus
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.57
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.57" }
+	title = equestria_celestia.57.t
+	desc = equestria_celestia.57.d
+	picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.57.a
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 712
+					state = 713
+					state = 690
+					state = 689
+					state = 691
+					state = 815
+				}
+			}
+			transfer_state_to = BAT
+		}
+		set_autonomy = {
+			target = BAT
+			autonomy_state = autonomy_dominion
+		}
+		BAT = {
+			set_cosmetic_tag = BAT_EQS_celestia
+			set_party_name = {
+				ideology = neutrality
+				long_name = BAT_EQS_celestia_neutrality_party_long
+				name = BAT_EQS_celestia_neutrality_party
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 20
+				fascism = 40
+				communism = 10
+				neutrality = 30
+			}
+			load_focus_tree = { tree = generic_focus keep_completed = yes }
+		}
+		712 = {
+			set_state_name = EQS_state_harmonyhills
+		}
+		713 = {
+			set_state_name = EQS_state_friendshipshore
+		}
+		689 = {
+			set_state_name = EQS_state_starlightridge
+		}
+		691 = {
+			set_state_name = EQS_vp_skyros
+		}
+		815 = {
+			set_state_name = EQS_state_prancingpoint
+		}
+		set_province_name = {
+			id = 18570
+			name = EQS_vp_newcanterlot
+		}
+		set_province_name = {
+			id = 18601
+			name = EQS_vp_maretime_bay
+		}
+		set_province_name = {
+			id = 18583
+			name = EQS_vp_zephyrheights
+		}
+		set_province_name = {
+			id = 18499
+			name = EQS_vp_novacloudsdale
+		}
+		set_province_name = {
+			id = 18526
+			name = EQS_vp_auroria
+		}
+		set_province_name = {
+			id = 18517
+			name = EQS_vp_skyros
+		}
+		set_province_name = {
+			id = 18477
+			name = EQS_vp_bridlewood
 		}
 	}
 }
@@ -5294,1723 +7020,6 @@ country_event = {
 	option = {
 		name = equestria_journal.1.a
 		add_political_power = 1
-	}
-}
-
-##############
-###CELESTIA###
-##############
-
-country_event = {
-	id = equestria_celestia.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.1" }
-	title = equestria_celestia.1.t
-	desc = equestria_celestia.1.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.1.a
-		add_political_power = -50
-		two_random_industrial_complex = yes
-		two_random_arms_factory = yes
-		two_random_industrial_complex = yes
-		two_random_arms_factory = yes
-	}
-}
-
-country_event = {
-	id = equestria_celestia.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.2" }
-	title = equestria_celestia.2.t
-	desc = equestria_celestia.2.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.2.a
-		add_stability = 0.1
-		add_political_power = 150
-	}
-}
-
-country_event = {
-	id = equestria_celestia.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.3" }
-	title = equestria_celestia.3.t
-	desc = equestria_celestia.3.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.3.a
-		if = {
-			limit = {
-				has_idea = EQS_equestria_fractured
-			}
-			swap_ideas = {
-				remove_idea = EQS_equestria_fractured
-				add_idea = EQS_equestria_fractured_2
-			}
-		}
-		else = {
-			swap_ideas = {
-				remove_idea = EQS_equestria_fractured_2
-				add_idea = EQS_equestria_fractured_3
-			}
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.4" }
-	title = equestria_celestia.4.t
-	desc = equestria_celestia.4.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.4.a
-		if = {
-			limit = {
-				has_idea = EQS_equestria_fractured
-			}
-			swap_ideas = {
-				remove_idea = EQS_equestria_fractured
-				add_idea = EQS_equestria_fractured_2
-			}
-		}
-		else = {
-			swap_ideas = {
-				remove_idea = EQS_equestria_fractured_2
-				add_idea = EQS_equestria_fractured_3
-			}
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.5" }
-	title = equestria_celestia.6.t
-	desc = equestria_celestia.6.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.5.a
-		add_war_support = 0.15
-		add_timed_idea = {
-			idea = EQS_reorg_administration
-			days = 150
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.6" }
-	title = equestria_celestia.6.t
-	desc = equestria_celestia.6.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.6.a
-		add_war_support = 0.1
-		swap_ideas = {
-			remove_idea = EQS_equestria_fractured_3
-			add_idea = EQS_equestria_fractured_4
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.7" }
-	title = equestria_celestia.7.t
-	desc = equestria_celestia.7.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.7.a
-		if = {
-			limit = {
-				has_idea = EQS_thestral_military_integration
-			}
-			swap_ideas = {
-				remove_idea = EQS_thestral_military_integration
-				add_idea = EQS_full_thestral_integration
-			}
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.8
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.8" }
-	title = equestria_celestia.8.t
-	desc = equestria_celestia.8.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.8.a
-		add_field_marshal_role = {
-			character = EQS_princess_celestia
-			traits = { alicorn_of_the_sun pony_race_trait inspirational_leader }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			#desc =
-		}
-		custom_effect_tooltip = EQS_celestia_stats_tt
-	}
-}
-
-country_event = {
-	id = equestria_celestia.9
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.9" }
-	title = equestria_celestia.9.t
-	desc = equestria_celestia.9.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.9.a
-		EQS_princess_celestia = {
-			add_defense = 1
-			add_planning = 1
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.10
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.10" }
-	title = equestria_celestia.10.t
-	desc = equestria_celestia.10.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.10.a
-		EQS_princess_celestia = {
-			add_attack = 1
-			add_logistics = 1
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.11
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.11" }
-	title = equestria_celestia.11.t
-	desc = equestria_celestia.11.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.11.a
-		EQS_princess_celestia = {
-			add_skill_level = 1
-			add_unit_leader_trait = organisational_leader
-		}
-		custom_effect_tooltip = EQS_celestia_stat_increases_tt
-	}
-}
-
-country_event = {
-	id = equestria_celestia.12
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.12" }
-	title = equestria_celestia.12.t
-	desc = equestria_celestia.12.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.12.a
-		set_country_flag = EQS_celestia_selfdestruct_enabled
-		custom_effect_tooltip = EQS_celestia_selfkill_tt
-	}
-}
-
-country_event = {
-	id = equestria_celestia.13
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.13" }
-	title = equestria_celestia.13.t
-	desc = equestria_celestia.13.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.13.a
-		LSP = {
-			country_event = {
-				id = equestria_celestia.14
-				days = 2
-			}
-		}
-	}
-	option = {
-		name = equestria_celestia.13.b
-		LSP = {
-			country_event = {
-				id = equestria_celestia.15
-				days = 2
-			}
-		}
-	}
-	option = {
-		name = equestria_celestia.13.c
-		LSP = {
-			country_event = {
-				id = equestria_celestia.16
-				days = 2
-			}
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.14
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.14" }
-	title = equestria_celestia.14.t
-	desc = equestria_celestia.14.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.14.a
-		ai_chance = {
-			factor = 0
-		}
-		custom_effect_tooltip = EQS_game_over_warning_tt
-		EQS = {
-			annex_country = {
-				target = LSP
-				transfer_troops = no
-			}
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-		}
-	}
-	option = {
-		name = equestria_celestia.14.b
-		EQS = {
-			country_event = equestria_celestia.17
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.15
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.15" }
-	title = equestria_celestia.15.t
-	desc = equestria_celestia.15.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.15.a
-		EQS = {
-			set_country_flag = EQS_LSP_diploannex
-			annex_country = {
-				target = LSP
-				transfer_troops = no
-			}
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-		}
-	}
-	option = {
-		name = equestria_celestia.15.b
-		EQS = {
-			country_event = equestria_celestia.17
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.16
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.16" }
-	title = equestria_celestia.16.t
-	desc = equestria_celestia.16.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.16.a
-		EQS = {
-			puppet = LSP
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-			set_country_flag = EQS_LSP_diplosubject
-		}
-	}
-	option = {
-		name = equestria_celestia.16.b
-		EQS = {
-			country_event = equestria_celestia.17
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.17
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.17" }
-	title = equestria_celestia.17.t
-	desc = equestria_celestia.17.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.16.a
-		declare_war_on = {
-			target = LSP
-			type = annex_everything
-		}
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-		set_country_flag = EQS_LSP_warunification
-	}
-}
-
-country_event = {
-	id = equestria_celestia.18
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.18" }
-	title = equestria_celestia.18.t
-	desc = equestria_celestia.18.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.18.a
-		ROC = {
-			country_event = {
-				id = equestria_celestia.19
-				days = 2
-			}
-		}
-	}
-	option = {
-		name = equestria_celestia.18.b
-		ROC = {
-			country_event = {
-				id = equestria_celestia.20
-				days = 2
-			}
-		}
-	}
-	option = {
-		name = equestria_celestia.18.c
-		ROC = {
-			country_event = {
-				id = equestria_celestia.21
-				days = 2
-			}
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.19
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.19" }
-	title = equestria_celestia.19.t
-	desc = equestria_celestia.19.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.19.a
-		ai_chance = {
-			factor = 0
-		}
-		custom_effect_tooltip = EQS_game_over_warning_tt
-		EQS = {
-			annex_country = {
-				target = ROC
-				transfer_troops = no
-			}
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-		}
-	}
-	option = {
-		name = equestria_celestia.19.b
-		EQS = {
-			country_event = equestria_celestia.22
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.20
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.20" }
-	title = equestria_celestia.20.t
-	desc = equestria_celestia.20.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.20.a
-		EQS = {
-			set_country_flag = EQS_ROC_diploannex
-			annex_country = {
-				target = ROC
-				transfer_troops = no
-			}
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-		}
-	}
-	option = {
-		name = equestria_celestia.20.b
-		EQS = {
-			country_event = equestria_celestia.22
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.21
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.21" }
-	title = equestria_celestia.21.t
-	desc = equestria_celestia.21.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.21.a
-		EQS = {
-			puppet = ROC
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-			set_country_flag = EQS_ROC_diplosubject
-		}
-	}
-	option = {
-		name = equestria_celestia.21.b
-		EQS = {
-			country_event = equestria_celestia.22
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.22
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.22" }
-	title = equestria_celestia.22.t
-	desc = {
-		text = equestria_celestia.22.d1
-		trigger = {
-			NOT = {
-				ROC = {
-					is_in_faction_with = STG
-					is_guaranteed_by = STG
-				}
-			}
-		}
-	}
-	desc = {
-		text = equestria_celestia.22.d2
-		trigger = {
-			ROC = {
-				OR = {
-					is_in_faction_with = STG
-					is_guaranteed_by = STG
-				}
-			}
-		}
-	}
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.22.a
-		trigger = {
-			NOT = {
-				ROC = {
-					is_in_faction_with = STG
-					is_guaranteed_by = STG
-				}
-			}
-		}
-		declare_war_on = {
-			target = ROC
-			type = annex_everything
-		}
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-		set_country_flag = EQS_ROC_warunification
-	}
-	option = {
-		name = equestria_celestia.22.b
-		trigger = {
-			ROC = {
-				OR = {
-					is_in_faction_with = STG
-					is_guaranteed_by = STG
-				}
-			}
-		}
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-	}
-}
-
-country_event = {
-	id = equestria_celestia.23
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.23" }
-	title = equestria_celestia.23.t
-	desc = equestria_celestia.23.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.23.a
-		SCS = {
-			country_event = {
-				id = equestria_celestia.24
-				days = 2
-			}
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.24
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.24" }
-	title = equestria_celestia.24.t
-	desc = equestria_celestia.24.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.24.a
-		ai_chance = {
-			factor = 0
-		}
-		custom_effect_tooltip = EQS_game_over_warning_tt
-		EQS = {
-			annex_country = {
-				target = SCS
-				transfer_troops = no
-			}
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-		}
-	}
-	option = {
-		name = equestria_celestia.24.b
-		EQS = {
-			country_event = equestria_celestia.25
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.25
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.25" }
-	title = equestria_celestia.25.t
-	desc = equestria_celestia.25.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.25.a
-		declare_war_on = {
-			target = SCS
-			type = annex_everything
-		}
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-		set_country_flag = EQS_SCS_warunification
-	}
-}
-
-country_event = {
-	id = equestria_celestia.26
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.26" }
-	title = equestria_celestia.26.t
-	desc = equestria_celestia.26.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.26.a
-		BUF = {
-			country_event = {
-				id = equestria_celestia.27
-				days = 2
-			}
-		}
-	}
-	option = {
-		name = equestria_celestia.26.b
-		BUF = {
-			country_event = {
-				id = equestria_celestia.28
-				days = 2
-			}
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.27
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.27" }
-	title = equestria_celestia.27.t
-	desc = equestria_celestia.27.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.27.a
-		EQS = {
-			set_country_flag = EQS_BUF_diploannex
-			annex_country = {
-				target = BUF
-				transfer_troops = no
-			}
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-		}
-	}
-	option = {
-		name = equestria_celestia.27.b
-		EQS = {
-			country_event = equestria_celestia.29
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.28
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.28" }
-	title = equestria_celestia.28.t
-	desc = equestria_celestia.28.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.28.a
-		EQS = {
-			puppet = BUF
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-			set_country_flag = EQS_BUF_diplosubject
-		}
-	}
-	option = {
-		name = equestria_celestia.28.b
-		EQS = {
-			country_event = equestria_celestia.29
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.29
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.29" }
-	title = equestria_celestia.29.t
-	desc = equestria_celestia.29.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.29.a
-		declare_war_on = {
-			target = BUF
-			type = annex_everything
-		}
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-		set_country_flag = EQS_BUF_warunification
-	}
-}
-
-country_event = {
-	id = equestria_celestia.30
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.30" }
-	title = equestria_celestia.30.t
-	desc = equestria_celestia.30.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.30.a
-		annex_country = {
-			target = CES
-			transfer_troops = no
-		}
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-	}
-	option = {
-		name = equestria_celestia.30.b
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-	}
-}
-
-country_event = {
-	id = equestria_celestia.31
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.31" }
-	title = equestria_celestia.31.t
-	desc = equestria_celestia.31.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.31.a
-		JUN = {
-			country_event = {
-				id = equestria_celestia.32
-				days = 2
-			}
-		}
-	}
-	option = {
-		name = equestria_celestia.31.b
-		JUN = {
-			country_event = {
-				id = equestria_celestia.33
-				days = 2
-			}
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.32
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.32" }
-	title = equestria_celestia.32.t
-	desc = equestria_celestia.32.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.32.a
-		EQS = {
-			set_country_flag = EQS_JUN_diploannex
-			annex_country = {
-				target = JUN
-				transfer_troops = no
-			}
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-		}
-	}
-	option = {
-		name = equestria_celestia.32.b
-		EQS = {
-			country_event = equestria_celestia.34
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.33
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.33" }
-	title = equestria_celestia.33.t
-	desc = equestria_celestia.33.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.33.a
-		EQS = {
-			puppet = JUN
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-			set_country_flag = EQS_JUN_diplosubject
-		}
-	}
-	option = {
-		name = equestria_celestia.33.b
-		EQS = {
-			country_event = equestria_celestia.34
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.34
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.34" }
-	title = equestria_celestia.34.t
-	desc = equestria_celestia.34.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.34.a
-		declare_war_on = {
-			target = JUN
-			type = annex_everything
-		}
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-		set_country_flag = EQS_southeast_warunification
-	}
-}
-
-country_event = {
-	id = equestria_celestia.35
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.35" }
-	title = equestria_celestia.35.t
-	desc = equestria_celestia.35.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.35.a
-		NMS = {
-			country_event = {
-				id = equestria_celestia.36
-				days = 2
-			}
-		}
-	}
-	option = {
-		name = equestria_celestia.35.b
-		NMS = {
-			country_event = {
-				id = equestria_celestia.37
-				days = 2
-			}
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.36
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.36" }
-	title = equestria_celestia.36.t
-	desc = equestria_celestia.36.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.36.a
-		EQS = {
-			set_country_flag = EQS_NMS_diploannex
-			annex_country = {
-				target = NMS
-				transfer_troops = no
-			}
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-		}
-	}
-	option = {
-		name = equestria_celestia.36.b
-		EQS = {
-			country_event = equestria_celestia.38
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.37
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.37" }
-	title = equestria_celestia.37.t
-	desc = equestria_celestia.37.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.37.a
-		EQS = {
-			puppet = NMS
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-			set_country_flag = EQS_NMS_diplosubject
-		}
-	}
-	option = {
-		name = equestria_celestia.37.b
-		EQS = {
-			country_event = equestria_celestia.38
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.38
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.38" }
-	title = equestria_celestia.38.t
-	desc = equestria_celestia.38.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.38.a
-		declare_war_on = {
-			target = NMS
-			type = annex_everything
-		}
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-		set_country_flag = EQS_southeast_warunification
-	}
-}
-
-country_event = {
-	id = equestria_celestia.39
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.39" }
-	title = equestria_celestia.39.t
-	desc = equestria_celestia.39.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.39.a
-		BAL = {
-			country_event = {
-				id = equestria_celestia.40
-				days = 2
-			}
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.40
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.40" }
-	title = equestria_celestia.40.t
-	desc = equestria_celestia.40.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.40.a
-		ai_chance = {
-			factor = 0
-		}
-		custom_effect_tooltip = EQS_game_over_warning_tt
-		EQS = {
-			annex_country = {
-				target = BAL
-				transfer_troops = no
-			}
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-		}
-	}
-	option = {
-		name = equestria_celestia.40.b
-		EQS = {
-			country_event = equestria_celestia.41
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.41
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.41" }
-	title = equestria_celestia.41.t
-	desc = {
-		text = equestria_celestia.d1
-		trigger = {
-			NOT = {
-				BAL = {
-					is_in_faction_with = STG
-					is_guaranteed_by = STG
-				}
-			}
-		}
-	}
-	desc = {
-		text = equestria_celestia.41.d2
-		trigger = {
-			BAL = {
-				OR = {
-					is_in_faction_with = STG
-					is_guaranteed_by = STG
-				}
-			}
-		}
-	}
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.41.a
-		trigger = {
-			NOT = {
-				BAL = {
-					is_in_faction_with = STG
-					is_guaranteed_by = STG
-				}
-			}
-		}
-		declare_war_on = {
-			target = BAL
-			type = annex_everything
-		}
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-		set_country_flag = EQS_southeast_warunification
-	}
-	option = {
-		name = equestria_celestia.41.b
-		trigger = {
-			BAL = {
-				OR = {
-					is_in_faction_with = STG
-					is_guaranteed_by = STG
-				}
-			}
-		}
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-	}
-}
-
-country_event = {
-	id = equestria_celestia.42
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.42" }
-	title = equestria_celestia.42.t
-	desc = equestria_celestia.42.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.42.a
-		ai_chance = {
-			factor = 0
-		}
-		custom_effect_tooltip = EQS_game_over_warning_tt
-		EQS = {
-			annex_country = {
-				target = PCB
-				transfer_troops = no
-			}
-			clr_country_flag = EQS_breakaway_negotiations_ongoing
-			1193 = {
-				add_core_of = EQS
-			}
-			1194 = {
-				add_core_of = EQS
-			}
-		}
-	}
-	option = {
-		name = equestria_celestia.42.b
-		EQS = {
-			country_event = equestria_celestia.43
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.43
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.43" }
-	title = equestria_celestia.43.t
-	desc = equestria_celestia.43.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.43.a
-		if = {
-			limit = {
-				PCB = {
-					is_subject_of = EQS
-				}
-			}
-			PCB = {
-				end_puppet_this = yes
-			}
-		}
-		if = {
-			limit = {
-				PCB = {
-					is_in_faction_with = EQS
-				}
-			}
-			PCB = {
-				leave_faction = yes
-			}
-		}
-		declare_war_on = {
-			target = PCB
-			type = annex_everything
-		}
-		PCB = { add_to_ROOT_potential_cores = yes }
-		clr_country_flag = EQS_breakaway_negotiations_ongoing
-	}
-}
-
-country_event = {
-	id = equestria_celestia.44
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.44" }
-	title = equestria_celestia.44.t
-	desc = equestria_celestia.44.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.44.a
-		EQS = {
-			puppet = CRY
-		}
-	}
-	option = {
-		name = equestria_celestia.44.b
-		EQS = {
-			country_event = equestria_celestia.45
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.45
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.45" }
-	title = equestria_celestia.45.t
-	desc = equestria_celestia.45.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.45.a
-		declare_war_on = {
-			target = CRY
-			type = puppet_wargoal_focus
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.46
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.46" }
-	title = equestria_celestia.46.t
-	desc = equestria_celestia.46.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.46.a
-		EQS = {
-			add_to_faction = CCN
-		}
-	}
-	option = {
-		name = equestria_celestia.46.b
-		EQS = {
-			country_event = equestria_celestia.47
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.47
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.47" }
-	title = equestria_celestia.47.t
-	desc = equestria_celestia.47.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.47.a
-		declare_war_on = {
-			target = CCN
-			type = puppet_wargoal_focus
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.48
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.48" }
-	title = equestria_celestia.48.t
-	desc = equestria_celestia.48.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.48.a
-		release_puppet = CHN
-		set_autonomy = {
-			target = CHN
-			autonomy_state = autonomy_dominion
-		}
-		CHN = {
-			set_cosmetic_tag = CHN_VES_EQS
-			set_party_name = {
-				ideology = democratic
-				long_name = CHN_VES_EQS_harmony_party_long
-				name = CHN_VES_EQS_harmony_party
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 65
-				fascism = 10
-				communism = 5
-				neutrality = 20
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-		}
-		create_dynamic_country = {
-			original_tag = CHN
-			set_AI_strategies_on_every_possible_country_delayed = yes
-			set_research_slots = 3
-			ROOT = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 262
-							state = 264
-							state = 314
-							state = 311
-							state = 315
-							state = 320
-							state = 323
-							state = 322
-						}
-					}
-					transfer_state_to = PREV.PREV
-					add_core_of = PREV.PREV
-				}
-				puppet = PREV
-				set_autonomy = {
-					target = PREV
-					autonomy_state = autonomy_dominion
-				}
-			}
-			set_cosmetic_tag = CHN_SOR
-			every_possible_country = {
-				limit = {
-					has_character = CHN_queen_yaria
-				}
-				CHN_queen_yaria = {
-					set_nationality = PREV.PREV
-				}
-			}
-			add_country_leader_role = {
-				character = CHN_queen_yaria
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = conservatism
-				}
-				promote_leader = yes
-			}
-			add_ideas = no_poverty
-			add_ideas = modern_society
-			add_ideas = no_lack_of_scientists
-			add_ideas = proper_science_base
-			add_ideas = changeling_race
-			set_party_name = {
-				ideology = democratic
-				long_name = CHN_SOR_harmony_party_long
-				name = CHN_SOR_harmony_party
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 55
-				fascism = 4
-				communism = 1
-				neutrality = 40
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-			set_capital = {
-				state = 262
-			}
-		}
-		create_dynamic_country = {
-			original_tag = CHN
-			set_AI_strategies_on_every_possible_country_delayed = yes
-			set_research_slots = 3
-			ROOT = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 252
-							state = 304
-							state = 261
-							state = 305
-							state = 306
-							state = 312
-							state = 313
-						}
-					}
-					transfer_state_to = PREV.PREV
-					add_core_of = PREV.PREV
-				}
-				puppet = PREV
-				set_autonomy = {
-					target = PREV
-					autonomy_state = autonomy_dominion
-				}
-			}
-			set_cosmetic_tag = CHN_DIT
-			every_possible_country = {
-				limit = {
-					has_character = CHN_queen_helvia
-				}
-				CHN_queen_helvia = {
-					set_nationality = PREV.PREV
-				}
-			}	
-			add_country_leader_role = {
-				character = CHN_queen_helvia
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = conservatism
-				}
-				promote_leader = yes
-			}
-			add_ideas = no_poverty
-			add_ideas = modern_society
-			add_ideas = no_lack_of_scientists
-			add_ideas = proper_science_base
-			add_ideas = changeling_race
-			set_party_name = {
-				ideology = democratic
-				long_name = CHN_DIT_harmony_party_long
-				name = CHN_DIT_harmony_party
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 55
-				fascism = 1
-				communism = 19
-				neutrality = 25
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-			set_capital = {
-				state = 252
-			}
-		}
-		create_dynamic_country = {
-			original_tag = CHN
-			set_AI_strategies_on_every_possible_country_delayed = yes
-			set_research_slots = 3
-			ROOT = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 259
-							state = 250
-							state = 249
-							state = 321
-							state = 310
-						}
-					}
-					transfer_state_to = PREV.PREV
-					add_core_of = PREV.PREV
-				}
-				puppet = PREV
-				set_autonomy = {
-					target = PREV
-					autonomy_state = autonomy_dominion
-				}
-			}
-			set_cosmetic_tag = CHN_VRK
-			every_possible_country = {
-				limit = {
-					has_character = CHN_queen_argynnis
-				}
-				CHN_queen_argynnis = {
-					set_nationality = PREV.PREV
-				}
-			}
-			add_country_leader_role = {
-				character = CHN_queen_argynnis
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = conservatism
-				}
-				promote_leader = yes
-			}
-			add_ideas = no_poverty
-			add_ideas = modern_society
-			add_ideas = no_lack_of_scientists
-			add_ideas = proper_science_base
-			add_ideas = changeling_race
-			set_party_name = {
-				ideology = democratic
-				long_name = CHN_VRK_harmony_party_long
-				name = CHN_VRK_harmony_party
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 50
-				fascism = 35
-				communism = 1
-				neutrality = 14
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-			set_capital = {
-				state = 259
-			}
-		}
-		create_dynamic_country = {
-			original_tag = CHN
-			set_AI_strategies_on_every_possible_country_delayed = yes
-			set_research_slots = 3
-			ROOT = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 309
-							state = 303
-							state = 260
-							state = 308
-							state = 258
-							state = 307
-						}
-					}
-					transfer_state_to = PREV.PREV
-					add_core_of = PREV.PREV
-				}
-				puppet = PREV
-				set_autonomy = {
-					target = PREV
-					autonomy_state = autonomy_puppet
-				}
-			}
-			set_cosmetic_tag = CHN_LYC_EQS
-			every_possible_country = {
-				limit = {
-					has_character = EQS_sunset_shimmer_extra
-				}
-				EQS_sunset_shimmer_extra = {
-					set_nationality = PREV.PREV
-				}
-			}	
-			add_country_leader_role = {
-				character = EQS_sunset_shimmer_extra
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = khakistocracy
-				}
-				promote_leader = yes
-			}
-			add_ideas = no_poverty
-			add_ideas = modern_society
-			add_ideas = no_lack_of_scientists
-			add_ideas = proper_science_base
-			add_ideas = changeling_race
-			set_party_name = {
-				ideology = neutrality
-				long_name = CHN_LYC_EQS_neutrality_party_long
-				name = CHN_LYC_EQS_neutrality_party
-			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 25
-				fascism = 25
-				communism = 5
-				neutrality = 45
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-			set_capital = {
-				state = 309
-			}
-		}
-		create_dynamic_country = {
-			original_tag = CHN
-			set_AI_strategies_on_every_possible_country_delayed = yes
-			set_research_slots = 3
-			ROOT = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 316
-							state = 319
-							state = 247
-							state = 248
-							state = 291
-							state = 246
-						}
-					}
-					transfer_state_to = PREV.PREV
-					add_core_of = PREV.PREV
-				}
-				puppet = PREV
-				set_autonomy = {
-					target = PREV
-					autonomy_state = autonomy_puppet
-				}
-			}
-			set_cosmetic_tag = CHN_VLI_EQS
-			every_possible_country = {
-				limit = {
-					has_character = EQS_blueblood_extra
-				}
-				EQS_blueblood_extra = {
-					set_nationality = PREV.PREV
-				}
-			}	
-			add_country_leader_role = {
-				character = EQS_blueblood_extra
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = khakistocracy
-				}
-				promote_leader = yes
-			}
-			add_ideas = no_poverty
-			add_ideas = modern_society
-			add_ideas = no_lack_of_scientists
-			add_ideas = proper_science_base
-			add_ideas = changeling_race
-			set_party_name = {
-				ideology = neutrality
-				long_name = CHN_VLI_EQS_neutrality_party_long
-				name = CHN_VLI_EQS_neutrality_party
-			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 25
-				fascism = 35
-				communism = 5
-				neutrality = 35
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-			set_capital = {
-				state = 316
-			}
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.49
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.49" }
-	title = equestria_celestia.49.t
-	desc = equestria_celestia.49.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.49.a
-		EQS = {
-			add_to_faction = ROOT
-		}
-		every_owned_state = {
-			limit = {
-				OR = {
-					is_core_of = EQS
-					is_claimed_by = EQS
-				}
-			}
-			transfer_state_to = EQS
-		}
-	}
-	option = {
-		name = equestria_celestia.49.b
-		EQS = {
-			country_event = equestria_celestia.50
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.50
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.50" }
-	title = equestria_celestia.50.t
-	desc = equestria_celestia.50.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.50.a
-		declare_war_on = {
-			target = FROM
-			type = puppet_wargoal_focus
-		}
-	}
-}
-
-country_event = {
-	id = equestria_celestia.57
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.57" }
-	title = equestria_celestia.57.t
-	desc = equestria_celestia.57.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.57.a
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 712
-					state = 713
-					state = 690
-					state = 689
-					state = 691
-					state = 815
-				}
-			}
-			transfer_state_to = BAT
-		}
-		set_autonomy = {
-			target = BAT
-			autonomy_state = autonomy_dominion
-		}
-		BAT = {
-			set_cosmetic_tag = BAT_EQS_celestia
-			set_party_name = {
-				ideology = neutrality
-				long_name = BAT_EQS_celestia_neutrality_party_long
-				name = BAT_EQS_celestia_neutrality_party
-			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 20
-				fascism = 40
-				communism = 10
-				neutrality = 30
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-		}
-		712 = {
-			set_state_name = EQS_state_harmonyhills
-		}
-		713 = {
-			set_state_name = EQS_state_friendshipshore
-		}
-		689 = {
-			set_state_name = EQS_state_starlightridge
-		}
-		691 = {
-			set_state_name = EQS_vp_skyros
-		}
-		815 = {
-			set_state_name = EQS_state_prancingpoint
-		}
-		set_province_name = {
-			id = 18570
-			name = EQS_vp_newcanterlot
-		}
-		set_province_name = {
-			id = 18601
-			name = EQS_vp_maretime_bay
-		}
-		set_province_name = {
-			id = 18583
-			name = EQS_vp_zephyrheights
-		}
-		set_province_name = {
-			id = 18499
-			name = EQS_vp_novacloudsdale
-		}
-		set_province_name = {
-			id = 18526
-			name = EQS_vp_auroria
-		}
-		set_province_name = {
-			id = 18517
-			name = EQS_vp_skyros
-		}
-		set_province_name = {
-			id = 18477
-			name = EQS_vp_bridlewood
-		}
 	}
 }
 
