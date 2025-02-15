@@ -5,29 +5,30 @@
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-		infantry = { x = 0 y = 3 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
 	}
 
 	support = {
 		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
 	}
 }
 division_template = {
-	name = "Night Guard"
+	name = "Lunar Militia"
 	regiments = {
-		pegasi = { x = 0 y = 0 }
-		pegasi = { x = 0 y = 1 }
-		pegasi = { x = 0 y = 2 }
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
 	}
 
 	support = {
-		recon = { x = 0 y = 0 }
-		military_police = { x = 0 y = 1 }
 	}
-	priority = 2
 }
 division_template = {
 	name = "National Guard Division"
@@ -36,9 +37,27 @@ division_template = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-		infantry = { x = 0 y = 3 }
 	}
 	priority = 0
+}
+division_template = {
+	name = "Royal Armor"
+	division_names_group = NLR_ARM_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
 }
 division_template = {
 	name = "Thestral Division"
@@ -56,233 +75,258 @@ division_template = {
 		recon = { x = 0 y = 0 }
 	}
 }
-division_template = {
-	name = "Royal Armour"
-	division_names_group = NLR_ARM_01
-	regiments = {
-		light_armor = { x = 0 y = 0 }
-		light_armor = { x = 0 y = 1 }
-		light_armor = { x = 0 y = 2 }
-		motorized = { x = 1 y = 0 }
-		motorized = { x = 1 y = 1 }
-		motorized = { x = 1 y = 2 }
-		motorized = { x = 1 y = 3 }
-	}
-	support = {
-		mot_recon = { x = 0 y = 0 }
-	}
-}
 
 units = {
 	division = {
-		location = 6996
-		division_template = "Royal Armour"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 758
-		name = "Empress' Own Night Guard Regiment"
-		division_template = "Night Guard"
-		start_experience_factor = 1 }
-	division = {
-		location = 758
-		division_template = "National Guard Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 758
-		division_template = "National Guard Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 950
-		division_template = "National Guard Division"
-		start_experience_factor = 0.3 }
-	division = {
-		location = 11627
-		division_template = "National Guard Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 782
-		division_template = "National Guard Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 950
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 9867
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 9867
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 9867
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 9867
-		division_template = "National Guard Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 3915
-		division_template = "National Guard Division"
-		start_experience_factor = 0.4 }
-	division = {
-		location = 3534
-		division_template = "National Guard Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 11584
-		division_template = "National Guard Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 11584
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 11584
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 11734
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 9208
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 9208
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 3844
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 11206
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.4 }
-	division = {
-		location = 11206
-		division_template = "Thestral Division"
-		start_experience_factor = 0.4 }
-	division = {
-		location = 6668
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 118
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 6598
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 790
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 11875
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 3920
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
 		location = 758
 		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 10359
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 758
-		division_template = "Thestral Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 3844
-		division_template = "Thestral Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 9208
-		division_template = "Thestral Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 11584
-		division_template = "Thestral Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 118
-		division_template = "Thestral Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 758
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
-	division = {
-		location = 6734
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
+		start_experience_factor = 0.3
+	}
 	division = {
 		location = 11710
 		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
+		start_experience_factor = 0.2
+	}
 	division = {
-		location = 3920
+		location = 6734
 		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
+		start_experience_factor = 0.2
+	}
 	division = {
-		location = 4080
+		location = 950
 		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 4080
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 4080
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
-	division = {
-		location = 3920
-		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
+		start_experience_factor = 0.2
+	}
 	division = {
 		location = 10359
 		division_template = "Onhooves Division"
-		start_experience_factor = 0.2 }
+		start_experience_factor = 0.2
+	}
 	division = {
-		location = 10359
+		location = 3920
 		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
+		start_experience_factor = 0.2
+	}
 	division = {
-		location = 950
+		location = 6812
 		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
+		start_experience_factor = 0.2
+	}
 	division = {
-		location = 950
+		location = 3915
 		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
+		start_experience_factor = 0.2
+	}
 	division = {
-		location = 950
+		location = 11684
 		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3887
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.1
+	}
 	division = {
 		location = 874
 		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
+		start_experience_factor = 0.1
+	}
 	division = {
-		location = 874
+		location = 11875
 		division_template = "Onhooves Division"
-		start_experience_factor = 0.1 }
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 6996
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 784
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 11877
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 11052
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 3953
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 9867
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 782
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 11627
+		division_template = "Onhooves Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 6789
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 9867
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 11593
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 782
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 3976
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 6598
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 3844
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 9208
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 3044
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 11052
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 6789
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 9867
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 11593
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 782
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 3976
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 6598
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 3844
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 9208
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 3044
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 11052
+		division_template = "Lunar Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 6812
+		division_template = "Royal Armor"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3915
+		division_template = "Royal Armor"
+		start_experience_factor = 0.2
+	}
 	division = {
 		location = 758
 		division_template = "Thestral Division"
-		start_experience_factor = 0.1 }
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 950
+		division_template = "Thestral Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		location = 6598
+		division_template = "Thestral Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 3915
+		division_template = "Thestral Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 6812
+		division_template = "Thestral Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 11877
+		division_template = "Thestral Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		location = 6734
+		division_template = "Thestral Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 11710
+		division_template = "Thestral Division"
+		start_experience_factor = 0.1
+	}
 }
 
 ### Starting Production ###

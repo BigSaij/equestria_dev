@@ -937,6 +937,15 @@ focus_tree = {
 			NOT = {
 				has_war_with = CHN
 			}
+			BUF = {
+				exists = no
+			}
+			ROC = {
+				exists = no
+			}
+			LSP = {
+				exists = no
+			}
 		}
 
 		bypass = {

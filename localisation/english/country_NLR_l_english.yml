@@ -751,7 +751,6 @@ NLR_conquer_EQC:0 "Retake New Mareland"
 NLR_conquer_EQC_desc:0 ""
 
 ### Advisors ###
-NLR_rarity_night:0 "Rarity"
 NLR_umbra:0 "Umbra"
 NLR_nightshade:0 "Nightshade"
 NLR_star:0 "Star Cluster"

@@ -177,6 +177,16 @@ ideas = {
 					}
 				}
 			}
+			allowed_to_remove = {
+				if = {
+					limit = {
+						tag = EQS
+					}
+					NOT = {
+						has_country_flag = EQS_volunteer_only_set
+					}
+				}
+			}
 
 			ai_will_do = {
 				factor = 1

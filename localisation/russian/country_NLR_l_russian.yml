@@ -751,7 +751,6 @@ NLR_conquer_EQC:0 "Вернуть Новый Мейрленд"
 NLR_conquer_EQC_desc:0 ""
 
 ### Advisors ###
-NLR_rarity_night:0 "Рарити"
 NLR_umbra:0 "Умбра"
 NLR_nightshade:0 "Найтшэйд"
 NLR_star:0 "Стар Кластер"

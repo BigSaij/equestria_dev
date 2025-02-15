@@ -394,6 +394,7 @@ leader_traits = {
 		type = field_marshal
 		trait_type = personality_trait
 		field_marshal_modifier = {
+			max_army_group_size = -4
 			sickness_chance = -0.75
 			wounded_chance_factor = -0.75
 			army_attack_factor = 0.1
@@ -402,7 +403,7 @@ leader_traits = {
 			heat_attrition_factor = -0.3
 		}
 		non_shared_modifier = {
-			experience_gain_factor = -10
+			experience_gain_factor = -100
 		}
 		new_commander_weight = { factor = 0 }
 	}

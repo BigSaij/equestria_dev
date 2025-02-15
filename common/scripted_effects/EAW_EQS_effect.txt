@@ -103,20 +103,28 @@ EQS_NLR_civil_war = {
     		target = NLR
 		}
 		transfer_ship = {
-    		type = light_cruiser
+    		type = heavy_cruiser
     		target = NLR
 		}
 		transfer_ship = {
-    		type = light_cruiser
+    		type = heavy_cruiser
     		target = NLR
 		}
 		transfer_ship = {
-   			type = destroyer
+   			type = light_cruiser
    	 		target = NLR
 		}
 		transfer_ship = {
-	    	type = destroyer
+	    	type = light_cruiser
 	    	target = NLR
+		}
+		transfer_ship = {
+   			type = light_cruiser
+   			target = NLR
+		}
+		transfer_ship = {
+			type = light_cruiser
+			target = NLR
 		}
 		transfer_ship = {
    			type = destroyer
@@ -125,6 +133,14 @@ EQS_NLR_civil_war = {
 		transfer_ship = {
 			type = destroyer
 			target = NLR
+		}
+		transfer_ship = {
+   			type = destroyer
+   			target = NLR
+		}
+		transfer_ship = {
+	    	type = destroyer
+	    	target = NLR
 		}
 		transfer_ship = {
    			type = destroyer

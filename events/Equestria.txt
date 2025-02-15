@@ -658,7 +658,6 @@ country_event = {
 					small = "GFX_idea_NLR_Rarity"
 				}
 			}
-			set_character_name = NLR_rarity_night
 		}
 	}
 }
@@ -1482,6 +1481,10 @@ country_event = {
 	option = {
 		name = equestria_civwar.26.a
 		remove_country_leader_trait = absent_princess_2
+		set_country_leader_description = {
+			ideology = democratic
+			desc = POLITICS_CELESTIA_ABSOLESTIA_DESC
+		}
 		remove_ideas = EQS_civil_war
 		if = {
 			limit = {
@@ -1507,6 +1510,21 @@ country_event = {
 			country_event = {
 				id = equestria_civwar_flavor.9
 				days = 6
+			}
+			every_possible_country = {
+				limit = {
+					has_character = EQS_rarity
+				}
+				EQS_rarity = {
+					set_nationality = ROOT
+				}
+			}
+			EQS_rarity = {
+				set_portraits = {
+					civilian = {
+						small = "GFX_idea_EQS_rarity"
+					}
+				}
 			}
 		}
 	}

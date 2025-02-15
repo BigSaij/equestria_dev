@@ -453,7 +453,7 @@ characters = {
 		advisor = {
 			slot = air_chief
 			idea_token = EQS_rainbowdash
-			cost = 200
+			cost = 150
 			allowed = {
 				original_tag = EQS
 			}
@@ -508,10 +508,6 @@ characters = {
 				original_tag = EQS
 			}
 			available = {
-				if = {
-					limit = { country_exists = NLR }
-					NOT = { has_global_flag = rarity_captured }
-				}
 				NOT = {
 					has_country_flag = EQS_HIP_elements_sent
 				}
@@ -937,6 +933,11 @@ characters = {
 	#SCIENTISTS
 	EQS_starswirl = {
 		name = EQS_starswirl
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Starswirl.tga"
+			}
+		}
 		scientist = {
 			traits = { scientist_trait_brilliant_theorist }
 			skills = {
