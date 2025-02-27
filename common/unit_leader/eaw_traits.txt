@@ -402,9 +402,6 @@ leader_traits = {
 			land_reinforce_rate = 0.05
 			heat_attrition_factor = -0.3
 		}
-		non_shared_modifier = {
-			experience_gain_factor = -100
-		}
 		new_commander_weight = { factor = 0 }
 	}
 	

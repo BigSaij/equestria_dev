@@ -1624,518 +1624,125 @@ EQS_construction_projects_category = {
 }
 
 EQS_breakaway_diplomacy_category = {
-	EQS_las_pegasus_negotiations = {
+	EQS_integrate_CES_commanders = {
 		icon = celestia
 		available = {
-			has_war = no
-			NOT = {
-				has_country_flag = EQS_breakaway_negotiations_ongoing
-			}
-			NOT = {
-				has_country_flag = EQS_southwest_war_ongoing
+			CES = {
+				exists = no
 			}
 		}
 		visible = {
-			LSP = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					is_in_faction_with = EQS
-				}
+			CES = {
+				exists = no
 			}
-			has_completed_focus = EQS_cities_and_deserts
 		}
-		cost = 30
+		cost = 50
 		ai_will_do = {
-			factor = 100
+			factor = 50
 		}
 		fire_only_once = yes
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_las_pegasus_negotiations"
-			set_country_flag = EQS_breakaway_negotiations_ongoing
-			country_event = equestria_celestia.13
-		}
-	}
-	EQS_rock_union_negotiations = {
-		icon = celestia
-		available = {
-			has_war = no
-			NOT = {
-				has_country_flag = EQS_breakaway_negotiations_ongoing
-			}
-			NOT = {
-				has_country_flag = EQS_southwest_war_ongoing
-			}
-		}
-		visible = {
-			ROC = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					is_in_faction_with = EQS
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_integrate_CES_commanders"
+			CES = {
+				CES_daring_do = {
+					set_nationality = EQS
+					demote_leader = yes
+				}
+				CES_snap_shutter = {
+					set_nationality = EQS
+				}
+				CES_mane_allgood = {
+					set_nationality = EQS
 				}
 			}
-			has_completed_focus = EQS_cities_and_deserts
-		}
-		cost = 30
-		ai_will_do = {
-			factor = 10
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_rock_union_negotiations"
-			set_country_flag = EQS_breakaway_negotiations_ongoing
-			country_event = equestria_celestia.18
 		}
 	}
-	EQS_confederacy_negotiations = {
+	EQS_reintegrate_southwest = {
 		icon = celestia
 		available = {
-			has_war = no
-			NOT = {
-				has_country_flag = EQS_breakaway_negotiations_ongoing
-			}
-			NOT = {
-				has_country_flag = EQS_southwest_war_ongoing
-			}
-		}
-		visible = {
-			SCS = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					is_in_faction_with = EQS
-				}
-			}
-			has_completed_focus = EQS_cities_and_deserts
-		}
-		cost = 30
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_confederacy_negotiations"
-			set_country_flag = EQS_breakaway_negotiations_ongoing
-			country_event = equestria_celestia.23
-		}
-	}
-	EQS_buffalo_negotiations = {
-		icon = celestia
-		available = {
-			has_war = no
-			NOT = {
-				has_country_flag = EQS_breakaway_negotiations_ongoing
-			}
-			NOT = {
-				has_country_flag = EQS_southwest_war_ongoing
-			}
-		}
-		visible = {
 			BUF = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					is_in_faction_with = EQS
+				OR = {
+					exists = no
+					is_subject_of = EQS
 				}
 			}
-			has_completed_focus = EQS_cities_and_deserts
-		}
-		cost = 30
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_buffalo_negotiations"
-			set_country_flag = EQS_breakaway_negotiations_ongoing
-			country_event = equestria_celestia.26
-		}
-	}
-	EQS_reunify_southeast = {
-		icon = celestia
-		available = {
-			has_war = no
-			count_triggers = {
-				amount = 2
-				country_exists = CES
-				country_exists = JUN
-				country_exists = NMS
-				country_exists = BAL
+			SCS = {
+				exists = no
+			}
+			LSP = {
+				exists = no
+			}
+			ROC = {
+				exists = no
 			}
 		}
 		visible = {
-			count_triggers = {
-				amount = 2
-				country_exists = CES
-				country_exists = JUN
-				country_exists = NMS
-				country_exists = BAL
-			}
-			has_completed_focus = EQS_jungles_and_mountains
+			#has_country_flag = EQS_autonomous_southwest   #this will come in handy when BUF gets content
+			has_completed_focus = EQS_reunify_equestria
 		}
-		cost = 30
+		cost = 25
 		ai_will_do = {
 			factor = 100
 		}
 		fire_only_once = yes
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_reunify_southeast"
-			if = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_reintegrate_southwest"
+			every_owned_state = {
 				limit = {
-					CES = {
-						exists = yes
-					}
-				}
-				puppet = CES
-			}
-			if = {
-				limit = {
-					JUN = {
-						exists = yes
-					}
-				}
-				declare_war_on = {
-					target = JUN
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					NMS = {
-						exists = yes
-					}
-				}
-				declare_war_on = {
-					target = NMS
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					BAL = {
-						exists = yes
-					}
-				}
-				declare_war_on = {
-					target = BAL
-					type = annex_everything
-				}
-			}
-			set_country_flag = EQS_southeast_warunification
-		}
-	}
-	EQS_celestial_state_annexation = {
-		icon = celestia
-		available = {
-			has_war = no
-			NOT = {
-				has_country_flag = EQS_breakaway_negotiations_ongoing
-			}
-		}
-		visible = {
-			CES = {
-				exists = yes
-				is_subject_of = EQS
-			}
-			JUN = {
-				exists = no
-			}
-			NMS = {
-				exists = no
-			}
-			BAL = {
-				exists = no
-			}
-			has_completed_focus = EQS_jungles_and_mountains
-		}
-		cost = 30
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_celestial_state_negotiations"
-			set_country_flag = EQS_breakaway_negotiations_ongoing
-			country_event = equestria_celestia.30
-		}
-	}
-	EQS_aztlan_negotiations = {
-		icon = celestia
-		available = {
-			has_war = no
-			NOT = {
-				has_country_flag = EQS_breakaway_negotiations_ongoing
-			}
-		}
-		visible = {
-			JUN = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					is_in_faction_with = EQS
-				}
-			}
-			CES = {
-				exists = no
-			}
-			NMS = {
-				exists = no
-			}
-			BAL = {
-				exists = no
-			}
-			has_completed_focus = EQS_jungles_and_mountains
-		}
-		cost = 30
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_aztlan_negotiations"
-			set_country_flag = EQS_breakaway_negotiations_ongoing
-			country_event = equestria_celestia.31
-		}
-	}
-	EQS_tzinacatlia_negotiations = {
-		icon = celestia
-		available = {
-			has_war = no
-			NOT = {
-				has_country_flag = EQS_breakaway_negotiations_ongoing
-			}
-		}
-		visible = {
-			NMS = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					is_in_faction_with = EQS
-				}
-			}
-			CES = {
-				exists = no
-			}
-			JUN = {
-				exists = no
-			}
-			BAL = {
-				exists = no
-			}
-			has_completed_focus = EQS_jungles_and_mountains
-		}
-		cost = 30
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_tzinacatlia_negotiations"
-			set_country_flag = EQS_breakaway_negotiations_ongoing
-			country_event = equestria_celestia.35
-		}
-	}
-	EQS_kill_baltimare = {
-		icon = celestia
-		available = {
-			has_war = no
-			NOT = {
-				has_country_flag = EQS_breakaway_negotiations_ongoing
-			}
-		}
-		visible = {
-			BAL = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					is_in_faction_with = EQS
-				}
-			}
-			CES = {
-				exists = no
-			}
-			JUN = {
-				exists = no
-			}
-			NMS = {
-				exists = no
-			}
-			has_completed_focus = EQS_jungles_and_mountains
-		}
-		cost = 30
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_kill_baltimare"
-			set_country_flag = EQS_breakaway_negotiations_ongoing
-			country_event = equestria_celestia.39
-		}
-	}
-	EQS_annex_puerto_caballo = {
-		icon = celestia
-		available = {
-			has_war = no
-			NOT = {
-				has_country_flag = EQS_breakaway_negotiations_ongoing
-			}
-		}
-		visible = {
-			PCB = {
-				exists = yes
-			}
-			has_completed_focus = EQS_beyond_the_celestial_sea
-		}
-		cost = 30
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_annex_puerto_caballo"
-			set_country_flag = EQS_breakaway_negotiations_ongoing
-			PCB = {
-				country_event = equestria_celestia.42
-			}
-		}
-	}
-	EQS_invite_les_meridiennes = {
-		icon = celestia
-		available = {
-			has_war = no
-			MER = {
-				is_in_faction = no
-				is_subject = no
-				exists = yes
-			}
-		}
-		visible = {
-			MER = {
-				is_in_faction = no
-				is_subject = no
-				exists = yes
-			}
-			has_completed_focus = EQS_beyond_the_celestial_sea
-		}
-		cost = 30
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_invite_les_meridiennes"
-			puppet = MER
-		}
-	}
-	EQS_secure_dragons = {
-		icon = celestia
-		available = {
-			has_war = no
-			OR = {
-				AND = {
-					DRG = {
-						exists = no
+					OR = {
+						is_core_of = BUF
+						is_core_of = SCS
+						is_core_of = LSP
+						is_core_of = ROC
 					}
 					NOT = {
-						owns_state = 7
+						is_core_of = EQS
 					}
 				}
-				NOT = {
-					DRG = {
-						is_in_faction_with = EQS
-					}
-				}
-			}
-		}
-		visible = {
-			OR = {
-				AND = {
-					DRG = {
-						exists = no
-					}
-					NOT = {
-						owns_state = 7
-					}
-				}
-				NOT = {
-					DRG = {
-						is_in_faction_with = EQS
-					}
-				}
-			}
-			has_completed_focus = EQS_beyond_the_celestial_sea
-		}
-		cost = 30
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_secure_dragons"
-			if = {
-				limit = {
-					DRG = {
-						exists = yes
-						has_government = democratic
-					}
-				}
-				add_to_faction = DRG
-			}
-			else_if = {
-				limit = {
-					DRG = {
-						exists = yes
-					}
-				}
-				declare_war_on = {
-					target = DRG
-					type = puppet_wargoal_focus
-				}
-			}
-			else = {
-				declare_war_on = {
-					target = 7.owner
-					type = annex_everything
-				}
+				add_core_of = EQS
 			}
 		}
 	}
-	EQS_save_new_mareland = {
+	EQS_reintegrate_southeast = {
 		icon = celestia
 		available = {
-			has_war = no
-			EQC = {
-				exists = yes
-				is_subject = no
-				OR = {
-					has_government = fascism
-					has_government = communism
-				}
+			CES = {
+				exists = no
+			}
+			NMS = {
+				exists = no
+			}
+			BAL = {
+				exists = no
+			}
+			JUN = {
+				exists = no
 			}
 		}
 		visible = {
-			EQC = {
-				exists = yes
-				is_subject = no
-				OR = {
-					has_government = fascism
-					has_government = communism
-				}
-			}
-			has_completed_focus = EQS_beyond_the_celestial_sea
+			has_country_flag = EQS_autonomous_southeast
+			has_completed_focus = EQS_reunify_equestria
 		}
-		cost = 30
+		cost = 25
 		ai_will_do = {
 			factor = 100
 		}
 		fire_only_once = yes
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_save_new_mareland"
-			declare_war_on = {
-				target = EQC
-				type = puppet_wargoal_focus
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_reintegrate_southeast"
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = CES
+						is_core_of = JUN
+						is_core_of = NMS
+						is_core_of = BAL
+					}
+					NOT = {
+						is_core_of = EQS
+					}
+				}
+				add_core_of = EQS
 			}
 		}
 	}
@@ -2149,7 +1756,12 @@ EQS_breakaway_diplomacy_category = {
 		}
 		visible = {
 			CRY = {
-				exists = no
+				OR = {
+					exists = no
+					NOT = {
+						has_government = democratic
+					}
+				}
 			}
 		}
 		cost = 0
@@ -2161,6 +1773,17 @@ EQS_breakaway_diplomacy_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_integrate_crystal_empire"
 			set_country_flag = EQS_CRY_absolestia_integration
 			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = royalty_executed
+					}
+				}
+				country_event = equestria_celestia.21
+			}
+			else = {
+				country_event = equestria_celestia.22
+			}
 		}
 	}
 	EQS_integrate_stalliongrad = {

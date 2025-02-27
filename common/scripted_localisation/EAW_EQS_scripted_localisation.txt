@@ -95,3 +95,25 @@ defined_text = { # Celestia-DB Radical Support
 		localization_key = EQS_supremacysupport1
 	}
 }
+
+defined_text = { # Absolestia CRY focus
+	name = GetCelestiaCRYFocus
+	text = {
+		trigger = {
+			CRY = {
+				has_government = democratic
+			}
+		}
+		localization_key = EQS_return_to_crystal_empire_desc1
+	}
+	text = {
+		trigger = {
+			CRY = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+		}
+		localization_key = EQS_return_to_crystal_empire_desc2
+	}
+}

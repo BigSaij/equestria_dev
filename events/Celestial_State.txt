@@ -758,6 +758,8 @@ country_event = {
 				}
 			}
 		}
+		set_country_flag = EQS_autonomous_southeast
+		custom_effect_tooltip = EQS_delayed_integration_available_tt
 	}
 
 	option = { #Just Annex Them
@@ -767,15 +769,6 @@ country_event = {
 			modifier = {
 				CES = { is_ai = no }
 				factor = 0
-			}
-		}
-		CES = {
-			every_character = {
-				limit = {
-					is_unit_leader = yes
-					is_country_leader = no
-				}
-				set_nationality = EQS
 			}
 		}
 		annex_country = {

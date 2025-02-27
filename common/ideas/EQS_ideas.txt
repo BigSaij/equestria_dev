@@ -1104,6 +1104,25 @@ ideas = {
 				resistance_growth_on_our_occupied_states = 0.2
 			}
 		}
+		EQS_smile_empowered_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+			}
+			removal_cost = -1
+			picture = EQS_smile_empowered
+			modifier = {
+				party_popularity_stability_factor = 0.1
+				resistance_target_on_our_occupied_states = 0.1
+				resistance_growth_on_our_occupied_states = 0.2
+				encryption_factor = 0.2
+				decryption_factor = 0.2
+			}
+		}
 		EQS_lunarist_reintegration = {
 			allowed = {
 				always = no
@@ -1160,12 +1179,12 @@ ideas = {
 					soft_attack = 0.1
 					hard_attack = 0.2
 					ap_attack = 0.2
-					build_cost_ic = 0.15
+					build_cost_ic = 0.2
 					instant = yes
 				}
 			}
 		}
-		EQS_LSP_administrative_integration = {
+		EQS_blueblood_production = {
 			allowed = {
 				always = no
 			}
@@ -1176,15 +1195,36 @@ ideas = {
 			}
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
-			modifier = {
-				political_power_gain = -0.25
-				war_stability_factor = -0.1
-				trade_laws_cost_factor = 0.5
-				mobilization_laws_cost_factor = 0.5
-				economy_cost_factor = 0.5
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+					reliability = 0.1
+					build_cost_ic = -0.1
+					instant = yes
+				}
 			}
 		}
-		EQS_ROC_socialist_overtures = {
+		EQS_blueblood_artillery = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+			}
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			equipment_bonus = {
+				artillery_equipment = {
+					soft_attack = 0.05
+					hard_attack = 1
+					ap_attack = 0.5
+					breakthrough = 0.5
+				}
+			}
+		}
+		EQS_tactical_bonus = {
 			allowed = {
 				always = no
 			}
@@ -1196,9 +1236,10 @@ ideas = {
 			removal_cost = -1
 			picture = generic_pp_unity_bonus
 			modifier = {
-				production_speed_buildings_factor = -0.1
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.25
+				command_abilities_cost_factor = -0.25
+				coordination_bonus = 0.1
 			}
 		}
 		EQS_representative_overhaul = {
@@ -1240,6 +1281,19 @@ ideas = {
 	#TECHNOLOGY
 	tank_manufacturer = {
 		designer = yes
+		EQS_equestrian_tank_program = {
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				has_completed_focus = EQS_equestrian_armored_development
+			}
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { medium_tank_manufacturer }
+			picture = EQS_mustang
+		}
 		EQS_mustang = {
 			allowed = {
 				original_tag = EQS
@@ -1876,650 +1930,6 @@ ideas = {
 		}
 	}
 	country = {
-		popular_discontent = {
-
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			available = {
-				has_government = democratic
-				NOT = {
-					has_completed_focus = eqs_allow_the_vote
-					has_completed_focus = eqs_jail_dissenters
-				}
-			}
-
-			removal_cost = -1
-			picture = EQS_popular_discontent
-			modifier = {
-				stability_factor = -0.1
-				political_power_gain = -0.3
-				democratic_drift = 0.03
-
-			}
-		}
-	}
-	country = {
-		democratic_protest = {
-
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = no
-			}
-			available = {
-				has_government = democratic
-				NOT = {
-					has_completed_focus = eqs_allow_the_vote
-					has_completed_focus = eqs_jail_dissenters
-				}
-			}
-
-			removal_cost = -1
-			picture = FRA_factory_strikes
-			modifier = {
-				consumer_goods_factor = 0.4
-				production_speed_buildings_factor = -0.5
-			}
-		}
-	}
-	country = {
-		lone_princess = {
-			
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				has_government = democratic
-			}
-			removal_cost = -1
-			picture = EQS_celestia_sun
-			modifier = {
-				stability_factor = 0.025
-				army_morale_factor = 0.025
-			}
-		}
-	}
-	country = {
-		lone_princess_luna = {
-
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				has_government = democratic
-			}
-
-			removal_cost = -1
-			picture = EQS_lone_princess_luna
-			modifier = {
-				war_support_factor = 0.01
-				army_morale_factor = 0.01
-			}
-		}
-	}
-	country = {
-		transitional_government = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = STG_less_bureaucracy
-			modifier = {
-				political_power_gain = -0.25
-			}
-		}
-	}
-	country = {
-		charter_liberties = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = HUN_treaty_of_triannon
-			modifier = {
-				democratic_drift = 0.05
-			}
-		}
-	}
-	country = {
-		charter_republic = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = HUN_treaty_of_triannon
-			modifier = {
-				democratic_acceptance = 95
-				political_power_gain = 0.05
-			}
-		}
-	}
-	country = {
-		charter_commonwealth = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = HUN_treaty_of_triannon
-			modifier = {
-				democratic_drift = 0.075
-				democratic_acceptance = 85
-				political_power_gain = 0.015
-			}
-		}
-	}
-	country = {
-		bastion_harmony = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = generic_fortify_the_borders
-			modifier = {
-				drift_defence_factor = 0.1
-				enemy_operative_detection_chance_factor = 0.1
-				foreign_subversive_activites = -0.25
-				production_speed_bunker_factor = 0.025
-				production_speed_coastal_bunker_factor = 0.025
-				production_speed_anti_air_building_factor = 0.025
-				production_speed_radar_station_factor = 0.025
-				production_speed_air_base_factor = 0.025
-				army_core_attack_factor = 0.01
-				army_core_defence_factor = 0.015
-			}
-		}
-	}
-	country = {
-		arsenal_harmony = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = ast_volunteer_defence_corps
-			modifier = {
-				opinion_gain_monthly_same_ideology_factor = 0.05
-				production_speed_arms_factory_factor = 0.015
-				production_speed_dockyard_factor = 0.015
-				license_armor_purchase_cost = -0.05
-				lend_lease_tension = -0.20
-				send_volunteers_tension = -0.20
-				send_volunteer_divisions_required = -0.25
-				send_volunteer_size = 1
-			}
-		}
-	}
-	country = {
-		EQS_cel_executive = {
-
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				has_government = democratic
-			}
-			available = {
-				has_government = democratic
-			}
-
-			removal_cost = -1
-			picture = EQS_cel_executive
-			modifier = {
-				guarantee_tension = -0.1
-				guarantee_cost = -0.1
-				stability_factor = 0.05
-				political_power_factor = 0.05
-			}
-		}
-	}
-	country = {
-		EQS_cel_figurehead = {
-
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				has_government = democratic
-			}
-			available = {
-				has_government = democratic
-			}
-
-			removal_cost = -1
-			picture = EQS_cel_executive
-			modifier = {
-				army_morale_factor = 0.05
-				stability_factor = 0.05
-				drift_defence_factor = 0.1
-			}
-		}
-	}
-	country = {
-		EQS_luna_executive = {
-
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				has_government = democratic
-			}
-			available = {
-				has_government = democratic
-				NOT = { has_global_flag = equestrian_civil_war }
-			}
-
-			removal_cost = -1
-			picture = EQS_luna_executive
-			modifier = {
-				guarantee_tension = -0.1
-				guarantee_cost = -0.1
-				war_support_factor = 0.05
-				political_power_factor = 0.05
-			}
-		}
-	}
-	country = {
-		EQS_luna_figurehead = {
-			
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				has_government = democratic
-			}
-			available = {
-				has_government = democratic
-				NOT = { has_global_flag = equestrian_civil_war }
-			}
-
-			removal_cost = -1
-			picture = EQS_luna_executive
-			modifier = {
-				army_morale_factor = 0.05
-				stability_factor = 0.025
-				war_support_factor = 0.025
-				drift_defence_factor = 0.25
-			}
-		}
-	}
-	country = {
-		EQS_cel_luna_executive = {
-
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				has_government = democratic
-			}
-			available = {
-				has_government = democratic
-				NOT = { has_global_flag = equestrian_civil_war }
-			}
-
-			removal_cost = -1
-			picture = EQS_cel_luna_executive
-			modifier = {
-				guarantee_tension = -0.1
-				guarantee_cost = -0.1
-				stability_factor = 0.025
-				war_support_factor = 0.05
-				political_power_factor = 0.05
-			}
-		}
-	}
-	country = {
-		EQS_cel_luna_figurehead = {
-			
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				has_government = democratic
-			}
-			available = {
-				has_government = democratic
-				NOT = { has_global_flag = equestrian_civil_war }
-			}
-
-			removal_cost = -1
-			picture = EQS_cel_luna_executive
-			modifier = {
-				army_morale_factor = 0.05
-				stability_factor = 0.03
-				war_support_factor = 0.03
-				drift_defence_factor = 0.25
-			}
-		}
-	}
-	country = {
-		species_rights_act = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = neutrality_idea
-			modifier = {
-				non_core_manpower = 0.05
-				communism_drift = -0.10
-			}
-		}
-	}
-	country = {
-		new_harmonic_administration = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = generic_pp_unity_bonus
-			modifier = {
-				economy_cost_factor = -0.05
-				mobilization_laws_cost_factor = -0.05
-				trade_laws_cost_factor = -0.05
-				political_advisor_cost_factor = -0.05
-			}
-		}
-	}
-	country = {
-		commoner_kingdom = {
-			
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = EQS_manehattan
-			modifier = {
-				local_resources_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.05
-				consumer_goods_factor = 0.1
-			}
-		}
-	}
-	country = {
-		merchant_republic = {
-
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_synthetic_refinery_factor = 0.05
-				global_building_slots_factor = 0.05
-				trade_opinion_factor = 0.20
-			}
-		}
-	}
-	country = {
-		diet_commoners = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = generic_democratic_drift_bonus
-			modifier = {
-				mobilization_laws_cost_factor = -0.15
-			}
-		}
-	}
-	country = {
-		diet_nobles = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = generic_foreign_capital
-			modifier = {
-				trade_laws_cost_factor = -0.15
-			}
-		}
-	}
-	country = {
-		centralization = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = generic_central_management
-			modifier = {
-				global_building_slots_factor = 0.025
-				local_resources_factor = 0.025
-				production_speed_buildings_factor = 0.025
-				production_factory_efficiency_gain_factor = 0.025
-			}
-		}
-	}
-	country = {
-		maintain_autonomies = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = generic_local_self_management
-			modifier = {
-				industry_free_repair_factor = 0.05
-				line_change_production_efficiency_factor = 0.025
-				consumer_goods_factor = -0.01
-			}
-		}
-	}
-	country = {
-		grand_army = {
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-			picture = YUG_federal_defense_council
-			modifier = {
-				training_time_factor = -0.02
-				military_leader_cost_factor = -0.15
-			}
-		}
-	}
-	country = {
-		development_of_BUF = {
-			
-			allowed = {
-				always = no
-			}
-			available = {
-				BUF = {
-					NOT = { is_fully_developed = yes }
-					is_subject_of = EQS
-				}
-				BUF = { exists = yes }
-			}
-
-			removal_cost = -1
-			picture = generic_foreign_capital
-			modifier = {
-				consumer_goods_factor = -0.04
-				political_power_gain = -0.15
-			}
-		}
-	}
-
-	### PROJECT MOONSHINE BELOW ###
-
-### Moonshine Rework Partisan national spirits ###	
-	country = {
-		EQS_moonshine_partisans_3 = {
-
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-			picture = chaos_idea
-			modifier = {
-				supply_consumption_factor = 0.1
-				attrition = 0.1
-				army_morale_factor = -0.05
-			}
-		}
-	}
-	country = {
-		EQS_moonshine_partisans_2 = {
-
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-			picture = chaos_idea
-			modifier = {
-				supply_consumption_factor = 0.05
-				attrition = 0.05
-				army_morale_factor = -0.025
-			}
-		}
-	}
-	country = {
-		EQS_moonshine_partisans_1 = {
-
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-			picture = chaos_idea
-			modifier = {
-				supply_consumption_factor = 0.025
-				attrition = 0.025
-			}
-		}
-	}
-	country = {
-		EQS_moonshine_partisans_0 = {
-
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-			picture = chaos_idea
-			modifier = {
-				supply_consumption_factor = -0.05
-				attrition = -0.05
-				army_morale_factor = 0.05
-			}
-		}
-	}
-
-# End of Partisans #	
-
-	country = {
-		EQS_bat_extremism_1 = { #More serious
-			
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-			picture = EQS_ponies_act 
-			modifier = {
-				democratic_drift = 0.02
-				political_power_gain = -0.10
-				stability_factor = 0.05
-			}
-		}
-	}
-	country = {
-		EQS_bat_extremism_2 = { #Less serious
-			
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-			picture = EQS_ponies_act
-			modifier = {
-				democratic_drift = 0.01
-				political_power_gain = -0.05
-				stability_factor = 0.025
-			}
-		}
-	}
-	country = {
-		EQS_bat_pr_campaign_1 = { #More serious
-			
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-			picture = SOL_enlightened_education 
-			modifier = {
-				democratic_drift = 0.03
-				political_power_gain = -0.05
-			}
-		}
-	}
-	country = {
-		EQS_bat_pr_campaign_2 = { #Less serious
-			
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-			picture = SOL_enlightened_education 
-			modifier = {
-				democratic_drift = 0.02
-				political_power_gain = -0.03
-
-			}
-		}
-	}
-	country = {
-		EQS_bat_pony_divide_2 = { #Half-ass everything
-			
-			allowed = {
-				always = no
-			}
-			available = {
-				has_government = democratic
-				has_country_leader = { ruling_only = yes character = EQS_princess_celestia }
-			}
-
-			removal_cost = -1
-			picture = NLR_moonlight 
-			modifier = {
-				conscription_factor = -0.05
-				stability_factor = -0.025
-				army_core_defence_factor = -0.025
-				land_night_attack = -0.10
-				political_power_gain = -0.025
-				consumer_goods_factor = 0.02
-			}
-		}
-	}
-	### END PROJECT MOONSHINE ###
-	country = {
 		EQS_bad_tanks = {
 			
 			allowed = {
@@ -2581,37 +1991,6 @@ ideas = {
 			modifier = {
 				max_dig_in_factor = -0.1
 				dig_in_speed_factor = -0.1
-			}
-		}
-	}
-
-	hidden_ideas = {
-		EQS_block_manpower_demob = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
-			}
-		}
-		EQS_block_econ_demob = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier = {
 			}
 		}
 	}

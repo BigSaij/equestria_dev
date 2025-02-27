@@ -124,6 +124,14 @@ ideas = {
 			level = 6
 
 			visible = {
+				if = {
+					limit = {
+						original_tag = EQS
+					}
+					NOT = {
+						has_country_flag = EQS_sunset_volunteer_only
+					}
+				}
 				if = { 
 					limit = { original_tag = ELF }
 					NOT = { 
@@ -204,6 +212,26 @@ ideas = {
 			default = yes
 
 			cancel_if_invalid = no
+		}
+		
+		EQS_volunteer_only_sunset = {
+			picture = volunteer_only
+			cost = 150
+			removal_cost = -1
+			allowed = {
+				original_tag = EQS
+			}
+			visible = {
+				has_country_flag = EQS_sunset_volunteer_only
+			}
+			modifier = {
+				conscription = 0.02
+				weekly_manpower = 150
+				special_forces_training_time_factor = -0.1
+			}
+			allowed_to_remove = {
+				always = no
+			}
 		}
 
 		ELF_special_volunteer_only = {
@@ -350,6 +378,17 @@ ideas = {
 					}
 				}
 			}
+			
+			allowed_to_remove = {
+				if = {
+					limit = {
+						tag = EQS
+					}
+					NOT = {
+						has_country_flag = EQS_limited_conscription_set
+					}
+				}
+			}
 
 			modifier = {
 				conscription = 0.025
@@ -387,6 +426,26 @@ ideas = {
 			}
 
 			cancel_if_invalid = no
+		}
+		
+		EQS_limited_conscription_blueblood = {
+			picture = limited_conscription
+			cost = 150
+			removal_cost = -1
+			allowed = {
+				original_tag = EQS
+			}
+			visible = {
+				has_country_flag = EQS_blueblood_limited_conscription
+			}
+			modifier = {
+				conscription = 0.03
+				minimum_training_level = -0.1
+				training_time_factor = -0.1
+			}
+			allowed_to_remove = {
+				always = no
+			}
 		}
 
 		ELF_special_limited_conscription = {

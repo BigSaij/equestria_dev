@@ -1995,9 +1995,27 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_nothing_left_to_learn"
-		EQS_princess_celestia = {
-			add_skill_level = 1
-			add_unit_leader_trait = organisational_leader
+		if = {
+			limit = {
+				EQS_princess_celestia = {
+					skill < 9
+				}
+			}
+			EQS_princess_celestia = {
+				add_skill_level = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					EQS_princess_celestia = {
+						has_trait = organisational_leader
+					}
+				}
+			}
+			EQS_princess_celestia = {
+				add_unit_leader_trait = organisational_leader
+			}
 		}
 		custom_effect_tooltip = EQS_celestia_stat_increases_tt
 	}
@@ -2035,9 +2053,18 @@ shared_focus = {
 	x = 30
 	y = 0
 	cost = 5
+	available = {
+		has_completed_focus = EQS_celestial_monarchy
+	}
 	ai_will_do = {
 		factor = 5
 	}
+	will_lead_to_war_with = LSP
+	will_lead_to_war_with = ROC
+	will_lead_to_war_with = SCS
+	will_lead_to_war_with = NMS
+	will_lead_to_war_with = JUN
+	will_lead_to_war_with = BAL
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_reunify_equestria"
 		if = {
@@ -2047,9 +2074,8 @@ shared_focus = {
 					is_subject = no
 				}
 			}
-			set_autonomy = {
-				target = BUF
-				autonomy_state = autonomy_dominion
+			BUF = {
+				country_event = equestria_celestia.12
 			}
 		}
 		if = {
@@ -2071,7 +2097,7 @@ shared_focus = {
 					}
 				}
 				LSP = {
-					country_event = equestria_celestia.12
+					country_event = equestria_celestia.13
 				}
 			}
 			else = {
@@ -2136,9 +2162,8 @@ shared_focus = {
 					is_subject = no
 				}
 			}
-			set_autonomy = {
-				target = CES
-				autonomy_state = autonomy_dominion
+			CES = {
+				country_event = equestria_celestia.12
 			}
 		}
 		if = {
@@ -2160,7 +2185,7 @@ shared_focus = {
 					}
 				}
 				NMS = {
-					country_event = equestria_celestia.12
+					country_event = equestria_celestia.15
 				}
 			}
 			else = {
@@ -2189,7 +2214,7 @@ shared_focus = {
 					}
 				}
 				JUN = {
-					country_event = equestria_celestia.12
+					country_event = equestria_celestia.17
 				}
 			}
 			else = {
@@ -2238,244 +2263,17 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = EQS_cities_and_deserts
-	icon = GFX_goal_news
-	x = -1
-	y = 1
-	relative_position_id = EQS_reunify_equestria
-	cost = 4
-	prerequisite = {
-		focus = EQS_reunify_equestria
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_cities_and_deserts"
-	}
-}
-
-shared_focus = {
-	id = EQS_apples_rocks_and_las_pegasus
-	icon = GFX_goal_news
-	x = -1
-	y = 1
-	relative_position_id = EQS_cities_and_deserts
-	cost = 4
-	prerequisite = {
-		focus = EQS_cities_and_deserts
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_apples_rocks_and_las_pegasus"
-		if = {
-			limit = {
-				has_country_flag = EQS_LSP_diploannex
-			}
-			add_timed_idea = {
-				idea = EQS_LSP_administrative_integration
-				days = 180
-			}
-		}
-		else_if = {
-			limit = {
-				has_country_flag = EQS_LSP_diplosubject
-			}
-			#delay Celestia timer
-		}
-		else_if = {
-			limit = {
-				has_country_flag = EQS_LSP_warunification
-			}
-			custom_effect_tooltip = EQS_LSP_wareffects_tt
-			EQS_princess_celestia = {
-				add_planning = 1
-				add_unit_leader_trait = urban_assault_specialist
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = EQS_ROC_diploannex
-			}
-			add_timed_idea = {
-				idea = EQS_ROC_socialist_overtures
-				days = 210
-			}
-		}
-		else_if = {
-			limit = {
-				has_country_flag = EQS_ROC_diplosubject
-			}
-			#delay Celestia timer
-		}
-		else_if = {
-			limit = {
-				has_country_flag = EQS_ROC_warunification
-			}
-			custom_effect_tooltip = EQS_ROC_wareffects_tt
-			EQS_princess_celestia = {
-				add_logistics = 1
-				add_unit_leader_trait = trait_engineer
-				add_unit_leader_trait = fortress_buster
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = EQS_SCS_warunification
-			}
-			custom_effect_tooltip = EQS_SCS_wareffects_tt
-			EQS_princess_celestia = {
-				add_skill_level = 1
-				add_unit_leader_trait = desert_fox
-			}
-			if = {
-				limit = {
-					has_country_flag = EQS_celestia_heat1
-				}
-				EQS_princess_celestia = {
-					add_unit_leader_trait = heat_expert
-				}
-			}
-			else = {
-				EQS_princess_celestia = {
-					add_unit_leader_trait = heat_specialist
-				}
-				set_country_flag = EQS_celestia_heat1
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = EQS_BUF_warunification
-			}
-			custom_effect_tooltip = EQS_BUF_wareffects_tt
-			EQS_princess_celestia = {
-				add_skill_level = 1
-				add_unit_leader_trait = desert_fox
-			}
-			if = {
-				limit = {
-					has_country_flag = EQS_celestia_heat1
-				}
-				EQS_princess_celestia = {
-					add_unit_leader_trait = heat_expert
-				}
-			}
-			else = {
-				EQS_princess_celestia = {
-					add_unit_leader_trait = heat_specialist
-				}
-				set_country_flag = EQS_celestia_heat1
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = EQS_jungles_and_mountains
-	icon = GFX_goal_news
-	x = 1
-	y = 1
-	relative_position_id = EQS_reunify_equestria
-	cost = 4
-	prerequisite = {
-		focus = EQS_reunify_equestria
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_jungles_and_mountains"
-	}
-}
-
-shared_focus = {
-	id = EQS_tribes_cities_and_more
-	icon = GFX_goal_news
-	x = 1
-	y = 1
-	relative_position_id = EQS_jungles_and_mountains
-	cost = 4
-	prerequisite = {
-		focus = EQS_jungles_and_mountains
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_tribes_cities_and_more"
-		if = {
-			limit = {
-				has_country_flag = EQS_southeast_warunification
-			}
-			custom_effect_tooltip = EQS_southeast_wareffects_tt
-			EQS_princess_celestia = {
-				add_skill_level = 1
-				add_unit_leader_trait = jungle_rat
-			}
-			if = {
-				limit = {
-					has_country_flag = EQS_celestia_heat1
-				}
-				EQS_princess_celestia = {
-					add_unit_leader_trait = heat_expert
-				}
-			}
-			else = {
-				EQS_princess_celestia = {
-					add_unit_leader_trait = heat_specialist
-				}
-				set_country_flag = EQS_celestia_heat1
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = EQS_beyond_the_celestial_sea
-	icon = GFX_goal_news
-	x = 2
-	y = 1
-	relative_position_id = EQS_apples_rocks_and_las_pegasus
-	cost = 4
-	prerequisite = {
-		focus = EQS_apples_rocks_and_las_pegasus
-	}
-	prerequisite = {
-		focus = EQS_tribes_cities_and_more
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_beyond_the_celestial_sea"
-	}
-}
-
-shared_focus = {
 	id = EQS_return_to_crystal_empire
 	icon = GFX_goal_news
-	x = -2
+	x = -1
 	y = 1
-	relative_position_id = EQS_beyond_the_celestial_sea
+	relative_position_id = EQS_reunify_equestria
 	cost = 4
 	prerequisite = {
-		focus = EQS_beyond_the_celestial_sea
+		focus = EQS_reunify_equestria
 	}
 	available = {
 		has_war = no
-	}
-	bypass = {
-		CRY = {
-			OR = {
-				AND = {
-					exists = yes
-					is_in_faction_with = EQS
-				}
-				exists = no
-			}
-		}
 	}
 	ai_will_do = {
 		factor = 5
@@ -2493,17 +2291,31 @@ shared_focus = {
 				}
 			}
 			CRY = {
-				country_event = equestria_celestia.44
+				country_event = equestria_celestia.19
 			}
 		}
 		else_if = {
 			limit = {
 				CRY = {
 					exists = yes
+					NOT = {
+						is_subject_of = EQS
+					}
 				}
 			}
 			declare_war_on = {
 				target = CRY
+				type = annex_everything
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					owns_state = 344
+				}
+			}
+			declare_war_on = {
+				target = 344.owner
 				type = annex_everything
 			}
 		}
@@ -2513,7 +2325,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_never_another_tyrant
 	icon = GFX_goal_news
-	x = -2
+	x = -4
 	y = 1
 	relative_position_id = EQS_return_to_crystal_empire
 	cost = 4
@@ -2628,12 +2440,12 @@ shared_focus = {
 shared_focus = {
 	id = EQS_a_revolution_rectified
 	icon = GFX_goal_news
-	x = 2
+	x = 1
 	y = 1
-	relative_position_id = EQS_beyond_the_celestial_sea
+	relative_position_id = EQS_reunify_equestria
 	cost = 4
 	prerequisite = {
-		focus = EQS_beyond_the_celestial_sea
+		focus = EQS_reunify_equestria
 	}
 	available = {
 		has_war = no
@@ -2672,7 +2484,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_ponies_of_severyana
 	icon = GFX_goal_news
-	x = 2
+	x = 4
 	y = 1
 	relative_position_id = EQS_a_revolution_rectified
 	cost = 4
@@ -2771,7 +2583,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_safety_of_equestria
 	icon = GFX_goal_news
-	x = 2
+	x = 1
 	y = 1
 	relative_position_id = EQS_return_to_crystal_empire
 	cost = 4
@@ -2826,7 +2638,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_in_the_frozen_north
 	icon = GFX_goal_news
-	x = -1
+	x = -2
 	y = 1
 	relative_position_id = EQS_safety_of_equestria
 	cost = 4
@@ -2842,14 +2654,141 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = EQS_friends_on_mount_aris
+	id = EQS_beyond_the_celestial_sea
 	icon = GFX_goal_news
-	x = 1
+	x = 2
 	y = 1
 	relative_position_id = EQS_safety_of_equestria
 	cost = 4
 	prerequisite = {
 		focus = EQS_safety_of_equestria
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	will_lead_to_war_with = PCB
+	will_lead_to_war_with = DRG
+	will_lead_to_war_with = MER
+	will_lead_to_war_with = EQC
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_beyond_the_celestial_sea"
+		PCB = { add_to_ROOT_potential_cores = yes }
+		if = {
+			limit = {
+				PCB = {
+					exists = yes
+				}
+			}
+			PCB = {
+				country_event = equestria_celestia.19
+			}
+		}
+		if = {
+			limit = {
+				DRG = {
+					exists = yes
+				}
+			}
+			DRG = {
+				country_event = equestria_celestia.20
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					owns_state = 7
+				}
+			}
+			declare_war_on = {
+				target = 7.owner
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = {
+				MER = {
+					exists = yes
+					is_subject = no
+				}
+			}
+			MER = {
+				country_event = equestria_celestia.21
+			}
+		}
+		if = {
+			limit = {
+				EQC = {
+					exists = yes
+					NOT = {
+						is_subject_of = EQS
+					}
+				}
+			}
+			if = {
+				limit = {
+					EQC = {
+						has_government = democratic
+					}
+				}
+				EQC = {
+					country_event = equestria_celestia.22
+				}
+			}
+			else = {
+				declare_war_on = {
+					target = EQC
+					type = annex_everything
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				EQC = {
+					exists = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						owns_state = 356
+					}
+				}
+				declare_war_on = {
+					target = 356.owner
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						owns_state = 362
+					}
+					362 = {
+						owner = {
+							NOT = {
+								owns_state = 356
+							}
+						}
+					}
+				}
+				declare_war_on = {
+					target = 362.owner
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_friends_on_mount_aris
+	icon = GFX_goal_news
+	x = 2
+	y = 1
+	relative_position_id = EQS_in_the_frozen_north
+	cost = 4
+	prerequisite = {
+		focus = EQS_in_the_frozen_north
 	}
 	ai_will_do = {
 		factor = 5
@@ -2948,13 +2887,10 @@ shared_focus = {
 shared_focus = {
 	id = EQS_with_fire_and_vengeance
 	icon = GFX_goal_news
-	x = 1
+	x = 0
 	y = 1
-	relative_position_id = EQS_in_the_frozen_north
+	relative_position_id = EQS_friends_on_mount_aris
 	cost = 4
-	prerequisite = {
-		focus = EQS_in_the_frozen_north
-	}
 	prerequisite = {
 		focus = EQS_friends_on_mount_aris
 	}
@@ -3163,7 +3099,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_new_equestrian_military
 	icon = GFX_goal_news
-	x = 40
+	x = 42
 	y = 0
 	cost = 5
 	available = {
@@ -3232,8 +3168,20 @@ shared_focus = {
 		}
 		set_country_flag = EQS_volunteer_only_set
 		custom_effect_tooltip = EQS_volunteer_only_locked_tt
-		EQS_princess_celestia = {
-			add_unit_leader_trait = offensive_doctrine
+		if = {
+			limit = {
+				NOT = {
+					EQS_princess_celestia = {
+						OR = {
+							has_trait = offensive_doctrine
+							has_trait = defensive_doctrine
+						}
+					}
+				}
+			}
+			EQS_princess_celestia = {
+				add_unit_leader_trait = offensive_doctrine
+			}
 		}
 	}
 }
@@ -3256,8 +3204,30 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_blueblood_doctrine"
-		EQS_princess_celestia = {
-			add_unit_leader_trait = defensive_doctrine
+		if = {
+			limit = {
+				NOT = {
+					has_idea = limited_conscription
+				}
+			}
+			add_ideas = limited_conscription
+		}
+		set_country_flag = EQS_limited_conscription_set
+		custom_effect_tooltip = EQS_limited_conscription_locked_tt
+		if = {
+			limit = {
+				NOT = {
+					EQS_princess_celestia = {
+						OR = {
+							has_trait = defensive_doctrine
+							has_trait = offensive_doctrine
+						}
+					}
+				}
+			}
+			EQS_princess_celestia = {
+				add_unit_leader_trait = defensive_doctrine
+			}
 		}
 	}
 }
@@ -3268,7 +3238,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_sunset_doctrine
-	cost = 5
+	cost = 8
 	prerequisite = {
 		focus = EQS_sunset_doctrine
 		focus = EQS_blueblood_doctrine
@@ -3278,16 +3248,36 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_equestrian_armored_development"
+		custom_effect_tooltip = available_designer
+		show_ideas_tooltip = EQS_equestrian_tank_program
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 1.0
+			uses = 1
+			category = cat_light_armor
+		}
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 1.0
+			uses = 1
+			category = cat_medium_armor
+		}
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 1.0
+			uses = 1
+			category = cat_heavy_armor
+		}
 	}
 }
 
 shared_focus = {
-	id = EQS_defense_of_homes
+	id = EQS_military_codebreakers
 	icon = GFX_goal_news
 	x = -1
 	y = 1
 	relative_position_id = EQS_blueblood_doctrine
-	cost = 5
+	cost = 8
 	prerequisite = {
 		focus = EQS_sunset_doctrine
 		focus = EQS_blueblood_doctrine
@@ -3296,46 +3286,69 @@ shared_focus = {
 		factor = 5
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_defense_of_homes"
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_military_codebreakers"
+		swap_ideas = {
+			remove_idea = EQS_smile_empowered
+			add_idea = EQS_smile_empowered_army
+		}
+		add_tech_bonus = {
+			name = computer_bonus
+			bonus = 1.0
+			uses = 2
+			category = encryption_tech
+			category = decryption_tech
+		}
+		custom_effect_tooltip = EQS_darkwar_bonuses_tt
 	}
 }
 
 shared_focus = {
-	id = EQS_best_of_the_best
+	id = EQS_doctrinal_innovation
 	icon = GFX_goal_news
 	x = 1
 	y = 1
 	relative_position_id = EQS_equestrian_armored_development
-	cost = 5
+	cost = 8
 	prerequisite = {
 		focus = EQS_equestrian_armored_development
 	}
 	prerequisite = {
-		focus = EQS_defense_of_homes
+		focus = EQS_military_codebreakers
 	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_best_of_the_best"
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_doctrinal_innovation"
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = land_doctrine
+		}
+		add_breakthrough_progress = {
+			specialization = specialization_land
+			value = 1.0
+		}
 	}
 }
 
 shared_focus = {
-	id = EQS_reintegrate_the_lost
+	id = EQS_reintegrate_military_talent
 	icon = GFX_goal_news
 	x = 0
 	y = 1
-	relative_position_id = EQS_best_of_the_best
-	cost = 5
+	relative_position_id = EQS_doctrinal_innovation
+	cost = 8
 	prerequisite = {
-		focus = EQS_best_of_the_best
+		focus = EQS_doctrinal_innovation
 	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_reintegrate_the_lost"
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_reintegrate_military_talent"
+		custom_effect_tooltip = EQS_breakaway_commanders_unlocked_tt
 	}
 }
 
@@ -3345,7 +3358,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = EQS_sunset_doctrine
-	cost = 5
+	cost = 8
 	prerequisite = {
 		focus = EQS_sunset_doctrine
 	}
@@ -3383,7 +3396,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = EQS_magitech_expertise
-	cost = 5
+	cost = 8
 	prerequisite  ={
 		focus = EQS_magitech_expertise
 	}
@@ -3416,7 +3429,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_magitech_expertise
-	cost = 5
+	cost = 8
 	prerequisite = {
 		focus = EQS_magitech_expertise
 	}
@@ -3436,6 +3449,22 @@ shared_focus = {
 			uses = 2
 			category = pegasi_tech
 		}
+		if = {
+			limit = {
+				NOT = {
+					is_special_project_completed = sp:sp_pegasi_void_suit
+				}
+			}
+			sp:sp_pegasi_void_suit = {
+				add_project_progress_ratio = 0.3
+			}
+		}
+		else = {
+			add_breakthrough_progress = {
+				specialization = specialization_magical
+				value = 1.0
+			}
+		}
 	}
 }
 
@@ -3445,7 +3474,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_mage_training_standardization
-	cost = 5
+	cost = 8
 	prerequisite = {
 		focus = EQS_mage_training_standardization
 	}
@@ -3465,6 +3494,10 @@ shared_focus = {
 			popup = no
 			JER_magical_tanks_tech = 1
 		}
+		add_breakthrough_progress = {
+			specialization = specialization_magical
+			value = 2.0
+		}
 	}
 }
 
@@ -3474,18 +3507,36 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_magitech_proliferation
-	cost = 5
+	cost = 8
 	prerequisite = {
 		focus = EQS_magitech_proliferation
 	}
 	prerequisite = {
-		focus = EQS_reintegrate_the_lost
+		focus = EQS_reintegrate_military_talent
 	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_heroes_of_equestria"
+		if = {
+			limit = {
+				EQS_princess_celestia = {
+					skill < 9
+				}
+			}
+			EQS_princess_celestia = {
+				add_skill_level = 1
+			}
+		}
+		EQS_princess_celestia = {
+			add_unit_leader_trait = aggressive_assaulter
+		}
+		set_country_flag = EQS_sunset_volunteer_only
+		swap_ideas = {
+			remove_idea = volunteer_only
+			add_idea = EQS_volunteer_only_sunset
+		}
 	}
 }
 
@@ -3495,7 +3546,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_blueblood_doctrine
-	cost = 5
+	cost = 8
 	prerequisite = {
 		focus = EQS_blueblood_doctrine
 	}
@@ -3504,16 +3555,23 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_standard_equipment_calibration"
+		add_tech_bonus = {
+			name = infantry_weapons_bonus
+			bonus = 1.0
+			uses = 2
+			category = infantry_weapons
+		}
+		add_ideas = EQS_blueblood_production
 	}
 }
 
 shared_focus = {
-	id = EQS_doctrinal_innovation
+	id = EQS_soldier_support
 	icon = GFX_goal_news
 	x = -1
 	y = 1
 	relative_position_id = EQS_standard_equipment_calibration
-	cost = 5
+	cost = 8
 	prerequisite = {
 		focus = EQS_standard_equipment_calibration
 	}
@@ -3521,7 +3579,38 @@ shared_focus = {
 		factor = 5
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_doctrinal_innovation"
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_soldier_support"
+		set_technology = {
+			popup = no
+			EQS_improved_engineers = 1
+		}
+		custom_effect_tooltip = EQS_improved_engineers_tt
+		add_tech_bonus = {
+			name = infantry_bonus
+			bonus = 1.0
+			uses = 3
+			category = support_tech
+		}
+		add_tech_bonus = {
+			name = race_tech_bonus
+			bonus = 1.0
+			uses = 2
+			technology = tech_pony_unicorns
+			technology = tech_pony_unicorns2
+			technology = tech_pony_unicorns3
+			technology = tech_pony_unicorns4
+			technology = tech_pony_unicorns5
+		}
+		add_tech_bonus = {
+			name = race_tech_bonus
+			bonus = 1.0
+			uses = 2
+			technology = tech_unicorn_th
+			technology = tech_unicorn_th2
+			technology = tech_unicorn_th3
+			technology = tech_unicorn_th4
+			technology = tech_unicorn_th5
+		}
 	}
 }
 
@@ -3531,7 +3620,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_standard_equipment_calibration
-	cost = 5
+	cost = 8
 	prerequisite = {
 		focus = EQS_standard_equipment_calibration
 	}
@@ -3540,6 +3629,13 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_overwhelming_firepower"
+		add_tech_bonus = {
+			name = infantry_weapons_bonus
+			bonus = 1.0
+			uses = 2
+			category = artillery
+		}
+		add_ideas = EQS_blueblood_artillery
 	}
 }
 
@@ -3548,10 +3644,10 @@ shared_focus = {
 	icon = GFX_goal_news
 	x = 1
 	y = 1
-	relative_position_id = EQS_doctrinal_innovation
-	cost = 5
+	relative_position_id = EQS_soldier_support
+	cost = 8
 	prerequisite = {
-		focus = EQS_doctrinal_innovation
+		focus = EQS_soldier_support
 	}
 	prerequisite = {
 		focus = EQS_overwhelming_firepower
@@ -3561,6 +3657,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_tactical_superiority"
+		add_ideas = EQS_tactical_bonus
 	}
 }
 
@@ -3570,17 +3667,36 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = EQS_tactical_superiority
-	cost = 5
+	cost = 8
 	prerequisite = {
 		focus = EQS_tactical_superiority
 	}
 	prerequisite = {
-		focus = EQS_reintegrate_the_lost
+		focus = EQS_reintegrate_military_talent
 	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_ponies_at_the_ready"
+		if = {
+			limit = {
+				EQS_princess_celestia = {
+					skill < 9
+				}
+			}
+			EQS_princess_celestia = {
+				add_skill_level = 1
+			}
+		}
+		EQS_princess_celestia = {
+			add_unit_leader_trait = unyielding_defender
+		}
+		set_country_flag = EQS_blueblood_limited_conscription
+		swap_ideas = {
+			remove_idea = limited_conscription
+			add_idea = EQS_limited_conscription_blueblood
+		}
+		custom_effect_tooltip = EQS_army_decay_reduction_tt
 	}
 }

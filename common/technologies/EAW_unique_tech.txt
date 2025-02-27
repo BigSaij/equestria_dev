@@ -31,6 +31,27 @@ technologies = {
 		}
 	}
 
+	EQS_improved_engineers = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		engineer = {
+			entrenchment = 3
+			fort = {
+				defence = 0.1
+				attack = 0.1
+			}
+		}
+		armored_engineer = {
+			entrenchment = 3
+			fort = {
+				defence = 0.1
+				attack = 0.1
+			}
+		}
+	}
+
 	#for focus
 	knights_of_strawberry = {
 
