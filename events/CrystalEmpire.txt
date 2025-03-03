@@ -3181,16 +3181,7 @@ country_event = { ## Royal Family Captured
 	option = {
 		name = crysom.41.a
 		set_global_flag = continue_imprisonment
-		event_target:equestria = {
-			if = {
-				limit = { has_government = democratic }
-				add_ideas = royal_family_imprisoned
-				if = {
-					limit = { ROOT = { has_government = communism } }
-					country_event = { id = equestria.45 days = 2 }
-				}
-			}
-		}
+		country_event = crysom.42
 	}
 }
 country_event = { ## What to do with the royal family
@@ -3218,6 +3209,16 @@ country_event = { ## What to do with the royal family
 			}
 			add_opinion_modifier = { modifier = executed_royalty target = ROOT }
 		}
+		if = {
+			limit = {
+				EQS = {
+					has_war_with = NLR
+				}
+			}
+			EQS = {
+				country_event = equestria_civwar.31
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = { has_government = fascism }
@@ -3225,40 +3226,6 @@ country_event = { ## What to do with the royal family
 			}
 			else = {
 				news_event = { id = news.cry.4 days = 1 }
-			}
-		}
-	}
-	option = {
-		name = crysom.42.b
-		add_stability = 0.05
-		ai_chance = {
-			factor = 1
-		}
-	}
-	option = {
-		name = crysom.42.c
-		add_political_power = -50
-		set_global_flag = free_the_old_royalty
-		clr_global_flag = continue_imprisonment
-		every_other_country = {
-			limit = {
-				original_tag = event_target:equestria
-				OR = {
-					is_subject_of = event_target:equestria
-					is_in_faction_with = event_target:equestria
-				}
-			}
-			add_opinion_modifier = { modifier = released_royalty target = ROOT }
-		}
-		event_target:equestria = {
-			country_event = { id = equestria.48 days = 1 }
-		}
-		hidden_effect = { news_event = { id = news.cry.5 days = 1 } }
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_government = fascism
 			}
 		}
 	}

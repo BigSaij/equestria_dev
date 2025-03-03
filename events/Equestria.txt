@@ -187,13 +187,14 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		trigger = {
-			has_country_flag = EQS_PHOENIX_POSTRELEASE
-		}
 		name = equestria_moonshine.2.a
 		custom_effect_tooltip = EQS_luna_reforms_support_tt
 		set_country_flag = EQS_moonshine_reforms_shared
 		mark_focus_tree_layout_dirty = yes
+		custom_effect_tooltip = EQS_PHOENIX_UNRELEASED_tt
+		ai_chance = {
+			factor = 0
+		}
 	}
 	option = {
 		name = equestria_moonshine.2.b
@@ -443,6 +444,10 @@ country_event = {
 		name = equestria_moonshine.10.b
 		hidden_effect = {
 			country_event = equestria_moonshine.13
+		}
+		custom_effect_tooltip = EQS_PHOENIX_UNRELEASED_tt
+		ai_chance = {
+			factor = 0
 		}
 	}
 }
@@ -1740,6 +1745,268 @@ country_event = {
 		name = equestria_civwar.30.a
 		set_country_flag = EQS_new_smile_director
 		custom_effect_tooltip = EQS_sweetiedrops_unlocked_tt
+	}
+}
+
+country_event = {
+	id = equestria_civwar.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.31" }
+	title = equestria_civwar.31.t
+	desc = equestria_civwar.31.d
+	#picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_civwar.31.a
+	}
+}
+
+country_event = {
+	id = equestria_civwar.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.100" }
+	title = equestria_civwar.100.t
+	desc = equestria_civwar.100.d
+	#picture = GFX_event_autumn
+	is_triggered_only = yes
+	fire_only_once = no
+	option = { #Support celestia
+		name = equestria_civwar.100.a
+		trigger = {
+			tag = EQC
+		}
+		effect_tooltip = {
+			add_to_war_EQS_against_NLR = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = equestria.166
+				days = 1
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_subject = yes
+					is_ai = no
+				}
+				set_rule = {
+					can_decline_call_to_war = no
+				}
+			}
+			set_country_flag = supported_EQS
+		}
+		ai_chance = {
+			base = 3
+			modifier = {
+				original_tag = EQC
+				has_completed_focus = EQC_patriation
+				factor = 0
+			}
+			modifier = {
+				OR = {
+					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
+					has_game_rule = {
+						rule = EQS_ai_behavior
+						option = LUNAR_CIVIL_WAR_MAX
+					}
+				}
+				factor = 0
+			}
+		}
+	}
+	option = { #Stay neutral
+		name = equestria_civwar.100.b
+		end_puppet_this = yes
+		if = {
+			limit = {
+				is_in_faction_with = EQS
+			}
+			leave_faction = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_war_with = NLR
+				}
+				set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+				white_peace = NLR
+				every_enemy_country = {
+					limit = {
+						is_in_faction_with = NLR
+					}
+					white_peace = ROOT
+				}
+			}
+			set_country_flag = ignored_EQS_civil_war
+			add_to_array = {
+				global.former_EQS_puppets = THIS
+			}
+			set_country_flag = former_EQS_puppet
+		}
+		ai_chance = {
+			base = 4
+			modifier = {
+				NOT = {
+					is_pony_race = yes
+				}
+				factor = 3
+			}
+			modifier = {
+				is_major = yes
+				factor = 6
+			}
+			modifier = {
+				original_tag = CRY
+				has_completed_focus = CRY_independence_referendum
+				factor = 3
+			}
+			modifier = {
+				NOT = {
+					is_neighbor_of = EQS
+					is_neighbor_of = NLR
+				}
+				factor = 3
+			}
+			modifier = {
+				OR = {
+					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
+					has_game_rule = {
+						rule = EQS_ai_behavior
+						option = LUNAR_CIVIL_WAR_MAX
+					}
+				}
+				factor = 0
+			}
+		}
+	}
+	option = { #Support NMM
+		name = equestria_civwar.100.c
+		trigger = {
+			tag = EQC
+		}
+		if = {
+			limit = {
+				is_subject_of = EQS
+			}
+			get_current_autonomy_level = yes
+			add_to_array = {
+				global.former_EQS_puppets = THIS
+			}
+			set_country_flag = former_EQS_puppet
+			set_country_flag = supported_NLR
+			end_puppet_this = yes
+		}
+		if = {
+			limit = {
+				is_in_faction_with = EQS
+			}
+			leave_faction = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_war_with = NLR
+				}
+				set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+				white_peace = NLR
+				every_enemy_country = {
+					limit = {
+						is_in_faction_with = NLR
+					}
+					white_peace = ROOT
+				}
+			}
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.1
+		}
+		effect_tooltip = {
+			add_to_war_NLR_against_EQS = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = equestria.167
+				days = 1
+			}
+		}
+		NLR = { 
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_satellite
+			}
+		}
+		load_focus_tree = eqc_nlr_focus
+		add_country_leader_role = {
+			character = EQC_jet_set
+			promote_leader = yes
+			country_leader={
+				desc = "snooty_noble_desc"
+				ideology = centrism
+				expire="1965.1.1.1"
+				traits = { democratic_sympathies }
+			}
+		}
+		set_party_name = { ideology = fascism name = EQC_bat_supporters_fash long_name = EQC_bat_supporters_fash_long }
+		add_country_leader_role = {
+			character = EQC_evening_dew
+			promote_leader = yes
+			country_leader={
+				desc = "another_edgy_bat_desc"
+				ideology = esotericism
+				expire="1965.1.1.1"
+				traits = {  }
+			}
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		set_party_name = { ideology = neutrality name = EQC_bat_supporters long_name = EQC_bat_supporters_long }
+		country_event = { id = mareland.44 days = 1 }
+		add_stability = -0.15
+		add_war_support = -0.15
+		hidden_effect = {
+			country_event = { id = EQC_NLR.11 days = 94 }
+		}
+	}
+	hidden_effect = {
+		set_popularities = {
+			democratic = 25
+			fascism = 30
+			communism = 0
+			neutrality = 45
+		}
+	}
+	ai_chance = {
+		factor = 1.5
+		modifier = {
+			factor = 0
+			is_historical_focus_on = yes
+			NOT = {
+				OR = {
+					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
+					has_game_rule = {
+						rule = EQS_ai_behavior
+						option = LUNAR_CIVIL_WAR_MAX
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 100
+			OR = {
+				has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
+				has_game_rule = {
+					rule = EQS_ai_behavior
+					option = LUNAR_CIVIL_WAR_MAX
+				}
+			}
+		}
+		modifier = {
+			add = 15
+			has_government = fascism
+		}
 	}
 }
 

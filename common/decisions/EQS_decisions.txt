@@ -1635,6 +1635,7 @@ EQS_breakaway_diplomacy_category = {
 			CES = {
 				exists = no
 			}
+			has_completed_focus = EQS_reintegrate_military_talent
 		}
 		cost = 50
 		ai_will_do = {
@@ -2822,46 +2823,6 @@ political_actions = {
 
 		ai_will_do = {
 			factor = 50
-		}
-	}
-	EQS_rename_stalliongrad_decision = {
-		icon = anti_communist
-		allowed = {
-			original_tag = EQS
-		}
-		visible = {
-			owns_state = 153
-			#OR = {
-			#	has_government = fascism
-			#	has_country_flag = war_with_stg
-			#}
-			NOT = { 
-				has_country_flag = stg_renamed_eqs 
-				has_global_flag = stg_renamed
-				has_government = communism
-			}
-			NOT = { has_country_flag = EQS_april_fools }
-		}
-
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 153
-			}
-		}
-
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_rename_stalliongrad_decision"
-			country_event = equestria.133
-			hidden_effect = {
-				168 = {
-					reset_state_name = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 100
 		}
 	}
 	EQS_generic_rename_stalliongrad_decision = {

@@ -1692,7 +1692,7 @@ shared_focus = {
 	icon = GFX_goal_news
 	x = 18
 	y = 0
-	cost = 4
+	cost = 5
 	ai_will_do = {
 		factor = 5
 	}
@@ -1707,7 +1707,7 @@ shared_focus = {
 	x = -4
 	y = 1
 	relative_position_id = EQS_equestria_survives
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_equestria_survives
 	}
@@ -1729,7 +1729,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = EQS_equestrian_reconstruction
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_equestrian_reconstruction
 	}
@@ -1748,7 +1748,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_equestrian_reconstruction
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_equestrian_reconstruction
 	}
@@ -1771,7 +1771,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_academic_revival
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_academic_revival
 	}
@@ -1793,7 +1793,7 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = EQS_equestria_survives
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_equestria_survives
 	}
@@ -1812,7 +1812,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = EQS_equestria_survives
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_equestria_survives
 	}
@@ -1831,7 +1831,7 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = EQS_equestria_survives
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_equestria_survives
 	}
@@ -1850,7 +1850,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = EQS_smile_new_role
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_administrative_reorganization
 	}
@@ -1872,7 +1872,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_smile_new_role
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_smile_new_role
 	}
@@ -1894,7 +1894,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_punish_radicals
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_punish_radicals
 	}
@@ -1916,7 +1916,7 @@ shared_focus = {
 	x = 4
 	y = 1
 	relative_position_id = EQS_equestria_survives
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_equestria_survives
 	}
@@ -1945,7 +1945,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = EQS_lead_from_the_front
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_lead_from_the_front
 	}
@@ -1964,7 +1964,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_lead_from_the_front
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_lead_from_the_front
 	}
@@ -1983,7 +1983,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_lessons_from_nephew
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_lessons_from_nephew
 	}
@@ -2027,7 +2027,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = EQS_tale_of_two_sisters
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_harmonized_economics
 	}
@@ -2052,7 +2052,7 @@ shared_focus = {
 	icon = GFX_goal_news
 	x = 30
 	y = 0
-	cost = 5
+	cost = 8
 	available = {
 		has_completed_focus = EQS_celestial_monarchy
 	}
@@ -2268,7 +2268,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = EQS_reunify_equestria
-	cost = 4
+	cost = 8
 	prerequisite = {
 		focus = EQS_reunify_equestria
 	}
@@ -2278,6 +2278,7 @@ shared_focus = {
 	ai_will_do = {
 		factor = 5
 	}
+	will_lead_to_war_with = CRY
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_return_to_crystal_empire"
 		if = {
@@ -2328,7 +2329,7 @@ shared_focus = {
 	x = -4
 	y = 1
 	relative_position_id = EQS_return_to_crystal_empire
-	cost = 4
+	cost = 5
 	allow_branch = {
 		has_country_flag = EQS_CRY_absolestia_integration
 	}
@@ -2356,7 +2357,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = EQS_never_another_tyrant
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_never_another_tyrant
 	}
@@ -2399,7 +2400,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_never_another_tyrant
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_never_another_tyrant
 	}
@@ -2421,7 +2422,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_secure_crystal_city
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_secure_crystal_city
 	}
@@ -2443,7 +2444,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_reunify_equestria
-	cost = 4
+	cost = 8
 	prerequisite = {
 		focus = EQS_reunify_equestria
 	}
@@ -2461,6 +2462,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 5
 	}
+	will_lead_to_war_with = STG
+	will_lead_to_war_with = BAL
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_a_revolution_rectified"
 		declare_war_on = {
@@ -2478,6 +2481,17 @@ shared_focus = {
 				type = annex_everything
 			}
 		}
+		if = {
+			limit = {
+				BAL = {
+					exists = yes
+				}
+			}
+			declare_war_on = {
+				target = BAL
+				type = annex_everything
+			}
+		}
 	}
 }
 
@@ -2487,7 +2501,7 @@ shared_focus = {
 	x = 4
 	y = 1
 	relative_position_id = EQS_a_revolution_rectified
-	cost = 4
+	cost = 5
 	allow_branch = {
 		has_country_flag = EQS_STG_absolestia_integration
 	}
@@ -2515,7 +2529,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = EQS_ponies_of_severyana
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_ponies_of_severyana
 	}
@@ -2537,7 +2551,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_ponies_of_severyana
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_ponies_of_severyana
 	}
@@ -2554,6 +2568,22 @@ shared_focus = {
 			id = 488
 			name = EQS_vp_princessyn
 		}
+		235 = {
+			set_state_name = EQS_vp_ladimir
+			add_compliance = 15
+		}
+		set_province_name = {
+			id = 3584
+			name = EQS_vp_ladimir
+		}
+		57 = {
+			set_state_name = EQS_vp_zlatogorsk
+			add_compliance = 15
+		}
+		set_province_name = {
+			id = 3335
+			name = EQS_vp_zlatogorsk
+		}
 	}
 }
 
@@ -2563,7 +2593,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_reinstate_equestrian_representation
-	cost = 4
+	cost = 5
 	prerequisite = {
 		focus = EQS_reinstate_equestrian_representation
 	}
@@ -2586,7 +2616,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = EQS_return_to_crystal_empire
-	cost = 4
+	cost = 8
 	prerequisite = {
 		focus = EQS_return_to_crystal_empire
 	}
@@ -2608,6 +2638,8 @@ shared_focus = {
 	ai_will_do = {
 		factor = 5
 	}
+	will_lead_to_war_with = CHN
+	will_lead_to_war_with = SCS
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_safety_of_equestria"
 		if = {
@@ -2630,6 +2662,17 @@ shared_focus = {
 			}
 			CCN = {
 				country_event = equestria_celestia.46
+			}
+		}
+		if = {
+			limit = {
+				SCS = {
+					exists = yes
+				}
+			}
+			declare_war_on = {
+				target = SCS
+				type = annex_everything
 			}
 		}
 	}
