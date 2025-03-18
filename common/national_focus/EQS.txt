@@ -1257,10 +1257,10 @@ shared_focus = {
 				controls_state = 3
 			}
 			3 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -1275,10 +1275,10 @@ shared_focus = {
 				controls_state = 74
 			}
 			74 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1288,19 +1288,6 @@ shared_focus = {
 				controls_state = 70
 			}
 			70 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-		if = {
-			limit = {
-				controls_state = 68
-			}
-			68 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -1758,10 +1745,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_royal_capitalism"
 		add_political_power = -50
-		two_random_industrial_complex = yes
-		two_random_arms_factory = yes
-		two_random_industrial_complex = yes
-		two_random_arms_factory = yes
+		one_random_industrial_complex = yes
+		one_random_arms_factory = yes
+		one_random_industrial_complex = yes
+		one_random_arms_factory = yes
 	}
 }
 
@@ -2043,6 +2030,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_celestial_monarchy"
 		add_country_leader_trait = celestial_monarch
+		remove_ideas = EQS_equestria_fractured_4
 		country_event = equestria_celestia.11
 	}
 }
@@ -3022,13 +3010,26 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_new_equestrian_economy"
+		custom_effect_tooltip = EQS_prewar_industry_unlocked_tt
+		set_variable = { EQS_line_change_efficiency_var = 0.1 }
+		set_variable = { EQS_monthly_population_var = 0 }
+		set_variable = { EQS_resources_var = 0 }
+		set_variable = { EQS_resource_penalty_var = 0 }
+		set_variable = { EQS_fuel_gain_var = 0 }
+		set_variable = { EQS_building_slots_var = 0 }
+		set_variable = { EQS_industrial_capacity_var = 0 }
+		set_variable = { EQS_dockyard_capacity_var = 0 }
+		hidden_effect = {
+			add_dynamic_modifier = { modifier = EQS_absolestia_economy }
+		}
+		custom_effect_tooltip = EQS_absolestia_economy1_tt
 	}
 }
 
 shared_focus = {
 	id = EQS_integrate_EEA
 	icon = GFX_goal_news
-	x = -2
+	x = -1
 	y = 1
 	relative_position_id = EQS_new_equestrian_economy
 	cost = 4
@@ -3040,31 +3041,21 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_integrate_EEA"
-	}
-}
-
-shared_focus = {
-	id = EQS_industrial_revitalization
-	icon = GFX_goal_news
-	x = 0
-	y = 1
-	relative_position_id = EQS_new_equestrian_economy
-	cost = 4
-	prerequisite = {
-		focus = EQS_new_equestrian_economy
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_industrial_revitalization"
+		add_timed_idea = {
+			idea = EQS_EEA_integration
+			days = 250
+		}
+		custom_effect_tooltip = EQS_idea_expires_tt
+		effect_tooltip = {
+			add_ideas = EQS_education_reform_4
+		}
 	}
 }
 
 shared_focus = {
 	id = EQS_military_rd_facilities
 	icon = GFX_goal_news
-	x = 2
+	x = 1
 	y = 1
 	relative_position_id = EQS_new_equestrian_economy
 	cost = 4
@@ -3076,6 +3067,79 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_military_rd_facilities"
+		custom_effect_tooltip = {
+			localization_key = land_facility_construction_tt
+			temp_facility_state_loc = "[74.GetName]"
+			temp_facility_province_loc = "[74.GetCapitalVictoryPointName]"
+		}
+		custom_effect_tooltip = {
+			localization_key = naval_facility_construction_tt
+			temp_facility_state_loc = "[12.GetName]"
+			temp_facility_province_loc = "[12.GetCapitalVictoryPointName]"
+		}
+		custom_effect_tooltip = {
+			localization_key = air_facility_construction_tt
+			temp_facility_state_loc = "[68.GetName]"
+			temp_facility_province_loc = "[68.GetCapitalVictoryPointName]"
+		}
+		hidden_effect = {
+			if = {
+				limit = { 
+					74 = {
+						is_fully_controlled_by = ROOT
+						can_construct_building = land_facility
+					}
+				}
+				74 = {
+					add_building_construction = {
+						type = land_facility
+						level = 1
+						instant_build = yes
+						province = 3162
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { 
+					12 = {
+						is_fully_controlled_by = ROOT
+						can_construct_building = naval_facility
+					}
+				}
+				12 = {
+					add_building_construction = {
+						type = naval_facility
+						level = 1
+						instant_build = yes
+						province = 950
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { 
+					68 = {
+						is_fully_controlled_by = ROOT
+						can_construct_building = air_facility
+					}
+				}
+				68 = {
+					add_building_construction = {
+						type = air_facility
+						level = 1
+						instant_build = yes
+						province = 11672
+					}
+				}
+			}
+		}
+		set_country_flag = EQS_land_warfare_facility_built
+		set_country_flag = EQS_naval_engineering_facility_built
+		set_country_flag = EQS_avionics_facility_built
+		custom_effect_tooltip = EQS_scientists_unlocked_tt
 	}
 }
 
@@ -3094,21 +3158,19 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_foreign_magical_studies"
+		custom_effect_tooltip = EQS_foreign_magic_tech_tt
 	}
 }
 
 shared_focus = {
 	id = EQS_economic_reunification
 	icon = GFX_goal_news
-	x = 0
+	x = 1
 	y = 1
-	relative_position_id = EQS_industrial_revitalization
+	relative_position_id = EQS_integrate_EEA
 	cost = 4
 	prerequisite = {
 		focus = EQS_integrate_EEA
-	}
-	prerequisite = {
-		focus = EQS_industrial_revitalization
 	}
 	prerequisite = {
 		focus = EQS_military_rd_facilities
@@ -3136,6 +3198,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_defensive_infrastructure"
+		custom_effect_tooltip = EQS_defensive_lines_unlocked_tt
+		set_country_flag = EQS_defensive_infrastructure_unlocked
 	}
 }
 

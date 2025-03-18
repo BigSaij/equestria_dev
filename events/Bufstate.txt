@@ -1318,10 +1318,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = bufstate.41.a
-		if = {
-			limit = { event_target:equestria = { exists = yes } }
-			event_target:equestria = { country_event = equestria.71 }
-		}
 	}
 }
 ## Equestria accepted

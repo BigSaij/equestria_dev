@@ -109,11 +109,20 @@ defined_text = { # Absolestia CRY focus
 	text = {
 		trigger = {
 			CRY = {
-				NOT = {
-					has_government = democratic
+				OR = {
+					has_government = communism
+					has_government = neutrality
 				}
 			}
 		}
 		localization_key = EQS_return_to_crystal_empire_desc2
+	}
+	text = {
+		trigger = {
+			CRY = {
+				has_government = fascism
+			}
+		}
+		localization_key = EQS_return_to_crystal_empire_desc3
 	}
 }

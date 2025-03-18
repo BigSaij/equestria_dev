@@ -934,7 +934,7 @@ characters = {
 	EQS_starswirl = {
 		name = EQS_starswirl
 		portraits = {
-			civilian = {
+			army = {
 				large = "gfx/leaders/EQS/Starswirl.tga"
 			}
 		}
@@ -951,18 +951,56 @@ characters = {
 		gender = female
 		portraits = {
 			army = {
-				large = "gfx/leaders/Pony/portrait_eqs_pony_generic_14.tga" #Yes this is temporary until someone can make a portrait of her
+				large = "gfx/leaders/EQS/Harshwhinny.tga"
 			}
 		}
 		scientist = {
-			traits = { scientist_trait_armored_specialist scientist_trait_resourceful } 
+			traits = { scientist_trait_armored_specialist scientist_trait_resourceful }
 			skills = {
 				specialization_land = 2
 			}
 			visible = {
 				has_country_flag = EQS_land_warfare_facility_built
 			}
-			desc = EQS_miss_harshwhinny
+			desc = EQS_miss_harshwhinny_desc
+		}
+	}
+	EQS_sea_swirl = {
+		name = EQS_sea_swirl
+		gender = female
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/SeaSwirl.tga"
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+			visible = {
+				has_country_flag = EQS_naval_engineering_facility_built
+			}
+			desc = EQS_sea_swirl_desc
+		}
+	}
+	EQS_torque_wrench = {
+		name = EQS_torque_wrench
+		gender = female
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/TorqueWrench.tga"
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_air = 2
+			}
+			visible = {
+				has_country_flag = EQS_avionics_facility_built
+			}
+			desc = EQS_torque_wrench_desc
 		}
 	}
 	#BACKSCENE EXTRAS

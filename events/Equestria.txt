@@ -7,6 +7,7 @@ add_namespace = equestria_civwar_flavor
 add_namespace = equestria_flavor
 add_namespace = equestria_journal
 add_namespace = equestria_celestia
+add_namespace = olenia_uprising
 add_namespace = equestria_other
 add_namespace = equestria_debug
 add_namespace = equestria_news
@@ -462,6 +463,7 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_moonshine.11.a
+		remove_ideas = EQS_princess_luna_idea
 		hidden_effect = {
 			country_event = {
 				id = equestria_moonshine.12
@@ -1081,7 +1083,7 @@ country_event = {
 				transfer_state = 119
 				add_state_core = 38
 				add_state_core = 94
-				add_state_core - 87
+				add_state_core = 87
 				add_state_core = 118
 				add_state_core = 119
 				country_event = equestria_debug.1
@@ -2710,6 +2712,36 @@ country_event = {
 	}
 }
 
+
+
+country_event = {
+	id = olenia_uprising.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event olenia_uprising.1" }
+	title = olenia_uprising.1.t
+	desc = olenia_uprising.1.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = olenia_uprising.1.a
+	}
+}
+
+country_event = {
+	id = olenia_uprising.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event olenia_uprising.2" }
+	title = olenia_uprising.2.t
+	desc = olenia_uprising.2.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = olenia_uprising.2.a
+	}
+}
+
+
+
 country_event = {
 	id = equestria_celestia.100
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.19" }
@@ -3392,6 +3424,73 @@ country_event = {
 		set_province_name = {
 			id = 18477
 			name = EQS_vp_bridlewood
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.200
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.200" }
+	title = equestria_celestia.200.t
+	desc = equestria_celestia.200.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.200.a
+		hidden_effect = {
+			load_oob = "EQS_olenian_uprising"
+		}
+		set_country_flag = EQS_hjortland_invasion_started
+	}
+}
+
+country_event = {
+	id = equestria_celestia.201
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.201" }
+	title = equestria_celestia.201.t
+	desc = equestria_celestia.201.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.201.a
+		CHN = {
+			annex_country = {
+				target = OLE
+				transfer_troops = yes
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = OLE
+				controller = {
+					OR = {
+						tag = EQS
+						is_in_faction_with = EQS
+					}
+				}
+			}
+			OLE = {
+				transfer_state = PREV
+			}
+		}
+		set_autonomy = {
+			target = OLE
+			autonomy_state = autonomy_dominion
+		}
+		OLE = {
+			set_cosmetic_tag = OLE_EQS_resistance
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 70
+				fascism = 10
+				communism = 10
+				neutrality = 10
+			}
 		}
 	}
 }

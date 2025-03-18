@@ -10,8 +10,8 @@ EQS_fascism:0 "Equestrian State"
 EQS_fascism_DEF:0 "the Equestrian State"
 EQS_communism:0 "Socialist Republic of Equestria"
 EQS_communism_DEF:0 "the Socialist Republic of Equestria"
-EQS_democratic:0 "Equestrian Empire"
-EQS_democratic_DEF:0 "Empire of Equestria"
+EQS_democratic:0 "Equestria"
+EQS_democratic_DEF:0 "Equestria"
 EQS_fascism_ADJ:0 "Equestrian"
 EQS_democratic_ADJ:0 "Equestrian"
 EQS_neutrality_ADJ:0 "Equestrian"
@@ -39,6 +39,10 @@ CHN_VLI_EQS_neutrality_ADJ:0 "Borderlander"
 BAT_EQS_celestia_neutrality:0 "Western Hazrumenia"
 BAT_EQS_celestia_neutrality_DEF:0 "the Military Government of Western Hazrumenia"
 BAT_EQS_celestia_neutrality_ADJ:0 "Western Hazrumenian"
+
+OLE_EQS_resistance_democratic:0 "Olenian Resistance"
+OLE_EQS_resistance_democratic_DEF:0 "The Olenian Resistance"
+OLE_EQS_resistance_democratic_ADJ:0 "Olenian"
 
 CHN_VES_EQS_harmony_party:0 "Throraxian-Equestrian Administration"
 CHN_VES_EQS_harmony_party_long:0 "The Joint Thoraxian-Equestrian Administration"
@@ -163,9 +167,9 @@ EQS_chaos_and_order_desc:0 "The rise of the Nightmare has made many ponies scare
 EQS_help_the_refugees:0 "Help The Refugees"
 EQS_help_the_refugees_desc:0 "Thousands of ponies have been displaced due to the war, whether they be fleeing across the border from the tyranny of the Nightmare or from their homes due to proximity to the frontline. Many simply wish for a new place to call home until the war is over, but such circumstances breeds resentment. And while we are a nation of friendship... we also always need more ponies on the front."
 EQS_wartime_administration:0 "Wartime Administration"
-EQS_wartime_administration_desc:0 "The bureaucracy of Equestria is full of talented, loyal ponies who have all proven themselves to the Princess. It is unsuited for war, as many within its ranks are unwilling or uneducated in wartime measures. Though we are grateful for their service, it may be time to find replacements more suitable for what will be asked of them in this difficult time."
+EQS_wartime_administration_desc:0 "The bureaucracy of Equestria is full of talented, loyal ponies who have all proven themselves to the Princess. It is also unsuited for war, as many within its ranks are unwilling or uneducated in wartime measures. Though we are grateful for their service, it may be time to find replacements more suitable for what will be asked of them in this difficult time."
 EQS_wartime_laws:0 "Wartime Laws"
-EQS_wartime_laws_desc:0 "The legal code of Equestria is something that has adapted and shifted with the times, though it has always officially protected the many freedoms that ponies enjoy. But now, the leniency and spirit of forgiveness that has held Equestria together takes valuable resources, a dangerous thing given our situation. Perhaps it is time to overhaul the laws to suit the times, even if only temporarily?"
+EQS_wartime_laws_desc:0 "The legal code of Equestria is something that has adapted and shifted with the times, though it has always officially protected the many freedoms that ponies enjoy. But now, the leniency and spirit of forgiveness that has held Equestria together takes valuable resources, a dangerous thing given our situation. Perhaps it is time to overhaul the laws to suit the war, even if only temporarily?"
 EQS_together_against_nightmare:0 "Together Against The Nightmare"
 EQS_together_against_nightmare_desc:0 "War is not the end of friendship, nor is it something that breaks the bonds that keep us together. Rather it creates new ones, friendships tested through the most difficult trials and shared burdens. We may fight our former friends on the battlefield, but the bonds forged in battle are unbreakable, where any soldier of Equestria is willing to put their life in the hooves of the ponies that stand by them."
 EQS_new_general_staff:0 "A New General Staff"
@@ -219,7 +223,8 @@ EQS_reunify_equestria_desc:0 "The time has come to make Equestria whole once mor
 EQS_return_to_crystal_empire:0 "Return to the Crystal Empire"
 EQS_return_to_crystal_empire_desc:0 "[Root.GetCelestiaCRYFocus]"
 EQS_return_to_crystal_empire_desc1:0 "The Crystal Empire. When it returned from its long banishment I sent my own niece, Princess Mi Amore Cadenza there to rule knowing she was the descendant of the old Princess Amore. Equestria supported it as much as it could, and yet during the civil war it broke away and became distant. It cannot survive without my protection; a simple letter to Cadance should remind her of that."
-EQS_return_to_crystal_empire_desc2:0 "The Crystal Empire. When it returned from its long banishment I sent my own niece, Princess Mi Amore Cadenza there to rule knowing she was the descendant of the old Princess Amore. Equestria supported it as much as it could, and yet it rejected its new Princess in favor of radicalism and darkness. This cannot stand; the crystal ponies will find Harmony once more."
+EQS_return_to_crystal_empire_desc2:0 "The Crystal Empire. When it returned from its long banishment I sent my own niece, Princess Mi Amore Cadenza there to rule knowing she was the descendant of the old Princess Amore. Equestria supported it as much as it could, and yet it rejected its new Princess in favor of foreign radicalism. This cannot stand; the crystal ponies will find Harmony once more."
+EQS_return_to_crystal_empire_desc3:0 "There will be no mercy this time."
 EQS_never_another_tyrant:0 "Never Another Sombra"
 EQS_never_another_tyrant_desc:0 "Long had the Crystal Empire suffered under the reign of Sombra before Equestria had finally put an end to it. But even now, there has proven to be threats lurking all across the Empire who would meddle with the forces of darkness for their own personal gain. This I cannot allow; S.M.I.L.E. will be brought in to root out these treasonous cowards."
 EQS_secure_crystal_city:0 "Secure The Crystal City"
@@ -249,6 +254,17 @@ EQS_in_the_frozen_north:0 "In The Frozen North"
 EQS_friends_on_mount_aris:0 "Friends on Mount Aris"
 EQS_with_fire_and_vengeance:0 "With Fire And Vengeance"
 EQS_the_sun_never_sets:0 "The Sun Never Sets"
+
+EQS_new_equestrian_economy:0 "The New Equestrian Economy"
+EQS_new_equestrian_economy_desc:0 ""
+EQS_integrate_EEA:0 "Integrate The E.E.A."
+EQS_integrate_EEA_desc:0 ""
+EQS_military_rd_facilities:0 "Military R&D Facilities"
+EQS_military_rd_facilities_desc:0 ""
+EQS_foreign_magical_studies:0 "The Foreign Magical Studies Department"
+EQS_foreign_magical_studies_desc:0 ""
+EQS_defensive_infrastructure:0 "Defensive Infrastructure Program"
+EQS_defensive_infrastructure_desc:0 ""
 
 EQS_new_equestrian_military:0 "The New Equestrian Military"
 EQS_new_equestrian_military_desc:0 "The Equestrian Military is one that was born in the fires of the civil war, and is led by countless capable ponies that have proved their worth time and time again. Still, it must not show weakness if I am to ensure Equestria's survival. It will receive the new attention it requires, and its leaders will enact the reforms they desire on my authority."
@@ -422,11 +438,6 @@ River_Fortifications_desc:0 "Despite our previous efforts to fortify the Changel
 magical_crypto_machines:0 "Magical Crypto Machines"
 magical_crypto_machines_desc:0 "Magic acts as an effective multiplier to many difficult problems. A dozen earth ponies can raise a barn with no issue, but a skilled unicorn could achieve it all on their own, saving time and labour. This force should find plentiful use in one of the new, rapidly expanding technologies - cryptographical machines. A good cypher is always shifting and never clear."
 
-EQS_sombra_return_civil_war_help:0 "Fight the Darkness"
-EQS_sombra_return_civil_war_help_desc:0 "In a perfect storm of evil and bad timing, Sombra has returned to the Crystal Empire. He and his followers are already engaging Loyalists in the streets, and gunfire echoes across the snow. We are in poor shape to fully commit to aiding Cadance's Loyalists, but we have several eager volunteers ready to cross the border. Perhaps it's time to allow this?"
-EQS_sombra_return_war:0 "Defend Equestria"
-EQS_sombra_return_war_desc:0 "The time has come to strike back against this century's old barbarism. Our volunteer forces are chomping at the bit, and with the situation over there getting no better according to our spies, it is time to fight for the defence of Equestria."
-
 
 # This file's organization is an absolute disaster so I added the PRE-MADE TANK DESIGNS TOOLTIPS here #
 
@@ -499,6 +510,13 @@ EQS_southwestern_equestria_railroads:0 "Create the Rockville-Appleloosa Line"
 EQS_southwestern_equestria_railroads_desc:0 "The newest frontier of Equestria, the southwest is a land of deserts, orchards and most recently, oil. And while these are almost all very important things, our delicate relationship with the buffalo have made it very difficult to establish the necessary infrastructure in the region. However, now that said relationship has been fully resolved we can go ahead with our plans drawn up together with the buffalo, for the mutual benefit of them and the ponies of Equestria."
 EQS_southeastern_equestria_railroads:0 "The Ayacachtli-Tenochtitlan Connection"
 EQS_southeastern_equestria_railroads_desc:0 "The southeast is a very difficult region to establish infrastructure and rail in, for very obvious reasons. The jungle, the brewing hostility between the Neighua and various thestral tribes, the communist movements in Baltimare, and other such problems have historically made it a very unattractive place to invest funds in. With the thestrals finally properly integrated into the nation, however, their help can be invaluable in finally connecting their homeland to the rest of Equestria."
+
+EQS_acornage_line:0 "Construct the Acornage Line"
+EQS_acornage_line_desc:0 "While the White river makes a natural defensive line in the west as does the Acorn River in the east, the cities of Cirruspolis and Acornage itself sit vulnerable at the central part of the border with the Changeling Queendom. Expectations of holding the Heer there are considered woefully optimistic at best, but preliminary defenses may be able to stall the changelings long enough for other defensive positions to be erected, and cover an orderly retreat when the time comes."
+EQS_fairflanks_diamondflake_line:0 "Construct the Fairflanks-Diamondflake Line"
+EQS_fairflanks_diamondflake_line_desc:0 "Should the changelings be able to cross the White river, Vanhoover would be left completely exposed and Equestria would be vulnerable towards Whitebell and potentially Shire. As such, defenses must be constructed along its riverbank and the bank of the Diamond river leading north into the Crystal Empire. The more resources we can force the Heer to expend pushing through the northwest, the better."
+EQS_talltale_prancisco_line:0 "Construct the Tall Tale-Prancisco Lines"
+EQS_talltale_prancisco_line_desc:0 "With the Smokey Mountains forming a natural barrier against the changelings, the Tall River makes for a natural line to defend the important city of Tall Tale and let the Heer exhaust itself crossing the Unicorn Range. Should this line fall, a secondary defensive line will also be constructed along the Saltramento River to defend southern Coltifoalnia with a shorter frontline."
 
 EQS_celestia_DB_meter_category:0 "Struggle of the Princess"
 EQS_celestia_DB_meter_category_desc:0 "With Equestria at war, Princess Celestia has been forced into a role she never wished to be in; the leader of a nation that must defend itself with fire and blood. And though she possesses the wisdom of over a thousand years of rulership, even she is not infallible. Care must be taken lest she fall to the darkness in her own heart, like her own sister once did. For if the Princess of Ponies can not stand against her own failings... there may soon not be an Equestria to save.\n\nPrincess Celestia is currently [Root.GetDBMeter].\nThe ponies of Equestria are currently [Root.GetEQSSupremacySupport]."
@@ -595,6 +613,9 @@ EQS_innovating_industry_desc:0 "Equestria is currently undergoing an industriali
 EQS_equestrian_production:0 "Equestrian Productivity"
 EQS_equestrian_production_desc:0 ""
 EQS_education_reform_1:0 "Spark of Knowledge"
+EQS_education_reform_2:0 "Spark of Knowledge"
+EQS_education_reform_3:0 "Spark of Knowledge"
+EQS_education_reform_4:0 "Spark of Knowledge"
 EQS_political_disorder:0 "Political Disorder"
 EQS_full_thestral_integration:0 "Full Thestral Integration"
 
@@ -651,6 +672,9 @@ EQS_tactical_bonus:0 "Tactical Superiority"
 EQS_harmonized_economics_law:0 "Harmonized Economics"
 EQS_volunteer_only_sunset:0 "Volunteer Only"
 EQS_limited_conscription_blueblood:0 "Limited Conscription"
+
+EQS_absolestia_economy:0 "The Celestial Economy"
+EQS_EEA_integration:0 "EEA Integration"
 
 EQS_equestrian_tank_program:0 "Equestrian Tank Development Program"
 
@@ -755,11 +779,6 @@ EQS_equestrian_tank_program:0 "Equestrian Tank Development Program"
  EQS_support_thorax_decision_desc:0 "A glimmer of hope for a peaceful reconciliation with Changelings - the revolutionary [CCN.GetLeader] has risen up against the regime of [CHN.GetLeader]. It is in our best interest to support him in this fight for Friendship and Harmony."
  
  #Scientists.
- 
- EQS_miss_harshwhinny:0 "Miss Harshwhinny"
- EQS_miss_harshwhinny_desc:0 "Chief inspector of the Equestria Games committee, this workaholic pony has recently been recruited by S.M.I.L.E to work on army-related projects. With a keen eye for stamping out inefficiencies and streamlining things, as well as having recently learnt aspects of tank design, her experience in organizing the Equestria Games makes her a bright and resourceful researcher."
- EQS_naval_scientist:0 "Calm Waters" #INSERT SOMEBODY HERE PLEASE
- #EQS_naval_scientist_desc:0 "" #Lol, lmao.
 
 #PROJECT MOONSHINE IDEAS
 
@@ -1099,6 +1118,14 @@ equestria_celestia.22.a:0 ""No.""
 #Olenian Uprising in Hjortland
 #Reinstating Velvet after Olenian Protectorate collapse
 #Sugar Belle as part of SMILE being sent to Our Town?
+
+olenia_uprising.1.t:0 "Liberation Calls"
+olenia_uprising.1.d:0 ""Is it time?"\n\nThe S.M.I.L.E. operative, a snow-white pony who had given the name 'Foxtrot' to the Olenians checked her watch. "One more minute," she said as the hands approached midnight. "Have you made sure everypony is ready?"\n\n"Everydeer," the Olenian corrected, "and we've been ready for weeks." Taking a hold of his rifle, he pulled back the bolt to let the next round slide into the chamber. "Though we all owe you a great debt for helping us secure these changeling weapons and keeping communication between cells open. The collaborators are incompetent, but the Heer is effective at keeping us spread thin."\n\n"Fighting the bugs is payment enough. Once you seize Hjortland, Equestria will ship supplies and reinforcements in to secure the peninsula. Queen Velvet will arrive to establish a new government when it is safe enough to do so."\n\nThe stag nodded. "I suppose there is some irony in these things," he commented as moonlight began breaking through the treeline. "The changelings have done what no Olenian has before, and bought unity to all deer against a common enemy. I supported King Johan before, you know. My father was a noble threatened by Velvet's reforms, so she was the enemy. But better a doe upon the throne than a foreigner."\n\n"Fair enough." Foxtrot checked her watch again. "It's midnight. Are you ready?"\n\nPulling out a flare gun, the stag grinned. "Of course. We have been waiting a long time for this."\n\nAnd as the flares rose over the sea of trees, the first echoes of gunfire rang through the Hjortland Peninsula."
+olenia_uprising.1.a:0 "For Olenia!"
+
+olenia_uprising.2.t:0 "Return of the Queen"
+olenia_uprising.2.d:0 "Hjortland was free. The flag of the Olenian Protectorate had been burned, and one of the true Kingdom had been raised in its place above the Riksdag. Bodies swung in the streets, as changelings and collaborationists alike were strung up by the communists. The church preferred beheading as a tribute to the gods, but those bodies had been left to freeze in the snow. Only the harmonists and the Equestrian Army had taken prisoners, those deemed worthy of a trial post-war with the rest being sent to the firing squad.\n\nBut none of that concerned Queen Velvet. Perhaps it would later, but presently her attention was focused on a greater task; the total liberation of Olenia. To that end she had gathered those of importance in the royal palace, namely Field Marshal Sunset Shimmer of Equestria and S.M.I.L.E.'s Agent Foxtrot.\n\n"The Protectorate has completely collapsed," Foxtrot reported in first. "With Hjortland in our hooves, any semblance of a civil administration has disappeared. Resistance is at an all-time high and the Heer is having to deal with it personally, but we were unable to locate Hjortsling himself."\n\n"Zat is because I already dealt vith zat traitor personally," Velvet answered dismissively. "You may still find shards of him outside if you vish. Ze bugs are ze issue now."\n\nSunset and Foxtrot shared a glance. "Right," the former began, "and Equestria has already organized Olenian volunteers for the new army. Marshal Manntlerhim will lead them to liberate the rest of Olenia and hopefully link up with the Equestrian front for the push into the hives themselves."\n\n"Good. I have vaited too long to vatch ze bugs freeze. Zeir hives vill feel ze ice of a true vinter."\n\nAnother nervous look between the Equestrians. Foxtrot shifted. "Queen Velvet, while we do not deny your effectiveness on the frontlines S.M.I.L.E. believes you should stay in Hjortland. If the changelings were to capture you, the resistance could break into infighting again."\n\nVelvet raised an eyebrow. "You zink I am ze one in danger?" Her laugh was dainty yet cold as ice. "No. Zey vill find that I am ze danger. I am not Queen because of blood, like my brother. Olenia fights because I fight, for I have ze strength to lead them into battle myself. Zat is ze way of ze old kings, and I vill vin my crown back just as zey did."\n\nThe Queen of Olenia looked out the window, where the snow was beginning to fall again. "I vill not forget my debt to you, Equestrians. But zis is our war as vell. Now, ve fight together.""
+olenia_uprising.2.a:0 "Onwards, to Vesalipolis!"
 
 
 
@@ -1889,7 +1916,7 @@ equestria_news.2.a:0 "So nothing really changes."
 equestria_news.2.b:0 "We welcome our new Buffalo friends!"
 equestria_news.3.t:0 "The Equestrian Civil War"
 equestria_news.3.d1:0 "[This.GetNewspaperHeader]Shocking news has spread from the once-peaceful nation of Equestria, as the harmonic nation has fallen into a full-blown civil war following chaos in the capital of Canterlot. Princess Luna, leading an effort for the reintegration of thestrals into Equestrian society, has according to some sources turned into Nightmare Moon after a suicide bombing in Canterlot and is now fighting a war to dethrone her sister from Manehattan. Others claim that a secretive nation from Zebrica is to blame.\n\nPrincess Celestia has been unavailable as of the moment, but as the first shots are fired, Equestria finds itself split in two."
-equestria_news.3.d2:0 "[This.GetNewspaperHeader]"
+equestria_news.3.d2:0 "[This.GetNewspaperHeader]Shocking news has spread from the once-peaceful nation of Equestria, as the harmonic nation has fallen into a full-blown civil war following chaos in the capital of Canterlot. Princess Luna, leading an effort for the reintegration of thestrals into Equestrian society, has according to some sources turned into Nightmare Moon after an assassination attempt in Manehattan and is now fighting a war to dethrone her sister. Others claim that a secretive nation from Zebrica is to blame.\n\nPrincess Celestia has been unavailable as of the moment, but as the first shots are fired, Equestria finds itself split in two."
 equestria_news.3.a:0 "Sister... why..."
 equestria_news.3.b:0 "For the glory of the Nightmare!"
 equestria_news.3.c:0 "What is going on over there?!"
@@ -2018,6 +2045,9 @@ EQS_RAINBOW_WARTIME_GENERAL_DESC:0 "§YBorn§!: 3rd of March, 981 in Cloudsdale\
 EQS_PINKIE_GENERAL_DESC:0 "§YBorn§!: 15th of March, 982 on the Pie Family Rock Farm\n\n§YRank§!: General\n\n§YBiography§!: As the premier party pony in all of Equestria, Pinkie Pie is known from Vanhoover to Fillydelphia. Born the third child of the Pie family near Rockville, she gained her cutie mark one day after witnessing Rainbow Dash's Sonic Rainboom, discovering that her special talent in life was spreading joy to other ponies. After moving to Ponyville she took up baking at Sugarcube Corner, and soon became the Bearer of the Element of Laughter while helping Twilight Sparkle defeat Nightmare Moon in the year 1000.\n\nSince then, Pinkie Pie has played a major role in defeating many of Equestria's threats, including King Sombra, Lord Tirek and the Pony of Shadows. As an honorary yak, she also served as the unofficial diplomat to the Kingdom of Yakyakistan during their exit from isolation under Prince Rutherford, and taught lessons at the School of Friendship about the role of laughter in harmony.\n\nIn the past, Pinkie Pie was an excitable, hyperactive and social pony, albeit with strange mannerisms and occasional insecurities. However, the recent war has drastically changed her personality, turning her into a distant and depressive, if determined general in the Equestrian Army. Most soldiers under her command appreciate her fourth-wall bending powers and experience in defending positions from her background as a rock farmer, but some of her aides whisper of regular emotional breakdowns and requests of leaving casualities out of operational reports. Still, her unique skillset has proven to be vital to the Equestrian war effort, and she continues to willingly serve in its defense despite the toll on her mental state.\n\n§YPortrait By§!: "
 
 EQS_starswirl:0 "Starswirl the Bearded"
+EQS_miss_harshwhinny:0 "Miss Harshwhinny"
+EQS_sea_swirl:0 "Sea Swirl"
+EQS_torque_wrench:0 "Torque Wrench"
 EQS_flash_magnus:0 "Flash Magnus"
 EQS_STARSWIRL_SCIENTIST_DESC:0 "Test"
 
@@ -2162,7 +2192,12 @@ EQS_ROC_wardelay_tt:0 "War with the §YRock Union§! will be delayed until the w
 EQS_SCS_wardelay_tt:0 "War with the §YConfederation of Southern States§! will be delayed until the war with the §GChangeling Queendom§!."
 EQS_BAL_wardelay_tt:0 "War with the §YSoutheast§! will be delayed until the war with §RStalliongrad§!."
 
-EQS_dynamic_economics_tt:0 "Completing this focus will unlock the §CHarmonized Economics§! national spirit, which can be §Gimproved§! through §Yvarious foci§!."
+EQS_prewar_industry_unlocked_tt:0 "Certain §Cindustrial decisions§! from §Ybefore the war§! will become §Gavailable§! again."
+EQS_idea_expires_tt:0 "When this §Yidea§! §Rexpires§!:"
+EQS_scientists_unlocked_tt:0 "New §Cscientists§! will become §Gavailable§!."
+EQS_foreign_magic_tech_tt:0 "Completing this focus will unlock §Cdecisions§! to research certain foreign §Yracial technologies§!."
+EQS_defensive_lines_unlocked_tt:0 "Completing this focus will unlock §Cdecisions§! to construct §Ydefensive lines§! against §REquestria's enemies§!."
+EQS_radar_research_reward_tt:0 "§CRadar stations§! will be §Yconstructed§! if the relevant §Yspecial project§! is §Gcompleted§!."
 EQS_celestia_selfkill_tt:0 "§RA new decision category has been unlocked.\n\nBe careful.§!"
 EQS_celestia_nostop_tt:0 "§RNothing will get in the way of the Princess.§!"
 EQS_celestia_worsen_tt:0 "§RThe Princess will begin to falter under the strain... as will Harmony.§!"
@@ -2212,6 +2247,8 @@ EQS_wonderbolt_pegasi_training:0 "Wonderbolt Pegasi Divisions"
 EQS_wonderbolt_pegasi_training_tt:0 "£unit_pegasi_icon_small Pegasi:\n    Organization: §G+3§!\n    Soft Attack: §G+10%§!\n    Hard Attack: §G+25%§!\n    Breakthrough: §G+10%§!\n    Piercing: §G+100%§!\n    Defense: §G+10%§!\n    Air Attack: §G+300000%§!\n    Max Speed: §G+10%§!\n\n"
 EQS_improved_engineers:0 "Improved Engineers"
 EQS_improved_engineers_tt:0 "£unit_engineer_icon_small Engineer Company:\n    Entrenchment: §G+3§!\n    Attack on Forts: §G+10%§!\n    Defence on Forts: §G+10%§!\n\n"
+
+EQS_absolestia_economy1_tt:0 "Add §YThe Celestial Economy§!, which grants (Production Efficiency Retention: §G+10.00%§!)."
 
 
 EQS_PHOENIX_UNRELEASED_tt:0 "§RContent for this option is undeveloped. It is highly suggested that you do not take it.§!"
@@ -2299,6 +2336,7 @@ EQS_SOL_daybreaker:0 "Daybreaker"
 EQS_gw_tank_equipment:0 "Yak 'Tank' Infantry Fighting Vehicle"
 EQS_gw_tank_equipment_desc:0 "Equestria, reeling from the military defeats during the conflict with Stalliongrad rushed to produce prototype copies of the makeshift Stalliongrad vehicles. One tester, nearly overwhelmed by the exhaust choking the poorly ventilated interior, likened the experience to 'sitting inside of a fuel tank'. Critics of the project seized on the comment, and the nickname 'tank' stuck, with the true name quickly forgotten."
 EQS_gw_tank_equipment_short:0 "Yak 'Tank'"
+
 EQS_light_tank_equipment_1:0 "Breezie"
 EQS_light_tank_equipment_1_desc:0 "Following the failure of initial designs to produce adequate results for the new role tanks were entering on the battlefield, Equestrian theorists finally came up with the Breezie towards the end of 1005. Fast, lightly armored, and mostly designed to engage in infantry and unarmored targets it was nevertheless the first major step in Equestrian tank development. Despite major design flaws, lack of Equestrian production meant it saw limited combat in the initial stages of the Great War."
 EQS_light_tank_equipment_1_short:0 "Breezie"
@@ -2314,6 +2352,7 @@ EQS_light_tank_equipment_x_2:0 "Flyder"
 EQS_light_tank_equipment_x_2_short:0 "Flyder"
 EQS_light_tank_equipment_x_3:0 "Jackalope"
 EQS_light_tank_equipment_x_3_short:0 "Jackalope"
+
 EQS_medium_tank_equipment_1:0 "Cragadile"
 EQS_medium_tank_equipment_1_desc:0 "Experience with the Muletilda quickly demonstrated that tanks with greater protection and firepower were needed. Work on a new design, the Twilight, began, but progressed so slowly that a stopgap was required. The result was the Timberwolf, a modification of the incomplete Rainbow project, with a new engine, more armor, redesigned turret, and larger main gun added. The Timberwolf was the first Equestrian tank to combine adequate speed, respectable armour, and significant firepower."
 EQS_medium_tank_equipment_1_short:0 "Cragadile"
@@ -2323,8 +2362,9 @@ EQS_medium_tank_equipment_2_short:0 "Timberwolf"
 EQS_medium_tank_equipment_3:0 "Manticore"
 EQS_medium_tank_equipment_3_desc:0 "With new expertise from the Stalliongrad tech sharing project the Comet revisited the ambitious goals of the Twilight, but with a more realistic approach. More refined in its systems, it utilized the very best of Equestrian technology. Arriving in time to lead the drive into the heart of the Changeling Lands, Comet tanks became a symbol of Equestrian liberation and victory, as they rolled through formerly occupied towns of cheering deer and sullen, defeated, hives."
 EQS_medium_tank_equipment_3_short:0 "Manticore"
+
 EQS_heavy_tank_equipment_1:0 "Bugbear"
-EQS_heavy_tank_equipment_1_desc:0 "The development of tanks led to two schools of thought on their use. The 'Trotists' envisioned them as the final word against frontier predators and localized threats, able to defend a village from elder dragons or work closely with infantry to clear out a rogue Changeling hive. The Cerberus was designed to their specifications; expensive, slow, and prone to mechanical problems, it had decent armour and carried significant firepower in its multiple turrets."
+EQS_heavy_tank_equipment_1_desc:0 "While Equestrian tank development focused on light and cost-efficient designs due to the limited resources of the military, an ambitious project for a much larger tank was drawn up in the years leading up to the Great War. Named the Bugbear, it carried armor believed to be impenetrable at the time and a larger gun with side turrets at the expense of being prohibitively expensive and slow. Though a few were created as prototypes and passed inspection, none saw active combat."
 EQS_heavy_tank_equipment_1_short:0 "Bugbear"
 EQS_heavy_tank_equipment_2:0 "Cerberus"
 EQS_heavy_tank_equipment_2_desc:0 "Experience with heavy combat demonstrated a need for larger, better armoured, tanks, with powerful main guns, to counter enemy tanks and entrenched defenses, and act as the spearhead for breakthrough forces. The Celestia was designed in response to those requirements, and, while it suffered from mechanical issues due to its weight and the failure of hoped-for magitek engine and transmission system components to be manufacturable on an adequate scale, it was judged to be generally effective in those roles."

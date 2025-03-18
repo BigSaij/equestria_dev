@@ -1,0 +1,56 @@
+﻿division_template = {
+	name = "Olenian Resistance"
+	is_locked = yes
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+
+units = {
+    division = {
+		name = "Olenian Resistance"
+		location = 4417
+		division_template = "Olenian Resistance"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0 
+	}
+	division = {
+		name = "Olenian Resistance"
+		location = 3712
+		division_template = "Olenian Resistance"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Olenian Resistance"
+		location = 3917
+		division_template = "Olenian Resistance"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Olenian Resistance"
+		location = 6909
+		division_template = "Olenian Resistance"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Olenian Resistance"
+		location = 9847
+		division_template = "Olenian Resistance"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+}

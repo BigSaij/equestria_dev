@@ -280,6 +280,7 @@ ideas = {
 				has_government = democratic
 			}
 			available = {
+				has_war = no
 			}
 			removal_cost = -1
 			picture = EQS_harmonic_stagnation
@@ -1161,6 +1162,26 @@ ideas = {
 				weekly_convoys_war_support = 0.001
 				weekly_bombing_war_support = 0.001
 				conscription = 0.01
+			}
+		}
+		EQS_EEA_integration = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+			}
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				research_speed_factor = -0.1
+				political_power_cost = 0.1
+				consumer_goods_factor = 0.1
+			}
+			on_remove = {
+				add_ideas = EQS_education_reform_4
 			}
 		}
 		EQS_sunset_magitech = {

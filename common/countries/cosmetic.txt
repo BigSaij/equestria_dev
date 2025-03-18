@@ -26,6 +26,10 @@ BAT_EQS_celestia = {
 	color = rgb { 142 232 153 }
 	color_ui = rgb { 142 232 153 }
 }
+OLE_EQS_resistance = {
+	color = rgb { 142 232 153 }
+	color_ui = rgb { 142 232 153 }
+}
 FAT_Monarchy = {
 	color = rgb { 104 107 156 }
 	color_ui = rgb { 104 107 156 }
