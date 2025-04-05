@@ -777,8 +777,6 @@ EQS_equestrian_tank_program:0 "Equestrian Tank Development Program"
  Preemptive_attack_desc:0 "As the [CHN.GetAdjective] war machine continues to pick up speed, we need to strike first before they inevitably attack us. The changelings won't see it coming, for sure."
  EQS_support_thorax_decision:0 "Support [CCN.GetLeader]"
  EQS_support_thorax_decision_desc:0 "A glimmer of hope for a peaceful reconciliation with Changelings - the revolutionary [CCN.GetLeader] has risen up against the regime of [CHN.GetLeader]. It is in our best interest to support him in this fight for Friendship and Harmony."
- 
- #Scientists.
 
 #PROJECT MOONSHINE IDEAS
 
