@@ -8,6 +8,7 @@ add_namespace = equestria_flavor
 add_namespace = equestria_journal
 add_namespace = equestria_celestia
 add_namespace = olenia_uprising
+add_namespace = equestria_darkwar
 add_namespace = equestria_other
 add_namespace = equestria_debug
 add_namespace = equestria_news
@@ -3494,7 +3495,18 @@ country_event = {
 		}
 	}
 }
-					
+
+country_event = {
+	id = equestria_darkwar.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_darkwar.1" }
+	title = equestria_darkwar.1.t
+	desc = equestria_darkwar.1.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_darkwar.1.a
+		
 
 country_event = {
 	id = equestria.3

@@ -15,6 +15,26 @@ on_actions = {
 				limit = {
 					OR = {
 						AND = {
+							FROM = { tag = EQS }
+							tag = CHN
+						}
+						AND = {
+							FROM = { tag = CHN }
+							tag = EQS
+						}
+					}
+				}
+				EQS = {
+					country_event = {
+						id = equestria_darkwar.1
+						days = 6
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
 							FROM = { tag = DED }
 							tag = HLR
 						}
@@ -283,28 +303,6 @@ on_actions = {
 				}
 				if = {
 					limit = {
-						FROM = {
-							original_tag = BUF
-							is_subject = no
-						}
-					}
-					country_event = news.2001
-				}
-				else_if = {
-					limit = {
-						FROM = { original_tag = CHN }
-					}
-					set_variable = {
-						var = mane_six_event_counter
-						value = 0
-					}
-					country_event = {
-						id = equestria.172
-						days = 5
-					}
-				}
-				else_if = {
-					limit = {
 						is_EQS_SOL = yes
 						NOT = { has_completed_focus = SOL_bat_problems }
 						FROM = { original_tag = EQS }
@@ -357,22 +355,6 @@ on_actions = {
 					}
 					country_event = { id = changelingattache.13 days = 1 }
 					news_event = { id = news.3 days = 1 }
-					EQS = {
-						set_variable = {
-							var = mane_six_event_counter
-							value = 0
-						}
-						country_event = {
-							id = equestria.172
-							days = 5
-						}
-						if = {
-							limit = {
-								EQC = { is_ally_with = PREV }
-							}
-							EQC = { set_country_flag = together_with_EQS }
-						}
-					}
 				}
 				if = {
 					limit = {
