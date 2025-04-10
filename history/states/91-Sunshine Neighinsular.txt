@@ -11,7 +11,8 @@ state={
 	buildings_max_level_factor=1.00
 
 	history={
-		owner = BUF
+		owner = EQS
 		add_core_of = BUF
+		add_claim_by = EQS
 	}
 }

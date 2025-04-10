@@ -44,6 +44,23 @@ EQS_celestia_selfdestruct_category = {
 	visible = {
 		has_country_flag = EQS_celestia_selfdestruct_enabled
 	}
+	visible_when_empty = yes
+	icon = celestia_cat
+	priority = {
+		base = 100
+	}
+}
+
+EQS_darkwar_category = {
+	allowed = {
+		OR = {
+			original_tag = EQS
+			original_tag = CHN
+		}
+	}
+	visible = {
+		has_country_flag = greatwar_darkwar_enabled
+	}
 	icon = celestia_cat
 	priority = {
 		base = 100

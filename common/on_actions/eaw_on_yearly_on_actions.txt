@@ -152,6 +152,73 @@ on_actions = {
 			}
 		}
 	}
+	
+	on_weekly_EQS = {
+		effect = {
+			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_EQS"
+			if = {
+				limit = {
+					has_country_flag = greatwar_darkwar_enabled
+				}
+				add_to_variable = { global.CHN_infiltration_level = global.CHN_infiltration_weekly_change }
+				clamp_variable = {
+					var = global.CHN_infiltration_level
+					min = 0
+					max = 100
+				}
+				add_to_variable = { global.EQS_infiltration_level = global.EQS_infiltration_weekly_change }
+				clamp_variable = {
+					var = global.EQS_infiltration_level
+					min = 0
+					max = 100
+				}
+				EQS = {
+					set_temp_variable = { EQS_DW_research_surrender_temp = global.CHN_infiltration_level }
+					multiply_temp_variable = { EQS_DW_research_surrender_temp = -0.005 }
+					multiply_temp_variable = { EQS_DW_research_surrender_temp = 0.5 } #For some reason the math only works if I multiply twice
+					set_variable = { EQS_DW_research_speed = EQS_DW_research_surrender_temp }
+					set_variable = { EQS_DW_surrender_limit = EQS_DW_research_surrender_temp }
+					
+					set_temp_variable = { EQS_DW_stability_ws_temp = global.CHN_infiltration_level }
+					multiply_temp_variable = { EQS_DW_stability_ws_temp = -0.005 }
+					set_variable = { EQS_DW_stability_factor = EQS_DW_stability_ws_temp }
+					set_variable = { EQS_DW_war_support_factor = EQS_DW_stability_ws_temp }
+				}
+				if = {
+					limit = {
+						check_variable = { global.CHN_infiltration_level > 50 }
+					}
+					EQS = {
+						set_temp_variable = { EQS_DW_landfort_defence_temp = global.CHN_infiltration_level }
+						subtract_from_temp_variable = { EQS_DW_landfort_defence_temp = 50 }
+						multiply_temp_variable = { EQS_DW_landfort_defence_temp = -0.005 }
+						set_variable = { EQS_DW_land_bunker_effectiveness_factor = EQS_DW_landfort_defence_temp }
+						set_variable = { EQS_DW_army_defence_factor = EQS_DW_landfort_defence_temp }
+					}
+				}
+				else = {
+					EQS = {
+						set_variable = { EQS_DW_land_bunker_effectiveness_factor = 0 }
+						set_variable = { EQS_DW_army_defence_factor = 0 }
+					}
+				}
+				CHN = {
+					set_temp_variable = { CHN_freerepair_temp = global.EQS_infiltration_level }
+					multiply_temp_variable = { CHN_freerepair_temp = -0.01 }
+					set_variable = { CHN_DW_industry_free_repair_factor = CHN_freerepair_temp }
+					
+					set_temp_variable = { CHN_everything_else_temp = global.EQS_infiltration_level }
+					multiply_temp_variable = { CHN_everything_else_temp = 0.005 }
+					set_variable = { CHN_DW_required_garrison_factor = CHN_everything_else_temp }
+					set_variable = { CHN_DW_resistance_activity = CHN_everything_else_temp }
+					set_variable = { CHN_DW_resistance_target = CHN_everything_else_temp }
+					multiply_temp_variable = { CHN_everything_else_temp = -1 }
+					set_variable = { CHN_DW_compliance_growth = CHN_everything_else_temp }
+				}
+			}
+		}
+	}
+		
 
 	on_monthly_CHN = {
 		effect = {

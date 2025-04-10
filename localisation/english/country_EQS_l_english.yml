@@ -533,6 +533,9 @@ EQS_supremacysupport4:0 "§Ywaiting for the Princess' commands§!"
 EQS_supremacysupport5:0 "§Rloyal to their sole savior§!"
 EQS_supremacysupport6:0 "§Rwilling to do whatever the Princess desires§!"
 
+EQS_darkwar_category:0 "The Dark War"
+EQS_darkwar_category_desc:0 "§YThe most dangerous enemy is the one you cannot see.§!\n\nBeyond the battlefields fought by soldiers lies a far more dangerous war to be won, fought by §Yspies§! and won through §Ydeception§! rather than brute force. The §PSecret Monster Intelligence League of Equestria§! and the §GVesalipolis Office of Public Safety§! are locked in their own §Rshadow war§!, playing a chess game that could easily turn the tide of the §YGreat War§! in one side's favor. The §Gchangelings§! will do all in their power to destabilize §PEquestria§!, and ensure that no §Rresistance§! to their rule can take shape. If the ponies wish to beat them at their own game it will take a strategic mind, sound methods and whatever resources §PEquestria§! can spare to be victorious...\n\n§RDebuffs§! for each nation will §Rscale§! based on the level of §Yinfiltration§! the opposing side has. §YInfiltration§! is increased or decreased by the amount of §Yassets§! distributed by each side for that purpose, in addition to §Rother sources§!. §YAssets§! are passively gained per week, and their distribution can be §Rmodified§! through the §Ydecision menu§!.\n\nOur current weekly gain of §Ycounterintelligence§! is §Y[?global.CHN_infiltration_weekly_change]§!.\nOur current gain in §Yinfiltration§! is §Y[?global.EQS_infiltration_weekly_change]§!.\n\nThe current level of §GChangeling infiltration§! in Equestria is §Y[?global.CHN_infiltration_level]/100§!\nThe current level of §PEquestrian infiltration§! in occupied territories is §Y[?global.EQS_infiltration_level]/100§!"
+
 EQS_breakaway_diplomacy_category:0 "Equestrian Foreign Policy"
 EQS_reintegrate_southwest:0 "Reintegrate the Southwest"
 EQS_reintegrate_southeast:0 "Reintegrate the Southeast"
@@ -675,6 +678,9 @@ EQS_limited_conscription_blueblood:0 "Limited Conscription"
 
 EQS_absolestia_economy:0 "The Celestial Economy"
 EQS_EEA_integration:0 "EEA Integration"
+
+EQS_dark_war_equestria:0 "The Dark War"
+EQS_dark_war_changelings:0 "The Dark War"
 
 EQS_equestrian_tank_program:0 "Equestrian Tank Development Program"
 
