@@ -1655,6 +1655,14 @@ political_actions = {
 					has_government = neutrality
 				}
 			}
+			else_if = {
+			    limit = {
+					original_tag = ABY
+				}
+				NOT = {
+					has_country_flag = ABY_peace_with_patriots
+				}
+			}
 		}
 		available = {
 			fascism > 0.1
@@ -1799,6 +1807,14 @@ political_actions = {
 					has_government = neutrality
 				}
 			}
+			else_if = {
+			    limit = {
+					original_tag = ABY
+				}
+				NOT = {
+					has_country_flag = ABY_peace_with_patriots
+				}
+			}
 		}
 		available = {
 			democratic > 0.1
@@ -1923,6 +1939,14 @@ political_actions = {
 					has_government = neutrality
 				}
 			}
+			else_if = {
+			    limit = {
+					original_tag = ABY
+				}
+				NOT = {
+					has_country_flag = ABY_peace_with_patriots
+				}
+			}
 		}
 		available = {
 			communism > 0.1
@@ -2036,6 +2060,14 @@ political_actions = {
 				}
 				NOT = {
 					has_country_flag = have_regular_puppets
+				}
+			}
+			if = {
+			    limit = {
+					original_tag = ABY
+				}
+				NOT = {
+					has_country_flag = ABY_peace_with_patriots
 				}
 			}
 		}
@@ -2182,6 +2214,14 @@ political_actions = {
 				}
 				NOT = {
 					has_government = neutrality
+				}
+			}
+			else_if = {
+			    limit = {
+					original_tag = ABY
+				}
+				NOT = {
+					has_country_flag = ABY_peace_with_patriots
 				}
 			}
 		}
@@ -2346,6 +2386,14 @@ political_actions = {
 					}
 				}
 			}
+			else_if = {
+			    limit = {
+					original_tag = ABY
+				}
+				NOT = {
+					has_country_flag = ABY_peace_with_patriots
+				}
+			}
 		}
 		remove_trigger = {
 			hidden_trigger = {
@@ -2497,6 +2545,14 @@ political_actions = {
 					has_government = neutrality
 				}
 			}
+			else_if = {
+			    limit = {
+					original_tag = ABY
+				}
+				NOT = {
+					has_country_flag = ABY_peace_with_patriots
+				}
+			}
 		}
 		remove_trigger = {
 			hidden_trigger = {
@@ -2620,6 +2676,14 @@ political_actions = {
 				}
 				NOT = {
 					has_country_flag = have_regular_puppets
+				}
+			}
+			else_if = {
+			    limit = {
+					original_tag = ABY
+				}
+				NOT = {
+					has_country_flag = ABY_peace_with_patriots
 				}
 			}
 		}
@@ -2817,6 +2881,14 @@ political_actions = {
 					has_completed_focus = FEA_martial_law
 					has_completed_focus = FEA_party_convention
 					has_completed_focus = FEA_the_fate_of_feathisia
+				}
+			}
+			else_if = {
+			    limit = {
+					original_tag = ABY
+				}
+				NOT = {
+					has_country_flag = ABY_peace_with_patriots
 				}
 			}
 		}

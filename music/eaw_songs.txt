@@ -18,11 +18,29 @@ music = {
 }
 
 music = {
-	song = "RedSpark_Wilzy_A_SMASHing_Adventure"
+	song = "Resonant_Tonality-Quiet_Land"
 	chance = {
 		factor = 2
 		modifier = {
 			factor = 2
+			OR = {
+				original_tag = ABY
+				original_tag = BRZ
+			}
+		}
+		modifier = {
+			factor = 0.25
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "RedSpark_Wilzy-A_SMASHing_Adventure"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 4
 			OR = {
 				original_tag = YAK
 				original_tag = JAK
@@ -165,25 +183,25 @@ music = {
 		}
 	}
 }
-music = {
-	song = "Resonant_Tonality-Quiet_Land"
-
-	chance = {
-		factor = 1
-		
-		modifier = {
-			factor = 0.5
-			has_war = yes
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-		}
-	}
-}
+#music = {
+#	song = "Resonant_Tonality-Quiet_Land"
+#
+#	chance = {
+#		factor = 1
+#		
+#		modifier = {
+#			factor = 0.5
+#			has_war = yes
+#		}
+#		modifier = {
+#			factor = 2
+#			OR = {
+#				has_government = democratic
+#				has_government = neutrality
+#			}
+#		}
+#	}
+#}
 music = {
 	song = "Resonant_Tonality-Do_Not_Fear"
 
@@ -1065,6 +1083,19 @@ music = {
 	}
 }
 music = {
+	song = SteadyGaze_Wilzy_Zvykar-O_Hills_of_Bronze
+
+	chance = {
+		factor = 0
+
+		modifier = { 
+			add = 1
+			original_tag = BRZ
+			has_war = no
+		}
+	}
+}
+music = {
 	song = "Wilzy-Desolation"
 
 	chance = {
@@ -1086,12 +1117,12 @@ music = {
 		modifier = {
 			add = 20
 			original_tag = ABY
-			has_global_flag = ABY_AF_musicflag
+			has_global_flag = KTZ_musicflag
 		}
 		modifier = {
 			add = 8
 			has_war_with = ABY
-			has_global_flag = ABY_AF_musicflag
+			has_global_flag = KTZ_musicflag
 		}
 	}
 }
