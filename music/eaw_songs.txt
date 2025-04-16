@@ -18,24 +18,6 @@ music = {
 }
 
 music = {
-	song = "Resonant_Tonality-Quiet_Land"
-	chance = {
-		factor = 2
-		modifier = {
-			factor = 2
-			OR = {
-				original_tag = ABY
-				original_tag = BRZ
-			}
-		}
-		modifier = {
-			factor = 0.25
-			has_war = yes
-		}
-	}
-}
-
-music = {
 	song = "RedSpark_Wilzy-A_SMASHing_Adventure"
 	chance = {
 		factor = 1
