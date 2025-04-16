@@ -2877,6 +2877,172 @@ country_event = {
 }
 
 country_event = {
+	id = equestria_celestia.104
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.104" }
+	title = equestria_celestia.104.t
+	desc = equestria_celestia.104.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.104.a
+		trigger = {
+			OR = {
+				FAT = {
+					AND = {
+						exists = yes
+						is_subject = no
+						NOT = {
+							has_government = communism
+						}
+					}
+				}
+				FAW = {
+					AND = {
+						exists = yes
+						is_subject = no
+						NOT = {
+							has_government = fascism
+						}
+					}
+				}
+			}
+			NTR = {
+				OR = {
+					exists = no
+					is_subject = no
+					is_subject_of = FAT
+					is_subject_of = FAW
+				}
+			}
+		}
+		if = {
+			limit = {
+				FAT = {
+					exists = yes
+				}
+			}
+			FAT = {
+				country_event = {
+					id = equestria_celestia.105
+					days = 2
+				}
+			}
+		}
+		else = {
+			FAW = {
+				country_event = {
+					id = equestria_celestia.105
+					days = 2
+				}
+			}
+		}
+		custom_effect_tooltip = EQS_griffonian_hauklandish_agreement_tt
+	}
+	option = {
+		name = equestria_celestia.104.b
+		trigger = {
+			GRD = {
+				exists = yes
+				is_subject = no
+				OR = {
+					tag = GRI
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}
+		}
+		GRD = {
+			country_event = {
+				id = equestria_celestia.105
+				days = 2
+			}
+		}
+		custom_effect_tooltip = EQS_griffonian_hauklandish_agreement_tt
+	}
+	option = {
+		name = equestria_celestia.104.c
+		custom_effect_tooltip = EQS_griffonian_involvement_tt
+		release_puppet = HAU
+		set_autonomy = {
+			target = HAU
+			autonomy_state = autonomy_dominion
+		}
+		HAU = {
+			set_cosmetic_tag = HAU_EQS
+			set_party_name = {
+				ideology = democratic
+				long_name = HAU_EQS_harmony_party_long
+				name = HAU_EQS_harmony_party
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 85
+				fascism = 4
+				communism = 1
+				neutrality = 10
+			}
+			load_focus_tree = { tree = generic_focus keep_completed = yes }
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.105
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.105" }
+	title = equestria_celestia.105.t
+	desc = equestria_celestia.105.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.105.a
+		custom_effect_tooltip = EQS_hauklandish_agreement_tt
+		set_country_flag = EQS_hauklandish_agreement_signed
+		every_state = {
+			limit = {
+				owner = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				OR = {
+					is_core_of = NTR
+					is_claimed_by = NTR
+				}
+			}
+			transfer_state_to = NTR
+		}
+		if = {
+			limit = {
+				NTR = {
+					is_subject_of = ROOT
+				}
+			}
+			NTR = {
+				end_puppet_this = yes
+			}
+		}
+		EQS = {
+			every_owned_state = {
+				limit = {
+					is_core_of = HAU
+				}
+				transfer_state_to = ROOT
+			}
+		}
+	}
+	option = {
+		name = equestria_celestia.105.b
+	}
+}
+
+country_event = {
 	id = equestria_celestia.46
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.46" }
 	title = equestria_celestia.46.t
@@ -3512,7 +3678,7 @@ country_event = {
 					tag = EQS
 				}
 				set_variable = { global.CHN_infiltration_weekly_change = 3 }
-				set_variable = { global.EQS_infiltration_weekly_change = -1 }
+				set_variable = { global.EQS_infiltration_weekly_change = 3 }
 				set_variable = { global.CHN_infiltration_level = 0 }
 				set_variable = { global.EQS_infiltration_level = 0 }
 				set_variable = { EQS_DW_political_power_cost = 0 }
