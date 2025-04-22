@@ -320,7 +320,7 @@ LSP_border_war_cat = {
 		}
 
 		highlight_states = {
-			highlight_states_trigger = { 
+			highlight_state_targets = { 
 				state = 41
 			}
 		}
@@ -385,7 +385,7 @@ LSP_border_war_cat = {
 		}
 
 		highlight_states = {
-			highlight_states_trigger = { 
+			highlight_state_targets = { 
 				state = 95
 			}
 		}
