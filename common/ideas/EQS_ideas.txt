@@ -1184,6 +1184,43 @@ ideas = {
 				add_ideas = EQS_education_reform_4
 			}
 		}
+		EQS_economic_resurgence = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+			}
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				min_export = -0.1
+				trade_opinion_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.2
+				consumer_goods_factor = -0.1
+			}
+		}
+		EQS_economic_imperialism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				is_subject_of = EQS
+			}
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				autonomy_gain = -0.1
+				extra_trade_to_overlord_factor = 0.4
+				overlord_trade_cost_factor = -0.2
+				autonomy_gain_trade_factor = -0.5
+			}
+		}
 		EQS_sunset_magitech = {
 			allowed = {
 				always = no

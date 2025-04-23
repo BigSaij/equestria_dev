@@ -518,6 +518,11 @@ recruit_character = EQS_fleetfoot
 recruit_character = EQS_flash_magnus
 recruit_character = EQS_captain_artemis
 
+recruit_character = EQS_starswirl
+recruit_character = EQS_miss_harshwhinny
+recruit_character = EQS_sea_swirl
+recruit_character = EQS_torque_wrench
+
 recruit_character = EQS_starlight_glimmer
 recruit_character = EQS_fast_clip
 recruit_character = EQS_whiplash
@@ -529,7 +534,6 @@ recruit_character = EQS_copper_gearheart_cog
 recruit_character = EQS_grimhoof
 recruit_character = EQS_coppertop
 recruit_character = EQS_kittyhawk
-recruit_character = EQS_starswirl
 recruit_character = EQS_sentinel
 recruit_character = EQS_flakesnow
 recruit_character = EQS_sunset_shimmer_extra
@@ -582,10 +586,6 @@ recruit_character = EQS_ledd_metal
 recruit_character = EQS_ember_spark
 recruit_character = EQS_sunrise_sparkle
 recruit_character = EQS_cocopomell
-#Scientists
-recruit_character = EQS_miss_harshwhinny
-recruit_character = EQS_naval_scientist
-recruit_character = EQS_bill_neigh
 ###TNO Crossover Characters###
 recruit_character = EUS_country_leader
 recruit_character = UESR_berry_punch

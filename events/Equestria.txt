@@ -1059,7 +1059,7 @@ country_event = {
 				transfer_state = 119
 				add_state_core = 38
 				add_state_core = 94
-				add_state_core - 87
+				add_state_core = 87
 				add_state_core = 118
 				add_state_core = 119
 				country_event = equestria_debug.1
@@ -10024,7 +10024,10 @@ news_event = {
 
 news_event = {
 	id = equestria_news.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_news.7" }
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria_news.7"
+		set_global_flag = equestrian_civil_war_ended
+	}
 	title = equestria_news.7.t
 	desc = equestria_news.7.d
 	picture = GFX_news_ponies_urben
@@ -10059,3 +10062,28 @@ news_event = {
 		}
 	}
 }
+
+news_event = {
+	id = equestria_news.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_news.8" }
+	title = equestria_news.8.t
+	desc = equestria_news.8.d
+	picture = GFX_news_event_galloping_gala
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = equestria_news.8.a
+		trigger = {
+			tag = EQS
+		}
+	}
+	option = {
+		name = equestria_news.8.b
+		trigger = {
+			NOT = {
+				tag = EQS
+			}
+		}
+	}
+}
+

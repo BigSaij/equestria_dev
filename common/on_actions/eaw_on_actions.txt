@@ -764,6 +764,16 @@ on_actions = {
 			CTH_load_ideology_focus = yes
 			if = {
 				limit = {
+					FROM = {
+						original_tag = EQS
+						has_completed_focus = EQS_equestrian_economic_integration
+					}
+				}
+				add_ideas = EQS_economic_imperialism
+				add_ideas = free_trade
+			}
+			if = {
+				limit = {
 					ROOT = { original_tag = ABY }
 				}
 				load_focus_tree = { tree = generic_zebra_focus keep_completed = yes }
@@ -1572,6 +1582,16 @@ on_actions = {
 					}
 				}
 				add_to_tech_sharing_group = equestrian_research
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = EQS
+						has_completed_focus = EQS_equestrian_economic_integration
+					}
+				}
+				add_ideas = EQS_economic_imperialism
+				add_ideas = free_trade
 			}
 			if = {
 				limit = {

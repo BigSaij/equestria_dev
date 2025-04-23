@@ -1684,52 +1684,6 @@ news_event = { #
 	}
 }
 country_event = {
-	id = news.2031
-	immediate = {log = "[GetDateText]: [Root.GetName]: event news.2031"}
-	hidden = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-	immediate = {
-		set_global_flag = equestrian_civil_war_ended
-	}
-	option = {
-		news_event = news.203
-	}
-}
-news_event = { ## IF EQS WINS
-	id = news.203
-	immediate = {log = "[GetDateText]: [Root.GetName]: event news.203"}
-	title = news.203.t
-	desc = news.203.d
-	picture = GFX_news_event_galloping_gala
-
-	major = yes
-
-	is_triggered_only = yes
-
-	option = {
-		name = news.203.a
-		trigger = {
-			tag = event_target:equestria
-		}
-	}
-	option = {
-		name = news.203.c
-		trigger = {
-			tag = event_target:solar_empire
-		}
-	}
-	option = {
-		name = news.203.b
-		trigger = {
-			NOT = {
-				tag = event_target:equestria
-				tag = event_target:solar_empire
-			}
-		}
-	}
-}
-country_event = {
 	id = news.2041
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.2041"}
 	hidden = yes
@@ -1776,32 +1730,6 @@ news_event = { ## IF NLR WINS
 				original_tag = NLR
 				original_tag = NMS
 				is_in_faction_with = NLR
-			}
-		}
-	}
-}
-news_event = { ## IF EQS WINS
-	id = news.206
-	immediate = {log = "[GetDateText]: [Root.GetName]: event news.206"}
-	title = news.206.t
-	desc = news.206.d
-	picture = GFX_news_event_galloping_gala
-
-	major = yes
-
-	is_triggered_only = yes
-
-	option = {
-		name = news.206.a
-		trigger = {
-			original_tag = EQS
-		}
-	}
-	option = {
-		name = news.206.b
-		trigger = {
-			NOT = {
-				original_tag = EQS
 			}
 		}
 	}

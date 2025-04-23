@@ -960,7 +960,9 @@ characters = {
 				specialization_land = 2
 			}
 			visible = {
-				has_country_flag = EQS_land_warfare_facility_built
+				owner = {
+					has_country_flag = EQS_land_warfare_facility_built
+				}
 			}
 			desc = EQS_miss_harshwhinny_desc
 		}
@@ -979,7 +981,9 @@ characters = {
 				specialization_naval = 2
 			}
 			visible = {
-				has_country_flag = EQS_naval_engineering_facility_built
+				owner = {
+					has_country_flag = EQS_naval_engineering_facility_built
+				}
 			}
 			desc = EQS_sea_swirl_desc
 		}
@@ -998,7 +1002,9 @@ characters = {
 				specialization_air = 2
 			}
 			visible = {
-				has_country_flag = EQS_avionics_facility_built
+				owner = {
+					has_country_flag = EQS_avionics_facility_built
+				}
 			}
 			desc = EQS_torque_wrench_desc
 		}
