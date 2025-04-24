@@ -3189,6 +3189,26 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = EQS_defensive_infrastructure
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_military_rd_facilities
+	cost = 4
+	prerequisite = {
+		focus = EQS_military_rd_facilities
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_defensive_infrastructure"
+		custom_effect_tooltip = EQS_defensive_lines_unlocked_tt
+		set_country_flag = EQS_defensive_infrastructure_unlocked
+	}
+}
+
+shared_focus = {
 	id = EQS_utilize_changeling_innovation
 	icon = GFX_goal_news
 	x = -2
@@ -3198,11 +3218,26 @@ shared_focus = {
 	prerequisite = {
 		focus = EQS_celestial_economic_miracle
 	}
+	available = {
+		OR = {
+			CHN = {
+				is_in_faction_with = EQS
+			}
+			CCN = {
+				is_in_faction_with = EQS
+			}
+		}
+	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_utilize_changeling_innovation"
+		add_breakthrough_progress = {
+			specialization = specialization_land
+			value = 0.5
+		}
+		add_to_variable = { EQS_industrial_capacity_var = 0.1 }
 	}
 }
 
@@ -3221,12 +3256,19 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_equestrian_economic_integration"
-		every_other_country = {
-			limit = {
-				is_subject_of = EQS
-			}
+		custom_effect_tooltip = EQS_for_every_subject_tt
+		effect_tooltip = {
 			add_ideas = EQS_economic_imperialism
 			add_ideas = free_trade
+		}
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					is_subject_of = EQS
+				}
+				add_ideas = EQS_economic_imperialism
+				add_ideas = free_trade
+			}
 		}
 		custom_effect_tooltip = EQS_economic_imperialism_unlocked_tt
 	}
@@ -3242,31 +3284,54 @@ shared_focus = {
 	prerequisite = {
 		focus = EQS_celestial_economic_miracle
 	}
+	available = {
+		HIP = {
+			is_in_faction_with = EQS
+		}
+		controls_state = 75
+		controls_state = 12
+		controls_state = 14
+	}
 	ai_will_do = {
 		factor = 5
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_hippogriff_naval_expertise"
-	}
-}
-
-shared_focus = {
-	id = EQS_defensive_infrastructure
-	icon = GFX_goal_news
-	x = 1
-	y = 1
-	relative_position_id = EQS_military_rd_facilities
-	cost = 4
-	prerequisite = {
-		focus = EQS_military_rd_facilities
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_defensive_infrastructure"
-		custom_effect_tooltip = EQS_defensive_lines_unlocked_tt
-		set_country_flag = EQS_defensive_infrastructure_unlocked
+		75 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+		12 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+		14 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_doctrine_cost_reduction = {
+			name = naval_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = naval_doctrine
+		}
+		add_breakthrough_progress = {
+			specialization = specialization_naval
+			value = 0.5
+		}
+		add_to_variable = { EQS_dockyard_capacity_var = 0.1 }
 	}
 }
 

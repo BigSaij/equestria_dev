@@ -271,9 +271,15 @@ EQS_military_rd_facilities_desc:0 "It is not enough to stay on par with the rest
 EQS_foreign_magical_studies:0 "The Foreign Magical Studies Department"
 EQS_foreign_magical_studies_desc:0 "Ponies are not the only ones with magic. The ice magic and divination of the deer, the alchemy of the zebras, even the shapeshifting of the changelings has its role in this world. Should Equestria seek control over magic it must understand it, so a special research group will be created to study the ways of creatures outside our borders. We will learn, and be better off for it."
 EQS_celestial_economic_miracle:0 "The Celestial Economic Miracle"
-EQS_celestial_economic_miracle:0 "Once more, Equestria is working with itself in tune to its own needs, and the needs of the world. Its economy has roared back to life, and with it Equestria is quickly retaking its rightful place as the predominant trading power. While this is no time to be satisfied with my progress, I cannot deny a major step has been reached. Ponies can enjoy life once more, with the fruits of their own labors."
+EQS_celestial_economic_miracle_desc:0 "Once more, Equestria is working with itself in tune to its own needs, and the needs of the world. Its economy has roared back to life, and with it Equestria is quickly retaking its rightful place as the predominant trading power. While this is no time to be satisfied with my progress, I cannot deny a major step has been reached. Ponies can enjoy life once more, with the fruits of their own labors."
 EQS_defensive_infrastructure:0 "Defensive Infrastructure Program"
 EQS_defensive_infrastructure_desc:0 "Equestria's enemies are many, and they will undoubtedly pounce at the next sign of our weakness to tear it apart. That is why I shall give them none. Fortifications will be constructed against their inevitable attacks, so that when they come for Equestria they will pay for it in blood. Their arrogance will be their downfall."
+EQS_utilize_changeling_innovation:0 "Utilize Changeling Innovation"
+EQS_utilize_changeling_innovation_desc:0 "If there is one thing that cannot be denied, it is changeling ingenuity when it comes to their industry. They managed to create a credible war machine despite their lackluster situation, and their determination is something Equestria can learn from. Now that they are part of the Accord, ponykind can benefit from their knowledge and technology."
+EQS_equestrian_economic_integration:0 "Equestrian Economic Integration"
+EQS_equestrian_economic_integration_desc:0 "For Equestria to be safe, it must remain prosperous. And for it to remain prosperous, it must maintain the connections it has made beyond its borders. Our loyal subjects will understand this, and why they must let go of old and dated ideas of protectionism and self-reliance. All they will ever need is Equestria, and with their resources Equestria will provide everything they could want and more."
+EQS_hippogriff_naval_expertise:0 "Hippogriff Naval Expertise"
+EQS_hippogriff_naval_expertise_desc:0 "Hippogriffia is a predominantly naval power, given their dual nature as seaponies and their position as an island in Zebrica. Defending Equestria and its subjects will also require a strong, large and modern navy able to control the seas against any enemy, magical or otherwise. With the seaponies now standing with me, their skills will be put to good use in Equestrian shipyards."
 
 EQS_new_equestrian_military:0 "The New Equestrian Military"
 EQS_new_equestrian_military_desc:0 "The Equestrian Military is one that was born in the fires of the civil war, and is led by countless capable ponies that have proved their worth time and time again. Still, it must not show weakness if I am to ensure Equestria's survival. It will receive the new attention it requires, and its leaders will enact the reforms they desire on my authority."
@@ -2234,6 +2240,7 @@ EQS_army_decay_reduction_tt:0 "The military will suffer §Rdebuffs§! §Gless fr
 EQS_delayed_integration_available_tt:0 "§YWe will be able to re-core the southeast later should the Celestial Resistance no longer exist.§!"
 
 EQS_regional_economic_development_tt:0 "Unlocks the §YRegional Economic Development§! decisions, which will allow us to gain §Ceconomic bonuses§! upon securing various §Yregions of Equestria§!."
+EQS_for_every_subject_tt:0 "§YEvery subject will receive the following§!:"
 EQS_economic_imperialism_unlocked_tt:0 "All of our future §Csubjects§! will gain this §Ynational spirit§! and be locked to §YFree Trade§!."
 EQS_southwest_secured_req_tt:0 "We have secured the entirety of the §YEquestrian Southwest§!."
 

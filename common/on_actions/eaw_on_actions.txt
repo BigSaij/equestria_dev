@@ -771,6 +771,7 @@ on_actions = {
 				}
 				add_ideas = EQS_economic_imperialism
 				add_ideas = free_trade
+				set_country_flag = trade_laws_blocked
 			}
 			if = {
 				limit = {
@@ -1592,6 +1593,7 @@ on_actions = {
 				}
 				add_ideas = EQS_economic_imperialism
 				add_ideas = free_trade
+				set_country_flag = trade_laws_blocked
 			}
 			if = {
 				limit = {
