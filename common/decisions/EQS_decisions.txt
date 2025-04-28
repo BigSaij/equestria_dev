@@ -2683,9 +2683,7 @@ EQS_celestia_DB_meter_category = {
 				surrender_progress > 0.15
 				AND = {
 					has_defensive_war = yes
-					any_enemy_country = {
-						is_major = yes
-					}
+					has_war_with_major = yes
 				}
 			}
 		}
@@ -3916,9 +3914,7 @@ EQS_militias = {
 		fire_only_once = yes
 		visible = {
 			has_defensive_war = yes
-			any_enemy_country = {
-				is_major = yes
-			}
+			has_war_with_major = yes
 			eqs_not_has_civil_war = yes
 		}
 		days_remove = 20
@@ -4053,9 +4049,7 @@ EQS_militias = {
 		fire_only_once = yes
 		visible = {
 			has_defensive_war = yes
-			any_enemy_country = {
-				is_major = yes
-			}
+			has_war_with_major = yes
 			eqs_not_has_civil_war = yes
 		}
 		days_remove = 25
@@ -4202,9 +4196,7 @@ EQS_militias = {
 		fire_only_once = yes
 		visible = {
 			has_defensive_war = yes
-			any_enemy_country = {
-				is_major = yes
-			}
+			has_war_with_major = yes
 			eqs_not_has_civil_war = yes
 		}
 		days_remove = 60
@@ -4325,9 +4317,7 @@ EQS_militias = {
 		fire_only_once = yes
 		visible = {
 			has_defensive_war = yes
-			any_enemy_country = {
-				is_major = yes
-			}
+			has_war_with_major = yes
 			eqs_not_has_civil_war = yes
 		}
 		days_remove = 25
@@ -4447,9 +4437,7 @@ EQS_militias = {
 		visible = {
 			NOT = { BAL = { exists = yes } }
 			has_defensive_war = yes
-			any_enemy_country = {
-				is_major = yes
-			}
+			has_war_with_major = yes
 			eqs_not_has_civil_war = yes
 		}
 		days_remove = 35
