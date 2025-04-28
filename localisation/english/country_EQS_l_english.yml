@@ -41,12 +41,16 @@ BAT_EQS_celestia_neutrality_DEF:0 "the Military Government of Western Hazrumenia
 BAT_EQS_celestia_neutrality_ADJ:0 "Western Hazrumenian"
 
 OLE_EQS_resistance_democratic:0 "Olenian Resistance"
-OLE_EQS_resistance_democratic_DEF:0 "The Olenian Resistance"
+OLE_EQS_resistance_democratic_DEF:0 "the Olenian Resistance"
 OLE_EQS_resistance_democratic_ADJ:0 "Olenian"
 
 HAU_EQS_democratic:0 "Haukland Republic"
 HAU_EQS_democratic_DEF:0 "the Republic of Haukland"
 HAU_EQS_democratic_ADJ:0 "Hauklander"
+
+STL_EQS_smilestate_democratic:0 "Our Town"
+STL_EQS_smilestate_democratic_DEF:0 "the Harmonic Revolt in Our Town"
+STL_EQS_smilestate_democratic_ADJ:0 "Townie"
 
 CHN_VES_EQS_harmony_party:0 "Throraxian-Equestrian Administration"
 CHN_VES_EQS_harmony_party_long:0 "The Joint Thoraxian-Equestrian Administration"
@@ -252,12 +256,14 @@ EQS_end_the_tsardom:0 "An End To The Tsardom"
 EQS_end_the_tsardom_desc:0 "During the autonomous period of Severyana in Equestria I served as their ceremonial Tsaritsa, inherited from the last Tsar. This title is defunct, serving only to artifically differentiate the region from the rest of Equestria. It will be abolished, and I will rule the Severyanians with the same authority I do with all other ponies; as the Princess of Equestria."
 EQS_safety_of_equestria:0 "For the Safety of Equestria"
 EQS_safety_of_equestria_desc:0 "As long as Chrysalis rules the changelings, Equestria will never be safe. I have let her evil fester beyond our borders for long enough, allowing her to build her power for a final attempt at the destruction of harmony. This time we strike first, and will bring down this scourge of Equus for the good of all ponykind. Once she is gone, I can focus on the true enemy at hoof."
-
+EQS_in_the_frozen_north:0 "In The Frozen North"
+EQS_in_the_frozen_north_desc:0 ""
+EQS_the_old_colony:0 "The Old Colony"
+EQS_the_old_colony_desc:0 ""
 EQS_beyond_the_celestial_sea:0 "Beyond the Celestial Sea"
 EQS_beyond_the_celestial_sea_desc:0 ""
 
 
-EQS_in_the_frozen_north:0 "In The Frozen North"
 EQS_friends_on_mount_aris:0 "Friends on Mount Aris"
 EQS_with_fire_and_vengeance:0 "With Fire And Vengeance"
 EQS_the_sun_never_sets:0 "The Sun Never Sets"
@@ -280,6 +286,15 @@ EQS_equestrian_economic_integration:0 "Equestrian Economic Integration"
 EQS_equestrian_economic_integration_desc:0 "For Equestria to be safe, it must remain prosperous. And for it to remain prosperous, it must maintain the connections it has made beyond its borders. Our loyal subjects will understand this, and why they must let go of old and dated ideas of protectionism and self-reliance. All they will ever need is Equestria, and with their resources Equestria will provide everything they could want and more."
 EQS_hippogriff_naval_expertise:0 "Hippogriff Naval Expertise"
 EQS_hippogriff_naval_expertise_desc:0 "Hippogriffia is a predominantly naval power, given their dual nature as seaponies and their position as an island in Zebrica. Defending Equestria and its subjects will also require a strong, large and modern navy able to control the seas against any enemy, magical or otherwise. With the seaponies now standing with me, their skills will be put to good use in Equestrian shipyards."
+
+EQS_project_phoenix:0 "Project Phoenix"
+EQS_project_phoenix_desc:0 "Some of the brightest minds of Equestria speak of a new weapon that could change the future of warfare forever, one that could wipe out entire cities with its power. In the past I may have shied away from such weapons, but this is a new age of darkness and evil. I cannot allow Equestria's enemies to wield its power before we do; research into the development of magi-nuclear weaponry must begin immediately."
+EQS_mareposa_nuclear_facility:0 "The Mareposa Nuclear Testing Facility"
+EQS_mareposa_nuclear_facility_desc:0 "Work on this weapon must be done in absolute secrecy, so a facility in one of Equestria's major cities is out of the question. Mareposa is a place developed enough to supply a full research facility while remaining a quiet and inconspicuous location for clandestine research. A rising star among the science team, one already thoroughly vetted by S.M.I.L.E. will oversee the work done in my name here."
+EQS_nuclear_power_proliferation:0 "Nuclear Power Proliferation"
+EQS_nuclear_power_proliferation_desc:0 "With endless potential and applications, it is clear to me that nuclear power may very well be the future of Equestria, or perhaps even the world. Though their operation will remain under the watch of S.M.I.L.E. and Canterlot, public nuclear energy facilities will be constructed in major Equestrian cities to provide energy to countless ponies, while also producing certain other resources..."
+EQS_might_of_the_sun:0 "Might of the Sun"
+EQS_might_of_the_sun_desc:0 "The weapon is beyond anything I could have dreamed of. It contains the power of a sun on its own, something able to destroy entire armies in a mere flash. Some would balk at its destructive power, but it must be wielded without hestitation against the monsters of darkness. If this is the only way to force peace to the world, then so be it. Harmony and history will vindicate me."
 
 EQS_new_equestrian_military:0 "The New Equestrian Military"
 EQS_new_equestrian_military_desc:0 "The Equestrian Military is one that was born in the fires of the civil war, and is led by countless capable ponies that have proved their worth time and time again. Still, it must not show weakness if I am to ensure Equestria's survival. It will receive the new attention it requires, and its leaders will enact the reforms they desire on my authority."
@@ -556,6 +571,8 @@ EQS_reintegrate_southwest:0 "Reintegrate the Southwest"
 EQS_reintegrate_southeast:0 "Reintegrate the Southeast"
 EQS_integrate_crystal_empire:0 "Integrate the Crystal Empire"
 EQS_integrate_stalliongrad:0 "Reintegrate Severyana"
+EQS_integrate_ourtown:0 "Integrate Our Town"
+EQS_integrate_ourtown_desc:0 "S.M.I.L.E. accomplished impressive results in their operations within Starlight Glimmer's old village, providing Equestria with a loyal revolt against communist rule led by none other than one of their own agents, Sugar Belle. However, their usefulness has come to an end. The heroes who fought in Celestia's name will be rewarded, but the only fate for Our Town now will be annexation into Equestria and reintegration along with the rest of Severyana."
 
 EQS_integrate_CES_commanders:0 "Reintegrate Daring Do's Command Staff"
 
@@ -698,6 +715,8 @@ EQS_economic_imperialism:0 "Equestrian Economic Integration"
 
 EQS_dark_war_equestria:0 "The Dark War"
 EQS_dark_war_changelings:0 "The Dark War"
+
+EQS_power_of_sun:0 "Power of the Sun"
 
 EQS_equestrian_tank_program:0 "Equestrian Tank Development Program"
 
@@ -1135,12 +1154,18 @@ equestria_celestia.21.a:0 "We all make mistakes. I am here to fix them."
 equestria_celestia.22.t:0 "Broken Hearts"
 equestria_celestia.22.d:0 "Princess Flurry Heart stared at the gravestones before her.\n\nThe funeral had ended hours ago. Sombra hadn't left any bodies to properly bury, but everypony had agreed that her parents deserved at least some ceremony to honor their memories. Princess Celestia had said some things about fighting off evil and how her mother and father were before she was born. Aunt Twilight had tried saying things too, but just ended up crying too much and had to be pulled away by her friends. All the crystal ponies had told her how sorry they were, but one by one they had left until Flurry was the only one left. She had thought that Sombra's own death would make her feel better, but as she read the names etched upon crystal over and over, all she felt was emptiness.\n\nHoofsteps came from behind her. Flurry assumed it was another crystal pony coming to offer their apologies, or maybe one of Twilight's friends. Instead it was Princess Celestia who sat down next to her, her eyes flickering with the blue flame that burned behind the tombstones. "I know it hurts," she said softly. "The emptiness."\n\nFlurry nodded. She had already cried endlessly hours ago; there were no tears left to spill over. "I don't know what to do now. I don't want to be a princess anymore. My friends told me how lucky I was to be an alicorn, but I would give up my wings and my horn for Mom and Dad back."\n\n"I know. But we cannot wish them back, no matter how hard we try." Celestia looked at Flurry, the two alicorns seeing their own reflections in each other's eyes. "We are the ones left behind. That is why we have a duty to protect what we have left. All you can do is use your pain to be better every day."\n\nBoth looked back to the gravestones. Flurry still remembered the last time she had seen her parents, promising her she'd be okay as they sent her on the last train out of the Crystal City to Equestria. She broke the silence first.\n\n"Does it stop hurting?"\n\nCelestia remembered the shock in her sister's eyes just before the spell hit."
 equestria_celestia.22.a:0 ""No.""
+equestria_celestia.23.t:0 "Traitor to the Revolution"
+equestria_celestia.23.d:0 ""...So please, ponies of Equestria and Severyana alike. I know what it's like to want change. To see something unfair and base your view of the world on how to fix it. But communism isn't the way to do that. Their dreams of a better world aren't real. So please, ask yourself if what you're hearing from Stalliongrad is a lie. Equestria didn't want this war, and I'm sure you didn't either."\n\nPutting down the recorder, Starlight Glimmer sighed and gave an exasperated look at Director Sweetie Drops sitting across from her. "Was that good enough for you?"\n\n"Yes," the earth pony replied plainly. "Now just repeat it in Severyanian and that'll be it."\n\nStarlight rolled her eyes. The two had been at it for what must have been hours; she could only guess given that there was no way of telling time in this empty room. "You know, I don't really appreciate being pulled in here to read off a script. Or being used for propaganda in a war."\n\n"And I don't appreciate having to keep tabs on you all the time," the Director fired back. "Running a cult, trying to destroy the fabric of reality with time travel, ponynapping and mind controlling Equestria's heroes. If it was up to me, we would have thrown you in Tartarus years ago."\n\n"How..." Starlight swallowed. "How do you know all that?"\n\n"S.M.I.L.E. knows everything. We'd be a poor intelligence agency if we didn't." Sweetie Drops' watch beeped once, causing her to frown in annoyance. "Now are you done wasting my time?"\n\n"Fine." The recorder levitated back towards Starlight's muzzle once more. "Just so you know, my Severyanian is a bit rusty."\n\n"That's fine. We have a translator ready to make sure there's no mistakes."\n\n"I'm sure you do.""
+equestria_celestia.23.a:0 ""Hello, everypony. I'm Starlight Glimmer...""
 
-#Event ideas
-#Starlight denouncing STG on war start
-#Olenian Uprising in Hjortland
-#Reinstating Velvet after Olenian Protectorate collapse
-#Sugar Belle as part of SMILE being sent to Our Town?
+equestria_celestia.24.t:0 "Smiles in Our Town"
+equestria_celestia.24.d:0 ""Thanks for checking in, Night Glider. Make sure to tell Party Favor to get his sleep tonight, alright? It's gonna be a big day tomorrow."\n\nThe dark coated pegasus nodded and trotted out the door as Sugar Belle's smile faded and she turned her attention back to the papers before her. Her friends had been a massive help in getting things ready, at least after she had convinced them that Stalliongrad was no longer the place of friendship they thought it was. Double Diamond, Party Favor, Night Glider, they had all proven themselves some of the best friends she could ask for. Even now they were organizing ponies and spreading the word so that tomorrow's revolt against the Supreme Soviet would go as planned.\n\nBut it wasn't just them. The only reason any of this was possible was the S.M.I.L.E. pin she kept hidden away in a secret drawer. She had joined shortly after Starlight had run off and the Soviet had formally reannexed the town, sending reports by dragonfire whenever she caught wind of anything important. The reports back soon became shipments of 'famine relief', brought by none other than a a certain apple farmer who had quickly become the love of her life...\n\nThe door opened. Sugar Belle looked up and blinked in surprise. "Big Mac?"\n\n"Eeyup. Heard you were finally going to use all those apples I sent you."\n\nThe unicorn nodded and got out of her chair, brushing all the papers aside to trot over and share an embrace with the stallion. "You can't be here," she said softly. "It's going to be dangerous."\n\n"It was dangerous getting here too. War made things difficult." Big Mac pulled away, continuing to hold one of Sugar Belle's hooves. "But I wasn't going to let you run off into danger alone."\n\n"...You're not going to leave no matter what I say, aren't you?"\n\n"Eenope."\n\nSugar Belle smiled. "That's why I love you." Her eyes drifted back to the files on her desk. A familiar emblem was on all of them. "Just be careful, alright? I don't want you getting hurt just for me."\n\nBig Mac snorted. "Now you're sounding like Applejack.""
+equestria_celestia.24.a:0 "Rise up, for Harmony!"
+
+equestria_darkwar.1.t:0 "Poison at the Heart"
+equestria_darkwar.1.d:0 "It had started as a chance meeting. A run-in within the halls of Canterlot Palace. Chancellor Neighsay and Fancy Pants, nearly slamming into each other as they rounded a corner. "Ah, I was wondering when I'd run into you," Fancy said. "The reports you requested are ready in the east wing."\n\n"Reports?" Neighsay raised an eyebrow. "I never requested any reports. Everything is brought directly to my office. Are you certain it was me?"\n\n"Well, who else would want reports on Canterlot's latest research..." Fancy Pants trailed off. His eyes widened in horror, and he stared behind Neighsay as Director Sweetie Drops and Agent Lyra Heartstrings approached from behind. "Director!" he called out. "I believe we may have a problem in the palace!"\n\nSweetie lowered her sunglasses and raised an eyebrow. "Lyra?"\n\n"Yes, director?"\n\nThe earth pony whipped out her pistol and fired it straight into Lyra's head. The mare fell to the floor, a changeling taking her place in a flash of green fire. It wasn't even a second later before Neighsay and Fancy found themselves at gunpoint. "Klutzy?" Director Drops asked warningly.\n\n"Draconequus," both answered back simultaneously.\n\nSweetie frowned and lowered her pistol. "That'll have to do for now," she said sparing a glance back at the dead changeling. "She still calls me Bon-Bon. Fancy Pants, order a full lockdown of the palace. Neighsay, I want every unicorn available on standby to cast detection spells. Assume nopony is safe. S.M.I.L.E. will handle things from there."\n\nFancy nodded and immediately began trotting off, while Neighsay paused for a moment to stare suspiciously at the director. His horn ignited causing the earth pony to glow faintly for a second. The Director smirked. "Looks like you're finally learning."\n\n"That is my job, Director Drops.""
+equestria_darkwar.1.a:0 "We need to root out these changelings posthaste!"
+
 
 olenia_uprising.1.t:0 "Liberation Calls"
 olenia_uprising.1.d:0 ""Is it time?"\n\nThe S.M.I.L.E. operative, a snow-white pony who had given the name 'Foxtrot' to the Olenians checked her watch. "One more minute," she said as the hands approached midnight. "Have you made sure everypony is ready?"\n\n"Everydeer," the Olenian corrected, "and we've been ready for weeks." Taking a hold of his rifle, he pulled back the bolt to let the next round slide into the chamber. "Though we all owe you a great debt for helping us secure these changeling weapons and keeping communication between cells open. The collaborators are incompetent, but the Heer is effective at keeping us spread thin."\n\n"Fighting the bugs is payment enough. Once you seize Hjortland, Equestria will ship supplies and reinforcements in to secure the peninsula. Queen Velvet will arrive to establish a new government when it is safe enough to do so."\n\nThe stag nodded. "I suppose there is some irony in these things," he commented as moonlight began breaking through the treeline. "The changelings have done what no Olenian has before, and bought unity to all deer against a common enemy. I supported King Johan before, you know. My father was a noble threatened by Velvet's reforms, so she was the enemy. But better a doe upon the throne than a foreigner."\n\n"Fair enough." Foxtrot checked her watch again. "It's midnight. Are you ready?"\n\nPulling out a flare gun, the stag grinned. "Of course. We have been waiting a long time for this."\n\nAnd as the flares rose over the sea of trees, the first echoes of gunfire rang through the Hjortland Peninsula."
@@ -2004,6 +2029,8 @@ POLITICS_DAYBREAKER_DESC:0 "§YBorn§!: Time Immemorial\n\n§YBiography§!: Myth
 POLITICS_BLUEBLOOD_DESC:0 "A well educated and accomplished general from the Equestrian military, Prince Blueblood rode his popularity as a hero of Equestria and his traditionally inherited power as a prince through the elections and into his new role as the executive of the nation. His tactics as a general were strict, disciplined, and conservative, not to mention highly effective, and he carries those methodologies into his administration. Though not necessarily the most humble politician, Blueblood knows how, when, and what to say what the public wants to hear, knows what the public wants, and has the intellect to carry out their will efficiently. Finally, his knowledge as a general gives his pragmatic administration great insight into the military and the defensive needs of the nation, essential in the torn and chaotic modern world."
 POLITICS_PANTS_DESC:0 "Fancy Pants is a renowned member of the old Canterlot elite aristocracy, a shrewd businesspony and a clever diplomat. Though uptight as many Canterlotians are, he has occasionally shown a softer side such as his favorable business dealings with Rarity and forgiveness to the aid of Princess Twilight Sparkle after a notable debacle while she was attending other business. With these qualities, he is a natural choice for a leader that the traditional elite are content with, though some ponies may not agree with his strongly orthodox methods and policy."
 
+STL_sugar_belle_SMILE_desc:0 "§YBorn§!: 19th of July, 979 in Trotterfield\n\n§YBiography§!: "
+
 EQS_princess_celestia_and_luna:0 "Princesses Celestia and Luna"
 
 EQS_twilight_sparkle:0 "Twilight Sparkle"
@@ -2077,6 +2104,7 @@ EQS_starswirl:0 "Starswirl the Bearded"
 EQS_miss_harshwhinny:0 "Miss Harshwhinny"
 EQS_sea_swirl:0 "Sea Swirl"
 EQS_torque_wrench:0 "Torque Wrench"
+EQS_doctor_hooves:0 "Dr. Hooves"
 EQS_flash_magnus:0 "Flash Magnus"
 EQS_STARSWIRL_SCIENTIST_DESC:0 "Test"
 
@@ -2244,6 +2272,9 @@ EQS_for_every_subject_tt:0 "§YEvery subject will receive the following§!:"
 EQS_economic_imperialism_unlocked_tt:0 "All of our future §Csubjects§! will gain this §Ynational spirit§! and be locked to §YFree Trade§!."
 EQS_southwest_secured_req_tt:0 "We have secured the entirety of the §YEquestrian Southwest§!."
 
+EQS_doctor_hooves_unlocked_tt:0 "§YDoctor Hooves§! will become §Gavailable§! as a §YNuclear Scientist§!."
+EQS_major_city_nuclear_reactors_tt:0 "§YNuclear Reactors§! will be §Cconstructed§! in the cities of §YCanterlot§!, §YManehattan§! and §YFillydelphia§!."
+
 EQS_army_modification_unlocked_tt:0 "§GWill unlock unit training, disbanding and editing templates!§!"
 EQS_high_command_reform_tt:0 "Completing this focus will §Cunlock§! new §Ymilitary high command§!."
 
@@ -2288,6 +2319,9 @@ EQS_improved_engineers_tt:0 "£unit_engineer_icon_small Engineer Company:\n    E
 
 EQS_absolestia_economy1_tt:0 "Add §YThe Celestial Economy§!, which grants (Production Efficiency Retention: §G+10.00%§!)."
 EQS_absolestia_economy2_tt:0 "Modify §YThe Celestial Economy§! by\nMonthly Population: §G+15.00%§!."
+
+EQS_absolestia_economy6_tt:0 "Modify §YThe Celestial Economy§! by\nFactory Output: §G+10.00%§!."
+EQS_absolestia_economy7_tt:0 "Modify §YThe Celestial Economy§! by\nDockyard Output: §G+10.00%§!."
 
 
 EQS_PHOENIX_UNRELEASED_tt:0 "§RContent for this option is undeveloped. It is highly suggested that you do not take it.§!"
@@ -2622,3 +2656,6 @@ EQS_large_plane_maritime_patrol_plane_airframe_0_short:0 "Southpoint"
  EQS_medium_plane_scout_plane_airframe_5_short:0 "Poison PR"
  EQS_scout_plane_equipment_1:0 "Spitfire PR"
  EQS_scout_plane_equipment_2:0 "Mosquito PR"
+ 
+ ### SPECIAL PROJECTS ###
+ EQS_sp_nuclear_bomb:0 "Project Phoenix"

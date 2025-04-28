@@ -141,11 +141,6 @@ set_politics = {
 	elections_allowed = no
 }
 
-add_ideas = {
-	STL_city_state
-	STL_equality_past
-}
-
 set_stability = 0.5
 
 recruit_character = STL_feather_bangs

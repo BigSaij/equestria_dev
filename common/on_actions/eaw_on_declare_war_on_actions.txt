@@ -41,6 +41,26 @@ on_actions = {
 				limit = {
 					OR = {
 						AND = {
+							FROM = { tag = EQS }
+							tag = STG
+						}
+						AND = {
+							FROM = { tag = STG }
+							tag = EQS
+						}
+					}
+				}
+				EQS = {
+					country_event = {
+						id = equestria_celestia.23
+						days = 4
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
 							FROM = { tag = DED }
 							tag = HLR
 						}

@@ -1444,7 +1444,7 @@ country_event = {
 		add_manpower = 10000
 		custom_effect_tooltip = EQS_CES_volunteers_tt
 		hidden_effect = {
-			load_oob = EQS_CES_volunteers
+			load_oob = "EQS_CES_volunteers"
 		}
 	}
 }
@@ -2710,6 +2710,82 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_celestia.22.a
+	}
+}
+
+country_event = {
+	id = equestria_celestia.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.23" }
+	title = equestria_celestia.23.t
+	desc = equestria_celestia.23.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.23.a
+		add_war_support = 0.01
+		STG = {
+			add_war_support = -0.01
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.24" }
+	title = equestria_celestia.24.t
+	desc = equestria_celestia.24.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.24.a
+		STG = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 57
+						state = 240
+					}
+				}
+				STL = {
+					transfer_state = PREV
+				}
+				add_core_of = STL
+			}
+		}
+		set_autonomy = {
+			target = STL
+			autonomy_state = autonomy_dominion
+		}
+		STL = {
+			set_cosmetic_tag = STL_EQS_smilestate
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 95
+				fascism = 3
+				communism = 0
+				neutrality = 2
+			}
+			add_country_leader_role = {
+				character = STL_sugar_belle
+				country_leader = {
+					desc = STL_sugar_belle_SMILE_desc
+					ideology = liberation_front
+					expire = "1965.1.1"
+					traits = {
+						agent_of_smile
+					}
+				}
+				promote_leader = yes
+			}
+			hidden_effect = {
+				load_oob = "STL_smile_revolt"
+			}
+		}
 	}
 }
 

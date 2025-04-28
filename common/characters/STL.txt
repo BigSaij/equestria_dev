@@ -161,6 +161,7 @@ characters={
 		name = sugar_belle
 		portraits = {
 			civilian = {
+				large="gfx/leaders/STL/SugarBelle.tga"
 				small = "GFX_idea_STL_sugar_belle"
 			}
 		}

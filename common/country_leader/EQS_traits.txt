@@ -71,6 +71,32 @@ leader_traits = {
 		}
 	}
 	
+	sovereign_of_sun = {
+		random = no
+		stability_factor = 0.1
+		war_support_factor = 0.1
+		political_power_gain = 0.3
+		war_stability_factor = 0.3
+		surrender_limit = 0.1
+		justify_war_goal_time = -0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	agent_of_smile = {
+		random = no
+		encryption = 0.25
+		decryption = 0.25
+		drift_defence_factor = 0.5
+		resistance_target = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	element_of_magic = {
 		random = no
 		stability_factor = 0.05

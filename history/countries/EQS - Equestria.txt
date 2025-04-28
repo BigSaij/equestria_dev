@@ -522,6 +522,7 @@ recruit_character = EQS_starswirl
 recruit_character = EQS_miss_harshwhinny
 recruit_character = EQS_sea_swirl
 recruit_character = EQS_torque_wrench
+recruit_character = EQS_doctor_hooves
 
 recruit_character = EQS_starlight_glimmer
 recruit_character = EQS_fast_clip

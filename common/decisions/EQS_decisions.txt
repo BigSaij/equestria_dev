@@ -2317,6 +2317,42 @@ EQS_breakaway_diplomacy_category = {
 			}
 		}
 	}
+	EQS_integrate_ourtown = {
+		icon = celestia
+		available = {
+			STL = {
+				exists = yes
+				is_subject_of = EQS
+			}
+			STG = {
+				exists = no
+			}
+		}
+		visible = {
+			STL = {
+				exists = yes
+				is_subject_of = EQS
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_integrate_ourtown"
+			annex_country = {
+				target = STL
+				transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = STL
+				}
+				remove_core_of = STL
+			}
+		}
+	}
 	EQS_integrate_stalliongrad = {
 		icon = celestia
 		available = {

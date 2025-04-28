@@ -1009,6 +1009,26 @@ characters = {
 			desc = EQS_torque_wrench_desc
 		}
 	}
+	EQS_doctor_hooves = {
+		name = EQS_doctor_hooves
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/DoctorHooves.tga"
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_nuclear = 3
+			}
+			visible = {
+				owner = {
+					has_country_flag = EQS_nuclear_facility_built
+				}
+			}
+			desc = EQS_doctor_hooves_desc
+		}
+	}
 	#BACKSCENE EXTRAS
 	EQS_sunset_shimmer_extra = {
 		name = EQS_sunset_shimmer
