@@ -2315,6 +2315,41 @@ EQS_breakaway_diplomacy_category = {
 			else = {
 				country_event = equestria_celestia.22
 			}
+			if = {
+				limit = {
+					EQS_princess_celestia = {
+						skill < 9
+					}
+				}
+				EQS_princess_celestia = {
+					add_skill_level = 1
+				}
+			}
+		}
+	}
+	EQS_ourtown_rebellion = {
+		icon = celestia
+		available = {
+			has_war_with = STG
+		}
+		visible = {
+			has_war_with = STG
+		}
+		cost = 75
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_ourtown_rebellion"
+			STG = {
+				country_event = equestria_celestia.26
+			}
+		}
+		days_remove = 50
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_ourtown_rebellion"
+			country_event = equestria_celestia.24
 		}
 	}
 	EQS_integrate_ourtown = {
@@ -2351,6 +2386,7 @@ EQS_breakaway_diplomacy_category = {
 				}
 				remove_core_of = STL
 			}
+			country_event = equestria_celestia.25
 		}
 	}
 	EQS_integrate_stalliongrad = {
@@ -2385,6 +2421,16 @@ EQS_breakaway_diplomacy_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_integrate_stalliongrad"
 			set_country_flag = EQS_STG_absolestia_integration
 			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					EQS_princess_celestia = {
+						skill < 9
+					}
+				}
+				EQS_princess_celestia = {
+					add_skill_level = 1
+				}
+			}
 		}
 	}
 	EQS_balkanize_changelings = {

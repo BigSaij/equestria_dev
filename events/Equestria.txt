@@ -2789,6 +2789,46 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = equestria_celestia.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.25" }
+	title = equestria_celestia.25.t
+	desc = equestria_celestia.25.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.25.a
+	}
+}
+
+country_event = {
+	id = equestria_celestia.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.26" }
+	title = equestria_celestia.26.t
+	desc = equestria_celestia.26.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.26.a
+		custom_effect_tooltip = EQS_STG_uprising_warning_tt
+	}
+}
+
+country_event = {
+	id = equestria_celestia.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.27" }
+	title = equestria_celestia.27.t
+	desc = equestria_celestia.27.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.27.a
+	}
+}
+
 
 
 country_event = {

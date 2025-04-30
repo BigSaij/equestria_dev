@@ -1678,7 +1678,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_equestria_survives
 	icon = GFX_goal_news
-	x = 18
+	x = 17
 	y = 0
 	cost = 5
 	ai_will_do = {
@@ -2039,7 +2039,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_reunify_equestria
 	icon = GFX_goal_news
-	x = 30
+	x = 26
 	y = 0
 	cost = 8
 	available = {
@@ -2246,6 +2246,16 @@ shared_focus = {
 			declare_war_on = {
 				target = TEM
 				type = annex_everything
+			}
+		}
+		if = {
+			limit = {
+				EQS_princess_celestia = {
+					skill < 9
+				}
+			}
+			EQS_princess_celestia = {
+				add_skill_level = 1
 			}
 		}
 	}
@@ -3049,7 +3059,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_new_equestrian_economy
 	icon = GFX_goal_news
-	x = 5
+	x = 4
 	y = 0
 	cost = 4
 	available = {
@@ -3392,7 +3402,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_project_phoenix
 	icon = GFX_goal_news
-	x = 10
+	x = 9
 	y = 0
 	cost = 5
 	available = {
@@ -3779,7 +3789,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_new_equestrian_military
 	icon = GFX_goal_news
-	x = 42
+	x = 35
 	y = 0
 	cost = 5
 	available = {

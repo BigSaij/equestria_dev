@@ -1494,6 +1494,10 @@ focus_tree = {
 				}
 				custom_effect_tooltip = CHN_infiltrate_operations_tooltip
 			}
+			country_event = equestria_darkwar.1
+			EQS = {
+				country_event = equestria_darkwar.1
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
