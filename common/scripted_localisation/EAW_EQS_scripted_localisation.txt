@@ -126,3 +126,23 @@ defined_text = { # Absolestia CRY focus
 		localization_key = EQS_return_to_crystal_empire_desc3
 	}
 }
+
+defined_text = { # Absolestia CHN focus
+	name = GetCelestiaCHNFocus
+	text = {
+		trigger = {
+			CCN = {
+				exists = no
+			}
+		}
+		localization_key = EQS_safety_of_equestria_desc1
+	}
+	text = {
+		trigger = {
+			CCN = {
+				exists = yes
+			}
+		}
+		localization_key = EQS_safety_of_equestria_desc2
+	}
+}

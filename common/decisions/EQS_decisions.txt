@@ -2468,7 +2468,78 @@ EQS_breakaway_diplomacy_category = {
 			country_event = equestria_celestia.48
 		}
 	}
-			
+	EQS_reclaim_new_mareland = {
+		icon = celestia
+		available = {
+			has_war = no
+		}
+		visible = {
+			EQC = {
+				NOT = {
+					is_subject_of = EQS
+				}
+			}
+			OR = {
+				NOT = {
+					owns_state = 356
+				}
+				NOT = {
+					owns_state = 362
+				}
+			}
+			has_completed_focus = EQS_the_old_colony
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_reclaim_new_mareland"
+			if = {
+				limit = {
+					EQC = {
+						exists = yes
+					}
+				}
+				declare_war_on = {
+					target = EQC
+					type = annex_everything
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						NOT = {
+							owns_state = 356
+						}
+					}
+					declare_war_on = {
+						target = 356.owner
+						type = annex_everything
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							owns_state = 362
+						}
+						362 = {
+							owner = {
+								NOT = {
+									owns_state = 356
+								}
+							}
+						}
+					}
+					declare_war_on = {
+						target = 362.owner
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
 	EQS_generic_faction_demand = {
 		icon = celestia
 		visible = {

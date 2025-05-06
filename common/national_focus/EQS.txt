@@ -2622,6 +2622,18 @@ shared_focus = {
 	prerequisite = {
 		focus = EQS_a_revolution_rectified
 	}
+	available = {
+		STG = {
+			exists = no
+		}
+		CRY = {
+			OR = {
+				exists = no
+				is_subject_of = EQS
+			}
+		}
+		has_war = no
+	}
 	bypass = {
 		OR = {
 			has_war_with = CHN
@@ -2629,8 +2641,8 @@ shared_focus = {
 			CHN = {
 				is_subject_of = EQS
 			}
-			CHN = {
-				is_subject_of = EQS
+			CCN = {
+				is_in_faction_with = EQS
 			}
 		}
 	}
@@ -2638,6 +2650,7 @@ shared_focus = {
 		factor = 5
 	}
 	will_lead_to_war_with = CHN
+	will_lead_to_war_with = CCN
 	will_lead_to_war_with = SCS
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_safety_of_equestria"
@@ -2660,8 +2673,9 @@ shared_focus = {
 				}
 			}
 			CCN = {
-				country_event = equestria_celestia.46
+				country_event = equestria_celestia.30
 			}
+			custom_effect_tooltip = EQS_possible_CCN_war_tt
 		}
 		if = {
 			limit = {
@@ -2690,8 +2704,201 @@ shared_focus = {
 	ai_will_do = {
 		factor = 5
 	}
+	will_lead_to_war_with = OLE
+	will_lead_to_war_with = GRF
+	will_lead_to_war_with = GFF
+	will_lead_to_war_with = YAK
+	will_lead_to_war_with = JAK
+	will_lead_to_war_with = PNG
+	will_lead_to_war_with = PLB
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_in_the_frozen_north"
+		if = {
+			limit = {
+				OLE = {
+					exists = yes
+					NOT = {
+						is_in_faction_with = EQS
+					}
+				}
+			}
+			if = {
+				limit = {
+					OLE = {
+						is_subject = no
+						has_government = democratic
+					}
+				}
+				OLE = {
+					country_event = equestria_celestia.33
+				}
+			}
+			else_if = {
+				limit = {
+					OLE = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+				}
+				declare_war_on = {
+					target = OLE
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				GRF = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					GRF = {
+						is_subject = no
+						has_government = democratic
+					}
+				}
+				GRF = {
+					country_event = equestria_celestia.33
+				}
+			}
+			else_if = {
+				limit = {
+					GRF = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+				}
+				declare_war_on = {
+					target = GRF
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				GFF = {
+					exists = yes
+					NOT = {
+						has_government = democratic
+					}
+				}
+			}
+			declare_war_on = {
+				target = GFF
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = {
+				YAK = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					YAK = {
+						has_government = democratic
+						is_subject = no
+					}
+				}
+				YAK = {
+					country_event = equestria_celestia.33
+				}
+			}
+			else_if = {
+				limit = {
+					YAK = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+				}
+				declare_war_on = {
+					target = YAK
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				JAK = {
+					exists = yes
+					NOT = {
+						has_government = democratic
+					}
+				}
+			}
+			declare_war_on = {
+				target = JAK
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = {
+				PNG = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					PNG = {
+						has_government = democratic
+						is_subject = no
+					}
+				}
+				PNG = {
+					country_event = equestria_celestia.33
+				}
+			}
+			else_if = {
+				limit = {
+					PNG = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+				}
+				declare_war_on = {
+					target = PNG
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				PLB = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					PLB = {
+						has_government = democratic
+						is_subject = no
+					}
+				}
+				PLB = {
+					country_event = equestria_celestia.33
+				}
+			}
+			else_if = {
+				limit = {
+					PLB = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+				}
+				declare_war_on = {
+					target = PLB
+					type = annex_everything
+				}
+			}
+		}
 	}
 }
 
@@ -2705,11 +2912,52 @@ shared_focus = {
 	prerequisite = {
 		focus = EQS_safety_of_equestria
 	}
+	bypass = {
+		EQC = {
+			is_in_faction_with = EQS
+		}
+	}
 	ai_will_do = {
 		factor = 5
 	}
+	will_lead_to_war_with = EQC
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_the_old_colony"
+		if = {
+			limit = {
+				EQC = {
+					exists = yes
+					NOT = {
+						is_subject_of = EQS
+					}
+				}
+			}
+			if = {
+				limit = {
+					EQC = {
+						has_government = democratic
+						is_subject = no
+					}
+				}
+				EQC = {
+					country_event = equestria_celestia.34
+				}
+			}
+			else_if = {
+				limit = {
+					EQC = {
+						is_subject = no
+					}
+				}
+				declare_war_on = {
+					target = EQC
+					type = annex_everything
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = EQS_new_mareland_reclaimation_tt
+		}
 	}
 }
 
@@ -2729,7 +2977,6 @@ shared_focus = {
 	will_lead_to_war_with = PCB
 	will_lead_to_war_with = DRG
 	will_lead_to_war_with = MER
-	will_lead_to_war_with = EQC
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_beyond_the_celestial_sea"
 		PCB = { add_to_ROOT_potential_cores = yes }
@@ -2740,7 +2987,7 @@ shared_focus = {
 				}
 			}
 			PCB = {
-				country_event = equestria_celestia.19
+				country_event = equestria_celestia.35
 			}
 		}
 		if = {
@@ -2750,7 +2997,7 @@ shared_focus = {
 				}
 			}
 			DRG = {
-				country_event = equestria_celestia.20
+				country_event = equestria_celestia.36
 			}
 		}
 		else_if = {
@@ -2772,69 +3019,7 @@ shared_focus = {
 				}
 			}
 			MER = {
-				country_event = equestria_celestia.21
-			}
-		}
-		if = {
-			limit = {
-				EQC = {
-					exists = yes
-					NOT = {
-						is_subject_of = EQS
-					}
-				}
-			}
-			if = {
-				limit = {
-					EQC = {
-						has_government = democratic
-					}
-				}
-				EQC = {
-					country_event = equestria_celestia.22
-				}
-			}
-			else = {
-				declare_war_on = {
-					target = EQC
-					type = annex_everything
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				EQC = {
-					exists = no
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						owns_state = 356
-					}
-				}
-				declare_war_on = {
-					target = 356.owner
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						owns_state = 362
-					}
-					362 = {
-						owner = {
-							NOT = {
-								owns_state = 356
-							}
-						}
-					}
-				}
-				declare_war_on = {
-					target = 362.owner
-					type = annex_everything
-				}
+				country_event = equestria_celestia.37
 			}
 		}
 	}
@@ -3052,6 +3237,13 @@ shared_focus = {
 		swap_ruler_traits = {
 			remove = celestial_monarch
 			add = sovereign_of_sun
+		}
+		custom_effect_tooltip = EQS_unlimited_justification_tt
+		hidden_effect = {
+			set_rule = {
+				can_only_justify_war_on_threat_country = no
+				can_declare_war_on_same_ideology = yes
+			}
 		}
 	}
 }
