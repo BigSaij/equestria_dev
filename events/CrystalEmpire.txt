@@ -4562,16 +4562,7 @@ country_event = { ## Communist Crystal Ponies # Elections
 	id = crycom.3
 	immediate = {log = "[GetDateText]: [Root.GetName]: event crycom.3"}
 	title = crycom.3.t
-	desc = { text = crycom.3.d_yes_com
-		trigger = {
-			communism > 0.499
-		}
-	}
-	desc = { text = crycom.3.d_no_com
-		trigger = {
-			communism < 0.5
-		}
-	}
+	desc = crycom.3.d_yes_com
 	picture = GFX_event_crystal_city
 
 	is_triggered_only = yes
@@ -4580,9 +4571,6 @@ country_event = { ## Communist Crystal Ponies # Elections
 	}
 
 	option = {
-		trigger = {
-			communism > 0.499
-		}
 		name = crycom.3.a
 		set_politics = { ruling_party = communism elections_allowed = no }
 		end_puppet_this = yes
@@ -4595,73 +4583,19 @@ country_event = { ## Communist Crystal Ponies # Elections
 			remove_ideas = royal_family2
 			remove_ideas = equestrian_overlord
 			remove_ideas = equestrian_overlord2
-			end_puppet_this = yes
-			leave_faction = yes
-			CRY_shining_armour = { set_nationality = event_target:equestria }
 			set_cosmetic_tag = CRY_COM
 			country_event = {
 				id = crycom.9 hours = 3
 			}
-			#news_event = { id = news.cry.1 days = 1 }
 			set_global_flag = free_the_old_royalty
 			clr_global_flag = continue_imprisonment
-			event_target:equestria = {
-				country_event = { id = equestria.48 days = 5 }
-			}
-			#hidden_effect = { news_event = { id = news.cry.5 days = 5 } }
-		}
-	}
-	option = {
-		trigger = {
-			communism < 0.5
-		}
-		name = crycom.3.b
-		set_temp_variable = { civ_war_size = party_popularity@communism }
-		add_to_temp_variable = { civ_war_size = 0.1 }
-		clamp_variable = { var = civ_war_size min = 0.4 max = 0.6 }
-		start_civil_war = {
-			ruling_party = communism
-			ideology = democratic
-			size = civ_war_size
-		}
-		add_threat = 10
-		add_popularity = { ideology = communism popularity = 0.2 }
-		random_other_country = {
-			limit = { original_tag = CRY
-				has_government = democratic }
-			set_cosmetic_tag = CRY_DEM
-			add_popularity = { ideology = democratic popularity = 0.3 }
-			save_event_target_as = dem_CRY
-		}
-		reverse_add_opinion_modifier = { target = event_target:equestria modifier = hostility }
-		hidden_effect = {
-			if = {
-				limit = {
-					has_character = CRY_flash_sentry
-				}
-				CRY_flash_sentry = {
-					set_nationality = event_target:dem_CRY
+			EQS = {
+				country_event = {
+					id = equestria_misc.1
+					days = 3
 				}
 			}
-			if = {
-				limit = {
-					has_character = CRY_shining_armour
-				}
-				CRY_shining_armour = {
-					set_nationality = event_target:dem_CRY
-				}
-			}
-			if = {
-				limit = {
-					has_character = CRY_wondermane
-				}
-				CRY_wondermane = {
-					set_nationality = event_target:dem_CRY
-				}
-			}
-			news_event = { id = news.cry.0 days = 1 }
 		}
-		set_cosmetic_tag = CRY_COM
 	}
 }
 country_event = { ## Stalliongrad's advisory

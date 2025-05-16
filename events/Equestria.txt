@@ -9,6 +9,7 @@ add_namespace = equestria_journal
 add_namespace = equestria_celestia
 add_namespace = olenia_uprising
 add_namespace = equestria_darkwar
+add_namespace = equestria_misc
 add_namespace = equestria_other
 add_namespace = equestria_debug
 add_namespace = equestria_news
@@ -1761,6 +1762,20 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_civwar.31.a
+		CRY = {
+			CRY_flurry_heart = {
+				set_nationality = EQS
+			}
+			CRY_spike = {
+				set_nationality = EQS
+			}
+			CRY_mistmane = {
+				set_nationality = EQS
+			}
+			CRY_sunburst = {
+				set_nationality = EQS
+			}
+		}
 	}
 }
 
@@ -2786,6 +2801,9 @@ country_event = {
 				load_oob = "STL_smile_revolt"
 			}
 		}
+		EQS_big_macintosh = {
+			set_nationality = STL
+		}
 	}
 }
 
@@ -2799,6 +2817,17 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_celestia.25.a
+		set_country_flag = EQS_STL_integrated
+		STL = {
+			EQS_big_macintosh = {
+				set_nationality = EQS
+				demote_leader = yes
+			}
+			STL_sugar_belle = {
+				set_nationality = EQS
+				demote_leader = yes
+			}
+		}
 	}
 }
 
@@ -3277,7 +3306,7 @@ country_event = {
 	desc = equestria_celestia.33.d
 	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
-	fire_only_once = yes
+	fire_only_once = no
 	option = {
 		name = equestria_celestia.33.a
 		every_owned_state = {
@@ -3431,6 +3460,111 @@ country_event = {
 				type = annex_everything
 			}
 		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.38" }
+	title = equestria_celestia.38.t
+	desc = equestria_celestia.38.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.38.a
+		EQS = {
+			add_to_faction = HIP
+		}
+	}
+	option = {
+		name = equestria_celestia.38.b
+		EQS = {
+			declare_war_on = {
+				target = HIP
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.39
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.39" }
+	title = equestria_celestia.39.t
+	desc = equestria_celestia.39.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.39.a
+		EQS = {
+			add_to_faction = MGY
+		}
+	}
+	option = {
+		name = equestria_celestia.39.b
+		EQS = {
+			declare_war_on = {
+				target = MGY
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.40" }
+	title = equestria_celestia.40.t
+	desc = equestria_celestia.40.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.40.a
+		country_event = equestria_celestia.41
+	}
+}
+
+country_event = {
+	id = equestria_celestia.41
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.41" }
+	title = equestria_celestia.41.t
+	desc = equestria_celestia.41.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.41.a
+		country_event = equestria_celestia.42
+	}
+}
+
+country_event = {
+	id = equestria_celestia.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.42" }
+	title = equestria_celestia.42.t
+	desc = equestria_celestia.42.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.42.a
+		country_event = equestria_celestia.43
+	}
+}
+
+country_event = {
+	id = equestria_celestia.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.43" }
+	title = equestria_celestia.43.t
+	desc = equestria_celestia.43.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.43.a
 	}
 }
 
@@ -3832,6 +3966,39 @@ country_event = {
 			}
 		}
 		set_country_flag = greatwar_darkwar_enabled
+	}
+}
+
+country_event = {
+	id = equestria_misc.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_misc.1" }
+	title = equestria_misc.1.t
+	desc = equestria_misc.1.d
+	#picture = GFX_event_canterlot
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_misc.1.a
+		CRY = {
+			CRY_princess_mi_amore_cadenza = {
+				set_nationality = EQS
+			}
+			CRY_shining_armour = {
+				set_nationality = EQS
+			}
+			CRY_flurry_heart = {
+				set_nationality = EQS
+			}
+			CRY_spike = {
+				set_nationality = EQS
+			}
+			CRY_mistmane = {
+				set_nationality = EQS
+			}
+			CRY_sunburst = {
+				set_nationality = EQS
+			}
+		}
 	}
 }
 

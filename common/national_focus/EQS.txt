@@ -3059,7 +3059,7 @@ shared_focus = {
 				}
 				declare_war_on = {
 					target = HIP
-					type = puppet_wargoal_focus
+					type = annex_everything
 				}
 			}
 		}
@@ -3083,35 +3083,13 @@ shared_focus = {
 				}
 			}
 			HIP = {
-				country_event = equestria_celestia.51
+				country_event = equestria_celestia.38
 			}
-		}
-		else_if = {
-			limit = {
-				HIP = {
-					has_government = neutrality
-				}
-			}
-			HIP = {
-				country_event = equestria_celestia.53
-			}
-		}
-		else_if = {
-			limit = {
-				HIP = {
-					has_government = communism
-					NOT = {
-						has_country_leader = { ruling_only = yes character = HIP_crack_lightning }
-						has_country_leader = { ruling_only = yes character = HIP_hard_line }
-					}
-				}
-			}
-			#tooltip
 		}
 		else = {
 			declare_war_on = {
 				target = HIP
-				type = puppet_wargoal_focus
+				type = annex_everything
 			}
 		}
 		if = {
@@ -3150,6 +3128,37 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_ponies_of_the_neighle"
+		if = {
+			limit = {
+				MGY = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					MGY = {
+						is_subject = no
+						has_government = democratic
+					}
+				}
+				MGY = {
+					country_event = equestria_celestia.39
+				}
+			}
+			else_if = {
+				limit = {
+					MGY = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+				}
+				declare_war_on = {
+					target = MGY
+					type = annex_everything
+				}
+			}
+		}
 	}
 }
 
@@ -3174,16 +3183,11 @@ shared_focus = {
 		if = {
 			limit = {
 				BAT = {
-					OR = {
-						has_government = democratic
-						has_government = communism
-					}
-					is_subject = no
+					is_subject_of = HIP
+					is_in_faction_with = EQS
 				}
 			}
-			BAT = {
-				country_event = equestria_celestia.55
-			}
+			country_event = equestria_celestia.40
 		}
 		else_if = {
 			limit = {

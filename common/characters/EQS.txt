@@ -889,6 +889,30 @@ characters = {
 			}
 		}
 	}
+	EQS_big_macintosh = {
+		name = EQS_big_macintosh
+		portraits = {
+			army = {
+				large = "gfx/leaders/EQS/BigMac.tga"
+				small = "GFX_idea_EQS_big_macintosh"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist pony_race_trait }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			desc = "EQS_bigmac_desc"
+			visible = {
+				OR = {
+					original_tag = STL
+					has_country_flag = EQS_STL_integrated
+				}
+			}
+		}
+	}
 	EQS_captain_artemis = {
 		name = EQS_captain_artemis
 		portraits = {
@@ -2368,25 +2392,6 @@ characters = {
 				has_country_flag = EQS_splinter_state_UESR_flag
 			}
 			traits = { UESR_party_flavor_trait }
-		}
-	}
-	UESR_sugar_belle = {
-		name = sugar_belle
-		portraits = {
-			civilian = {
-				small = "GFX_idea_STL_sugar_belle"
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = UESR_sugar_belle_idea
-			allowed = {
-				original_tag = EQS
-			}
-			visible = {
-				has_country_flag = EQS_splinter_state_UESR_flag
-			}
-			traits = { UESR_sugar_belle_trait }
 		}
 	}
 	UESR_cheese_sandwich = {

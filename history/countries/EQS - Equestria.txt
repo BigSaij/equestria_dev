@@ -516,6 +516,7 @@ recruit_character = EQS_marble_pie
 recruit_character = EQS_soarin
 recruit_character = EQS_fleetfoot
 recruit_character = EQS_flash_magnus
+recruit_character = EQS_big_macintosh
 recruit_character = EQS_captain_artemis
 
 recruit_character = EQS_starswirl
@@ -572,7 +573,6 @@ recruit_character = EQS_swift_wing
 recruit_character = EQS_fireflight
 recruit_character = EQS_anonfilly
 recruit_character = EQS_sergeant_reckless
-recruit_character = EQS_big_macintosh
 recruit_character = EQS_caltrop_decay
 recruit_character = EQS_sun_marble
 recruit_character = EQS_orion_star

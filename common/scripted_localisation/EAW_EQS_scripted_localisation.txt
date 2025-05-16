@@ -146,3 +146,127 @@ defined_text = { # Absolestia CHN focus
 		localization_key = EQS_safety_of_equestria_desc2
 	}
 }
+
+defined_text = { # Absolestia HIP focus
+	name = GetCelestiaHIPFocus
+	text = {
+		trigger = {
+			HIP = {
+				exists = yes
+				OR = {
+					has_government = democratic
+					AND = {
+						has_government = communism
+						OR = {
+							has_country_leader = { ruling_only = yes character = HIP_skystar }
+							has_country_leader = { ruling_only = yes character = HIP_salina_blue }
+						}
+					}
+					AND = {
+						has_government = neutrality
+						has_country_leader = { ruling_only = yes character = HIP_queen_novo }
+					}
+				}
+			}
+			BAT = {
+				NOT = {
+					is_subject_of = HIP
+				}
+			}
+		}
+		localization_key = EQS_friends_on_mount_aris_desc1
+	}
+	text = {
+		trigger = {
+			HIP = {
+				exists = yes
+				OR = {
+					has_government = democratic
+					AND = {
+						has_government = communism
+						OR = {
+							has_country_leader = { ruling_only = yes character = HIP_skystar }
+							has_country_leader = { ruling_only = yes character = HIP_salina_blue }
+						}
+					}
+					AND = {
+						has_government = neutrality
+						has_country_leader = { ruling_only = yes character = HIP_queen_novo }
+					}
+				}
+			}
+			BAT = {
+				is_subject_of = HIP
+			}
+		}
+		localization_key = EQS_friends_on_mount_aris_desc2
+	}
+	text = {
+		trigger = {
+			HIP = {
+				OR = {
+					exists = no
+					has_government = fascism
+					AND = {
+						has_government = neutrality
+						NOT = { has_country_leader = { ruling_only = yes character = HIP_queen_novo } }
+					}
+					AND = {
+						has_government = communism
+						NOT = { has_country_leader = { ruling_only = yes character = HIP_skystar } }
+						NOT = { has_country_leader = { ruling_only = yes character = HIP_salina_blue } }
+					}
+				}
+			}	
+		}
+		localization_key = EQS_friends_on_mount_aris_desc3
+	}
+}
+
+defined_text = { #Absolestia BAT Focus Title
+	name = GetCelestiaBATTitle
+	text = {
+		trigger = {
+			NOT = {
+				BAT = {
+					is_subject_of = HIP
+					is_in_faction_with = EQS
+				}
+			}
+		}
+		localization_key = EQS_with_fire_and_vengeance1
+	}
+	text = {
+		trigger = {
+			BAT = {
+				is_subject_of = HIP
+				is_in_faction_with = EQS
+			}
+		}
+		localization_key = EQS_with_fire_and_vengeance2
+	}
+}
+
+defined_text = { #Absolestia BAT Focus Desc
+	name = GetCelestiaBATDesc
+	text = {
+		trigger = {
+			NOT = {
+				BAT = {
+					is_subject_of = HIP
+					is_in_faction_with = EQS
+				}
+			}
+		}
+		localization_key = EQS_with_fire_and_vengeance_desc1
+	}
+	text = {
+		trigger = {
+			BAT = {
+				is_subject_of = HIP
+				is_in_faction_with = EQS
+			}
+		}
+		localization_key = EQS_with_fire_and_vengeance_desc2
+	}
+}

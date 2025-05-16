@@ -161,7 +161,7 @@ characters={
 		name = sugar_belle
 		portraits = {
 			civilian = {
-				large="gfx/leaders/STL/SugarBelle.tga"
+				large = "gfx/leaders/STL/SugarBelle.tga"
 				small = "GFX_idea_STL_sugar_belle"
 			}
 		}
@@ -172,6 +172,21 @@ characters={
 				original_tag = STL
 			}
 			traits = { best_baker_in_town }
+		}
+		field_marshal = {
+			traits = { pony_race_trait }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			desc = STL_sugar_belle_general_desc
+			visible = {
+				OR = {
+					original_tag = STL
+					has_country_flag = EQS_STL_integrated
+				}
+			}
 		}
 	}
 	UESR_country_leader = {
