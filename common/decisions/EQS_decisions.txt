@@ -2566,6 +2566,71 @@ EQS_breakaway_diplomacy_category = {
 			country_event = equestria_celestia.57
 		}
 	}
+	EQS_release_OLE_decision = {
+		icon = celestia
+		available = {
+			OLE = {
+				exists = no
+			}
+			owns_state = 76
+			has_war = no
+		}
+		visible = {
+			OLE = {
+				exists = no
+			}
+			owns_state = 76
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_OLE_decision"
+			every_state = {
+				limit = {
+					is_core_of = OLE
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				OLE = {
+					transfer_state = PREV
+				}
+			}
+			set_autonomy = {
+				target = OLE
+				autonomy_state = autonomy_dominion
+			}
+			if = {
+				limit = {
+					has_country_flag = EQS_velvet_arrived
+				}
+				OLE_queen_velvet = {
+					set_nationality = OLE
+				}
+				delete_unit_template_and_units = {
+					division_template = "Olenian Exiles"
+				}
+				OLE = {
+					OLE_queen_velvet = {
+						promote_character = yes
+						promote_leader = yes
+					}
+					set_popularities = {
+						democratic = 90
+						fascism = 1
+						communism = 5
+						neutrality = 4
+					}
+				}
+			}
+		}
+	}
 }
 
 EQS_celestia_selfdestruct_category = {
@@ -2600,6 +2665,91 @@ EQS_celestia_selfdestruct_category = {
 }
 
 EQS_darkwar_category = {
+	EQS_CHN_infiltration_investment = {
+		icon = celestia
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = no
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_infiltration_investment"
+			if = {
+				limit = {
+					original_tag = CHN
+				}
+				add_to_variable = { CHN_DW_political_power_cost = 0.1 }
+				add_to_variable = { global.CHN_infiltration_weekly_change = 1 }
+				add_to_variable = { CHN_DW_investment_level = 1 }
+				custom_effect_tooltip = EQS_CHN_infiltration_1_tt
+			}
+			else_if = {
+				limit = {
+					original_tag = EQS
+				}
+				add_to_variable = { EQS_DW_political_power_cost = 0.1 }
+				add_to_variable = { global.EQS_infiltration_weekly_change = 1 }
+				add_to_variable = { EQS_DW_investment_level = 1 }
+				custom_effect_tooltip = EQS_CHN_counterintelligence_1_tt
+			}
+			custom_effect_tooltip = EQS_CHN_infiltration_gain_tt
+		}
+	}
+	EQS_CHN_infiltration_uninvestment = {
+		icon = celestia
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EQS_CHN_not_lowest_investment_tt
+				if = {
+					limit = {
+						original_tag = EQS
+					}
+					check_variable = { EQS_DW_investment_level > 0 }
+				}
+				else_if = {
+					limit = {
+						original_tag = CHN
+					}
+					check_variable = { CHN_DW_investment_level > 0 }
+				}
+			}
+		}
+		visible = {
+			always = yes
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = no
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_infiltration_uninvestment"
+			if = {
+				limit = {
+					original_tag = CHN
+				}
+				subtract_from_variable = { CHN_DW_political_power_cost = 0.1 }
+				subtract_from_variable = { global.CHN_infiltration_weekly_change = 1 }
+				subtract_from_variable = { CHN_DW_investment_level = 1 }
+				custom_effect_tooltip = EQS_CHN_infiltration_down1_tt
+			}
+			else_if = {
+				limit = {
+					original_tag = EQS
+				}
+				subtract_from_variable = { EQS_DW_political_power_cost = 0.1 }
+				subtract_from_variable = { global.EQS_infiltration_weekly_change = 1 }
+				subtract_from_variable = { EQS_DW_investment_level = 1 }
+				custom_effect_tooltip = EQS_CHN_counterintelligence_down1_tt
+			}
+			custom_effect_tooltip = EQS_CHN_infiltration_loss_tt
+		}
+	}
 	EQS_olenian_uprising = {
 		icon = celestia
 		available = {

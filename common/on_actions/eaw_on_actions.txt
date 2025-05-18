@@ -3481,6 +3481,18 @@ on_actions = {
 			}
 			else_if = {
 				limit = {
+					tag = OLE
+					FROM = { tag = CHN }
+				}
+				EQS = {
+					country_event = {
+						id = equestria_misc.3
+						days = 2
+					}
+				}
+			}
+			else_if = {
+				limit = {
 					tag = EQS
 					FROM = { tag = NLR }
 				}

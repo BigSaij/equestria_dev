@@ -2355,6 +2355,9 @@ country_event = { # We couldn't get him
 	is_triggered_only = yes
 	option = {
 		name = changelings.64.a
+		CRY = {
+			country_event = equestria_misc.2
+		}
 		hidden_effect = {
 			country_event = { id = changelings.65 days = 2 }
 		}

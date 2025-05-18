@@ -3904,17 +3904,26 @@ country_event = {
 			target = OLE
 			autonomy_state = autonomy_dominion
 		}
+		OLE_queen_velvet = {
+			set_nationality = OLE
+		}
+		delete_unit_template_and_units = {
+			division_template = "Olenian Exiles"
+		}
 		OLE = {
-			set_cosmetic_tag = OLE_EQS_resistance
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
+			OLE_queen_velvet = {
+				promote_character = yes
+				promote_leader = yes
 			}
+			set_cosmetic_tag = OLE_EQS_resistance
 			set_popularities = {
 				democratic = 70
 				fascism = 10
 				communism = 10
 				neutrality = 10
+			}
+			hidden_effect = {
+				load_oob = "EQS_OLE_hjortland_operation"
 			}
 		}
 	}
@@ -3936,7 +3945,7 @@ country_event = {
 					tag = EQS
 				}
 				set_variable = { global.CHN_infiltration_weekly_change = 3 }
-				set_variable = { global.EQS_infiltration_weekly_change = 3 }
+				set_variable = { global.EQS_infiltration_weekly_change = 0 }
 				set_variable = { global.CHN_infiltration_level = 0 }
 				set_variable = { global.EQS_infiltration_level = 0 }
 				set_variable = { EQS_DW_political_power_cost = 0 }
@@ -3946,6 +3955,7 @@ country_event = {
 				set_variable = { EQS_DW_war_support_factor = 0 }
 				set_variable = { EQS_DW_land_bunker_effectiveness_factor = 0 }
 				set_variable = { EQS_DW_army_defence_factor = 0 }
+				set_variable = { EQS_DW_investment_level = 0 }
 				add_dynamic_modifier = {
 					modifier = EQS_dark_war_equestria
 				}
@@ -3960,6 +3970,7 @@ country_event = {
 				set_variable = { CHN_DW_resistance_activity = 0 }
 				set_variable = { CHN_DW_resistance_target = 0 }
 				set_variable = { CHN_DW_compliance_growth = 0 }
+				set_variable = { CHN_DW_investment_level = 0 }
 				add_dynamic_modifier = {
 					modifier = EQS_dark_war_changelings
 				}
@@ -3999,6 +4010,83 @@ country_event = {
 				set_nationality = EQS
 			}
 		}
+		if = {
+			limit = {
+				CRY = {
+					has_country_flag = CRY_accepted_thorax
+				}
+			}
+			CRY = {
+				CHN_thorax = {
+					set_nationality = CRY
+				}
+			}
+		}
+	}
+}
+
+country_event = { #For CRY, I just don't want to make that event file org any worse
+	id = equestria_misc.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_misc.2" }
+	title = equestria_misc.2.t
+	desc = equestria_misc.2.d
+	#picture = GFX_event_canterlot
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_misc.2.a
+		CHN = {
+			CHN_thorax = {
+				set_nationality = CRY
+			}
+		}
+		set_country_flag = CRY_accepted_thorax
+	}
+}
+
+country_event = { #OLE died
+	id = equestria_misc.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_misc.3" }
+	title = equestria_misc.3.t
+	desc = equestria_misc.3.d
+	#picture = GFX_event_canterlot
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_misc.3.a
+		OLE = {
+			OLE_queen_velvet = {
+				set_nationality = EQS
+			}
+		}
+		add_advisor_role = {
+			character = OLE_queen_velvet
+			advisor = {
+				slot = political_advisor
+				idea_token = OLE_EQS_queen_velvet
+				allowed = {
+					original_tag = EQS
+				}
+				traits = { olenian_queen }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+		}
+		add_corps_commander_role = {
+			character = OLE_queen_velvet
+			traits = { deer_race_trait experienced_fighter ice_queen winter_specialist winter_expert }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		custom_effect_tooltip = EQS_olenian_exiles_tt
+		hidden_effect = {
+			load_oob = "EQS_olenian_exiles"
+		}
+		set_country_flag = EQS_velvet_arrived
 	}
 }
 
