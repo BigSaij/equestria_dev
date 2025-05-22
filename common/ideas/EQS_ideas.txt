@@ -1376,36 +1376,6 @@ ideas = {
 			traits = { medium_tank_manufacturer }
 			picture = EQS_mustang
 		}
-		EQS_mustang = {
-			allowed = {
-				original_tag = EQS
-			}
-			research_bonus = {
-				armor = 0.15
-			}
-			picture = EQS_mustang
-			traits = { fast_tank_manufacturer }
-		}
-		EQS_stallion = {
-			allowed = {
-				original_tag = EQS
-			}
-			research_bonus = {
-				armor = 0.15
-			}
-			traits = { medium_tank_manufacturer }
-			picture = EQS_shoof
-		}
-		EQS_sirius = {
-			allowed = {
-				original_tag = EQS
-			}
-			research_bonus = {
-				armor = 0.15
-			}
-			traits = { heavy_tank_manufacturer }
-			picture = EQS_sirius
-		}
 	}
 	naval_manufacturer = {
 		designer = yes

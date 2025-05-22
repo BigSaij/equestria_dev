@@ -1300,6 +1300,26 @@ spriteTypes = {
 	}
 	#EQS - Characters#
 	spriteType = {
+		name = "GFX_idea_EQS_neighsay"
+		texturefile = "gfx/interface/ideas/Advisors/EQS/EQS_neighsay.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_EQS_stygian"
+		texturefile = "gfx/interface/ideas/Advisors/EQS/EQS_stygian.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_EQS_cranky_doodle"
+		texturefile = "gfx/interface/ideas/Advisors/EQS/EQS_cranky_doodle.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_EQS_marble_pie"
+		texturefile = "gfx/interface/ideas/Advisors/EQS/EQS_marble_pie.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_EQS_fleetfoot"
+		texturefile = "gfx/interface/ideas/Advisors/EQS/EQS_fleetfoot.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_EQS_cel_executive"
 		texturefile = "gfx/interface/ideas/Advisors/EQS/EQS_celestia.dds"
 	}

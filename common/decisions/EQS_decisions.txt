@@ -2685,7 +2685,7 @@ EQS_darkwar_category = {
 				}
 				add_to_variable = { CHN_DW_political_power_cost = 0.1 }
 				add_to_variable = { global.CHN_infiltration_weekly_change = 1 }
-				add_to_variable = { CHN_DW_investment_level = 1 }
+				add_to_variable = { CHN_DW_infiltration_investment_level = 1 }
 				custom_effect_tooltip = EQS_CHN_infiltration_1_tt
 			}
 			else_if = {
@@ -2694,7 +2694,7 @@ EQS_darkwar_category = {
 				}
 				add_to_variable = { EQS_DW_political_power_cost = 0.1 }
 				add_to_variable = { global.EQS_infiltration_weekly_change = 1 }
-				add_to_variable = { EQS_DW_investment_level = 1 }
+				add_to_variable = { EQS_DW_infiltration_investment_level = 1 }
 				custom_effect_tooltip = EQS_CHN_counterintelligence_1_tt
 			}
 			custom_effect_tooltip = EQS_CHN_infiltration_gain_tt
@@ -2704,18 +2704,18 @@ EQS_darkwar_category = {
 		icon = celestia
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = EQS_CHN_not_lowest_investment_tt
+				tooltip = EQS_CHN_not_lowest_investment_infiltration_tt
 				if = {
 					limit = {
 						original_tag = EQS
 					}
-					check_variable = { EQS_DW_investment_level > 0 }
+					check_variable = { EQS_DW_infiltration_investment_level > 0 }
 				}
 				else_if = {
 					limit = {
 						original_tag = CHN
 					}
-					check_variable = { CHN_DW_investment_level > 0 }
+					check_variable = { CHN_DW_infiltration_investment_level > 0 }
 				}
 			}
 		}
@@ -2735,7 +2735,7 @@ EQS_darkwar_category = {
 				}
 				subtract_from_variable = { CHN_DW_political_power_cost = 0.1 }
 				subtract_from_variable = { global.CHN_infiltration_weekly_change = 1 }
-				subtract_from_variable = { CHN_DW_investment_level = 1 }
+				subtract_from_variable = { CHN_DW_infiltration_investment_level = 1 }
 				custom_effect_tooltip = EQS_CHN_infiltration_down1_tt
 			}
 			else_if = {
@@ -2744,8 +2744,93 @@ EQS_darkwar_category = {
 				}
 				subtract_from_variable = { EQS_DW_political_power_cost = 0.1 }
 				subtract_from_variable = { global.EQS_infiltration_weekly_change = 1 }
-				subtract_from_variable = { EQS_DW_investment_level = 1 }
+				subtract_from_variable = { EQS_DW_infiltration_investment_level = 1 }
 				custom_effect_tooltip = EQS_CHN_counterintelligence_down1_tt
+			}
+			custom_effect_tooltip = EQS_CHN_infiltration_loss_tt
+		}
+	}
+	EQS_CHN_counterinfil_investment = {
+		icon = celestia
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = no
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_counterinfil_investment"
+			if = {
+				limit = {
+					original_tag = CHN
+				}
+				add_to_variable = { CHN_DW_political_power_cost = 0.1 }
+				subtract_from_variable = { global.EQS_infiltration_weekly_change = 1 }
+				add_to_variable = { CHN_DW_counterinfil_investment_level = 1 }
+				custom_effect_tooltip = EQS_CHN_counterintelligence_down1_tt
+			}
+			else_if = {
+				limit = {
+					original_tag = EQS
+				}
+				add_to_variable = { EQS_DW_political_power_cost = 0.1 }
+				subtract_from_variable = { global.CHN_infiltration_weekly_change = 1 }
+				add_to_variable = { EQS_DW_counterinfil_investment_level = 1 }
+				custom_effect_tooltip = EQS_CHN_infiltration_down1_tt
+			}
+			custom_effect_tooltip = EQS_CHN_infiltration_gain_tt
+		}
+	}
+	EQS_CHN_counterinfil_uninvestment = {
+		icon = celestia
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EQS_CHN_not_lowest_investment_counterinfil_tt
+				if = {
+					limit = {
+						original_tag = EQS
+					}
+					check_variable = { EQS_DW_counterinfil_investment_level > 0 }
+				}
+				else_if = {
+					limit = {
+						original_tag = CHN
+					}
+					check_variable = { CHN_DW_counterinfil_investment_level > 0 }
+				}
+			}
+		}
+		visible = {
+			always = yes
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = no
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_counterinfil_uninvestment"
+			if = {
+				limit = {
+					original_tag = CHN
+				}
+				subtract_from_variable = { CHN_DW_political_power_cost = 0.1 }
+				add_to_variable = { global.EQS_infiltration_weekly_change = 1 }
+				subtract_from_variable = { CHN_DW_counterinfil_investment_level = 1 }
+				custom_effect_tooltip = EQS_CHN_counterintelligence_1_tt
+			}
+			else_if = {
+				limit = {
+					original_tag = EQS
+				}
+				subtract_from_variable = { EQS_DW_political_power_cost = 0.1 }
+				add_to_variable = { global.CHN_infiltration_weekly_change = 1 }
+				subtract_from_variable = { EQS_DW_counterinfil_investment_level = 1 }
+				custom_effect_tooltip = EQS_CHN_infiltration_1_tt
 			}
 			custom_effect_tooltip = EQS_CHN_infiltration_loss_tt
 		}

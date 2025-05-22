@@ -3955,7 +3955,8 @@ country_event = {
 				set_variable = { EQS_DW_war_support_factor = 0 }
 				set_variable = { EQS_DW_land_bunker_effectiveness_factor = 0 }
 				set_variable = { EQS_DW_army_defence_factor = 0 }
-				set_variable = { EQS_DW_investment_level = 0 }
+				set_variable = { EQS_DW_infiltration_investment_level = 0 }
+				set_variable = { EQS_DW_counterinfil_investment_level = 0 }
 				add_dynamic_modifier = {
 					modifier = EQS_dark_war_equestria
 				}
@@ -3970,7 +3971,8 @@ country_event = {
 				set_variable = { CHN_DW_resistance_activity = 0 }
 				set_variable = { CHN_DW_resistance_target = 0 }
 				set_variable = { CHN_DW_compliance_growth = 0 }
-				set_variable = { CHN_DW_investment_level = 0 }
+				set_variable = { CHN_DW_infiltration_investment_level = 0 }
+				set_variable = { CHN_DW_counterinfil_investment_level = 0 }
 				add_dynamic_modifier = {
 					modifier = EQS_dark_war_changelings
 				}

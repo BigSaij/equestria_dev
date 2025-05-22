@@ -162,6 +162,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/EQS/Naysay.tga"
+				small = "GFX_idea_EQS_neighsay"
 			}
 		}
 		advisor = {
@@ -291,6 +292,11 @@ characters = {
 	#THEORISTS
 	EQS_stygian = {
 		name = EQS_stygian
+		portraits = {
+			army = {
+				small = "GFX_idea_EQS_stygian"
+			}
+		}
 		advisor = {
 			slot = theorist
 			idea_token = EQS_stygian
@@ -401,6 +407,11 @@ characters = {
 	#NAVY CHIEFS
 	EQS_cranky_doodle = {
 		name = EQS_cranky_doodle
+		portraits = {
+			army = {
+				small = "GFX_idea_EQS_cranky_doodle"
+			}
+		}
 		advisor = {
 			slot = navy_chief
 			idea_token = EQS_cranky_doodle
@@ -808,7 +819,7 @@ characters = {
 		name = EQS_marble_pie
 		portraits = {
 			army = {
-				small = "GFX_idea_unknown.tga"
+				small = "GFX_idea_EQS_marble_pie"
 			}
 		}
 		advisor = {
@@ -854,7 +865,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/EQS/Fleetfoot.tga"
-				small = "GFX_idea_unknown.tga"
+				small = "GFX_idea_EQS_fleetfoot"
 			}
 		}
 		corps_commander = {
