@@ -488,7 +488,7 @@ ideas = {
 		}
 		
 		EQS_harmonized_economics_law = {
-			picture = low_economic_mobilisation
+			picture = SPR_collectivized_society
 			allowed = {
 				original_tag = EQS
 			}

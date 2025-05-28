@@ -2435,6 +2435,65 @@ EQS_breakaway_diplomacy_category = {
 			}
 		}
 	}
+	EQS_olenian_uprising = {
+		icon = celestia
+		available = {
+			has_war_with = CHN
+			custom_trigger_tooltip = {
+				tooltip = EQS_twoyears_changelingwar_tt
+				war_length_with = {
+					tag = CHN
+					months > 24
+				}
+			}
+			controls_state = 46
+		}
+		visible = {
+			has_war_with = CHN
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_olenian_uprising"
+			country_event = equestria_celestia.200
+		}
+	}
+	
+	EQS_olenian_protectorate_collapse = {
+		activation = {
+			has_country_flag = EQS_hjortland_invasion_started
+			controls_state = 76
+		}
+		available = {
+			NOT = {
+				controls_state = 76
+			}
+		}
+		cancel_trigger = {
+			controls_state = 76
+			controls_state = 191
+			controls_state = 194
+			controls_state = 192
+		}
+		icon = celestia
+		is_good = yes
+		days_mission_timeout = 150
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_olenian_protectorate_collapse"
+			country_event = equestria_celestia.202
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout EQS_olenian_protectorate_collapse"
+			country_event = equestria_celestia.201
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel EQS_olenian_protectorate_collapse"
+			country_event = equestria_celestia.201
+		}
+	}
 	EQS_balkanize_changelings = {
 		icon = celestia
 		available = {
@@ -2467,7 +2526,7 @@ EQS_breakaway_diplomacy_category = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_balkanize_changelings"
-			country_event = equestria_celestia.48
+			country_event = equestria_celestia.28
 		}
 	}
 	EQS_reclaim_new_mareland = {
@@ -2621,11 +2680,13 @@ EQS_breakaway_diplomacy_category = {
 						promote_character = yes
 						promote_leader = yes
 					}
-					set_popularities = {
-						democratic = 90
-						fascism = 1
-						communism = 5
-						neutrality = 4
+					hidden_effect = {
+						set_popularities = {
+							democratic = 90
+							fascism = 1
+							communism = 5
+							neutrality = 4
+						}
 					}
 				}
 			}
@@ -2653,6 +2714,7 @@ EQS_celestia_selfdestruct_category = {
 		days_mission_timeout = 150
 		activation = {
 			has_country_flag = EQS_celestia_selfdestruct_enabled
+			always = no
 		}
 		fixed_random_seed = no
 		fire_only_once = no
@@ -2833,58 +2895,6 @@ EQS_darkwar_category = {
 				custom_effect_tooltip = EQS_CHN_infiltration_1_tt
 			}
 			custom_effect_tooltip = EQS_CHN_infiltration_loss_tt
-		}
-	}
-	EQS_olenian_uprising = {
-		icon = celestia
-		available = {
-			has_war_with = CHN
-			controls_state = 46
-		}
-		visible = {
-			always = yes
-		}
-		cost = 0
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_olenian_uprising"
-			country_event = equestria_celestia.200
-		}
-	}
-	
-	EQS_olenian_protectorate_collapse = {
-		activation = {
-			has_country_flag = EQS_hjortland_invasion_started
-			controls_state = 76
-		}
-		available = {
-			NOT = {
-				controls_state = 76
-			}
-		}
-		cancel_trigger = {
-			controls_state = 76
-			controls_state = 191
-			controls_state = 194
-			controls_state = 192
-		}
-		icon = celestia
-		is_good = yes
-		days_mission_timeout = 150
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_olenian_protectorate_collapse"
-			country_event = equestria_celestia.202
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout EQS_olenian_protectorate_collapse"
-			country_event = equestria_celestia.201
-		}
-		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancel EQS_olenian_protectorate_collapse"
-			country_event = equestria_celestia.201
 		}
 	}
 }
@@ -3106,20 +3116,6 @@ SOL_trolling_chiropterra = {
     }
 }
 political_actions = {
-	EQS_oc_general_unlock = {
-		icon = generic_army_support
-		fire_only_once = yes
-		allowed = {
-			original_tag = EQS
-		}
-		cost = 0
-		visible = {
-			has_country_flag = EQS_wartime_generals
-		}
-		complete_effect = {
-			country_event = equestria_other.1
-		}
-	}
 	EQS_generic_rename_stalliongrad_decision = {
 		icon = anti_communist
 		allowed = {

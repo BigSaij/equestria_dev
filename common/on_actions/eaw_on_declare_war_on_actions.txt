@@ -43,18 +43,18 @@ on_actions = {
 							}
 						}
 					}
-					EQS = {
-						country_event = {
-							id = equestria_darkwar.1
-							days = 6
-						}
-					}
-					CHN = {
-						country_event = {
-							id = equestria_darkwar.1
-							days = 6
-						}
-					}
+					#EQS = {
+						#country_event = {
+							#id = equestria_darkwar.1
+							#days = 6
+						#}
+					#}
+					#CHN = {
+						#country_event = {
+							#id = equestria_darkwar.1
+							#days = 6
+						#}
+					#}
 				}
 			}
 			if = {

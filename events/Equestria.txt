@@ -1274,7 +1274,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.18" }
 	title = equestria_civwar.18.t
 	desc = equestria_civwar.18.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -1303,7 +1303,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.19" }
 	title = equestria_civwar.19.t
 	desc = equestria_civwar.19.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -1336,7 +1336,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.20" }
 	title = equestria_civwar.20.t
 	desc = equestria_civwar.20.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -1353,7 +1353,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.21" }
 	title = equestria_civwar.21.t
 	desc = equestria_civwar.21.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -1382,7 +1382,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.22" }
 	title = equestria_civwar.22.t
 	desc = equestria_civwar.22.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -1406,7 +1406,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.23" }
 	title = equestria_civwar.23.t
 	desc = equestria_civwar.23.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -1437,7 +1437,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.24" }
 	title = equestria_civwar.24.t
 	desc = equestria_civwar.24.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -1544,7 +1544,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.27" }
 	title = equestria_civwar.27.t
 	desc = equestria_civwar.27.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -1610,7 +1610,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.28" }
 	title = equestria_civwar.28.t
 	desc = equestria_civwar.28.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -1676,7 +1676,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar.29" }
 	title = equestria_civwar.29.t
 	desc = equestria_civwar.29.d
-	picture = GFX_event_celestia_poster
+	#picture = GFX_event_celestia_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -1775,6 +1775,20 @@ country_event = {
 			CRY_sunburst = {
 				set_nationality = EQS
 			}
+		}
+		if = {
+			limit = {
+				CRY = {
+					has_country_flag = CRY_accepted_thorax
+				}
+			}
+			CRY = {
+				clr_country_flag = CRY_accepted_thorax
+				CHN_thorax = {
+					set_nationality = EQS
+				}
+			}
+			set_country_flag = EQS_accepted_thorax
 		}
 	}
 }
@@ -2497,8 +2511,8 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_celestia.11.a
-		set_country_flag = EQS_celestia_selfdestruct_enabled
-		custom_effect_tooltip = EQS_celestia_selfkill_tt
+		#set_country_flag = EQS_celestia_selfdestruct_enabled
+		#custom_effect_tooltip = EQS_celestia_selfkill_tt
 	}
 }
 
@@ -2868,367 +2882,435 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_celestia.28.a
-		release_puppet = CHN
-		set_autonomy = {
-			target = CHN
-			autonomy_state = autonomy_dominion
-		}
-		CHN = {
-			set_cosmetic_tag = CHN_VES_EQS
-			set_party_name = {
-				ideology = democratic
-				long_name = CHN_VES_EQS_harmony_party_long
-				name = CHN_VES_EQS_harmony_party
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 65
-				fascism = 10
-				communism = 5
-				neutrality = 20
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-		}
-		create_dynamic_country = {
-			original_tag = CHN
-			set_AI_strategies_on_every_possible_country_delayed = yes
-			set_research_slots = 3
-			ROOT = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 262
-							state = 264
-							state = 314
-							state = 311
-							state = 315
-							state = 320
-							state = 323
-							state = 322
-						}
-					}
-					transfer_state_to = PREV.PREV
-					add_core_of = PREV.PREV
-				}
-				puppet = PREV
-				set_autonomy = {
-					target = PREV
-					autonomy_state = autonomy_dominion
-				}
-			}
-			set_cosmetic_tag = CHN_SOR
-			every_possible_country = {
+		hidden_effect = {
+			every_state = {
 				limit = {
-					has_character = CHN_queen_yaria
+					is_core_of = CCN
 				}
-				CHN_queen_yaria = {
-					set_nationality = PREV.PREV
-				}
+				remove_core_of = CCN
 			}
-			add_country_leader_role = {
-				character = CHN_queen_yaria
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = conservatism
-				}
-				promote_leader = yes
-			}
-			add_ideas = no_poverty
-			add_ideas = modern_society
-			add_ideas = no_lack_of_scientists
-			add_ideas = proper_science_base
-			add_ideas = changeling_race
-			set_party_name = {
-				ideology = democratic
-				long_name = CHN_SOR_harmony_party_long
-				name = CHN_SOR_harmony_party
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 55
-				fascism = 4
-				communism = 1
-				neutrality = 40
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-			set_capital = {
-				state = 262
-			}
-		}
-		create_dynamic_country = {
-			original_tag = CHN
-			set_AI_strategies_on_every_possible_country_delayed = yes
-			set_research_slots = 3
-			ROOT = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 252
-							state = 304
-							state = 261
-							state = 305
-							state = 306
-							state = 312
-							state = 313
-						}
-					}
-					transfer_state_to = PREV.PREV
-					add_core_of = PREV.PREV
-				}
-				puppet = PREV
-				set_autonomy = {
-					target = PREV
-					autonomy_state = autonomy_dominion
-				}
-			}
-			set_cosmetic_tag = CHN_DIT
-			every_possible_country = {
+			every_state = {
 				limit = {
-					has_character = CHN_queen_helvia
-				}
-				CHN_queen_helvia = {
-					set_nationality = PREV.PREV
-				}
-			}	
-			add_country_leader_role = {
-				character = CHN_queen_helvia
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = conservatism
-				}
-				promote_leader = yes
-			}
-			add_ideas = no_poverty
-			add_ideas = modern_society
-			add_ideas = no_lack_of_scientists
-			add_ideas = proper_science_base
-			add_ideas = changeling_race
-			set_party_name = {
-				ideology = democratic
-				long_name = CHN_DIT_harmony_party_long
-				name = CHN_DIT_harmony_party
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 55
-				fascism = 1
-				communism = 19
-				neutrality = 25
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-			set_capital = {
-				state = 252
-			}
-		}
-		create_dynamic_country = {
-			original_tag = CHN
-			set_AI_strategies_on_every_possible_country_delayed = yes
-			set_research_slots = 3
-			ROOT = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 259
-							state = 250
-							state = 249
-							state = 321
-							state = 310
-						}
+					is_core_of = CHN
+					NOT = {
+						state = 251
 					}
-					transfer_state_to = PREV.PREV
-					add_core_of = PREV.PREV
 				}
-				puppet = PREV
-				set_autonomy = {
-					target = PREV
-					autonomy_state = autonomy_dominion
-				}
+				remove_core_of = CHN
 			}
-			set_cosmetic_tag = CHN_VRK
-			every_possible_country = {
+			if = {
 				limit = {
-					has_character = CHN_queen_argynnis
-				}
-				CHN_queen_argynnis = {
-					set_nationality = PREV.PREV
-				}
-			}
-			add_country_leader_role = {
-				character = CHN_queen_argynnis
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = conservatism
-				}
-				promote_leader = yes
-			}
-			add_ideas = no_poverty
-			add_ideas = modern_society
-			add_ideas = no_lack_of_scientists
-			add_ideas = proper_science_base
-			add_ideas = changeling_race
-			set_party_name = {
-				ideology = democratic
-				long_name = CHN_VRK_harmony_party_long
-				name = CHN_VRK_harmony_party
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 50
-				fascism = 35
-				communism = 1
-				neutrality = 14
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-			set_capital = {
-				state = 259
-			}
-		}
-		create_dynamic_country = {
-			original_tag = CHN
-			set_AI_strategies_on_every_possible_country_delayed = yes
-			set_research_slots = 3
-			ROOT = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 309
-							state = 303
-							state = 260
-							state = 308
-							state = 258
-							state = 307
-						}
+					CRY = {
+						has_country_flag = CRY_accepted_thorax
 					}
-					transfer_state_to = PREV.PREV
-					add_core_of = PREV.PREV
 				}
-				puppet = PREV
-				set_autonomy = {
-					target = PREV
-					autonomy_state = autonomy_puppet
-				}
-			}
-			set_cosmetic_tag = CHN_LYC_EQS
-			every_possible_country = {
-				limit = {
-					has_character = EQS_sunset_shimmer_extra
-				}
-				EQS_sunset_shimmer_extra = {
-					set_nationality = PREV.PREV
-				}
-			}	
-			add_country_leader_role = {
-				character = EQS_sunset_shimmer_extra
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = khakistocracy
-				}
-				promote_leader = yes
-			}
-			add_ideas = no_poverty
-			add_ideas = modern_society
-			add_ideas = no_lack_of_scientists
-			add_ideas = proper_science_base
-			add_ideas = changeling_race
-			set_party_name = {
-				ideology = neutrality
-				long_name = CHN_LYC_EQS_neutrality_party_long
-				name = CHN_LYC_EQS_neutrality_party
-			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 25
-				fascism = 25
-				communism = 5
-				neutrality = 45
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-			set_capital = {
-				state = 309
-			}
-		}
-		create_dynamic_country = {
-			original_tag = CHN
-			set_AI_strategies_on_every_possible_country_delayed = yes
-			set_research_slots = 3
-			ROOT = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 316
-							state = 319
-							state = 247
-							state = 248
-							state = 291
-							state = 246
-						}
+				CRY = {
+					CHN_thorax = {
+						set_nationality = CHN
 					}
-					transfer_state_to = PREV.PREV
-					add_core_of = PREV.PREV
-				}
-				puppet = PREV
-				set_autonomy = {
-					target = PREV
-					autonomy_state = autonomy_puppet
 				}
 			}
-			set_cosmetic_tag = CHN_VLI_EQS
-			every_possible_country = {
+			else_if = {
 				limit = {
-					has_character = EQS_blueblood_extra
+					has_country_flag = EQS_accepted_thorax
 				}
-				EQS_blueblood_extra = {
-					set_nationality = PREV.PREV
+				CHN_thorax = {
+					set_nationality = CHN
 				}
-			}	
-			add_country_leader_role = {
-				character = EQS_blueblood_extra
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = khakistocracy
+			}
+			release_puppet = CHN
+			set_autonomy = {
+				target = CHN
+				autonomy_state = autonomy_dominion
+			}
+			CHN = {
+				CHN_thorax = {
+					promote_character = yes
 				}
-				promote_leader = yes
+				set_cosmetic_tag = CHN_VES_EQS
+				set_party_name = {
+					ideology = democratic
+					long_name = CHN_VES_EQS_harmony_party_long
+					name = CHN_VES_EQS_harmony_party
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				set_popularities = {
+					democratic = 65
+					fascism = 10
+					communism = 5
+					neutrality = 20
+				}
+				load_focus_tree = { tree = generic_focus keep_completed = yes }
+				add_ideas = EQS_vesalipolis_treaty
+				country_lock_all_division_template = yes
 			}
-			add_ideas = no_poverty
-			add_ideas = modern_society
-			add_ideas = no_lack_of_scientists
-			add_ideas = proper_science_base
-			add_ideas = changeling_race
-			set_party_name = {
-				ideology = neutrality
-				long_name = CHN_VLI_EQS_neutrality_party_long
-				name = CHN_VLI_EQS_neutrality_party
+			create_dynamic_country = {
+				original_tag = CHN
+				set_AI_strategies_on_every_possible_country_delayed = yes
+				set_research_slots = 3
+				ROOT = {
+					every_state = {
+						limit = {
+							OR = {
+								state = 262
+								state = 264
+								state = 314
+								state = 311
+								state = 315
+								state = 320
+								state = 323
+								state = 322
+							}
+						}
+						transfer_state_to = PREV.PREV
+						add_core_of = PREV.PREV
+					}
+					puppet = PREV
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_dominion
+					}
+				}
+				set_cosmetic_tag = CHN_SOR
+				every_possible_country = {
+					limit = {
+						has_character = CHN_queen_yaria
+					}
+					CHN_queen_yaria = {
+						set_nationality = PREV.PREV
+					}
+				}
+				add_country_leader_role = {
+					character = CHN_queen_yaria
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = conservatism
+					}
+					promote_leader = yes
+				}
+				add_ideas = no_poverty
+				add_ideas = modern_society
+				add_ideas = no_lack_of_scientists
+				add_ideas = proper_science_base
+				add_ideas = changeling_race
+				set_party_name = {
+					ideology = democratic
+					long_name = CHN_SOR_harmony_party_long
+					name = CHN_SOR_harmony_party
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				set_popularities = {
+					democratic = 55
+					fascism = 4
+					communism = 1
+					neutrality = 40
+				}
+				load_focus_tree = { tree = generic_focus keep_completed = yes }
+				set_capital = {
+					state = 262
+				}
+				251 = {
+					remove_core_of = PREV
+				}
+				add_ideas = EQS_vesalipolis_treaty
+				country_lock_all_division_template = yes
 			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
+			create_dynamic_country = {
+				original_tag = CHN
+				set_AI_strategies_on_every_possible_country_delayed = yes
+				set_research_slots = 3
+				ROOT = {
+					every_state = {
+						limit = {
+							OR = {
+								state = 252
+								state = 304
+								state = 261
+								state = 305
+								state = 306
+								state = 312
+								state = 313
+							}
+						}
+						transfer_state_to = PREV.PREV
+						add_core_of = PREV.PREV
+					}
+					puppet = PREV
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_dominion
+					}
+				}
+				set_cosmetic_tag = CHN_DIT
+				every_possible_country = {
+					limit = {
+						has_character = CHN_queen_helvia
+					}
+					CHN_queen_helvia = {
+						set_nationality = PREV.PREV
+					}
+				}	
+				add_country_leader_role = {
+					character = CHN_queen_helvia
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = conservatism
+					}
+					promote_leader = yes
+				}
+				add_ideas = no_poverty
+				add_ideas = modern_society
+				add_ideas = no_lack_of_scientists
+				add_ideas = proper_science_base
+				add_ideas = changeling_race
+				set_party_name = {
+					ideology = democratic
+					long_name = CHN_DIT_harmony_party_long
+					name = CHN_DIT_harmony_party
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				set_popularities = {
+					democratic = 55
+					fascism = 1
+					communism = 19
+					neutrality = 25
+				}
+				load_focus_tree = { tree = generic_focus keep_completed = yes }
+				set_capital = {
+					state = 252
+				}
+				251 = {
+					remove_core_of = PREV
+				}
+				add_ideas = EQS_vesalipolis_treaty
+				country_lock_all_division_template = yes
 			}
-			set_popularities = {
-				democratic = 25
-				fascism = 35
-				communism = 5
-				neutrality = 35
+			create_dynamic_country = {
+				original_tag = CHN
+				set_AI_strategies_on_every_possible_country_delayed = yes
+				set_research_slots = 3
+				ROOT = {
+					every_state = {
+						limit = {
+							OR = {
+								state = 259
+								state = 250
+								state = 249
+								state = 321
+								state = 310
+							}
+						}
+						transfer_state_to = PREV.PREV
+						add_core_of = PREV.PREV
+					}
+					puppet = PREV
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_dominion
+					}
+				}
+				set_cosmetic_tag = CHN_VRK
+				every_possible_country = {
+					limit = {
+						has_character = CHN_queen_argynnis
+					}
+					CHN_queen_argynnis = {
+						set_nationality = PREV.PREV
+					}
+				}
+				add_country_leader_role = {
+					character = CHN_queen_argynnis
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = conservatism
+					}
+					promote_leader = yes
+				}
+				add_ideas = no_poverty
+				add_ideas = modern_society
+				add_ideas = no_lack_of_scientists
+				add_ideas = proper_science_base
+				add_ideas = changeling_race
+				set_party_name = {
+					ideology = democratic
+					long_name = CHN_VRK_harmony_party_long
+					name = CHN_VRK_harmony_party
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				set_popularities = {
+					democratic = 50
+					fascism = 35
+					communism = 1
+					neutrality = 14
+				}
+				load_focus_tree = { tree = generic_focus keep_completed = yes }
+				set_capital = {
+					state = 259
+				}
+				251 = {
+					remove_core_of = PREV
+				}
+				add_ideas = EQS_vesalipolis_treaty
+				country_lock_all_division_template = yes
 			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-			set_capital = {
-				state = 316
+			create_dynamic_country = {
+				original_tag = CHN
+				set_AI_strategies_on_every_possible_country_delayed = yes
+				set_research_slots = 3
+				ROOT = {
+					every_state = {
+						limit = {
+							OR = {
+								state = 309
+								state = 303
+								state = 260
+								state = 308
+								state = 258
+								state = 307
+							}
+						}
+						transfer_state_to = PREV.PREV
+						add_core_of = PREV.PREV
+					}
+					puppet = PREV
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_puppet
+					}
+				}
+				set_cosmetic_tag = CHN_LYC_EQS
+				every_possible_country = {
+					limit = {
+						has_character = EQS_sunset_shimmer_extra
+					}
+					EQS_sunset_shimmer_extra = {
+						set_nationality = PREV.PREV
+					}
+				}	
+				add_country_leader_role = {
+					character = EQS_sunset_shimmer_extra
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = khakistocracy
+					}
+					promote_leader = yes
+				}
+				add_ideas = no_poverty
+				add_ideas = modern_society
+				add_ideas = no_lack_of_scientists
+				add_ideas = proper_science_base
+				add_ideas = changeling_race
+				set_party_name = {
+					ideology = neutrality
+					long_name = CHN_LYC_EQS_neutrality_party_long
+					name = CHN_LYC_EQS_neutrality_party
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				set_popularities = {
+					democratic = 25
+					fascism = 25
+					communism = 5
+					neutrality = 45
+				}
+				load_focus_tree = { tree = generic_focus keep_completed = yes }
+				set_capital = {
+					state = 309
+				}
+				251 = {
+					remove_core_of = PREV
+				}
+				add_ideas = EQS_vesalipolis_treaty
+				country_lock_all_division_template = yes
+			}
+			create_dynamic_country = {
+				original_tag = CHN
+				set_AI_strategies_on_every_possible_country_delayed = yes
+				set_research_slots = 3
+				ROOT = {
+					every_state = {
+						limit = {
+							OR = {
+								state = 316
+								state = 319
+								state = 247
+								state = 248
+								state = 291
+								state = 246
+							}
+						}
+						transfer_state_to = PREV.PREV
+						add_core_of = PREV.PREV
+					}
+					puppet = PREV
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_puppet
+					}
+				}
+				set_cosmetic_tag = CHN_VLI_EQS
+				every_possible_country = {
+					limit = {
+						has_character = EQS_blueblood_extra
+					}
+					EQS_blueblood_extra = {
+						set_nationality = PREV.PREV
+					}
+				}	
+				add_country_leader_role = {
+					character = EQS_blueblood_extra
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = khakistocracy
+					}
+					promote_leader = yes
+				}
+				add_ideas = no_poverty
+				add_ideas = modern_society
+				add_ideas = no_lack_of_scientists
+				add_ideas = proper_science_base
+				add_ideas = changeling_race
+				set_party_name = {
+					ideology = neutrality
+					long_name = CHN_VLI_EQS_neutrality_party_long
+					name = CHN_VLI_EQS_neutrality_party
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				set_popularities = {
+					democratic = 25
+					fascism = 35
+					communism = 5
+					neutrality = 35
+				}
+				load_focus_tree = { tree = generic_focus keep_completed = yes }
+				set_capital = {
+					state = 316
+				}
+				251 = {
+					remove_core_of = PREV
+				}
+				add_ideas = EQS_vesalipolis_treaty
+				country_lock_all_division_template = yes
 			}
 		}
+		custom_effect_tooltip = EQS_changeling_shattering_tt
 	}
 }
 
@@ -4019,10 +4101,12 @@ country_event = {
 				}
 			}
 			CRY = {
+				clr_country_flag = CRY_accepted_thorax
 				CHN_thorax = {
-					set_nationality = CRY
+					set_nationality = EQS
 				}
 			}
+			set_country_flag = EQS_accepted_thorax
 		}
 	}
 }
@@ -4061,20 +4145,6 @@ country_event = { #OLE died
 				set_nationality = EQS
 			}
 		}
-		add_advisor_role = {
-			character = OLE_queen_velvet
-			advisor = {
-				slot = political_advisor
-				idea_token = OLE_EQS_queen_velvet
-				allowed = {
-					original_tag = EQS
-				}
-				traits = { olenian_queen }
-				ai_will_do = {
-					factor = 1
-				}
-			}
-		}
 		add_corps_commander_role = {
 			character = OLE_queen_velvet
 			traits = { deer_race_trait experienced_fighter ice_queen winter_specialist winter_expert }
@@ -4084,6 +4154,7 @@ country_event = { #OLE died
 			planning_skill = 1
 			logistics_skill = 2
 		}
+		custom_effect_tooltip = EQS_velvet_stats_tt
 		custom_effect_tooltip = EQS_olenian_exiles_tt
 		hidden_effect = {
 			load_oob = "EQS_olenian_exiles"

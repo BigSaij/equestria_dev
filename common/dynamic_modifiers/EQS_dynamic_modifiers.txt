@@ -1,5 +1,5 @@
 EQS_absolestia_economy = {
-	icon = GFX_idea_triumphant_will
+	icon = GFX_idea_man_five_year_plan_industry
 	enable = { always = yes }
 	
 	line_change_production_efficiency_factor = EQS_line_change_efficiency_var

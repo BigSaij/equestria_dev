@@ -510,9 +510,9 @@ country_event = {
 		custom_effect_tooltip = spies_equestria
 		hidden_effect = {
 			event_target:equestria = {
-				add_ideas = changeling_spies
-				country_event = {
-					id = equestriachn.1 days = 25
+				add_timed_idea = {
+					idea = changeling_spies
+					days = 365
 				}
 			}
 		}
