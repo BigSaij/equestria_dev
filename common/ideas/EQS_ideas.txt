@@ -283,7 +283,7 @@ ideas = {
 				has_war = no
 			}
 			removal_cost = -1
-			picture = EQS_harmonic_stagnation
+			picture = generic_production_bonus
 			research_bonus = {
 				industry = 0.15
 			}
@@ -595,7 +595,7 @@ ideas = {
 				has_war_with = NLR
 			}
 			removal_cost = -1
-			picture = EQS_civil_war
+			picture = pony_soldier
 			modifier = {
 				dig_in_speed_factor = 0.2
 				max_dig_in_factor = 0.1
@@ -704,7 +704,7 @@ ideas = {
 				is_subject = no
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = generic_government
 			modifier = {
 				political_power_gain = 0.1
 				army_chief_cost_factor = -0.2
@@ -724,7 +724,7 @@ ideas = {
 				is_subject = no
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = generic_government
 			modifier = {
 				fascism_drift = 0.05
 				political_power_gain = 0.2
@@ -854,7 +854,7 @@ ideas = {
 				has_war = yes
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = generic_production_bonus
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.2
@@ -877,7 +877,7 @@ ideas = {
 				has_war = yes
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = generic_manpower_bonus
 			modifier = {
 				weekly_manpower = 500
 				mobilization_speed = 0.25
@@ -900,7 +900,7 @@ ideas = {
 				has_war = yes
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = idea_generic_reserve_divisions
 			modifier = {
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
@@ -920,7 +920,7 @@ ideas = {
 				has_war_with = NLR
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = LIT_crown_3
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = -0.1
@@ -940,7 +940,7 @@ ideas = {
 				has_war_with = NLR
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = LIT_crown_2
 			modifier = {
 				stability_factor = -0.2
 				war_support_factor = -0.2
@@ -961,7 +961,7 @@ ideas = {
 				has_war_with = NLR
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = LIT_crown_1
 			modifier = {
 				stability_factor = -0.3
 				war_support_factor = -0.3
@@ -1003,7 +1003,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = CHN_equestria_chaos3
+			picture = CHN_equestria_chaos2
 			rule = {
 				can_not_declare_war = yes
 			}
@@ -1025,7 +1025,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = CHN_equestria_chaos3
+			picture = CHN_equestria_chaos1
 			rule = {
 				can_not_declare_war = yes
 			}
@@ -1047,7 +1047,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = CHN_equestria_chaos3
+			picture = CHN_equestria_lockdown
 			rule = {
 				can_not_declare_war = yes
 			}
@@ -1203,7 +1203,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = generic_research_reduction
 			modifier = {
 				research_speed_factor = -0.1
 				political_power_cost = 0.1
@@ -1223,7 +1223,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = generic_bank_idea_icon
 			modifier = {
 				min_export = -0.1
 				trade_opinion_factor = 0.5
@@ -1242,7 +1242,7 @@ ideas = {
 				is_subject_of = EQS
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = idea_capital_outflow
 			modifier = {
 				autonomy_gain = -0.5
 				extra_trade_to_overlord_factor = -0.5
@@ -1267,7 +1267,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = EQS_nuclear_power
 			modifier = {
 				research_speed_factor = 0.05
 				nuclear_production_factor = 0.15
@@ -1284,7 +1284,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = EQS_magical_training
 			equipment_bonus = {
 				magical_equipment = {
 					soft_attack = 0.1
@@ -1305,7 +1305,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = ast_volunteer_defence_corps
 			equipment_bonus = {
 				infantry_equipment = {
 					soft_attack = 0.05
@@ -1325,7 +1325,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = arty
 			equipment_bonus = {
 				artillery_equipment = {
 					soft_attack = 0.05
@@ -1345,7 +1345,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = GRI_hat
 			modifier = {
 				command_power_gain_mult = 0.2
 				max_command_power_mult = 0.25
@@ -1363,7 +1363,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = Generic_Scroll
 			modifier = {
 				political_power_gain = -0.3
 				required_garrison_factor = -0.1
@@ -1381,7 +1381,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = generic_pp_unity_bonus
+			picture = neutrality_idea
 			modifier = {
 				political_power_gain = -0.2
 				consumer_goods_factor = 0.2

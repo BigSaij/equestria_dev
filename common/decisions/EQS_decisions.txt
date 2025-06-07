@@ -2333,6 +2333,13 @@ EQS_breakaway_diplomacy_category = {
 		icon = celestia
 		available = {
 			has_war_with = STG
+			custom_trigger_tooltip = {
+				tooltip = EQS_oneyear_stalliongradwar_tt
+				war_length_with = {
+					tag = STG
+					months > 11
+				}
+			}
 		}
 		visible = {
 			has_war_with = STG
@@ -2423,6 +2430,7 @@ EQS_breakaway_diplomacy_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_integrate_stalliongrad"
 			set_country_flag = EQS_STG_absolestia_integration
 			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = EQS_additional_foci_tt
 			if = {
 				limit = {
 					EQS_princess_celestia = {
@@ -2443,7 +2451,7 @@ EQS_breakaway_diplomacy_category = {
 				tooltip = EQS_twoyears_changelingwar_tt
 				war_length_with = {
 					tag = CHN
-					months > 24
+					months > 23
 				}
 			}
 			controls_state = 46
@@ -2622,7 +2630,7 @@ EQS_breakaway_diplomacy_category = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_reorganize_zebrican_possessions"
-			country_event = equestria_celestia.57
+			country_event = equestria_celestia.44
 		}
 	}
 	EQS_release_OLE_decision = {
@@ -2689,6 +2697,232 @@ EQS_breakaway_diplomacy_category = {
 						}
 					}
 				}
+			}
+		}
+	}
+	EQS_release_YAK_decision = {
+		icon = celestia
+		available = {
+			YAK = {
+				exists = no
+			}
+			OR = {
+				owns_state = 11
+				owns_state = 274
+			}
+			has_war = no
+		}
+		visible = {
+			YAK = {
+				exists = no
+			}
+			OR = {
+				owns_state = 11
+				owns_state = 274
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_YAK_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 102
+						region = 103
+						region = 104
+						region = 115
+						state = 271
+						state = 268
+						state = 255
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				YAK = {
+					transfer_state = PREV
+				}
+				add_core_of = YAK
+			}
+			set_autonomy = {
+				target = YAK
+				autonomy_state = autonomy_dominion
+			}
+		}
+	}
+	EQS_release_PLB_decision = {
+		icon = celestia
+		available = {
+			PLB = {
+				exists = no
+			}
+			owns_state = 290
+			has_war = no
+		}
+		visible = {
+			PLB = {
+				exists = no
+			}
+			owns_state = 290
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_PLB_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 109
+						state = 263
+						state = 289
+						state = 265
+						state = 62
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				PLB = {
+					transfer_state = PREV
+				}
+			}
+			set_autonomy = {
+				target = PLB
+				autonomy_state = autonomy_dominion
+			}
+		}
+	}
+	EQS_release_PNG_decision = {
+		icon = celestia
+		available = {
+			PNG = {
+				exists = no
+			}
+			owns_state = 325
+			has_war = no
+		}
+		visible = {
+			PNG = {
+				exists = no
+			}
+			owns_state = 325
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_PNG_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 118
+						state = 266
+						state = 282
+						state = 325
+						state = 286
+						state = 284
+						state = 288
+						state = 287
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				PNG = {
+					transfer_state = PREV
+				}
+				add_core_of = PNG
+			}
+			set_autonomy = {
+				target = PNG
+				autonomy_state = autonomy_dominion
+			}
+		}
+	}
+	EQS_release_GRF_decision = {
+		icon = celestia
+		available = {
+			GRF = {
+				exists = no
+			}
+			OR = {
+				owns_state = 243
+				owns_state = 239
+			}
+			has_war = no
+		}
+		visible = {
+			GRF = {
+				exists = no
+			}
+			OR = {
+				owns_state = 243
+				owns_state = 239
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_GRF_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 119
+						region = 117
+						state = 58
+						state = 338
+						state = 222
+						state = 244
+						state = 287
+						state = 288
+						state = 329
+						state = 336
+						state = 337
+						state = 335
+						state = 283
+						state = 281
+						state = 278
+						state = 277
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+						NOT = {
+							tag = YAK
+							tag = PNG
+						}
+					}
+				}
+				GRF = {
+					transfer_state = PREV
+				}
+			}
+			set_autonomy = {
+				target = GRF
+				autonomy_state = autonomy_dominion
 			}
 		}
 	}

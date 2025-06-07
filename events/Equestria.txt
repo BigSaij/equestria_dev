@@ -3309,7 +3309,12 @@ country_event = {
 				add_ideas = EQS_vesalipolis_treaty
 				country_lock_all_division_template = yes
 			}
+			country_event = {
+				id = equestria_celestia.29
+				days = 18
+			}
 		}
+		set_country_flag = EQS_vesalipolis_treaty_signed
 		custom_effect_tooltip = EQS_changeling_shattering_tt
 	}
 }
@@ -3440,6 +3445,9 @@ country_event = {
 				autonomy_state = autonomy_dominion
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	option = {
 		name = equestria_celestia.34.b
@@ -3448,6 +3456,9 @@ country_event = {
 				target = EQC
 				type = annex_everything
 			}
+		}
+		ai_chance = {
+			base = 1
 		}
 	}
 }
@@ -3468,6 +3479,9 @@ country_event = {
 				transfer_troops = yes
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	option = {
 		name = equestria_celestia.35.b
@@ -3476,6 +3490,9 @@ country_event = {
 				target = ROOT
 				type = annex_everything
 			}
+		}
+		ai_chance = {
+			base = 1
 		}
 	}
 }
@@ -3505,6 +3522,9 @@ country_event = {
 				autonomy_state = autonomy_dominion
 			}
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	option = {
 		name = equestria_celestia.36.b
@@ -3513,6 +3533,9 @@ country_event = {
 				target = DRG
 				type = annex_everything
 			}
+		}
+		ai_chance = {
+			base = 1
 		}
 	}
 }
@@ -3533,6 +3556,37 @@ country_event = {
 				autonomy_state = autonomy_dominion
 			}
 		}
+		if = {
+			limit = {
+				MER = {
+					has_idea = JER_MER_vivienne_fled
+				}
+			}
+			JER = {
+				JER_vivienne_discret = {
+					set_nationality = MER
+				}
+			}
+			MER = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				set_popularities = {
+					democratic = 40
+					fascism = 9
+					communism = 1
+					neutrality = 50
+				}
+				promote_character = {
+					character = JER_vivienne_discret
+					ideology = despotism
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	option = {
 		name = equestria_celestia.37.b
@@ -3541,6 +3595,9 @@ country_event = {
 				target = MER
 				type = annex_everything
 			}
+		}
+		ai_chance = {
+			base = 1
 		}
 	}
 }
@@ -3558,6 +3615,22 @@ country_event = {
 		EQS = {
 			add_to_faction = HIP
 		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 689
+					state = 690
+					state = 691
+					state = 712
+					state = 713
+					state = 815
+				}
+			}
+			transfer_state_to = EQS
+		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	option = {
 		name = equestria_celestia.38.b
@@ -3566,6 +3639,9 @@ country_event = {
 				target = HIP
 				type = annex_everything
 			}
+		}
+		ai_chance = {
+			base = 1
 		}
 	}
 }
@@ -3583,6 +3659,9 @@ country_event = {
 		EQS = {
 			add_to_faction = MGY
 		}
+		ai_chance = {
+			base = 100
+		}
 	}
 	option = {
 		name = equestria_celestia.39.b
@@ -3591,6 +3670,9 @@ country_event = {
 				target = MGY
 				type = annex_everything
 			}
+		}
+		ai_chance = {
+			base = 1
 		}
 	}
 }
@@ -3647,6 +3729,109 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_celestia.43.a
+	}
+}
+
+country_event = {
+	id = equestria_celestia.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.44" }
+	title = equestria_celestia.44.t
+	desc = equestria_celestia.44.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.44.a
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 712
+					state = 713
+					state = 690
+					state = 689
+					state = 691
+					state = 815
+				}
+			}
+			transfer_state_to = BAT
+		}
+		set_autonomy = {
+			target = BAT
+			autonomy_state = autonomy_dominion
+		}
+		EQS_fizzlepop = {
+			set_nationality = BAT
+		}
+		BAT = {
+			set_cosmetic_tag = BAT_EQS_celestia
+			set_party_name = {
+				ideology = neutrality
+				long_name = BAT_EQS_celestia_neutrality_party_long
+				name = BAT_EQS_celestia_neutrality_party
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			set_popularities = {
+				democratic = 20
+				fascism = 40
+				communism = 10
+				neutrality = 30
+			}
+			load_focus_tree = { tree = generic_focus keep_completed = yes }
+			add_country_leader_role = {
+				character = EQS_fizzlepop
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = khakistocracy
+				}
+				promote_leader = yes
+			}
+		}
+		712 = {
+			set_state_name = EQS_state_harmonyhills
+		}
+		713 = {
+			set_state_name = EQS_state_friendshipshore
+		}
+		689 = {
+			set_state_name = EQS_state_starlightridge
+		}
+		691 = {
+			set_state_name = EQS_vp_skyros
+		}
+		815 = {
+			set_state_name = EQS_state_prancingpoint
+		}
+		set_province_name = {
+			id = 18570
+			name = EQS_vp_newcanterlot
+		}
+		set_province_name = {
+			id = 18601
+			name = EQS_vp_maretime_bay
+		}
+		set_province_name = {
+			id = 18583
+			name = EQS_vp_zephyrheights
+		}
+		set_province_name = {
+			id = 18499
+			name = EQS_vp_novacloudsdale
+		}
+		set_province_name = {
+			id = 18526
+			name = EQS_vp_auroria
+		}
+		set_province_name = {
+			id = 18517
+			name = EQS_vp_skyros
+		}
+		set_province_name = {
+			id = 18477
+			name = EQS_vp_bridlewood
+		}
 	}
 }
 
@@ -3840,98 +4025,6 @@ country_event = {
 	}
 	option = {
 		name = equestria_celestia.105.b
-	}
-}
-
-country_event = {
-	id = equestria_celestia.57
-	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.57" }
-	title = equestria_celestia.57.t
-	desc = equestria_celestia.57.d
-	picture = GFX_event_celestia_poster
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = equestria_celestia.57.a
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 712
-					state = 713
-					state = 690
-					state = 689
-					state = 691
-					state = 815
-				}
-			}
-			transfer_state_to = BAT
-		}
-		set_autonomy = {
-			target = BAT
-			autonomy_state = autonomy_dominion
-		}
-		BAT = {
-			set_cosmetic_tag = BAT_EQS_celestia
-			set_party_name = {
-				ideology = neutrality
-				long_name = BAT_EQS_celestia_neutrality_party_long
-				name = BAT_EQS_celestia_neutrality_party
-			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
-			}
-			set_popularities = {
-				democratic = 20
-				fascism = 40
-				communism = 10
-				neutrality = 30
-			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
-		}
-		712 = {
-			set_state_name = EQS_state_harmonyhills
-		}
-		713 = {
-			set_state_name = EQS_state_friendshipshore
-		}
-		689 = {
-			set_state_name = EQS_state_starlightridge
-		}
-		691 = {
-			set_state_name = EQS_vp_skyros
-		}
-		815 = {
-			set_state_name = EQS_state_prancingpoint
-		}
-		set_province_name = {
-			id = 18570
-			name = EQS_vp_newcanterlot
-		}
-		set_province_name = {
-			id = 18601
-			name = EQS_vp_maretime_bay
-		}
-		set_province_name = {
-			id = 18583
-			name = EQS_vp_zephyrheights
-		}
-		set_province_name = {
-			id = 18499
-			name = EQS_vp_novacloudsdale
-		}
-		set_province_name = {
-			id = 18526
-			name = EQS_vp_auroria
-		}
-		set_province_name = {
-			id = 18517
-			name = EQS_vp_skyros
-		}
-		set_province_name = {
-			id = 18477
-			name = EQS_vp_bridlewood
-		}
 	}
 }
 
@@ -10529,6 +10622,30 @@ news_event = {
 	}
 	option = {
 		name = equestria_news.8.b
+		trigger = {
+			NOT = {
+				tag = EQS
+			}
+		}
+	}
+}
+
+news_event = {
+	id = equestria_news.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: equestria_news.9" }
+	title = equestria_news.9.t
+	desc = equestria_news.9.d
+	picture = GFX_news_event_changeling_hive
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = equestria_news.9.a
+		trigger = {
+			tag = EQS
+		}
+	}
+	option = {
+		name = equestria_news.9.b
 		trigger = {
 			NOT = {
 				tag = EQS

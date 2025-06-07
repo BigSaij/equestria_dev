@@ -591,59 +591,7 @@ news_event = {
 		trigger = { tag = CHN }
 	}
 }
-## changelings are puppeted ## end of war
 
-
-### changelings are annexed  ### end of war
-country_event = {
-	id = news.2101
-	immediate = {log = "[GetDateText]: [Root.GetName]: event news.2101"}
-	hidden = yes
-	is_triggered_only = yes
-	immediate = { set_global_flag = the_war_ended }
-	fire_only_once = yes
-	option = {
-		news_event = news.21
-		EQS = {
-			if = {
-				limit = { has_country_flag = has_GRF_volunteers }
-				delete_unit_template_and_units = { division_template = "Free Griffon Division" }
-				delete_unit_template_and_units = { division_template = "Militia Division" }
-				clr_country_flag = has_GRF_volunteers
-			}
-		}
-	}
-}
-news_event = {
-	id = news.21
-	immediate = {log = "[GetDateText]: [Root.GetName]: event news.21"}
-	title = news.21.t
-	desc = news.21.d
-	picture = GFX_news_event_changeling_hive
-
-	major = yes
-
-	trigger = {
-		OR = {
-			CHN = { is_subject_of = EQS }
-			AND = { 251 = { is_owned_by = EQS } CHN = { is_subject = no } }
-		}
-	}
-
-	is_triggered_only = yes
-	option = {
-		name = news.21.a
-		trigger = {
-			NOT = {
-				TAG = CHN
-			}
-		}
-	}
-	option = {
-		name = news.21.b
-		trigger = { tag = CHN }
-	}
-}
 country_event = {
 	id = news.2201
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.2201"}
