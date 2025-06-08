@@ -1084,6 +1084,15 @@ characters = {
 			}
 		}
 	}
+	EQS_fizzlepop_extra = {
+		name = EQS_tempest_shadow
+		portraits = {
+			civilian = {
+				small = "GFX_idea_EQS_fizzlepop"
+				large = "gfx/leaders/EQS/TempestShadow.tga"
+			}
+		}
+	}
 	#OC ZONE
 	EQS_sentinel = {
 		name = EQS_sentinel

@@ -540,6 +540,7 @@ recruit_character = EQS_sentinel
 recruit_character = EQS_flakesnow
 recruit_character = EQS_sunset_shimmer_extra
 recruit_character = EQS_blueblood_extra
+recruit_character = EQS_fizzlepop_extra
 recruit_character = EQS_SOL_padlock
 recruit_character = EQS_SOL_dottedline
 recruit_character = EQS_SOL_scope

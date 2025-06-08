@@ -1311,6 +1311,7 @@ EQS_construction_projects_category = {
 		}
 		fire_only_once = yes
 		visible = {
+			has_completed_focus = EQS_trans_equestria_railway
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -1371,6 +1372,7 @@ EQS_construction_projects_category = {
 		}
 		fire_only_once = yes
 		visible = {
+			has_completed_focus = EQS_trans_equestria_railway
 		}
 		highlight_states = {
 			highlight_state_targets = {

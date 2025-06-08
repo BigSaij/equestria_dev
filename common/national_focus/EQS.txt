@@ -2080,7 +2080,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_reunify_equestria
 	icon = GFX_goal_news
-	x = 26
+	x = 29
 	y = 0
 	cost = 8
 	available = {
@@ -3267,10 +3267,15 @@ shared_focus = {
 		has_war = no
 	}
 	bypass = {
-		BAT = {
-			exists = no
+		OR = {
+			AND = {
+				BAT = {
+					exists = no
+				}
+				owns_state = 712
+			}
+			has_country_flag = EQS_celestia_revenge_achieved
 		}
-		owns_state = 712
 	}
 	ai_will_do = {
 		factor = 5
@@ -3340,6 +3345,19 @@ shared_focus = {
 	ai_will_do = {
 		factor = 5
 	}
+	select_effect = {
+		hidden_effect = {
+			country_event = equestria_celestia.46
+			country_event = {
+				id = equestria_celestia.47
+				days = 20
+			}
+			country_event = {
+				id = equestria_celestia.48
+				days = 45
+			}
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_the_sun_never_sets"
 		swap_ruler_traits = {
@@ -3352,6 +3370,7 @@ shared_focus = {
 				can_only_justify_war_on_threat_country = no
 				can_declare_war_on_same_ideology = yes
 			}
+			country_event = equestria_celestia.49
 		}
 	}
 }
@@ -3371,6 +3390,14 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_new_equestrian_economy"
 		custom_effect_tooltip = EQS_prewar_industry_unlocked_tt
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = EQS_resource_prospecting_unlocked
+				}
+			}
+			set_country_flag = EQS_resource_prospecting_unlocked
+		}
 		set_variable = { EQS_line_change_efficiency_var = 0.1 }
 		set_variable = { EQS_monthly_population_var = 0 }
 		set_variable = { EQS_resources_var = 0 }
@@ -3504,24 +3531,24 @@ shared_focus = {
 	}
 }
 
-shared_focus = {
-	id = EQS_foreign_magical_studies
-	icon = GFX_goal_news
-	x = -1
-	y = 1
-	relative_position_id = EQS_integrate_EEA
-	cost = 4
-	prerequisite = {
-		focus = EQS_integrate_EEA
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_foreign_magical_studies"
-		custom_effect_tooltip = EQS_foreign_magic_tech_tt
-	}
-}
+#shared_focus = {
+	#id = EQS_foreign_magical_studies
+	#icon = GFX_goal_news
+	#x = -1
+	#y = 1
+	#relative_position_id = EQS_integrate_EEA
+	#cost = 4
+	#prerequisite = {
+		#focus = EQS_integrate_EEA
+	#}
+	#ai_will_do = {
+		#factor = 5
+	#}
+	#completion_reward = {
+		#log = "[GetDateText]: [Root.GetName]: Focus EQS_foreign_magical_studies"
+		#custom_effect_tooltip = EQS_foreign_magic_tech_tt
+	#}
+#}
 
 shared_focus = {
 	id = EQS_celestial_economic_miracle
@@ -3545,29 +3572,29 @@ shared_focus = {
 			idea = EQS_economic_resurgence
 			days = 365
 		}
-		custom_effect_tooltip = EQS_regional_economic_development_tt
+		#custom_effect_tooltip = EQS_regional_economic_development_tt
 	}
 }
 
-shared_focus = {
-	id = EQS_defensive_infrastructure
-	icon = GFX_goal_news
-	x = 1
-	y = 1
-	relative_position_id = EQS_military_rd_facilities
-	cost = 4
-	prerequisite = {
-		focus = EQS_military_rd_facilities
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_defensive_infrastructure"
-		custom_effect_tooltip = EQS_defensive_lines_unlocked_tt
-		set_country_flag = EQS_defensive_infrastructure_unlocked
-	}
-}
+#shared_focus = {
+	#id = EQS_defensive_infrastructure
+	#icon = GFX_goal_news
+	#x = 1
+	#y = 1
+	#relative_position_id = EQS_military_rd_facilities
+	#cost = 4
+	#prerequisite = {
+		#focus = EQS_military_rd_facilities
+	#}
+	#ai_will_do = {
+		#factor = 5
+	#}
+	#completion_reward = {
+		#log = "[GetDateText]: [Root.GetName]: Focus EQS_defensive_infrastructure"
+		#custom_effect_tooltip = EQS_defensive_lines_unlocked_tt
+		#set_country_flag = EQS_defensive_infrastructure_unlocked
+	#}
+#}
 
 shared_focus = {
 	id = EQS_utilize_changeling_innovation
@@ -4090,7 +4117,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_new_equestrian_military
 	icon = GFX_goal_news
-	x = 37
+	x = 40
 	y = 0
 	cost = 5
 	available = {
@@ -4289,7 +4316,7 @@ shared_focus = {
 			category = encryption_tech
 			category = decryption_tech
 		}
-		custom_effect_tooltip = EQS_darkwar_bonuses_tt
+		#custom_effect_tooltip = EQS_darkwar_bonuses_tt
 	}
 }
 
@@ -4688,6 +4715,6 @@ shared_focus = {
 			remove_idea = limited_conscription
 			add_idea = EQS_limited_conscription_blueblood
 		}
-		custom_effect_tooltip = EQS_army_decay_reduction_tt
+		#custom_effect_tooltip = EQS_army_decay_reduction_tt
 	}
 }
