@@ -453,14 +453,21 @@ EQS_integrate_ourtown:0 "Integrate Our Town"
 EQS_integrate_ourtown_desc:0 "S.M.I.L.E. accomplished impressive results in their operations within Starlight Glimmer's old village, providing Equestria with a loyal revolt against communist rule led by none other than one of their own agents, Sugar Belle. However, their usefulness has come to an end. The heroes who fought in Celestia's name will be rewarded, but the only fate for Our Town now will be annexation into Equestria and reintegration along with the rest of Severyana."
 EQS_balkanize_changelings:0 "Reorganize The Hives"
 EQS_balkanize_changelings_desc:0 "The changelings have been brought low, and we are victorious over Queen Chrysalis and her loyalists. But we cannot maintain an indefinite occupation; it would take far too many resources to keep stable, resources that are needed elsewhere. The Princess will ensure that the hives never again threaten Equestria, and under her benevolent rule they may finally rebuild something new out of the ashes Chrysalis led them into."
-EQS_reorganize_zebrican_possessions:0 "The Fate of the Traitors"
-EQS_reorganize_zebrican_possessions_desc:0 "§RThe traitors are mine to deal with as I see fit. Now, the Chiropterrans will pay for their crimes against Equestria.§!"
+EQS_obliterate_chiropterra:0 "The Fate of the Traitors"
+EQS_obliterate_chiropterra_desc:0 "§RThe traitors are mine to deal with as I see fit. Now, the Chiropterrans will pay for their crimes against Equestria.§!"
 EQS_release_OLE_decision:0 "Reform the Kingdom of Olenia"
 EQS_release_OLE_decision_desc:0 "The lands formerly known as Olenia have come under our jurisdiction, but we are not here to conquer nor to rule. We have come to liberate, and to help guide them to a better path of Harmony. Queen Velvet, one who has embraced Equestrian ideals and is the rightful heir to the throne will take the crown and rule the reformed Kingdom, with light Equestrian oversight to ensure that peace and prosperity is maintained."
 EQS_release_YAK_decision:0 "Reform the Kingdom of Yakyakistan"
 EQS_release_PLB_decision:0 "Establish a Principality of the Polar Bears"
 EQS_release_PNG_decision:0 "Reform the Kingdom of Pingland"
-EQS_release_GRF_decision:0 "Restablish Nova Griffonia"
+EQS_release_GRF_decision:0 "Re-establish Nova Griffonia"
+EQS_release_DRG_decision:0 "Liberate the Dragons"
+EQS_release_MER_decision:0 "Reform Les Meridiennes"
+EQS_release_MGY_decision:0 "Re-establish the Kingdom of Maregypt"
+EQS_release_HIP_decision:0 "Re-establish the Kingdom of Hippogriffia"
+EQS_release_ZUM_decision:0 "Reform the Kingdom of Zumidia"
+EQS_release_WAR_decision:0 "Reform the Kingdom of Warzena"
+EQS_release_ZAR_decision:0 "Liberate the Tribes of Zarantia"
 
 
 EQS_integrate_CES_commanders:0 "Reintegrate Daring Do's Command Staff"
@@ -1915,3 +1922,6 @@ EQS_CAS_equipment_1_short:0 "Wildfire"
 
 ### SPECIAL PROJECTS ###
 EQS_sp_nuclear_bomb:0 "Project Phoenix"
+
+### RANDOM SHIT EAW FORCED ME TO KEEP ###
+CZE_war_college_effect_2_tt:0 "If we already have §Yfive§! §CResearch Slots§! we will §Rnot receive§! another!\n\n"

@@ -1718,7 +1718,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_equestria_survives
-	icon = GFX_goal_news
+	icon = GFX_goal_DOM_The_Phoenix
 	x = 17
 	y = 0
 	cost = 5
@@ -1732,7 +1732,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_equestrian_reconstruction
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_industry
 	x = -4
 	y = 1
 	relative_position_id = EQS_equestria_survives
@@ -1754,7 +1754,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_academic_revival
-	icon = GFX_goal_news
+	icon = GFX_goal_KTG_Bookstack
 	x = -1
 	y = 1
 	relative_position_id = EQS_equestrian_reconstruction
@@ -1773,7 +1773,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_royal_capitalism
-	icon = GFX_goal_news
+	icon = GFX_goal_GRI_trdprinces
 	x = 1
 	y = 1
 	relative_position_id = EQS_equestrian_reconstruction
@@ -1796,7 +1796,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_harmonized_economics
-	icon = GFX_goal_news
+	icon = GFX_goal_expand_state_industry
 	x = 1
 	y = 1
 	relative_position_id = EQS_academic_revival
@@ -1818,7 +1818,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_administrative_reorganization
-	icon = GFX_goal_news
+	icon = GFX_goal_reaffirm_royal_sovereignty
 	x = -2
 	y = 1
 	relative_position_id = EQS_equestria_survives
@@ -1837,7 +1837,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_smile_new_role
-	icon = GFX_goal_news
+	icon = GFX_goal_maintain_friendship_with_smile
 	x = 0
 	y = 1
 	relative_position_id = EQS_equestria_survives
@@ -1856,7 +1856,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_total_thestral_integration
-	icon = GFX_goal_news
+	icon = GFX_goal_bat
 	x = 2
 	y = 1
 	relative_position_id = EQS_equestria_survives
@@ -1875,7 +1875,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_punish_radicals
-	icon = GFX_goal_news
+	icon = GFX_focus_generic_anti_fascist_diplomacy
 	x = -1
 	y = 1
 	relative_position_id = EQS_smile_new_role
@@ -1897,7 +1897,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_release_lunar_pows
-	icon = GFX_goal_news
+	icon = GFX_goal_bat_with_hat
 	x = 1
 	y = 1
 	relative_position_id = EQS_smile_new_role
@@ -1919,7 +1919,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_tale_of_two_sisters
-	icon = GFX_goal_news
+	icon = GFX_goal_tree_of_harmony
 	x = 1
 	y = 1
 	relative_position_id = EQS_punish_radicals
@@ -1941,7 +1941,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_lead_from_the_front
-	icon = GFX_goal_news
+	icon = GFX_focus_generic_little_entente
 	x = 4
 	y = 1
 	relative_position_id = EQS_equestria_survives
@@ -1970,7 +1970,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_lessons_from_nephew
-	icon = GFX_goal_news
+	icon = GFX_goal_MAF_African_Pilots
 	x = -1
 	y = 1
 	relative_position_id = EQS_lead_from_the_front
@@ -1989,7 +1989,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_student_and_teacher
-	icon = GFX_goal_news
+	icon = GFX_goal_MAF_Merc_Pilots
 	x = 1
 	y = 1
 	relative_position_id = EQS_lead_from_the_front
@@ -2008,7 +2008,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_nothing_left_to_learn
-	icon = GFX_goal_news
+	icon = GFX_goal_military_academy
 	x = 1
 	y = 1
 	relative_position_id = EQS_lessons_from_nephew
@@ -2052,7 +2052,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_celestial_monarchy
-	icon = GFX_goal_news
+	icon = GFX_goal_solar_phoenix
 	x = 0
 	y = 1
 	relative_position_id = EQS_tale_of_two_sisters
@@ -2079,7 +2079,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_reunify_equestria
-	icon = GFX_goal_news
+	icon = GFX_goal_end_of_eqs_civil_war
 	x = 29
 	y = 0
 	cost = 8
@@ -2304,7 +2304,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_return_to_crystal_empire
-	icon = GFX_goal_news
+	icon = GFX_goal_crystal_empire
 	x = -1
 	y = 1
 	relative_position_id = EQS_reunify_equestria
@@ -2365,7 +2365,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_never_another_tyrant
-	icon = GFX_goal_news
+	icon = GFX_goal_cry_celestia
 	x = -4
 	y = 1
 	relative_position_id = EQS_return_to_crystal_empire
@@ -2393,7 +2393,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_secure_crystal_city
-	icon = GFX_goal_news
+	icon = GFX_goal_cry_world_metropolis
 	x = -1
 	y = 1
 	relative_position_id = EQS_never_another_tyrant
@@ -2436,7 +2436,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_integrate_crystal_economy
-	icon = GFX_goal_news
+	icon = GFX_goal_cry_factory_cel
 	x = 1
 	y = 1
 	relative_position_id = EQS_never_another_tyrant
@@ -2458,7 +2458,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_the_fifth_tribe
-	icon = GFX_goal_news
+	icon = GFX_goal_cry_deep_integration
 	x = 1
 	y = 1
 	relative_position_id = EQS_secure_crystal_city
@@ -2480,7 +2480,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_a_revolution_rectified
-	icon = GFX_goal_news
+	icon = GFX_goal_crush_stalliongrad
 	x = 1
 	y = 1
 	relative_position_id = EQS_reunify_equestria
@@ -2537,7 +2537,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_ponies_of_severyana
-	icon = GFX_goal_news
+	icon = GFX_goal_agrarian_reform
 	x = 4
 	y = 1
 	relative_position_id = EQS_a_revolution_rectified
@@ -2565,7 +2565,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_reinstate_equestrian_representation
-	icon = GFX_goal_news
+	icon = GFX_goal_POR_royal_edicts
 	x = -1
 	y = 1
 	relative_position_id = EQS_ponies_of_severyana
@@ -2587,7 +2587,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_erasing_the_legacy
-	icon = GFX_goal_news
+	icon = GFX_goal_broken_red_star
 	x = 1
 	y = 1
 	relative_position_id = EQS_ponies_of_severyana
@@ -2629,7 +2629,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_end_the_tsardom
-	icon = GFX_goal_news
+	icon = GFX_focus_rom_abdicate
 	x = 1
 	y = 1
 	relative_position_id = EQS_reinstate_equestrian_representation
@@ -2651,7 +2651,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_safety_of_equestria
-	icon = GFX_goal_news
+	icon = GFX_focus_indy_swing_the_sword
 	x = 1
 	y = 1
 	relative_position_id = EQS_return_to_crystal_empire
@@ -2733,7 +2733,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_in_the_frozen_north
-	icon = GFX_goal_news
+	icon = GFX_goal_embassy_yakistan
 	x = -2
 	y = 1
 	relative_position_id = EQS_safety_of_equestria
@@ -2953,7 +2953,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_the_old_colony
-	icon = GFX_goal_news
+	icon = GFX_focus_eqc_defence_of_the_commonwelth
 	x = 0
 	y = 1
 	relative_position_id = EQS_safety_of_equestria
@@ -3021,7 +3021,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_beyond_the_celestial_sea
-	icon = GFX_goal_news
+	icon = GFX_marinefocus
 	x = 2
 	y = 1
 	relative_position_id = EQS_safety_of_equestria
@@ -3061,6 +3061,7 @@ shared_focus = {
 			limit = {
 				DRG = {
 					exists = yes
+					is_subject = no
 				}
 			}
 			DRG = {
@@ -3094,7 +3095,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_friends_on_mount_aris
-	icon = GFX_goal_news
+	icon = GFX_goal_the_only_beacon_of_harmony
 	x = 1
 	y = 1
 	relative_position_id = EQS_in_the_frozen_north
@@ -3197,7 +3198,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_ponies_of_the_neighle
-	icon = GFX_goal_news
+	icon = GFX_focus_mgy_flag
 	x = -1
 	y = 1
 	relative_position_id = EQS_beyond_the_celestial_sea
@@ -3252,7 +3253,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_with_fire_and_vengeance
-	icon = GFX_goal_news
+	icon = GFX_PLB_HY_CELESTIA
 	x = 1
 	y = 1
 	relative_position_id = EQS_friends_on_mount_aris
@@ -3331,7 +3332,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_the_sun_never_sets
-	icon = GFX_goal_news
+	icon = GFX_goal_celestia_raising_the_sun
 	x = 0
 	y = 1
 	relative_position_id = EQS_with_fire_and_vengeance
@@ -3377,7 +3378,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_new_equestrian_economy
-	icon = GFX_goal_news
+	icon = GFX_goal_improve_industry
 	x = 4
 	y = 0
 	cost = 8
@@ -3415,7 +3416,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_integrate_EEA
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_EEA
 	x = -1
 	y = 1
 	relative_position_id = EQS_new_equestrian_economy
@@ -3442,7 +3443,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_military_rd_facilities
-	icon = GFX_goal_news
+	icon = GFX_focus_research2
 	x = 1
 	y = 1
 	relative_position_id = EQS_new_equestrian_economy
@@ -3552,7 +3553,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_celestial_economic_miracle
-	icon = GFX_goal_news
+	icon = GFX_goal_the_general_directorate_of_production
 	x = 1
 	y = 1
 	relative_position_id = EQS_integrate_EEA
@@ -3598,7 +3599,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_utilize_changeling_innovation
-	icon = GFX_goal_news
+	icon = GFX_goal_chn_man_bullets
 	x = -2
 	y = 1
 	relative_position_id = EQS_celestial_economic_miracle
@@ -3634,7 +3635,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_equestrian_economic_integration
-	icon = GFX_goal_news
+	icon = GFX_goal_generic_intelligence_exchange_pony
 	x = 0
 	y = 1
 	relative_position_id = EQS_celestial_economic_miracle
@@ -3667,7 +3668,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_hippogriff_naval_expertise
-	icon = GFX_goal_news
+	icon = GFX_HIP_gshipb
 	x = 2
 	y = 1
 	relative_position_id = EQS_celestial_economic_miracle
@@ -3729,7 +3730,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_project_phoenix
-	icon = GFX_goal_news
+	icon = GFX_focus_wonderweapons
 	x = 9
 	y = 0
 	cost = 5
@@ -3763,7 +3764,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_mareposa_nuclear_facility
-	icon = GFX_goal_news
+	icon = GFX_goal_magical_nukes
 	x = -1
 	y = 1
 	relative_position_id = EQS_project_phoenix
@@ -3811,7 +3812,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_nuclear_power_proliferation
-	icon = GFX_goal_news
+	icon = GFX_goal_riv_atom
 	x = 1
 	y = 1
 	relative_position_id = EQS_project_phoenix
@@ -3896,7 +3897,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_might_of_the_sun
-	icon = GFX_goal_news
+	icon = GFX_nuke_gen
 	x = 1
 	y = 1
 	relative_position_id = EQS_mareposa_nuclear_facility
@@ -4116,7 +4117,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_new_equestrian_military
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_army
 	x = 40
 	y = 0
 	cost = 5
@@ -4136,7 +4137,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_royal_equestrian_army
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_soldier
 	x = 0
 	y = 1
 	relative_position_id = EQS_new_equestrian_military
@@ -4160,7 +4161,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_sunset_doctrine
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_volunteer
 	x = -2
 	y = 1
 	relative_position_id = EQS_royal_equestrian_army
@@ -4206,7 +4207,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_blueblood_doctrine
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_blueblood
 	x = 2
 	y = 1
 	relative_position_id = EQS_royal_equestrian_army
@@ -4252,7 +4253,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_equestrian_armored_development
-	icon = GFX_goal_news
+	icon = GFX_goal_eqs_comet
 	x = 1
 	y = 1
 	relative_position_id = EQS_sunset_doctrine
@@ -4291,7 +4292,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_military_codebreakers
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_proof
 	x = -1
 	y = 1
 	relative_position_id = EQS_blueblood_doctrine
@@ -4322,7 +4323,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_doctrinal_innovation
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_services
 	x = 1
 	y = 1
 	relative_position_id = EQS_equestrian_armored_development
@@ -4353,7 +4354,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_reintegrate_military_talent
-	icon = GFX_goal_news
+	icon = GFX_goal_support_equestria
 	x = 0
 	y = 1
 	relative_position_id = EQS_doctrinal_innovation
@@ -4372,7 +4373,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_magitech_expertise
-	icon = GFX_goal_news
+	icon = GFX_goal_magical_weapon_focus
 	x = -1
 	y = 1
 	relative_position_id = EQS_sunset_doctrine
@@ -4410,7 +4411,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_mage_training_standardization
-	icon = GFX_goal_news
+	icon = GFX_goal_eqs_magic_horn
 	x = -1
 	y = 1
 	relative_position_id = EQS_magitech_expertise
@@ -4443,7 +4444,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_legacy_of_wonderbolts
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_pegasus
 	x = 1
 	y = 1
 	relative_position_id = EQS_magitech_expertise
@@ -4488,7 +4489,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_magitech_proliferation
-	icon = GFX_goal_news
+	icon = GFX_goal_unicorn_academy
 	x = 1
 	y = 1
 	relative_position_id = EQS_mage_training_standardization
@@ -4521,7 +4522,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_heroes_of_equestria
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_ponykind
 	x = 1
 	y = 1
 	relative_position_id = EQS_magitech_proliferation
@@ -4560,7 +4561,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_standard_equipment_calibration
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_bits_gun
 	x = 1
 	y = 1
 	relative_position_id = EQS_blueblood_doctrine
@@ -4585,7 +4586,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_soldier_support
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_ordnance
 	x = -1
 	y = 1
 	relative_position_id = EQS_standard_equipment_calibration
@@ -4634,7 +4635,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_overwhelming_firepower
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_military
 	x = 1
 	y = 1
 	relative_position_id = EQS_standard_equipment_calibration
@@ -4659,7 +4660,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_tactical_superiority
-	icon = GFX_goal_news
+	icon = GFX_goal_checkmate
 	x = 1
 	y = 1
 	relative_position_id = EQS_soldier_support
@@ -4681,7 +4682,7 @@ shared_focus = {
 
 shared_focus = {
 	id = EQS_ponies_at_the_ready
-	icon = GFX_goal_news
+	icon = GFX_goal_ELF_servicemare
 	x = -1
 	y = 1
 	relative_position_id = EQS_tactical_superiority
