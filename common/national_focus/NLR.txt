@@ -6717,7 +6717,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus NLR_unicorn_academy_f"
-		add_ideas = unicorn_academy
+		add_ideas = EQS_education_reform_1
 	}
 	search_filters = {
 		FOCUS_FILTER_RESEARCH
@@ -6835,8 +6835,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus NLR_luna_nova_f"
 		swap_ideas = {
-			remove_idea = unicorn_academy
-			add_idea = unicorn_academy1
+			remove_idea = EQS_education_reform_1
+			add_idea = EQS_education_reform_2
 		}
 	}
 	search_filters = {
@@ -6864,8 +6864,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus NLR_revive_eea"
 		swap_ideas = {
-		    remove_idea = unicorn_academy1
-		    add_idea = unicorn_academy2
+		    remove_idea = EQS_education_reform_2
+		    add_idea = EQS_education_reform_3
 	    }
 	}
 	search_filters = {

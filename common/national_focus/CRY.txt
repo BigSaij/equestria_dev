@@ -997,9 +997,6 @@ shared_focus = {
 		modifier = {
 			factor = 1.5
 			is_subject = yes
-			overlord = {
-				has_completed_focus = increase_presense_inCRY
-			}
 		}
 	}
 	mutually_exclusive = {
@@ -2081,9 +2078,6 @@ shared_focus = {
 		modifier = {
 			factor = 2
 			is_subject = yes
-			overlord = {
-				has_completed_focus = increase_presense_inCRY
-			}
 		}
 	}
 	relative_position_id = CRY_miamore

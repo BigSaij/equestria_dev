@@ -1015,7 +1015,7 @@ SCS = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	#heavy_tank_chassis = { #Make Flamethrower tanks show up at the bottom of the regular tank pools (like AT, AA, SPG, etc.)
 	#	pool = {
 	#		weight = 0.7

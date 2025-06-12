@@ -381,7 +381,7 @@ country_event = {
 					}
 				}
 				EQS = {
-					EQS_chancellor_neighsay = {
+					EQS_neighsay = {
 						set_nationality = USR
 					}
 					UESR_berry_punch = {
@@ -486,7 +486,7 @@ country_event = {
 						}
 					}
 				}
-				EQS_chancellor_neighsay = {
+				EQS_neighsay = {
 					promote_character = yes
 				}
 

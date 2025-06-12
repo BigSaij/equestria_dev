@@ -326,7 +326,6 @@ changeling_problem_eqs = {
 		tag = EQS
 	}
 	enable = {
-		has_completed_focus = worrisome_changelings
 		CHN = {
 			exists = yes
 			has_government = fascism
@@ -404,7 +403,6 @@ buffalo_mess_with_eqs = {
 			is_subject = no
 		}
 		OR = {
-			BUF = { has_completed_focus = BUF_proclaim_the_new_empire }
 			has_country_flag = buffalo_denied_friendship
 		}
 	}
@@ -683,7 +681,6 @@ equestria_less_likely_to_guarantee = {
 			}
 		}
 		has_government = democratic
-		NOT = { has_completed_focus = eqs_harmony_not_what_it_used_to_be }
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -1467,8 +1464,6 @@ EQS_build_more_civs = {
 	enable = {
 		date < 1009.3.3
 		has_war = no
-		NOT = { has_completed_focus = Extreme_war_comittee }
-		has_idea = harmonic_stagnation
 	} 
 	abort_when_not_enabled = yes
 
@@ -1510,9 +1505,6 @@ war_plan_mils = {
 	}
 	enable = {
 		OR = {
-			has_idea = war_plan_equestria_mild
-			has_idea = war_plan_equestria
-			has_idea = war_plan_equestria_extreme
 			has_idea = NLR_war_plan
 			has_idea = continous_war_plan_CHN
 		}

@@ -39,7 +39,6 @@ EQS_prewar_diplomacy_category = {
 			YAK = {
 				exists = yes
 				has_government = democratic
-				has_completed_focus = YAK_harmony_win
 				has_war = no
 			}
 			JAK = {

@@ -1238,7 +1238,6 @@ focus_tree = {
 			focus = CCN_Our_Own_Harmony
 		}
 		bypass = {
-			NOT = { event_target:equestria = { has_completed_focus = stage_coup } }
 			any_country_with_original_tag = {
 				original_tag_to_check = OLE
 				has_government = democratic
@@ -1273,7 +1272,6 @@ focus_tree = {
 			focus = CCN_A_Letter_To_A_Foreign_Queen
 		}
 		bypass = {
-			NOT = { event_target:equestria = { has_completed_focus = stage_coup } }
 			any_country_with_original_tag = {
 				original_tag_to_check = OLE
 				has_government = democratic

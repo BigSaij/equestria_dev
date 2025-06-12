@@ -7,7 +7,6 @@ can_EQC_get_NLR_SOL_cosmetic = {
 					is_subject = yes
 					overlord = {
 						is_original_EQS = yes
-						NOT = { has_completed_focus = eqs_new_equestrian_republic }
 					}
 				}
 				has_country_flag = EQC_govt_in_exile
@@ -36,15 +35,7 @@ can_EQC_drop_NLR_SOL_EQS_cosmetic = {
 		AND = {
 			has_cosmetic_tag = EQC_EQS
 			NOT = { has_country_flag = EQC_govt_in_exile }
-			OR = {
-				is_subject = no
-				AND = {
-					overlord = {
-						is_original_EQS = yes
-						has_completed_focus = eqs_new_equestrian_republic
-					}
-				}
-			}
+			is_subject = no
 		}
 		AND = {
 			has_cosmetic_tag = EQC_SOL

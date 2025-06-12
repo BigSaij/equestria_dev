@@ -422,7 +422,6 @@ on_actions = {
 						event_target:solar_empire = { has_war = no }
 						is_subject_of = event_target:solar_empire
 						NOT = {
-							event_target:solar_empire = { has_completed_focus = Crystal_Fair }
 							has_country_flag = supported_SOL
 							has_country_flag = CRY_solar_governorship
 							has_country_flag = CRY_dont_give_SOL_cosmetic

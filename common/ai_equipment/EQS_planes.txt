@@ -1373,7 +1373,7 @@ EQS_tactical_bomber = {
 	available_for = { 		EQS
 	CRY
 	NLR
-	VAN
+	ROC
 	SCS
 	BAL
 	NMS
@@ -1562,7 +1562,7 @@ EQS_heavy_fighter = {
 	available_for = { 		EQS
 	CRY
 	NLR
-	VAN
+	ROC
 	SCS
 	BAL
 	NMS
@@ -1688,7 +1688,7 @@ EQS_strategic_bomber = {
 	available_for = { 		EQS
 	CRY
 	NLR
-	VAN
+	ROC
 	SCS
 	BAL
 	NMS
@@ -1855,7 +1855,7 @@ EQS_maritime_patrol = {
 	available_for = { 		EQS
 	CRY
 	NLR
-	VAN
+	ROC
 	SCS
 	BAL
 	NMS

@@ -1699,6 +1699,27 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
+		id = BUF_maintain_harmony
+		icon = GFX_goal_generic_harmony
+		cost = 4
+		relative_position_id = BUF_NLR_war
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = BUF_NLR_war
+		}
+		ai_will_do = { factor = 3 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUF_maintain_harmony"
+			add_political_power = 100
+			add_opinion_modifier = { target = EQS modifier = common_threat }
+			reverse_add_opinion_modifier = { target = EQS modifier = common_threat }
+			one_random_arms_factory = yes
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
 		id = BUF_wait_until_we_are_threatened
 		icon = GFX_goal_follow_the_elder
 		cost = 9
@@ -1719,27 +1740,6 @@ focus_tree = {
 			two_random_arms_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
-	}
-	focus = {
-		id = BUF_maintain_harmony
-		icon = GFX_goal_generic_harmony
-		cost = 4
-		relative_position_id = BUF_NLR_war
-		x = 0
-		y = 1
-		prerequisite = {
-			focus = BUF_NLR_war
-		}
-		ai_will_do = { factor = 3 }
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BUF_maintain_harmony"
-			add_political_power = 100
-			add_opinion_modifier = { target = EQS modifier = common_threat }
-			reverse_add_opinion_modifier = { target = EQS modifier = common_threat }
-			one_random_arms_factory = yes
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = BUF_get_support_against_confederates

@@ -145,12 +145,12 @@ country_event = {
 		ELF = {
 			hidden_effect = {
 				EQS = {
-					EQS_chancellor_neighsay = {
+					EQS_neighsay = {
 						set_nationality = ELF
 					}
 				}
 				promote_character = {
-					character = EQS_chancellor_neighsay
+					character = EQS_neighsay
 					ideology = fascism_ideology
 				}
 				every_possible_country = {
@@ -210,25 +210,25 @@ country_event = {
 						set_nationality = ELF 
 					}
 				}
-				every_possible_country = {
-					limit = {
-						has_character = EQS_mayor_mare
-					}
-					EQS_mayor_mare = {
-						add_advisor_role = {
-							advisor = {
-								slot = political_advisor
-								idea_token = ELF_mayor_mare
+				#every_possible_country = {
+					#limit = {
+						#has_character = EQS_mayor_mare
+					#}
+					#EQS_mayor_mare = {
+						#add_advisor_role = {
+							#advisor = {
+								#slot = political_advisor
+								#idea_token = ELF_mayor_mare
 
-								traits = { populist }
-								ai_will_do = {
-									factor = 1
-								}
-							}
-						}
-						set_nationality = ELF
-					}
-				}
+								#traits = { populist }
+								#ai_will_do = {
+									#factor = 1
+								#}
+							#}
+						#}
+						#set_nationality = ELF
+					#}
+				#}
 				EQS = {
 					EQS_sweetie_drops = { set_nationality = ELF }
 					EQS_cocopomell = { 

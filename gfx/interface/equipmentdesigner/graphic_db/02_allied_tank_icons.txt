@@ -4817,7 +4817,7 @@ LSP = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	light_tank_destroyer_chassis = {
 		pool = {
 			icons = {

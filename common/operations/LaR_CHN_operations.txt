@@ -375,7 +375,7 @@ CHN_infiltrate_border_forts_EQS = {
 	}
 	
 	visible = {
-		has_completed_focus = reinforce_border
+		always = no
 		NOT = {
 			has_country_flag = CHN_oper_4
 		}
@@ -603,7 +603,7 @@ CHN_infiltrate_river_forts_EQS = {
 	}
 	
 	visible = {
-		has_completed_focus = River_Fortifications
+		always = no
 		NOT = {
 			has_country_flag = CHN_oper_5
 		}

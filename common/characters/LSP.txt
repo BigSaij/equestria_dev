@@ -396,7 +396,6 @@ characters={
 			}
 			available = {
 				has_government = fascism
-				has_completed_focus = LSP_bribe_the_officers
 			}
 			traits = {
 				unhindered_s
@@ -421,7 +420,6 @@ characters={
 			}
 			available = {
 				has_government = fascism
-				has_completed_focus = LSP_bribe_the_officers
 			}
 			traits = {
 				fortification_armchair_general
@@ -446,7 +444,6 @@ characters={
 			}
 			available = {
 				has_government = fascism
-				has_completed_focus = LSP_kickbacks_for_loyalty
 			}
 			traits = {
 				backroom_windbag

@@ -821,95 +821,6 @@ shared_focus = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
-shared_focus = {
-	id = SCS_take_whats_ours
-	icon = GFX_focus_generic_strike_at_democracy1
-	x = -2
-	y = 1
-	cost = 5
-
-	relative_position_id = SCS_buffalo_in_the_room
-
-	prerequisite = {
-		focus = SCS_buffalo_in_the_room
-	}
-
-	available = {
-		is_subject = no
-		NOT = { has_country_flag = SCS_loyalist_win }
-	}
-
-	bypass = {
-		BUF = {
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_war_with = ROOT
-			}
-		}
-	}
-	ai_will_do = {
-			factor = 20
-		}
-	mutually_exclusive = {
-		focus = SCS_a_fair_deal
-		focus = SCS_appeasement
-	}
-	will_lead_to_war_with = BUF
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SCS_take_whats_ours"
-		create_wargoal = { target = BUF type = annex_everything}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
-shared_focus = {
-	id = SCS_reservations
-	icon = GFX_goal_continuous_restrict_freedom
-	x = 0
-	y = 1
-	cost = 5
-
-	relative_position_id = SCS_take_whats_ours
-
-	prerequisite = {
-		focus = SCS_take_whats_ours
-	}
-
-	available = {
-		BUF = {
-			exists = no
-		}
-		owns_state = 78
-		owns_state = 89
-	}
-
-	bypass = {
-
-	}
-	ai_will_do = {
-			factor = 20
-		}
-	mutually_exclusive = {
-
-	}
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus SCS_reservations"
-		BUF = {
-			every_core_state = {
-				add_core_of = ROOT
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
 
 shared_focus = {
 	id = SCS_grand_army_of_the_confederacy
@@ -2188,10 +2099,7 @@ shared_focus = {
 
 	cost = 5
 	available = {
-		OR = {
-			has_government = fascism
-			has_completed_focus = SCS_manifest_destiny
-		}
+		has_government = fascism
 	}
 	bypass = {}
 	ai_will_do = {

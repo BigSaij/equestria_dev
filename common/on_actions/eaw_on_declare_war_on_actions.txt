@@ -350,7 +350,6 @@ on_actions = {
 				if = {
 					limit = {
 						is_EQS_SOL = yes
-						NOT = { has_completed_focus = SOL_bat_problems }
 						FROM = { original_tag = EQS }
 					}
 					every_owned_state = {
@@ -364,7 +363,6 @@ on_actions = {
 					limit = {
 						FROM = {
 							is_EQS_SOL = yes
-							NOT = { has_completed_focus = SOL_bat_problems }
 						}
 					}
 					every_owned_state = {

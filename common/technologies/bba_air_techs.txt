@@ -289,7 +289,6 @@ technologies = {
 				if = {
 					limit = {
 						original_tag = EQS
-						has_completed_focus = Spitfire_research
 					}
 					EQS_add_supermarine_spitfire_template = yes
 					EQS_add_supermarine_seafire_template = yes
@@ -395,7 +394,6 @@ technologies = {
 				if = {
 					limit = {
 						original_tag = EQS
-						has_completed_focus = Spitfire_research
 					}
 					EQS_add_hawker_tempest_template = yes
 					EQS_add_supermarine_spiteful_template = yes
@@ -499,7 +497,6 @@ technologies = {
 				if = {
 					limit = {
 						original_tag = EQS
-						has_completed_focus = Spitfire_research
 					}
 					EQS_add_gloster_meteor_template = yes
 					EQS_add_hawker_sea_fury_template = yes

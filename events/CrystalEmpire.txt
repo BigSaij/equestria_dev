@@ -311,9 +311,6 @@ country_event = { ## The Return of Sombra event chain
 			modifier = {
 				factor = 1.5
 				is_subject = yes
-				overlord = {
-					has_completed_focus = increase_presense_inCRY
-				}
 			}
 			modifier = {
 				factor = 0

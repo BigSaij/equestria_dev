@@ -959,15 +959,6 @@ prepare_for_all_ponies_front = {
 		EQS = {
 			surrender_progress > 0.18
 			OR = {
-				focus_progress = {
-					focus = All_ponies_front_f
-					progress > 0
-				}
-				has_completed_focus = All_ponies_front_f
-				focus_progress = {
-					focus = Appeal_to_STG
-					progress > 0
-				}
 				AND = {
 					is_historical_focus_on = yes
 					surrender_progress > 0.21

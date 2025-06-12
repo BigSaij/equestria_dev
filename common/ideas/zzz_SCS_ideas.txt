@@ -72,8 +72,7 @@ ideas = {
 			allowed = {
 				original_tag = SCS
 			}
-			available = {
-				has_completed_focus = SCS_public_funding_guns			
+			available = {		
 			}
 			research_bonus = {
 				artillery = 0.15

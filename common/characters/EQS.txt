@@ -1380,7 +1380,6 @@ characters = {
 		name=EQS_evening_squall
 		portraits={
 			army={
-				large="gfx/leaders/EQS/Udy.tga"
 				small="GFX_idea_EQS_evening_squall"
 			}
 		}
@@ -1984,7 +1983,6 @@ characters = {
 			visible = {
 				owner = {
 					is_EQS_SOL = yes
-					has_completed_focus = SOL_military_reorganization
 					NOT = {
 						any_country_with_original_tag = {
 							original_tag_to_check = EQC
