@@ -214,17 +214,17 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		
 		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						original_tag = EQS
-						has_completed_focus = Spitfire_research
-					}
-					EQS_add_hawker_hurricane_template = yes
-					EQS_add_hawker_sea_hurricane_template = yes
-					EQS_add_blackburn_skua_template = yes
-				}
-			}
+			#hidden_effect = {
+				#if = {
+					#limit = {
+						#original_tag = EQS
+						#has_completed_focus = Spitfire_research
+					#}
+					#EQS_add_hawker_hurricane_template = yes
+					#EQS_add_hawker_sea_hurricane_template = yes
+					#EQS_add_blackburn_skua_template = yes
+				#}
+			#}
 		}
 		
 		ai_will_do = {

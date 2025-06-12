@@ -3715,6 +3715,14 @@ focus_tree = {
 						}
 					}
 				}
+				AND = {
+					BAT = {
+						is_subject = yes
+						NOT = {
+							is_subject_of = HIP
+						}
+					}
+				}
 			}
 		}
 
@@ -4242,6 +4250,14 @@ focus_tree = {
 						NOT = {has_government = democratic}
 					}
 				}
+				AND = {
+					BAT = {
+						is_subject = yes
+						NOT = {
+							is_subject_of = HIP
+						}
+					}
+				}
 			}
 		}
 		prerequisite = {
@@ -4320,6 +4336,14 @@ focus_tree = {
 						}
 					}
 				}
+				AND = {
+					BAT = {
+						is_subject = yes
+						NOT = {
+							is_subject_of = HIP
+						}
+					}
+				}
 			}
 		}
 
@@ -4332,7 +4356,7 @@ focus_tree = {
 			country_event = {
 				id = hippogriff.551
 				days = 0
-				}
+			}
 		}
 	}
 	shared_focus = {

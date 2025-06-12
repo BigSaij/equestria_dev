@@ -468,6 +468,7 @@ EQS_release_HIP_decision:0 "Re-establish the Kingdom of Hippogriffia"
 EQS_release_ZUM_decision:0 "Reform the Kingdom of Zumidia"
 EQS_release_WAR_decision:0 "Reform the Kingdom of Warzena"
 EQS_release_ZAR_decision:0 "Liberate the Tribes of Zarantia"
+EQS_release_CTH_decision:0 "Recreate the Republic of Colthage"
 
 
 EQS_integrate_CES_commanders:0 "Reintegrate Daring Do's Command Staff"
@@ -999,8 +1000,8 @@ equestria_celestia.44.d:0 "Twilight Sparkle figeted as she stood on the podium, 
 equestria_celestia.44.a:0 "In a flash of light, Twilight was gone."
 
 equestria_celestia.45.t:0 "Justice of the Sun"
-equestria_celestia.45.d:0 "#TODO, Celestia's vengeance against BAT's evil bros with Twilight watching"
-equestria_celestia.45.a:0 "real"
+equestria_celestia.45.d:0 "The wind was blowing as Celestia stared out over the cliff edge, watching the sun edge over the horizon in the distance. The city of New Canterlot spread out before her below. She was not alone; Director Drops stood to the side attentively as the sole pony allowed to accompany her up to this mountainside. That and the various statues that now joined the Princess looking to the west.\n\nThe memory of what she had told the Chiropterrans still ran fresh in her mind, before their sentence had been carried out. The lies of their ancestors had been laid bare, the truth that they were not devoted servants of the Nightmare but mere opportunists fleeing retribution after a failed insurrection against her rule. Of course they had refused to believe her; it was only natural given how their entire lives had been built upon lies. Their history nothing more than a deception meant to justify their unnatural existence. They remained unrepentant for their murder of Princess Luna, and the judgement she placed upon them was equally merciless.\n\nPetrification until the day Celestia's sister was returned to her, so that they could watch the traitors die together. Until that day came they would watch as the Princess undid all that they had worked for, the sunsets illuminating their vision for the world dying before them. The image of the Nightmare upon the moon would serve as a reminder of their greatest failure, staring down upon them every night.\n\nIt was the most fitting punishment Celestia could provide. And yet, it had given her no satisfaction as she turned them to stone. Nothing ever would. "You deserve to suffer eternally for your actions," Celestia said quietly. "For what you did to Luna. For what you took from me. Nothing will ever compare to the pain you brought upon Equestria."\n\nSomething shifted behind Celestia. The Princess turned, expecting to see her Director. Instead she saw Princess Twilight staring back at her with saddened eyes. Sweetie Drops was behind her, refusing to look at either of the alicorns.\n\n"Twilight." There was nothing more for Celestia to say.\n\n"Princess." Twilight's eyes shifted over to the statues nearby for a moment. "Are you finished?" Celestia didn't answer. "I guess not. Director Drops, can you take me back to the city? Agent Heartstrings is waiting."\n\nSweetie hesitated for a moment, waiting for the slow nod from the Princess of the Sun before moving to walk by Twilight's side. The two trotted away from the Princess, beginning the long trek down the mountain as Celestia turned away to look back towards the setting sun. The statues said nothing, only watching with stone eyes at her side."
+equestria_celestia.45.a:0 "There is no room for regret."
 
 equestria_celestia.46.t:0 "Student of the Past"
 equestria_celestia.46.d:0 "#TODO, meeting with Sunset about Princess Celestia"
@@ -1010,7 +1011,7 @@ equestria_celestia.47.t:0 "A Prince and his Princess"
 equestria_celestia.47.d:0 "#TODO, meeting with Blueblood about Princess Celestia"
 equestria_celestia.47.a:0 "real"
 
-equestria_celestia.48.t:0 "A Last Word"
+equestria_celestia.48.t:0 "One Last Word"
 equestria_celestia.48.d:0 "#TODO, meeting with Director Drops right outside the throne room"
 equestria_celestia.48.a:0 "real"
 

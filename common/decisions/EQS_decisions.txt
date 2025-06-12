@@ -2308,6 +2308,7 @@ EQS_breakaway_diplomacy_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_integrate_crystal_empire"
 			set_country_flag = EQS_CRY_absolestia_integration
 			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = EQS_additional_foci_tt
 			if = {
 				limit = {
 					NOT = {
@@ -3258,7 +3259,6 @@ EQS_breakaway_diplomacy_category = {
 						state = 1206
 						state = 744
 						state = 743
-						state = 1205
 					}
 					owner = {
 						OR = {
@@ -3306,7 +3306,6 @@ EQS_breakaway_diplomacy_category = {
 							region = 289
 							NOT = {
 								state = 744
-								state = 1205
 							}
 						}
 						state = 692
@@ -3332,6 +3331,61 @@ EQS_breakaway_diplomacy_category = {
 			}
 			set_autonomy = {
 				target = ZAR
+				autonomy_state = autonomy_dominion
+			}
+		}
+	}
+	EQS_release_CTH_decision = {
+		icon = celestia
+		available = {
+			CTH = {
+				exists = no
+			}
+			owns_state = 875
+			has_war = no
+		}
+		visible = {
+			CTH = {
+				exists = no
+			}
+			owns_state = 875
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_CTH_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 241
+						region = 242
+						region = 148
+						state = 714
+						AND = {
+							region = 248
+							NOT = {
+								state = 749
+								state = 748
+							}
+						}
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				CTH = {
+					transfer_state = PREV
+				}
+				add_core_of = CTH
+			}
+			set_autonomy = {
+				target = CTH
 				autonomy_state = autonomy_dominion
 			}
 		}

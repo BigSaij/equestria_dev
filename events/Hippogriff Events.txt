@@ -12321,11 +12321,11 @@ country_event = { # Posada kills herself
 				}
 			}
 		}
-		hidden_effect = {
-			EQS = {
-				country_event = equestria.30
-			}
-		}
+		#hidden_effect = {
+			#EQS = {
+				#country_event = equestria.30
+			#}
+		#}
 	}
 }
 

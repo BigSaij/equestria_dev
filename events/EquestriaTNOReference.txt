@@ -414,9 +414,6 @@ country_event = {
 					UESR_jorge_orellana = {
 						set_nationality = USR
 					}
-					UESR_sugar_belle = {
-						set_nationality = USR
-					}
 					UESR_party_flavour = {
 						set_nationality = USR
 					}

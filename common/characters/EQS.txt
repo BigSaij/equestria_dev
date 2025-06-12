@@ -255,6 +255,10 @@ characters = {
 				available = {
 					has_intelligence_agency = yes
 					has_government = democratic
+					has_country_flag = EQS_new_smile_director
+				}
+				visible = {
+					has_country_flag = EQS_new_smile_director
 				}
 				traits = { agent_of_smile_lar }
 			}
@@ -951,7 +955,6 @@ characters = {
 		name = EQS_dust_hoover
 		portraits = {
 			army = {
-				large="gfx/leaders/EQS/Admiral.tga"
 				small="GFX_idea_EQS_dust_hoover"
 			}
 		}

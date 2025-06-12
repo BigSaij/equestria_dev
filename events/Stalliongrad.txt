@@ -708,13 +708,7 @@ country_event = { ## Выборы - Vasya Introduction
 	option = {
 		name = stalliongrad.28.a
 		hidden_effect = {
-			if = {
-				limit = { has_country_flag = compromise_elections }
-				country_event = { id = stalliongrad.29 days = 1 random = 228 } #days to hours applied
-			}
-			else = {
-				country_event = { id = stalliongrad.30 days = 1 random = 228 } #days to hours applied
-			}
+			country_event = { id = stalliongrad.30 days = 1 random = 228 } #days to hours applied
 		}
 	}
 }
@@ -883,42 +877,6 @@ country_event = { ## Выборы - Compromise Path Elections
 			news_event = { id = stalliongrad_news.102 days = 1 }
 		}
 	}
-	option = {
-		name = stalliongrad.31.c
-		set_country_flag = darkwing_elected
-		promote_character = {
-			character = STG_dark_wing
-			ideology = leninism
-		}
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = STG_ai_behavior
-							option = DEFAULT
-						}
-					}
-					has_country_flag = STG_AI_VASILY_HISTORICAL
-					has_game_rule = {
-						rule = STG_ai_behavior
-						option = VASILY_HISTORICAL
-					}
-					has_country_flag = STG_AI_SINISTER_ALTERNATE
-					has_game_rule = {
-						rule = STG_ai_behavior
-						option = SINISTER_ALTERNATE
-					}
-				}
-			}
-		}
-		hidden_effect = {
-			news_event = { id = stalliongrad_news.100 days = 1 }
-		}
-	}
 }
 country_event = { ## Поля уходит
 	id = stalliongrad.32
@@ -951,10 +909,6 @@ country_event = { ## Поля уходит
 		add_political_power = -100
 		hidden_effect = {
 			country_event = { id = stalliongrad.34 days = 1 random = 672 } #days to hours applied
-			if = {
-				limit = { has_country_flag = vasya_leaves }
-				country_event = { id = stalliongrad.36 days = 1 random = 192 } #days to hours applied
-			}
 		}
 	}
 	option = {
@@ -990,12 +944,6 @@ country_event = { ## Начало выборов после ухода Поль�
 	title = stalliongrad.34.t
 	desc = stalliongrad.34.d
 	picture = GFX_event_stg_pairlament
-
-	trigger = {
-		NOT = {
-			has_country_flag = darkwing_took_power
-		}
-	}
 	is_triggered_only = yes #moved to stalliongrad.32 and stalliongrad.94
 	fire_only_once = yes
 
@@ -1037,12 +985,6 @@ country_event = { ## 10 условий
 		name = stalliongrad.35.b
 		custom_effect_tooltip = vasya_leaves_tooltip
 		set_country_flag = vasya_leaves
-		hidden_effect = {
-			if = {
-				limit = { has_country_flag = polya_dies }
-				country_event = { id = stalliongrad.36 days = 1 random = 192 } #days to hours applied
-			}
-		}
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -2495,10 +2437,6 @@ country_event = { ## Polya is old
 		}
 		hidden_effect = {
 			country_event = { id = stalliongrad.34 days = 1 random = 672 } #days to hours applied
-			if = {
-				limit = { has_country_flag = vasya_leaves }
-				country_event = { id = stalliongrad.36 days = 1 random = 192 } #days to hours applied
-			}
 		}
 	}
 }

@@ -2008,22 +2008,30 @@ country_event = {
 		add_war_support = -0.15
 		hidden_effect = {
 			country_event = { id = EQC_NLR.11 days = 94 }
+			set_popularities = {
+				democratic = 25
+				fascism = 30
+				communism = 0
+				neutrality = 45
+			}
 		}
-	}
-	hidden_effect = {
-		set_popularities = {
-			democratic = 25
-			fascism = 30
-			communism = 0
-			neutrality = 45
-		}
-	}
-	ai_chance = {
-		factor = 1.5
-		modifier = {
-			factor = 0
-			is_historical_focus_on = yes
-			NOT = {
+		ai_chance = {
+			factor = 1.5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				NOT = {
+					OR = {
+						has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
+						has_game_rule = {
+							rule = EQS_ai_behavior
+							option = LUNAR_CIVIL_WAR_MAX
+						}
+					}
+				}
+			}
+			modifier = {
+				add = 100
 				OR = {
 					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
 					has_game_rule = {
@@ -2032,20 +2040,10 @@ country_event = {
 					}
 				}
 			}
-		}
-		modifier = {
-			add = 100
-			OR = {
-				has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-				has_game_rule = {
-					rule = EQS_ai_behavior
-					option = LUNAR_CIVIL_WAR_MAX
-				}
+			modifier = {
+				add = 15
+				has_government = fascism
 			}
-		}
-		modifier = {
-			add = 15
-			has_government = fascism
 		}
 	}
 }
