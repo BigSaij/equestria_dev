@@ -83,7 +83,7 @@ units = {
 			#Cruisers
 			ship = { name = "ERNS Ruby" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { heavy_cruiser_1 = { amount = 1 owner = EQS } } }
 			
-			ship = { name = "ERNS Canis Minor" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Cepheus" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
 			ship = { name = "ERNS Draco" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
 			
 			#Destroyers

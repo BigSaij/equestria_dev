@@ -8,14 +8,7 @@ EQS_alternate_lunar_civil_war_normal = {
 	}
 
 	enable = {
-
-		OR = {
-			has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_NORMAL 
-			has_game_rule = {
-				rule = EQS_ai_behavior
-				option = LUNAR_CIVIL_WAR_NORMAL
-			}
-		}
+		always = no
 	}
 	abort = {
 		
@@ -61,14 +54,7 @@ EQS_alternate_lunar_civil_war_max = {
 	}
 
 	enable = {
-
-		OR = {
-			has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX 
-			has_game_rule = {
-				rule = EQS_ai_behavior
-				option = LUNAR_CIVIL_WAR_MAX
-			}
-		}
+		always = no
 	}
 	abort = {
 		
@@ -109,14 +95,7 @@ EQS_alternate_solar_empire = {
 	}
 
 	enable = {
-
-		OR = {
-			has_country_flag = EQS_AI_SOLAR_EMPIRE
-			has_game_rule = {
-				rule = EQS_ai_behavior
-				option = SOLAR_EMPIRE
-			}
-		}
+		always = no
 	}
 	abort = {
 		
@@ -158,14 +137,7 @@ EQS_alternate_solar_and_lunar = {
 	}
 
 	enable = {
-
-		OR = {
-			has_country_flag = EQS_AI_SOLAR_AND_LUNAR
-			has_game_rule = {
-				rule = EQS_ai_behavior
-				option = SOLAR_AND_LUNAR
-			}
-		}
+		always = no
 	}
 	abort = {
 		
@@ -211,14 +183,7 @@ EQS_alternate_intervention = {
 	}
 
 	enable = {
-
-		OR = {
-			has_country_flag = EQS_AI_OLE_INTERVENTION
-			has_game_rule = {
-				rule = EQS_ai_behavior
-				option = OLE_INTERVENTION
-			}
-		}
+		always = no
 	}
 	abort = {
 		

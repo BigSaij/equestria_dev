@@ -6,19 +6,32 @@ bookmarks = {
 		picture = "GFX_bookmark_equus"
 		default_country = "EQS"
 		default = yes
-
-		"EQS"={
-			history = "EQS_GATHERING_STORM_DESC"
+		
+		"YAK"={
+			history = "YAK_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-				EQS_harmonic_stagnation
-				EQS_outdated_military
-				EQS_thestral_divide
+				YAK_resilience
+				YAK_banner_army
+				YAK_equestrian_support_2
 			}
 			focuses = {
-				EQS_pony_summit
-				EQS_civil_war_start
-				EQS_equestria_survives
+				YAK_left_centre_coalition
+				YAK_crown_stands_firm
+				YAK_popular_revolution
+			}
+		}
+		"STG"={
+			history = "STG_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				severe_famine
+				incomplete_industrialization
+			}
+			focuses = {
+				vasya_2
+				the_palace
+				manifesto_of_materialism
 			}
 		}
 		"CRY"={
@@ -35,17 +48,18 @@ bookmarks = {
 				CRY_oldking
 			}
 		}
-		"STG"={
-			history = "STG_GATHERING_STORM_DESC"
-			ideology = communism
+		"EQS"={
+			history = "EQS_GATHERING_STORM_DESC"
+			ideology = democratic
 			ideas = {
-				severe_famine
-				incomplete_industrialization
+				EQS_harmonic_stagnation
+				EQS_outdated_military
+				EQS_thestral_divide
 			}
 			focuses = {
-				vasya_2
-				the_palace
-				manifesto_of_materialism
+				EQS_pony_summit
+				EQS_civil_war_start
+				EQS_equestria_survives
 			}
 		}
 		"CHN"={
@@ -90,23 +104,7 @@ bookmarks = {
 			}
 		}
 
-
 		# minors ####
-		"YAK"={
-			minor = yes
-			history = "YAK_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				YAK_resilience
-				YAK_banner_army
-				YAK_equestrian_support_2
-			}
-			focuses = {
-				YAK_left_centre_coalition
-				YAK_crown_stands_firm
-				YAK_popular_revolution
-			}
-		}
 		"JAK"={
 			minor = yes
 			history = "JAK_GATHERING_STORM_DESC"
@@ -122,22 +120,6 @@ bookmarks = {
 				JAK_glory_to_yakyakistan
 			}
 		}
-		#Bears and bandits
-		"PLB"={
-			minor = yes
-			history = "PLB_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				PLB_bears
-				PLB_outcasts
-				PLB_clan_divides
-			}
-			focuses = {
-				PLB_hyperbearia_restored_loyal
-				PLB_horde_that_will_drown_all
-				PLB_begin_the_great_crusades
-			}
-		}
 		"GFF"={
 			minor = yes
 			history = "GFF_GATHERING_STORM_DESC"
@@ -151,6 +133,21 @@ bookmarks = {
 				GFF_funds
 				GFF_virgil_power
 				GFF_red_takover
+			}
+		}
+		"PLB"={
+			minor = yes
+			history = "PLB_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				PLB_bears
+				PLB_outcasts
+				PLB_clan_divides
+			}
+			focuses = {
+				PLB_hyperbearia_restored_loyal
+				PLB_horde_that_will_drown_all
+				PLB_begin_the_great_crusades
 			}
 		}
 		"PNG"={

@@ -1842,16 +1842,6 @@ country_event = {
 				has_completed_focus = EQC_patriation
 				factor = 0
 			}
-			modifier = {
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-				}
-				factor = 0
-			}
 		}
 	}
 	option = { #Stay neutral
@@ -1906,16 +1896,6 @@ country_event = {
 					is_neighbor_of = NLR
 				}
 				factor = 3
-			}
-			modifier = {
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-				}
-				factor = 0
 			}
 		}
 	}
@@ -2017,29 +1997,6 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 1.5
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				NOT = {
-					OR = {
-						has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-						has_game_rule = {
-							rule = EQS_ai_behavior
-							option = LUNAR_CIVIL_WAR_MAX
-						}
-					}
-				}
-			}
-			modifier = {
-				add = 100
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-				}
-			}
 			modifier = {
 				add = 15
 				has_government = fascism
@@ -5724,26 +5681,6 @@ country_event = {
 		name = equestria.45.a
 		ai_chance = {
 			factor = 85
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_NORMAL
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_NORMAL
-					}
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-					has_country_flag = EQS_AI_SOLAR_AND_LUNAR
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = SOLAR_AND_LUNAR
-					}
-				}
-			}
 		}
 		custom_effect_tooltip = EQS_luna_reforms_support_tt
 		set_country_flag = EQS_moonshine_reforms_shared
@@ -5763,33 +5700,6 @@ country_event = {
 		name = equestria.45.b
 		ai_chance = {
 			factor = 15
-			modifier = {
-				factor = 0
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = EQS_ai_behavior
-							option = DEFAULT
-						}
-					}
-					has_country_flag = EQS_AI_DEMOCRATIC_HISTORICAL 
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = DEMOCRATIC_HISTORICAL
-					}
-					has_country_flag = EQS_AI_SOLAR_EMPIRE 
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = SOLAR_EMPIRE
-					}
-					has_country_flag = EQS_AI_OLE_INTERVENTION
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = OLE_INTERVENTION
-					}
-				}
-			}
 		}
 		hidden_effect = {
 			set_variable = {
@@ -6293,16 +6203,6 @@ country_event = {
 		name = equestria.56.a
 		ai_chance = {
 			factor = 34
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-				}
-			}
 		}
 		custom_effect_tooltip = EQS_weapons_radical_tt
 		hidden_effect = {
@@ -6341,16 +6241,6 @@ country_event = {
 		name = equestria.56.c
 		ai_chance = {
 			factor = 33
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-				}
-			}
 		}
 		custom_effect_tooltip = EQS_weapons_peaceful_tt
 		hidden_effect = {
@@ -6475,16 +6365,6 @@ country_event = {
 		name = equestria.58.a
 		ai_chance = {
 			factor = 34
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-				}
-			}
 		}
 		custom_effect_tooltip = EQS_industry_radical_tt
 		hidden_effect = {
@@ -6523,16 +6403,6 @@ country_event = {
 		name = equestria.58.c
 		ai_chance = {
 			factor = 33
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-				}
-			}
 		}
 		custom_effect_tooltip =  EQS_industry_peaceful_tt
 		hidden_effect = {
@@ -6641,16 +6511,6 @@ country_event = {
 		name = equestria.60.a
 		ai_chance = {
 			factor = 34
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-				}
-			}
 		}
 		custom_effect_tooltip = EQS_thestrals_radical_tt
 		hidden_effect = {
@@ -6689,16 +6549,6 @@ country_event = {
 		name = equestria.60.c
 		ai_chance = {
 			factor = 33
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-				}
-			}
 		}
 		custom_effect_tooltip = EQS_thestrals_peaceful_tt
 		hidden_effect = {
@@ -6843,16 +6693,6 @@ country_event = {
 		name = equestria.63.a
 		ai_chance = {
 			factor = 34
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-				}
-			}
 		}
 		custom_effect_tooltip = EQS_partisans_radical_tt
 		hidden_effect = {
@@ -6891,16 +6731,6 @@ country_event = {
 		name = equestria.63.c
 		ai_chance = {
 			factor = 33
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-				}
-			}
 		}
 		custom_effect_tooltip = EQS_partisans_peaceful_tt
 		hidden_effect = {
@@ -7103,26 +6933,6 @@ country_event = {
 		name = equestria.66.a
 		ai_chance = {
 			factor = 20 
-			modifier = {
-				factor = 0		
-				OR = {
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_NORMAL 
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_NORMAL
-					}
-					has_country_flag = EQS_AI_LUNAR_CIVIL_WAR_MAX 
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = LUNAR_CIVIL_WAR_MAX
-					}
-					has_country_flag = EQS_AI_SOLAR_AND_LUNAR
-					has_game_rule = {
-						rule = EQS_ai_behavior
-						option = SOLAR_AND_LUNAR
-					}
-				}
-			}
 		}
 		custom_effect_tooltip = EQS_lunar_civil_war_peaceful_tt
 		hidden_effect = {

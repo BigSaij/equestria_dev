@@ -13,39 +13,15 @@ EQS_ai_behavior = {
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
 	option = {
-		name = DEMOCRATIC_HISTORICAL
-		text = "RULE_OPTION_DEMOCRATIC_HISTORICAL"
-		desc = "RULE_OPTION_DEMOCRATIC_HISTORICAL_EQS_AI_DESC"
+		name = EQS_HARMONIST_HISTORICAL
+		text = "RULE_OPTION_EQS_HISTORICAL"
+		desc = "RULE_OPTION_EQS_HISTORICAL_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = LUNAR_CIVIL_WAR_NORMAL
-		text = "RULE_OPTION_LUNAR_CIVIL_WAR_NORMAL"
-		desc = "RULE_LUNAR_CIVIL_WAR_NORMAL_EQS_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = LUNAR_CIVIL_WAR_MAX
-		text = "RULE_OPTION_LUNAR_CIVIL_WAR_MAX"
-		desc = "RULE_LUNAR_CIVIL_WAR_MAX_EQS_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = SOLAR_EMPIRE
-		text = "RULE_OPTION_SOLAR_EMPIRE"
-		desc = "RULE_SOLAR_EMPIRE_EQS_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = SOLAR_AND_LUNAR
-		text = "RULE_OPTION_SOLAR_AND_LUNAR"
-		desc = "RULE_SOLAR_AND_LUNAR_EQS_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = OLE_INTERVENTION
-		text = "RULE_OPTION_OLE_INTERVENTION"
-		desc = "RULE_OLE_INTERVENTION_EQS_AI_DESC"
+		name = EQS_HARMONIST_CIVIL_WAR
+		text = "RULE_OPTION_EQS_CIVIL_WAR"
+		desc = "RULE_OPTION_EQS_CIVIL_WAR_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {
