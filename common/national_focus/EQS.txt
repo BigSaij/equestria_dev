@@ -3962,6 +3962,9 @@ shared_focus = {
 	y = 1
 	relative_position_id = EQS_celestial_economic_miracle
 	cost = 5
+	allow_branch = {
+		always = no
+	}
 	prerequisite = {
 		focus = EQS_celestial_economic_miracle
 	}
@@ -4103,6 +4106,9 @@ shared_focus = {
 	y = 1
 	relative_position_id = EQS_celestial_economic_miracle
 	cost = 5
+	allow_branch = {
+		always = no
+	}
 	prerequisite = {
 		focus = EQS_celestial_economic_miracle
 	}
@@ -4121,6 +4127,9 @@ shared_focus = {
 	y = 1
 	relative_position_id = EQS_celestial_economic_miracle
 	cost = 5
+	allow_branch = {
+		always = no
+	}
 	prerequisite = {
 		focus = EQS_celestial_economic_miracle
 	}
@@ -4139,6 +4148,9 @@ shared_focus = {
 	y = 1
 	relative_position_id = EQS_celestial_economic_miracle
 	cost = 5
+	allow_branch = {
+		always = no
+	}
 	prerequisite = {
 		focus = EQS_celestial_economic_miracle
 	}

@@ -693,7 +693,7 @@ ideas = {
 				training_time_army_factor = -0.1
 			}
 		}
-		EQS_wartime_administration = {
+		EQS_wartime_administration_idea = {
 			allowed = {
 				always = no
 			}
@@ -735,7 +735,7 @@ ideas = {
 				command_power_gain = 0.2
 			}
 		}
-		EQS_wartime_laws_ideas = {
+		EQS_wartime_laws_idea = {
 			allowed = {
 				always = no
 			}

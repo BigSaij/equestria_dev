@@ -546,14 +546,17 @@ EQS_steadfast_defense_desc:0 "This is where we hold them! This is where we make 
 EQS_warplan_mild:0 "Equestrian War Plan - Mild"
 EQS_warplan_normal:0 "Equestrian War Plan - Normal"
 EQS_warplan_extreme:0 "Equestrian War Plan - Extreme"
-EQS_civilwar_industry_bonus:0 "Guns Against the Nightmare"
-EQS_civilwar_industry_bonus_desc:0 ""
 EQS_securing_order:0 "Enforced Order"
+EQS_wartime_administration_idea:0 "Wartime Administration"
+EQS_militarized_administration:0 "Militarized Administration"
 EQS_wartime_laws_idea:0 "Wartime Law"
 EQS_militarized_laws:0 "Militarized Law"
 EQS_friendship_warfare:0 "The Magic of Friendship"
+EQS_friendship_warfare_desc:0 "Friendship between ponies has been the defining feature of Equestria for countless generations. And in this modern era, it will continue to be so as friendship survives even on the battlefield. After all, there is no better friend you will find than your fellow soldier in the foxhole during an enemy bombardment."
 EQS_thestral_military_integration:0 "Thestral Military Integration"
 EQS_thestral_divide_civwar:0 "The Thestral Divide"
+EQS_civilwar_industry_bonus:0 "Guns Against the Nightmare"
+EQS_civilwar_industry_bonus_desc:0 ""
 EQS_civilwar_conscription_bonus:0 "Ponies Against the Nightmare"
 EQS_civilwar_conscription_bonus_desc:0 ""
 EQS_civilwar_combat_bonus:0 "For Equestria!"
@@ -578,32 +581,31 @@ EQS_smile_empowered_army_desc:0 "Led by Director Sweetie Drops and given full au
 EQS_lunarist_reintegration:0 "Lunarist Reintegration"
 EQS_rememberance_of_luna:0 "Rememberance of Luna"
 
-EQS_crystal_economic_integration:0 "Crystal Economic Integration"
-EQS_representative_overhaul:0 "Severyanian Representative Overhaul"
-
 EQS_vesalipolis_treaty:0 "The Treaty of Vesalipolis"
 EQS_vesalipolis_treaty_desc:0 "Signed by the Queen of every hive, the Treaty of Vesalipolis dictates the terms of the management of the changelings under Equestrian rule. While the traditional power structures of the hives are respected, they are explicitly barred from maintaining an army and their ability to produce military equipment is heavily restricted. Enforced by the Princess of Equestria through pony advisors allowed unrestricted access to the hives, it marks the end of any dream of changeling unity."
-
 EQS_SMILE_oversight:0 "S.M.I.L.E. Oversight"
+
+EQS_EEA_integration:0 "EEA Integration"
+EQS_economic_resurgence:0 "Equestrian Economic Resurgence"
+EQS_economic_imperialism:0 "Equestrian Economic Integration"
+EQS_power_of_sun:0 "Power of the Sun"
 
 EQS_sunset_magitech:0 "Magi-Tech Expertise"
 EQS_blueblood_production:0 "Standardized Rifle Production"
 EQS_blueblood_artillery:0 "Artillery Expertise"
 EQS_tactical_bonus:0 "Tactical Superiority"
 
+EQS_representative_overhaul:0 "Severyanian Representative Overhaul"
+EQS_crystal_economic_integration:0 "Crystal Economic Integration"
+
 EQS_harmonized_economics_law:0 "Harmonized Economics"
 EQS_volunteer_only_sunset:0 "Volunteer Only"
 EQS_limited_conscription_blueblood:0 "Limited Conscription"
 
 EQS_absolestia_economy:0 "The Celestial Economy"
-EQS_EEA_integration:0 "EEA Integration"
-EQS_economic_resurgence:0 "Equestrian Economic Resurgence"
-EQS_economic_imperialism:0 "Equestrian Economic Integration"
 
 EQS_dark_war_equestria:0 "The Dark War"
 EQS_dark_war_changelings:0 "The Dark War"
-
-EQS_power_of_sun:0 "Power of the Sun"
 
 
 #EVENTS
@@ -1560,6 +1562,8 @@ EQS_twoyears_changelingwar_tt:0 "We have been at §Rwar§! with the §GChangelin
 EQS_additional_foci_tt:0 "§YLoads in additional foci.§!"
 EQS_new_focus_tree_tt:0 "§YLoads in a new focus tree.§!"
 
+EQS_civwar_congrats_tt:0 "§YCongratulations on beating the civil war with barely any foci completed! However, for code reasons you must complete 'The Military Government' before proceeding.§!"
+
 EQS_pleaseannex_tt:0 "\n§CEquestria has decisions to release nations as client states across all of Equus, Northern Zebrica and New Mareland. Please annex these nations rather than puppet them through peace deals to avoid potential issues.§!"
 
 EQS_unlimited_justification_tt:0 "Allows §Yunrestricted justification§! of §Rwargoals§!."
@@ -1611,6 +1615,7 @@ EQS_chiropterra_destruction_tt:0 "§2Chiropterra's past§! will be §Rwashed awa
 EQS_OLE_kingdom_restoration_tt:0 "The §YOlenian Resistance§! will restablish the §CKingdom of Olenia§!."
 
 EQS_friendship_journal_unlocked_tt:0 "The §PFriendship Journal§! §Ydecision tab§! has been unlocked. This allows you to fire §Yvarious events§! relating to the §CMane Six§! in the civil war. These events will also fire in §Ynormal gameplay over time§! should they not be fired via §Ydecision§!."
+EQS_friendship_journal_unlocked_alt_tt:0 "The §PFriendship Journal§! §Ydecision tab§! has been unlocked. This allows you to fire §Yvarious events§! relating to the §CMane Six§! that you missed in the civil war."
 EQS_friendship_journal_relocked_tt:0 "The §PFriendship Journal§! §Ydecision tab§! will be §Rno longer available§!. Please make sure to read any §Yevents§! you desire there before proceeding."
 
 

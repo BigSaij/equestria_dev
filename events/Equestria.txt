@@ -1172,6 +1172,15 @@ country_event = {
 			remove = absent_princess
 			add = absent_princess_2
 		}
+		if = {
+			limit = {
+				has_country_flag = EQS_impossible_civwar_victory
+			}
+			country_event = {
+				id = equestria_civwar.26
+				days = 2
+			}
+		}
 	}
 }
 
@@ -1285,7 +1294,7 @@ country_event = {
 	option = {
 		name = equestria_civwar.18.b
 		add_political_power = -50
-		add_ideas = EQS_wartime_administration
+		add_ideas = EQS_wartime_administration_idea
 	}
 	option = {
 		name = equestria_civwar.18.c
@@ -1472,9 +1481,18 @@ country_event = {
 			}
 			remove_claim_by = NLR
 		}
-		country_event = {
-			id = equestria_civwar.26
-			days = 2
+		if = {
+			limit = {
+				has_completed_focus = EQS_military_government
+			}
+			country_event = {
+				id = equestria_civwar.26
+				days = 2
+			}
+		}
+		else = {
+			custom_effect_tooltip = EQS_civwar_congrats_tt
+			set_country_flag = EQS_impossible_civwar_victory
 		}
 	}
 }
@@ -1509,6 +1527,31 @@ country_event = {
 				has_idea = EQS_harmonic_stagnation_3
 			}
 			remove_ideas = EQS_harmonic_stagnation_3
+		}
+		if = {
+			limit = {
+				has_idea = EQS_outdated_military_2
+			}
+			remove_ideas = EQS_outdated_military_2
+			custom_effect_tooltip = EQS_high_command_reform_tt
+			set_country_flag = EQS_wartime_advisors
+			set_country_flag = EQS_wartime_generals
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = EQS_friendship_journal_visible
+				}
+			}
+			set_portraits = {
+				character = EQS_rainbowdash
+				army = { large = "gfx/leaders/EQS/RainbowDashWartime.tga" }
+			}
+			EQS_rainbowdash = {
+				set_leader_description = EQS_RAINBOW_WARTIME_GENERAL_DESC
+			}
+			set_country_flag = EQS_friendship_journal_visible
+			custom_effect_tooltip = EQS_friendship_journal_unlocked_alt_tt
 		}
 		add_ideas = EQS_equestria_fractured
 		set_stability = 0.6
@@ -2375,6 +2418,30 @@ country_event = {
 			idea = EQS_reorg_administration
 			days = 150
 		}
+		if = {
+			limit = {
+				has_idea = EQS_wartime_laws_ideas
+			}
+			remove_ideas = EQS_wartime_laws_ideas
+		}
+		else_if = {
+			limit = {
+				has_idea = EQS_militarized_laws
+			}
+			remove_ideas = EQS_militarized_laws
+		}
+		if = {
+			limit = {
+				has_idea = EQS_wartime_administration_idea
+			}
+			remove_ideas = EQS_wartime_administration_idea
+		}
+		else_if = {
+			limit = {
+				has_idea = EQS_militarized_administration
+			}
+			remove_ideas = EQS_militarized_administration
+		}
 	}
 }
 
@@ -2408,6 +2475,24 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = EQS_thestral_military_integration
+				add_idea = EQS_full_thestral_integration
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = EQS_thestral_divide_civwar
+			}
+			swap_ideas = {
+				remove_idea = EQS_thestral_divide_civwar
+				add_idea = EQS_full_thestral_integration
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = EQS_thestral_divide
+			}
+			swap_ideas = {
+				remove_idea = EQS_thestral_divide
 				add_idea = EQS_full_thestral_integration
 			}
 		}
