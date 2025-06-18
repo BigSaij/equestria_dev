@@ -44,6 +44,16 @@ focus_tree = {
 	shared_focus = EQS_project_phoenix
 }
 
+focus_tree = {
+	id = EQS_OLE_resistance_tree #just gonna stuff this here for now
+	country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = { x = 1800 y = 1800 }
+	shared_focus = EQS_OLE_proclaim_kingdom
+}
+
 ##################
 ###PRE-WAR TREE###
 ##################
@@ -2299,6 +2309,7 @@ shared_focus = {
 				add_skill_level = 1
 			}
 		}
+		custom_effect_tooltip = EQS_pleaseannex_tt
 	}
 }
 
@@ -2685,6 +2696,9 @@ shared_focus = {
 				is_in_faction_with = EQS
 			}
 		}
+		SCS = {
+			exists = no
+		}
 	}
 	ai_will_do = {
 		factor = 5
@@ -2699,6 +2713,9 @@ shared_focus = {
 				CHN = {
 					exists = yes
 					has_government = fascism
+					NOT = {
+						is_subject_of = EQS
+					}
 				}
 			}
 			declare_war_on = {
@@ -2710,6 +2727,9 @@ shared_focus = {
 			limit = {
 				CCN = {
 					exists = yes
+					NOT = {
+						is_subject_of = EQS
+					}
 				}
 			}
 			CCN = {
@@ -2803,6 +2823,21 @@ shared_focus = {
 				}
 			}
 			if = {
+				limit = {
+					GRF = {
+						has_civil_war = yes
+					}
+				}
+				declare_war_on = {
+					target = 243.owner
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = 271.owner
+					type = annex_everything
+				}
+			}
+			else_if = {
 				limit = {
 					GRF = {
 						is_subject = no
@@ -4717,5 +4752,29 @@ shared_focus = {
 			add_idea = EQS_limited_conscription_blueblood
 		}
 		#custom_effect_tooltip = EQS_army_decay_reduction_tt
+	}
+}
+
+shared_focus = {
+	id = EQS_OLE_proclaim_kingdom
+	icon = GFX_goal_ole_velvet
+	x = 5
+	y = 1
+	cost = 5
+	available = {
+		NOT = {
+			has_war_with = CHN
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_OLE_proclaim_kingdom"
+		add_political_power = 100
+		add_stability = 0.1
+		add_war_support = 0.1
+		custom_effect_tooltip = EQS_OLE_kingdom_restoration_tt
+		drop_cosmetic_tag = yes
 	}
 }

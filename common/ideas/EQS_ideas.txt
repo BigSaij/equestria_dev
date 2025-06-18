@@ -1161,7 +1161,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = EQS_lone_princess_luna
+			picture = EQS_remember_luna
 			modifier = {
 				war_support_factor = 0.15
 				weekly_casualties_war_support = 0.001
@@ -1197,6 +1197,29 @@ ideas = {
 			}
 			on_remove = {
 				country_lock_all_division_template = no
+			}
+		}
+		EQS_SMILE_oversight = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				is_in_faction_with = EQS
+			}
+			removal_cost = -1
+			picture = EQS_smile_empowered
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.2
+				political_power_gain = -0.2
+			}
+			targeted_modifier = {
+				tag = EQS
+				extra_trade_to_target_factor = 0.2
+				trade_cost_for_target_factor = 0.2
 			}
 		}
 		EQS_EEA_integration = {

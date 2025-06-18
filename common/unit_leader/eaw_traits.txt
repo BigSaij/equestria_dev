@@ -439,6 +439,7 @@ leader_traits = {
 			max_commander_army_size = -18
 			custom_modifier_tooltip = EQS_rainbowdash_trait_tt
 		}
+		new_commander_weight = { factor = 0 }
 	}
 	
 	pinkie_pie_bae = {

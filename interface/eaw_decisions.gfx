@@ -149,6 +149,30 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/celestia.dds"
 	}
 	SpriteType = {
+		name = "GFX_decision_honesty"
+		texturefile = "gfx/interface/decisions/honesty.tga"
+	}
+	SpriteType = {
+		name = "GFX_decision_loyalty"
+		texturefile = "gfx/interface/decisions/loyalty.tga"
+	}
+	SpriteType = {
+		name = "GFX_decision_generosity"
+		texturefile = "gfx/interface/decisions/generosity.tga"
+	}
+	SpriteType = {
+		name = "GFX_decision_kindness"
+		texturefile = "gfx/interface/decisions/kindness.tga"
+	}
+	SpriteType = {
+		name = "GFX_decision_laughter"
+		texturefile = "gfx/interface/decisions/laughter.tga"
+	}
+	SpriteType = {
+		name = "GFX_decision_magic"
+		texturefile = "gfx/interface/decisions/magic.tga"
+	}
+	SpriteType = {
 		name = "GFX_decision_hammer_and_horseshoe_decision"
 		texturefile = "gfx/interface/decisions/hammer_and_horseshoe_decision.dds"
 	}

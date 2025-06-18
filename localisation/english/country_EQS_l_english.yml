@@ -347,6 +347,9 @@ EQS_doctrinal_innovation_desc:0 "If there is one thing we cannot allow ourselves
 EQS_reintegrate_military_talent:0 "Reintegrate Military Talent"
 EQS_reintegrate_military_talent_desc:0 "Many ponies outside of Equestria have proven their skill in military leadership, fighting for harmony in remote regions effectively despite the little support we could offer. It is only sensible that we allow them a new place in the Equestrian Army, where they can continue to serve even if their old nations are no more. We need everypony we can get to stop the ever-encroaching darkness."
 
+EQS_OLE_proclaim_kingdom:0 "Restore the Kingdom"
+EQS_OLE_proclaim_kingdom_desc:0 "As it turns out, Velvet would much rather be a queen than a resistance leader! Who knew?"
+
 
 ##NEW DECISIONS##
 
@@ -409,6 +412,14 @@ EQS_southwestern_equestria_railroads_desc:0 "The newest frontier of Equestria, t
 EQS_southeastern_equestria_railroads:0 "The Ayacachtli-Tenochtitlan Connection"
 EQS_southeastern_equestria_railroads_desc:0 "The southeast is a very difficult region to establish infrastructure and rail in, for very obvious reasons. The jungle, the brewing hostility between the Neighua and various thestral tribes, the communist movements in Baltimare, and other such problems have historically made it a very unattractive place to invest funds in. With the thestrals finally properly integrated into the nation, however, their help can be invaluable in finally connecting their homeland to the rest of Equestria."
 
+EQS_friendship_journal_category:0 "The Friendship Journal"
+EQS_rarity_civwar_event:0 "Rarity - The Prisoner"
+EQS_fluttershy_civwar_event:0 "Fluttershy - The Medic"
+EQS_rainbowdash_civwar_event:0 "Rainbow Dash - The Warrior"
+EQS_applejack_civwar_event:0 "Applejack - The Worker"
+EQS_pinkiepie_civwar_event:0 "Pinkie Pie - The Lost"
+EQS_twilight_civwar_event:0 "Twilight Sparkle - The Princess"
+
 EQS_acornage_line:0 "Construct the Acornage Line"
 EQS_acornage_line_desc:0 "While the White river makes a natural defensive line in the west as does the Acorn River in the east, the cities of Cirruspolis and Acornage itself sit vulnerable at the central part of the border with the Changeling Queendom. Expectations of holding the Heer there are considered woefully optimistic at best, but preliminary defenses may be able to stall the changelings long enough for other defensive positions to be erected, and cover an orderly retreat when the time comes."
 EQS_fairflanks_diamondflake_line:0 "Construct the Fairflanks-Diamondflake Line"
@@ -447,12 +458,14 @@ EQS_breakaway_diplomacy_category:0 "Equestrian Foreign Policy"
 EQS_reintegrate_southwest:0 "Reintegrate the Southwest"
 EQS_reintegrate_southeast:0 "Reintegrate the Southeast"
 EQS_integrate_crystal_empire:0 "Integrate the Crystal Empire"
+EQS_ourtown_rebellion:0 "Ignite the Our Town Rebellion"
 EQS_integrate_stalliongrad:0 "Reintegrate Severyana"
 EQS_integrate_stalliongrad_desc:0 "The Revolution has been snuffed out; Stalliongrad is no more. But without real, systemic changes the region will inevitably fall into chaos and bloodshed once more. It is the task of our Princess to ensure that this time it is integrated as a true region of Equestria, one just as valued and just as integral as any other in the home of ponykind."
 EQS_integrate_ourtown:0 "Integrate Our Town"
 EQS_integrate_ourtown_desc:0 "S.M.I.L.E. accomplished impressive results in their operations within Starlight Glimmer's old village, providing Equestria with a loyal revolt against communist rule led by none other than one of their own agents, Sugar Belle. However, their usefulness has come to an end. The heroes who fought in Celestia's name will be rewarded, but the only fate for Our Town now will be annexation into Equestria and reintegration along with the rest of Severyana."
 EQS_balkanize_changelings:0 "Reorganize The Hives"
 EQS_balkanize_changelings_desc:0 "The changelings have been brought low, and we are victorious over Queen Chrysalis and her loyalists. But we cannot maintain an indefinite occupation; it would take far too many resources to keep stable, resources that are needed elsewhere. The Princess will ensure that the hives never again threaten Equestria, and under her benevolent rule they may finally rebuild something new out of the ashes Chrysalis led them into."
+EQS_reclaim_new_mareland:0 "Reclaim New Mareland"
 EQS_obliterate_chiropterra:0 "The Fate of the Traitors"
 EQS_obliterate_chiropterra_desc:0 "§RThe traitors are mine to deal with as I see fit. Now, the Chiropterrans will pay for their crimes against Equestria.§!"
 EQS_release_OLE_decision:0 "Reform the Kingdom of Olenia"
@@ -461,6 +474,7 @@ EQS_release_YAK_decision:0 "Reform the Kingdom of Yakyakistan"
 EQS_release_PLB_decision:0 "Establish a Principality of the Polar Bears"
 EQS_release_PNG_decision:0 "Reform the Kingdom of Pingland"
 EQS_release_GRF_decision:0 "Re-establish Nova Griffonia"
+EQS_release_EQC_decision:0 "Re-establish New Mareland"
 EQS_release_DRG_decision:0 "Liberate the Dragons"
 EQS_release_MER_decision:0 "Reform Les Meridiennes"
 EQS_release_MGY_decision:0 "Re-establish the Kingdom of Maregypt"
@@ -570,6 +584,8 @@ EQS_representative_overhaul:0 "Severyanian Representative Overhaul"
 EQS_vesalipolis_treaty:0 "The Treaty of Vesalipolis"
 EQS_vesalipolis_treaty_desc:0 "Signed by the Queen of every hive, the Treaty of Vesalipolis dictates the terms of the management of the changelings under Equestrian rule. While the traditional power structures of the hives are respected, they are explicitly barred from maintaining an army and their ability to produce military equipment is heavily restricted. Enforced by the Princess of Equestria through pony advisors allowed unrestricted access to the hives, it marks the end of any dream of changeling unity."
 
+EQS_SMILE_oversight:0 "S.M.I.L.E. Oversight"
+
 EQS_sunset_magitech:0 "Magi-Tech Expertise"
 EQS_blueblood_production:0 "Standardized Rifle Production"
 EQS_blueblood_artillery:0 "Artillery Expertise"
@@ -588,8 +604,6 @@ EQS_dark_war_equestria:0 "The Dark War"
 EQS_dark_war_changelings:0 "The Dark War"
 
 EQS_power_of_sun:0 "Power of the Sun"
-
-EQS_equestrian_tank_program:0 "Equestrian Tank Development Program"
 
 
 #EVENTS
@@ -1048,6 +1062,10 @@ equestria_celestia.201.t:0 "Return of the Queen"
 equestria_celestia.201.d:0 "Hjortland was free. The flag of the Olenian Protectorate had been burned, and one of the true Kingdom had been raised in its place above the Riksdag. Bodies swung in the streets, as changelings and collaborationists alike were strung up by the communists. The church and zealots preferred beheadings. Only the harmonists and the Equestrian Army had taken prisoners, those deemed worthy of a trial post-war with the rest being sent to the firing squad.\n\nBut none of that concerned Queen Velvet. Perhaps it would later, but presently her attention was focused on a greater task; the total liberation of Olenia. To that end she had gathered those of importance in the royal palace, namely S.M.I.L.E.'s Agent Foxtrot.\n\n"The Protectorate has completely collapsed," Foxtrot reported in first. "Resistance is at an all-time high and the Heer is having to deal with it personally, but we were unable to locate Hjortsling himself."\n\n"That is because I already dealt with that traitor personally," Velvet answered dismissively. "You may still find shards of him outside if you wish. Thee bugs are the issue now."\n\n"Right," Foxtrot wiped her icy hooves on the rug. "We've organized Olenian volunteers for the new army. Marshal Manntlerhim will lead them to liberate the rest of Olenia and hopefully link up with the Equestrian front."\n\n"Good. I have waited too long to watch the bugs freeze."\n\nFoxtrot shifted. "Queen Velvet, S.M.I.L.E. believes you should stay in Hjortland. If the changelings were to capture you, the resistance could break into infighting again."\n\nVelvet raised an eyebrow. "You think I am the one in danger?" Her laugh was dainty yet cold as ice. "No. They will find that I am the danger. I am not Queen because of blood, like my brother. Olenia fights because I fight, for I have the strength to lead them into battle myself. That is the way of the old kings, and I will win my crown back just as they did."\n\nThe Queen of Olenia looked out the window, where the snow was beginning to fall again. "I will not forget my debt to you, Equestrian. But this is our war as well. Now, we fight together.""
 equestria_celestia.201.a:0 "Zeir hives vill feel ze ice of a true vinter."
 
+equestria_celestia.202.t:0 "A Flash Freeze of Freedom"
+equestria_celestia.202.d:0 "Damn you lost Olenia lol"
+equestria_celestia.202.a:0 "RIP BOZO"
+
 
 
 
@@ -1269,6 +1287,8 @@ POLITICS_PANTS_DESC:0 "Fancy Pants is a renowned member of the old Canterlot eli
 
 STL_sugar_belle_SMILE_desc:0 "§YBorn§!: 19th of July, 979 in Trotterfield\n\n§YBiography§!: Sugar Belle has always desired to be part of something more than just herself. Perhaps that was why she was so easily swayed when she heard of Starlight Glimmer's promises of a new, equal society where everypony could live in 'true' harmony. Traveling to the far north of Severyana, she tried building a new life in what would become Our Town alongside her future new friends; Night Glider, Party Favor and Double Diamond.\n\nHowever, the dream she was promised quickly turned into a living nightmare. With her cutie mark taken away, Sugar Belle's desire to regain her old talent was buried until the Element Bearers arrived one day, a rare visit grudgingly allowed by the Stalliongradian Soviet. Princess Twilight Sparkle and her friends revealed Starlight Glimmer's ideology as a sham, resulting in everypony's cutie marks returning with Starlight being run out of the village, and ultimately the reannexation of 'Our Town' into Stalliongrad. For most residents, it was a small price to pay for the return of what made them special.\n\nSugar Belle saw things differently. When she looked at communism, she saw the same lies Starlight had used. They had been quick to distance themselves from Equalism, but there was a reason the Soviet approved the village in the first place. So she looked elsewhere for answers, and found them right in the hooves of a resurgent S.M.I.L.E. looking for agents. She fed them all the information she could, receiving food supplies in return.\n\nThis all culminated in decisive action once war broke out between Stalliongrad and Equestria. Sugar Belle prepared for an armed insurrection, working with her friends and using weapons delivered by the now love of her life, Big Macintosh. Now head of the 'Severyana Liberation Movement', she stands for Equestria knowing full well it is little more than a distraction for the Red Army. And while few know the truth of her role as an agent, everypony with her stands united in loyalty to friendship and harmony.\n\n§YPortrait By§!: Tofus"
 
+POLITICS_WALLFLOWER_SMILE_DESC:0 "§YSMILE DIRECTIVE NO# 86\nFOR ASSET 'FORGOTTEN GARDEN' ONLY§!\n\nNew Mareland's colonial administration had always been too distant from Equestria to effectively manage. This has allowed an unacceptable amount of fringe ideologies to flourish since its founding. While the new administration has rooted out the worst cases, there is still cause for concern. Your role as colonial administrator will be to assess and infiltrate these communities for observation and detention, should they approach you.\n\nWe have seen fit to commute your sentence for treason and conspiracy to utilize your unique skills as a member of the Shadowbolt Society. Your contact will be Agent Burn Notice. Failure will disappoint the Director and result in dire consequences for your fellow Shadowbolts. Good luck, Governor.\n\n§RTHIS DRAGONFIRE MESSAGE WILL IMMOLATE IN TEN SECONDS§!"
+
 EQS_princess_celestia_and_luna:0 "Princesses Celestia and Luna"
 
 EQS_twilight_sparkle:0 "Twilight Sparkle"
@@ -1349,6 +1369,7 @@ EQS_STARSWIRL_SCIENTIST_DESC:0 "Test"
 
 #DESIGNERS
 
+EQS_equestrian_tank_program:0 "Equestrian Tank Development Program"
 EQS_mustang:0 "Mustang Developments"
 EQS_stallion:0 "Stallion Company"
 EQS_sirius:0 "Sirius Metal Works"
@@ -1358,11 +1379,13 @@ EQS_seaward_shoals:0 "Seaward Shoals Dockyard"
 EQS_mustangia:0 "Mustangia Shipyards"
 EQS_ichthys:0 "Ichthys Dockyards"
 
-EQS_wonderbolt:0 "Wonderbolt Aircraft Research"
+EQS_wonderbolt:0 "Wonderbolt Design Bureau"
+EQS_wonderbolt_desc:0 "An offshoot of the Wonderbolts established by official order of the Crown and staffed with more intellectually-mined pegasi, the primary branch of the design bureau focuses on the development of light fighters and support aircraft. Due to its close nature to the traditional methods and style of the Wonderbolts, it primarily focuses on improving speed and agility the same way standard Wonderbolt training does."
 EQS_cloudsdale_aircraft:0 "Cloudsdale Airtech"
 EQS_northern:0 "Northern Development Bureau"
 EQS_ultramarine:0 "Ultramarine"
-EQS_stratus:0 "Stratus Company"
+EQS_stratus:0 "Stratusburg Design Bureau"
+EQS_stratus_desc:0 "The Stratusburg branch of the Wonderbolt Design Bureau focuses on the improvement of close air support on the battlefield with ground forces. Closely affiliated with the primary bureau due to overlapping design goals, it often provides prototypes with more powerful armaments and stronger frames compared to its Canterlot-based counterpart. Due to its eastern location, it also has the highest proportion of thestrals in its research staff."
 
 EQS_star_energy:0 "Star Energy"
 EQS_macintosh:0 "Macintosh Factory"
@@ -1537,6 +1560,8 @@ EQS_twoyears_changelingwar_tt:0 "We have been at §Rwar§! with the §GChangelin
 EQS_additional_foci_tt:0 "§YLoads in additional foci.§!"
 EQS_new_focus_tree_tt:0 "§YLoads in a new focus tree.§!"
 
+EQS_pleaseannex_tt:0 "\n§CEquestria has decisions to release nations as client states across all of Equus, Northern Zebrica and New Mareland. Please annex these nations rather than puppet them through peace deals to avoid potential issues.§!"
+
 EQS_unlimited_justification_tt:0 "Allows §Yunrestricted justification§! of §Rwargoals§!."
 
 EQS_night_guard_divisions_tt:0 "Five divisions of the §YLunar Guard§! will form."
@@ -1582,6 +1607,11 @@ EQS_STG_uprising_warning_tt:0 "§RStarlight's Village will revolt against the Re
 
 EQS_fizzlepop_nameswitch_tt:0 "§YFizzlepop Berrytwist§! will §Rpermanently retire§!. §YTempest Shadow§! will take her place."
 EQS_chiropterra_destruction_tt:0 "§2Chiropterra's past§! will be §Rwashed away§!, and a §Cmilitary government§! led by §YTempest Shadow§! will be established."
+
+EQS_OLE_kingdom_restoration_tt:0 "The §YOlenian Resistance§! will restablish the §CKingdom of Olenia§!."
+
+EQS_friendship_journal_unlocked_tt:0 "The §PFriendship Journal§! §Ydecision tab§! has been unlocked. This allows you to fire §Yvarious events§! relating to the §CMane Six§! in the civil war. These events will also fire in §Ynormal gameplay over time§! should they not be fired via §Ydecision§!."
+EQS_friendship_journal_relocked_tt:0 "The §PFriendship Journal§! §Ydecision tab§! will be §Rno longer available§!. Please make sure to read any §Yevents§! you desire there before proceeding."
 
 
 EQS_PHOENIX_UNRELEASED_tt:0 "§RContent for this option is undeveloped. It is highly suggested that you do not take it.§!"
@@ -1749,10 +1779,14 @@ EQS_fighter_equipment_3_short:0 "Spitfire"
 EQS_CAS_equipment_1:0 "Stratusburg Wildfire"
 EQS_CAS_equipment_1_desc:0 "Given the long history of pegasi working in tandem with ground forces, designs for a battlefield support aircraft were quickly drawn up and assigned to the Stratusburg branch of the Wonderbolt Design Bureau. The Wildfire did prove effective in the few instances where it was deployed in the Great War, but was not produced in large numbers due to early changeling dominance in the skies rendering close air support infeasible."
 EQS_CAS_equipment_1_short:0 "Wildfire"
-#EQS_CAS_equipment_2:0 "Hawker Typhoon"
-#EQS_CAS_equipment_2_short:0 "Typhoon"
-#EQS_CAS_equipment_3:0 "Hawker Tempest"
-#EQS_CAS_equipment_3_short:0 "Tempest"
+EQS_CAS_equipment_2:0 "Stratusburg Angel"
+EQS_CAS_equipment_2_desc:0 "As the idea of active air support in the Great War slowly became more feasible for Equestria, Stratusburg reopened their forays into a replacement for the Wildfire. Rapid counteroffensives meant it was deployed in active combat while still in prototyping, though its new anti-tank cannons proved incredibly effective. It was given the nickname 'Angel' by soldiers from how many engagements it managed to win in favor of Equestria, a title that stuck onto its production model."
+EQS_CAS_equipment_2_short:0 "Angel"
+EQS_CAS_equipment_3:0 "Stratusburg Blaze"
+EQS_CAS_equipment_3_desc:0 "The prospect of pushing into the Changeling Queendom itself proved a difficult challenge for support aircraft, as the forest terrain and hives meant static anti-air was much more effective. The Blaze was designed to allow for much faster speeds, featuring a streamlined design while keeping anti-tank guns and light bombs. New experimental rocket weaponry also proved highly effective in shattering the last attempts at changeling resistance against the Equestrian military."
+EQS_CAS_equipment_3_short:0 "Blaze"
+
+# Firefly, Fairweather, Starburst, Hunter, Midnight, Winds, Thunderlane, Surprise, Misty, Lightning, Fleetfoot, Rainbow
 
 #EQS_small_plane_cas_airframe_0:0 "Hawker Hind"
 #EQS_small_plane_cas_airframe_0_short:0 "Hind"

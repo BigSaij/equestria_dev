@@ -1310,7 +1310,8 @@ EQS_construction_projects_category = {
 		}
 		fire_only_once = yes
 		visible = {
-			has_completed_focus = EQS_trans_equestria_railway
+			always = no
+			#has_completed_focus = EQS_trans_equestria_railway
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -1371,7 +1372,8 @@ EQS_construction_projects_category = {
 		}
 		fire_only_once = yes
 		visible = {
-			has_completed_focus = EQS_trans_equestria_railway
+			always = no
+			#has_completed_focus = EQS_trans_equestria_railway
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -2154,6 +2156,153 @@ EQS_construction_projects_category = {
 	}
 }
 
+EQS_friendship_journal_category = {
+	EQS_rarity_civwar_event = {
+		icon = generosity
+		available = {
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = no
+		visible = {
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_rarity_civwar_event"
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = EQS_FJ_rarity_civwar_read
+					}
+				}
+				set_country_flag = EQS_FJ_rarity_civwar_read
+			}
+			country_event = equestria_civwar_flavor.2
+		}
+	}
+	EQS_fluttershy_civwar_event = {
+		icon = kindness
+		available = {
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = no
+		visible = {
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_fluttershy_civwar_event"
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = EQS_FJ_fluttershy_civwar_read
+					}
+				}
+				set_country_flag = EQS_FJ_fluttershy_civwar_read
+			}
+			country_event = equestria_civwar_flavor.3
+		}
+	}
+	EQS_rainbowdash_civwar_event = {
+		icon = loyalty
+		available = {
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = no
+		visible = {
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_rainbowdash_civwar_event"
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = EQS_FJ_rainbowdash_civwar_read
+					}
+				}
+				set_country_flag = EQS_FJ_rainbowdash_civwar_read
+			}
+			country_event = equestria_civwar_flavor.4
+		}
+	}
+	EQS_applejack_civwar_event = {
+		icon = honesty
+		available = {
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = no
+		visible = {
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_applejack_civwar_event"
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = EQS_FJ_applejack_civwar_read
+					}
+				}
+				set_country_flag = EQS_FJ_applejack_civwar_read
+			}
+			country_event = equestria_civwar_flavor.5
+		}
+	}
+	EQS_pinkiepie_civwar_event = {
+		icon = laughter
+		available = {
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = no
+		visible = {
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_pinkiepie_civwar_event"
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = EQS_FJ_pinkiepie_civwar_read
+					}
+				}
+				set_country_flag = EQS_FJ_pinkiepie_civwar_read
+			}
+			country_event = equestria_civwar_flavor.6
+		}
+	}
+	EQS_twilight_civwar_event = {
+		icon = magic
+		available = {
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = no
+		visible = {
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_twilight_civwar_event"
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = EQS_FJ_twilight_civwar_read
+					}
+				}
+				set_country_flag = EQS_FJ_twilight_civwar_read
+			}
+			country_event = equestria_civwar_flavor.7
+		}
+	}
+}
+
 EQS_breakaway_diplomacy_category = {
 	EQS_integrate_CES_commanders = {
 		icon = celestia
@@ -2925,6 +3074,75 @@ EQS_breakaway_diplomacy_category = {
 			set_autonomy = {
 				target = GRF
 				autonomy_state = autonomy_dominion
+			}
+		}
+	}
+	EQS_release_EQC_decision = {
+		icon = celestia
+		available = {
+			EQC = {
+				exists = no
+			}
+			OR = {
+				owns_state = 356
+				owns_state = 362
+			}
+			has_war = no
+		}
+		visible = {
+			EQC = {
+				exists = no
+			}
+			OR = {
+				owns_state = 356
+				owns_state = 362
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_EQC_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 169
+						region = 153
+						state = 360
+						state = 361
+						state = 675
+						state = 676
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				EQC = {
+					transfer_state = PREV
+				}
+			}
+			set_autonomy = {
+				target = EQC
+				autonomy_state = autonomy_dominion
+			}
+			EQC = {
+				add_country_leader_role = {
+					character = EQC_wallflower_blush
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = harmonic_constitutionalism
+					}
+					promote_leader = yes
+				}
+				set_country_leader_description = {
+					ideology = democratic
+					desc = POLITICS_WALLFLOWER_SMILE_DESC
+				}
 			}
 		}
 	}

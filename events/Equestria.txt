@@ -1371,7 +1371,7 @@ country_event = {
 			}
 			country_event = {
 				id = equestria_civwar_flavor.8
-				days = 50
+				days = 30
 			}
 		}
 	}
@@ -2028,6 +2028,8 @@ country_event = {
 		EQS_rainbowdash = {
 			set_leader_description = EQS_RAINBOW_WARTIME_GENERAL_DESC
 		}
+		set_country_flag = EQS_friendship_journal_visible
+		custom_effect_tooltip = EQS_friendship_journal_unlocked_tt
 		hidden_effect = {
 			country_event = {
 				id = equestria_civwar_flavor.8
@@ -2044,13 +2046,21 @@ country_event = {
 	desc = equestria_civwar_flavor.2.d
 	picture = GFX_event_foggy_forest
 	is_triggered_only = yes
-	fire_only_once = yes
+	fire_only_once = no
 	option = {
 		name = equestria_civwar_flavor.2.a
-		hidden_effect = {
-			country_event = {
-				id = equestria_civwar_flavor.8
-				days = 50
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = EQS_FJ_rarity_civwar_read
+				}
+			}
+			set_country_flag = EQS_FJ_rarity_civwar_read
+			hidden_effect = {
+				country_event = {
+					id = equestria_civwar_flavor.8
+					days = 50
+				}
 			}
 		}
 	}
@@ -2063,13 +2073,21 @@ country_event = {
 	desc = equestria_civwar_flavor.3.d
 	picture = GFX_event_foggy_forest
 	is_triggered_only = yes
-	fire_only_once = yes
+	fire_only_once = no
 	option = {
 		name = equestria_civwar_flavor.3.a
-		hidden_effect = {
-			country_event = {
-				id = equestria_civwar_flavor.8
-				days = 50
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = EQS_FJ_fluttershy_civwar_read
+				}
+			}
+			set_country_flag = EQS_FJ_fluttershy_civwar_read
+			hidden_effect = {
+				country_event = {
+					id = equestria_civwar_flavor.8
+					days = 50
+				}
 			}
 		}
 	}
@@ -2082,13 +2100,21 @@ country_event = {
 	desc = equestria_civwar_flavor.4.d
 	picture = GFX_event_foggy_forest
 	is_triggered_only = yes
-	fire_only_once = yes
+	fire_only_once = no
 	option = {
 		name = equestria_civwar_flavor.4.a
-		hidden_effect = {
-			country_event = {
-				id = equestria_civwar_flavor.8
-				days = 50
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = EQS_FJ_rainbowdash_civwar_read
+				}
+			}
+			set_country_flag = EQS_FJ_rainbowdash_civwar_read
+			hidden_effect = {
+				country_event = {
+					id = equestria_civwar_flavor.8
+					days = 50
+				}
 			}
 		}
 	}
@@ -2101,13 +2127,21 @@ country_event = {
 	desc = equestria_civwar_flavor.5.d
 	picture = GFX_event_foggy_forest
 	is_triggered_only = yes
-	fire_only_once = yes
+	fire_only_once = no
 	option = {
 		name = equestria_civwar_flavor.5.a
-		hidden_effect = {
-			country_event = {
-				id = equestria_civwar_flavor.8
-				days = 50
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = EQS_FJ_applejack_civwar_read
+				}
+			}
+			set_country_flag = EQS_FJ_applejack_civwar_read
+			hidden_effect = {
+				country_event = {
+					id = equestria_civwar_flavor.8
+					days = 50
+				}
 			}
 		}
 	}
@@ -2120,13 +2154,21 @@ country_event = {
 	desc = equestria_civwar_flavor.6.d
 	picture = GFX_event_foggy_forest
 	is_triggered_only = yes
-	fire_only_once = yes
+	fire_only_once = no
 	option = {
 		name = equestria_civwar_flavor.6.a
-		hidden_effect = {
-			country_event = {
-				id = equestria_civwar_flavor.8
-				days = 50
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = EQS_FJ_pinkiepie_civwar_read
+				}
+			}
+			set_country_flag = EQS_FJ_pinkiepie_civwar_read
+			hidden_effect = {
+				country_event = {
+					id = equestria_civwar_flavor.8
+					days = 50
+				}
 			}
 		}
 	}
@@ -2139,9 +2181,17 @@ country_event = {
 	desc = equestria_civwar_flavor.7.d
 	picture = GFX_event_foggy_forest
 	is_triggered_only = yes
-	fire_only_once = yes
+	fire_only_once = no
 	option = {
 		name = equestria_civwar_flavor.7.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = EQS_FJ_twilight_civwar_read
+				}
+			}
+			set_country_flag = EQS_FJ_twilight_civwar_read
+		}
 	}
 }
 
@@ -2176,15 +2226,14 @@ country_event = {
 						NLR = {
 							controls_state = 75
 						}
+						NOT = {
+							has_country_flag = EQS_FJ_rarity_civwar_read
+						}
 					}
 					country_event = equestria_civwar_flavor.2
 				}
 				else = {
-					add_to_variable = {
-						var = EQS_civwar_manesix_counter
-						value = 1
-					}
-					country_event = equestria_civwar_flavor.3
+					country_event = equestria_civwar_flavor.10
 				}
 			}
 			else_if = {
@@ -2193,7 +2242,17 @@ country_event = {
 						EQS_civwar_manesix_counter = 2
 					}
 				}
-				country_event = equestria_civwar_flavor.3
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = EQS_FJ_fluttershy_civwar_read
+						}
+					}
+					country_event = equestria_civwar_flavor.3
+				}
+				else = {
+					country_event = equestria_civwar_flavor.10
+				}
 			}
 			else_if = {
 				limit = {
@@ -2201,7 +2260,17 @@ country_event = {
 						EQS_civwar_manesix_counter = 3
 					}
 				}
-				country_event = equestria_civwar_flavor.4
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = EQS_FJ_rainbowdash_civwar_read
+						}
+					}
+					country_event = equestria_civwar_flavor.4
+				}
+				else = {
+					country_event = equestria_civwar_flavor.10
+				}
 			}
 			else_if = {
 				limit = {
@@ -2212,15 +2281,14 @@ country_event = {
 				if = {
 					limit = {
 						controls_state = 2
+						NOT = {
+							has_country_flag = EQS_FJ_applejack_civwar_read
+						}
 					}
 					country_event = equestria_civwar_flavor.5
 				}
 				else = {
-					add_to_variable = {
-						var = EQS_civwar_manesix_counter
-						value = 1
-					}
-					country_event = equestria_civwar_flavor.6
+					country_event = equestria_civwar_flavor.10
 				}
 			}
 			else_if = {
@@ -2229,12 +2297,25 @@ country_event = {
 						EQS_civwar_manesix_counter = 5
 					}
 				}
-				country_event = equestria_civwar_flavor.6
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = EQS_FJ_pinkiepie_civwar_read
+						}
+					}
+					country_event = equestria_civwar_flavor.6
+					else = {
+						country_event = equestria_civwar_flavor.10
+					}
+				}
 			}
 			else_if = {
 				limit = {
 					check_variable = {
 						EQS_civwar_manesix_counter = 6
+					}
+					NOT = {
+						has_country_flag = EQS_FJ_twilight_civwar_read
 					}
 				}
 				country_event = equestria_civwar_flavor.7
@@ -2257,6 +2338,21 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_civwar_flavor.9.a
+		clr_country_flag = EQS_friendship_journal_visible
+		custom_effect_tooltip = EQS_friendship_journal_relocked_tt
+	}
+}
+
+country_event = {
+	id = equestria_civwar_flavor.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_civwar_flavor.10" }
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		hidden_effect = {
+			country_event = equestria_civwar_flavor.8
+		}
 	}
 }
 
@@ -3292,6 +3388,12 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_celestia.29.a
+		hidden_effect = {
+			country_event = {
+				id = equestria_celestia.32
+				days = 16
+			}
+		}
 	}
 }
 
@@ -3331,7 +3433,13 @@ country_event = {
 	option = {
 		name = equestria_celestia.31.a
 		CCN = {
-			#add SMILE idea
+			add_ideas = EQS_SMILE_oversight
+		}
+		hidden_effect = {
+			country_event = {
+				id = equestria_celestia.32
+				days = 16
+			}
 		}
 	}
 }
@@ -3579,6 +3687,14 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_celestia.38.a
+		every_possible_country = {
+			limit = {
+				is_in_faction_with = HIP
+			}
+			EQS = {
+				add_to_faction = PREV
+			}
+		}
 		EQS = {
 			add_to_faction = HIP
 		}
@@ -3696,6 +3812,14 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_celestia.43.a
+		BAT = {
+			effect_tooltip = {
+				kill_country_leader = yes
+			}
+			hidden_effect = {
+				retire_country_leader = yes
+			}
+		}
 		set_country_flag = EQS_celestia_revenge_achieved
 	}
 }
@@ -3768,6 +3892,8 @@ country_event = {
 				set_country_flag = BAT_national_catastrophe
 				set_country_flag = BAT_harmonist_puppet
 				set_country_flag = BAT_harmonist_victory
+				add_ideas = disarmed_nation
+				add_ideas = free_trade
 			}
 			remove_opinion_modifier = { target = BAT modifier = mortal_enemies }
 			BAT = { remove_opinion_modifier = { target = ROOT modifier = mortal_enemies } }
@@ -4167,7 +4293,22 @@ country_event = {
 			hidden_effect = {
 				load_oob = "EQS_OLE_hjortland_operation"
 			}
+			load_focus_tree = EQS_OLE_resistance_tree
 		}
+	}
+}
+
+country_event = {
+	id = equestria_celestia.202
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.202" }
+	title = equestria_celestia.202.t
+	desc = equestria_celestia.202.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.202.a
+		add_political_power = -50
 	}
 }
 

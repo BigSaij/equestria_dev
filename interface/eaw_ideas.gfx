@@ -1200,6 +1200,10 @@ spriteTypes = {
 		name = "GFX_idea_EQS_lone_princess_luna"
 		texturefile = "gfx/interface/ideas/EQS/EQS_lone_princess_luna.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_EQS_remember_luna"
+		texturefile = "gfx/interface/ideas/EQS/EQS_remember_luna.tga"
+	}
 	spriteType = {
 		name = "GFX_idea_EQS_ponies_act"
 		texturefile = "gfx/interface/ideas/EQS/EQS_ponies_act.dds"
