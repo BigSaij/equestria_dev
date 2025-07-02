@@ -3695,6 +3695,7 @@ shared_focus = {
 				}
 				add_ideas = EQS_economic_imperialism
 				add_ideas = free_trade
+				set_country_flag = trade_laws_blocked
 			}
 		}
 		custom_effect_tooltip = EQS_economic_imperialism_unlocked_tt
@@ -4788,5 +4789,16 @@ shared_focus = {
 		add_war_support = 0.1
 		custom_effect_tooltip = EQS_OLE_kingdom_restoration_tt
 		drop_cosmetic_tag = yes
+		if = {
+			limit = {
+				EQS = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				NOT = {
+					has_idea = EQS_economic_imperialism
+				}
+			}
+			EQS_add_economic_imperialism = yes
+		}
 	}
 }

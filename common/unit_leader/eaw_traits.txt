@@ -550,6 +550,8 @@ leader_traits = {
 				defence = 0.1
 			}
 		}
+		
+		new_commander_weight = { factor = 0 }
 	}
 	
 	goddess_of_the_night = {

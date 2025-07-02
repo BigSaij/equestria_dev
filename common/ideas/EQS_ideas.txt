@@ -1252,7 +1252,7 @@ ideas = {
 			available = {
 			}
 			removal_cost = -1
-			picture = generic_bank_idea_icon
+			picture = Generic_bank_idea_icon
 			modifier = {
 				min_export = -0.1
 				trade_opinion_factor = 0.5
@@ -1271,7 +1271,7 @@ ideas = {
 				is_subject_of = EQS
 			}
 			removal_cost = -1
-			picture = idea_capital_outflow
+			picture = capital_outflow
 			modifier = {
 				autonomy_gain = -0.5
 				extra_trade_to_overlord_factor = -0.5

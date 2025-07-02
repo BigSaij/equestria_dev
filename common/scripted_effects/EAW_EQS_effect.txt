@@ -363,6 +363,12 @@ EQS_NLR_civil_war = {
 	set_variable = { EQS_celestia_DB_meter = 3 }
 }
 
+EQS_add_economic_imperialism = {
+	add_ideas = EQS_economic_imperialism
+	add_ideas = free_trade
+	set_country_flag = trade_laws_blocked
+}
+
 EQS_remove_civil_war_ideas = {
 	remove_ideas = eqs_civil_war
 	hidden_effect = {

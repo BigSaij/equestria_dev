@@ -2826,6 +2826,14 @@ EQS_breakaway_diplomacy_category = {
 			}
 			if = {
 				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				OLE = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
+			if = {
+				limit = {
 					has_country_flag = EQS_velvet_arrived
 				}
 				OLE_queen_velvet = {
@@ -2906,6 +2914,14 @@ EQS_breakaway_diplomacy_category = {
 				target = YAK
 				autonomy_state = autonomy_dominion
 			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				YAK = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
 		}
 	}
 	EQS_release_PLB_decision = {
@@ -2953,6 +2969,14 @@ EQS_breakaway_diplomacy_category = {
 			set_autonomy = {
 				target = PLB
 				autonomy_state = autonomy_dominion
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				PLB = {
+					EQS_add_economic_imperialism = yes
+				}
 			}
 		}
 	}
@@ -3005,6 +3029,14 @@ EQS_breakaway_diplomacy_category = {
 			set_autonomy = {
 				target = PNG
 				autonomy_state = autonomy_dominion
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				PNG = {
+					EQS_add_economic_imperialism = yes
+				}
 			}
 		}
 	}
@@ -3075,6 +3107,14 @@ EQS_breakaway_diplomacy_category = {
 				target = GRF
 				autonomy_state = autonomy_dominion
 			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				GRF = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
 		}
 	}
 	EQS_release_EQC_decision = {
@@ -3129,6 +3169,14 @@ EQS_breakaway_diplomacy_category = {
 			set_autonomy = {
 				target = EQC
 				autonomy_state = autonomy_dominion
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				EQC = {
+					EQS_add_economic_imperialism = yes
+				}
 			}
 			EQC = {
 				add_country_leader_role = {
@@ -3189,6 +3237,14 @@ EQS_breakaway_diplomacy_category = {
 				target = DRG
 				autonomy_state = autonomy_dominion
 			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				DRG = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
 		}
 	}
 	EQS_release_MER_decision = {
@@ -3234,6 +3290,14 @@ EQS_breakaway_diplomacy_category = {
 			set_autonomy = {
 				target = MER
 				autonomy_state = autonomy_dominion
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				MER = {
+					EQS_add_economic_imperialism = yes
+				}
 			}
 			if = {
 				limit = {
@@ -3324,6 +3388,14 @@ EQS_breakaway_diplomacy_category = {
 				target = MGY
 				autonomy_state = autonomy_dominion
 			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				MGY = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
 			MGY = {
 				add_country_leader_role = {
 					character = MGY_somnambula
@@ -3387,6 +3459,14 @@ EQS_breakaway_diplomacy_category = {
 			}
 			if = {
 				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				HIP = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
+			if = {
+				limit = {
 					NOT = {
 						HIP = {
 							has_country_leader = {
@@ -3445,6 +3525,14 @@ EQS_breakaway_diplomacy_category = {
 				target = ZUM
 				autonomy_state = autonomy_dominion
 			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				ZUM = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
 		}
 	}
 	EQS_release_WAR_decision = {
@@ -3491,6 +3579,14 @@ EQS_breakaway_diplomacy_category = {
 			set_autonomy = {
 				target = WAR
 				autonomy_state = autonomy_dominion
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				WAR = {
+					EQS_add_economic_imperialism = yes
+				}
 			}
 		}
 	}
@@ -3550,6 +3646,14 @@ EQS_breakaway_diplomacy_category = {
 				target = ZAR
 				autonomy_state = autonomy_dominion
 			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				ZAR = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
 		}
 	}
 	EQS_release_CTH_decision = {
@@ -3604,6 +3708,14 @@ EQS_breakaway_diplomacy_category = {
 			set_autonomy = {
 				target = CTH
 				autonomy_state = autonomy_dominion
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				CTH = {
+					EQS_add_economic_imperialism = yes
+				}
 			}
 		}
 	}

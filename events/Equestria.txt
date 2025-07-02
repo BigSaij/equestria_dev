@@ -2676,6 +2676,14 @@ country_event = {
 				autonomy_state = autonomy_dominion
 			}
 		}
+		if = {
+			limit = {
+				EQS = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+			}
+			EQS_add_economic_imperialism = yes
+		}
 	}
 }
 
@@ -2717,6 +2725,14 @@ country_event = {
 		set_autonomy = {
 			target = LSP
 			autonomy_state = autonomy_dominion
+		}
+		if = {
+			limit = {
+				has_completed_focus = EQS_equestrian_economic_integration
+			}
+			LSP = {
+				EQS_add_economic_imperialism = yes
+			}
 		}
 		#TODO, add Celestia decay buffer
 	}
@@ -2768,6 +2784,14 @@ country_event = {
 			target = NMS
 			autonomy_state = autonomy_dominion
 		}
+		if = {
+			limit = {
+				has_completed_focus = EQS_equestrian_economic_integration
+			}
+			NMS = {
+				EQS_add_economic_imperialism = yes
+			}
+		}
 	}
 	option = {
 		name = equestria_celestia.16.b
@@ -2817,6 +2841,14 @@ country_event = {
 			target = JUN
 			autonomy_state = autonomy_dominion
 		}
+		if = {
+			limit = {
+				has_completed_focus = EQS_equestrian_economic_integration
+			}
+			JUN = {
+				EQS_add_economic_imperialism = yes
+			}
+		}
 	}
 	option = {
 		name = equestria_celestia.18.b
@@ -2843,6 +2875,14 @@ country_event = {
 				autonomy_state = autonomy_dominion
 			}
 			country_event = equestria_celestia.20
+		}
+		if = {
+			limit = {
+				EQS = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+			}
+			EQS_add_economic_imperialism = yes
 		}
 	}
 }
@@ -3067,6 +3107,14 @@ country_event = {
 				target = CHN
 				autonomy_state = autonomy_dominion
 			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				CHN = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
 			CHN = {
 				CHN_thorax = {
 					promote_character = yes
@@ -3163,6 +3211,14 @@ country_event = {
 					remove_core_of = PREV
 				}
 				add_ideas = EQS_vesalipolis_treaty
+				if = {
+					limit = {
+						EQS = {
+							has_completed_focus = EQS_equestrian_economic_integration
+						}
+					}
+					EQS_add_economic_imperialism = yes
+				}
 				country_lock_all_division_template = yes
 			}
 			create_dynamic_country = {
@@ -3236,6 +3292,14 @@ country_event = {
 					remove_core_of = PREV
 				}
 				add_ideas = EQS_vesalipolis_treaty
+				if = {
+					limit = {
+						EQS = {
+							has_completed_focus = EQS_equestrian_economic_integration
+						}
+					}
+					EQS_add_economic_imperialism = yes
+				}
 				country_lock_all_division_template = yes
 			}
 			create_dynamic_country = {
@@ -3307,6 +3371,14 @@ country_event = {
 					remove_core_of = PREV
 				}
 				add_ideas = EQS_vesalipolis_treaty
+				if = {
+					limit = {
+						EQS = {
+							has_completed_focus = EQS_equestrian_economic_integration
+						}
+					}
+					EQS_add_economic_imperialism = yes
+				}
 				country_lock_all_division_template = yes
 			}
 			create_dynamic_country = {
@@ -3379,6 +3451,14 @@ country_event = {
 					remove_core_of = PREV
 				}
 				add_ideas = EQS_vesalipolis_treaty
+				if = {
+					limit = {
+						EQS = {
+							has_completed_focus = EQS_equestrian_economic_integration
+						}
+					}
+					EQS_add_economic_imperialism = yes
+				}
 				country_lock_all_division_template = yes
 			}
 			create_dynamic_country = {
@@ -3451,6 +3531,14 @@ country_event = {
 					remove_core_of = PREV
 				}
 				add_ideas = EQS_vesalipolis_treaty
+				if = {
+					limit = {
+						EQS = {
+							has_completed_focus = EQS_equestrian_economic_integration
+						}
+					}
+					EQS_add_economic_imperialism = yes
+				}
 				country_lock_all_division_template = yes
 			}
 			country_event = {
@@ -3601,6 +3689,14 @@ country_event = {
 				autonomy_state = autonomy_dominion
 			}
 		}
+		if = {
+			limit = {
+				EQS = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+			}
+			EQS_add_economic_imperialism = yes
+		}
 		ai_chance = {
 			base = 100
 		}
@@ -3678,6 +3774,14 @@ country_event = {
 				autonomy_state = autonomy_dominion
 			}
 		}
+		if = {
+			limit = {
+				EQS = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+			}
+			EQS_add_economic_imperialism = yes
+		}
 		ai_chance = {
 			base = 100
 		}
@@ -3711,6 +3815,14 @@ country_event = {
 				target = MER
 				autonomy_state = autonomy_dominion
 			}
+		}
+		if = {
+			limit = {
+				EQS = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+			}
+			EQS_add_economic_imperialism = yes
 		}
 		if = {
 			limit = {
@@ -3883,6 +3995,14 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_celestia.42.a
+		BAT = {
+			effect_tooltip = {
+				kill_country_leader = yes
+			}
+			hidden_effect = {
+				retire_country_leader = yes
+			}
+		}
 		country_event = equestria_celestia.43
 	}
 }
@@ -3897,13 +4017,8 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_celestia.43.a
-		BAT = {
-			effect_tooltip = {
-				kill_country_leader = yes
-			}
-			hidden_effect = {
-				retire_country_leader = yes
-			}
+		EQS_fizzlepop = {
+			set_character_name = EQS_tempest_shadow
 		}
 		set_country_flag = EQS_celestia_revenge_achieved
 	}
@@ -4024,6 +4139,14 @@ country_event = {
 			set_province_name = {
 				id = 18477
 				name = EQS_vp_bridlewood
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				BAT = {
+					EQS_add_economic_imperialism = yes
+				}
 			}
 		}
 		custom_effect_tooltip = EQS_fizzlepop_nameswitch_tt
@@ -4363,6 +4486,9 @@ country_event = {
 		delete_unit_template_and_units = {
 			division_template = "Olenian Exiles"
 		}
+		delete_unit_template_and_units = {
+			division_template = "Olenian Resistance"
+		}
 		OLE = {
 			OLE_queen_velvet = {
 				promote_character = yes
@@ -4380,6 +4506,7 @@ country_event = {
 			}
 			load_focus_tree = EQS_OLE_resistance_tree
 		}
+		clr_country_flag = EQS_hjortland_invasion_started
 	}
 }
 
@@ -4394,6 +4521,11 @@ country_event = {
 	option = {
 		name = equestria_celestia.202.a
 		add_political_power = -50
+		delete_unit_template_and_units = {
+			division_template = "Olenian Resistance"
+		}
+		add_manpower = 25000
+		clr_country_flag = EQS_hjortland_invasion_started
 	}
 }
 
