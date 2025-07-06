@@ -1096,6 +1096,22 @@ characters = {
 			}
 		}
 	}
+	EQS_grubber = {
+		name = EQS_grubber
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Grubber.tga"
+			}
+		}
+	}
+	EQS_amira = {
+		name = EQS_amira
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EQS/Amira.tga"
+			}
+		}
+	}
 	#OC ZONE
 	EQS_sentinel = {
 		name = EQS_sentinel

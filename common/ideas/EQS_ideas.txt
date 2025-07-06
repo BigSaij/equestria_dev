@@ -1130,6 +1130,25 @@ ideas = {
 				decryption_factor = 0.2
 			}
 		}
+		EQS_smile_empowered_army_LAR = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+			}
+			removal_cost = -1
+			picture = EQS_smile_empowered
+			modifier = {
+				party_popularity_stability_factor = 0.1
+				resistance_target_on_our_occupied_states = 0.1
+				resistance_growth_on_our_occupied_states = 0.2
+				decryption_power_factor = 0.2
+				intel_from_combat_factor = 0.25
+			}
+		}
 		EQS_lunarist_reintegration = {
 			allowed = {
 				always = no
@@ -1239,6 +1258,12 @@ ideas = {
 				consumer_goods_factor = 0.1
 			}
 			on_remove = {
+				if = {
+					limit = {
+						has_idea = EQS_education_reform_1
+					}
+					remove_ideas = EQS_education_reform_1
+				}
 				add_ideas = EQS_education_reform_4
 			}
 		}

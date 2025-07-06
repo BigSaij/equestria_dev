@@ -1440,7 +1440,7 @@ EQS_construction_projects_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = -0.15
+			civilian_factory_use = 4
 		}
 		days_remove = 130
 		remove_effect = {
@@ -1478,7 +1478,7 @@ EQS_construction_projects_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = -0.15
+			civilian_factory_use = 4
 		}
 		days_remove = 130
 		remove_effect = {
@@ -1510,6 +1510,7 @@ EQS_construction_projects_category = {
 		fire_only_once = yes
 		visible = {
 			has_completed_focus = EQS_civilian_industry_projects
+			always = no
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -1517,7 +1518,7 @@ EQS_construction_projects_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = -0.15
+			civilian_factory_use = 4
 		}
 		days_remove = 130
 		remove_effect = {
@@ -1555,7 +1556,7 @@ EQS_construction_projects_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = -0.15
+			civilian_factory_use = 4
 		}
 		days_remove = 150
 		remove_effect = {
@@ -1593,7 +1594,7 @@ EQS_construction_projects_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = -0.15
+			civilian_factory_use = 4
 		}
 		days_remove = 150
 		remove_effect = {
@@ -2436,6 +2437,7 @@ EQS_breakaway_diplomacy_category = {
 				exists = no
 			}
 			owns_state = 344
+			has_completed_focus = EQS_return_to_crystal_empire
 		}
 		visible = {
 			CRY = {
@@ -2557,6 +2559,7 @@ EQS_breakaway_diplomacy_category = {
 			}
 			owns_state = 153
 			owns_state = 166
+			has_completed_focus = EQS_a_revolution_rectified
 		}
 		visible = {
 			OR = {
@@ -2668,6 +2671,7 @@ EQS_breakaway_diplomacy_category = {
 			owns_state = 309
 			owns_state = 262
 			owns_state = 316
+			has_completed_focus = EQS_safety_of_equestria
 		}
 		visible = {
 			CHN = {
@@ -2685,6 +2689,16 @@ EQS_breakaway_diplomacy_category = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_balkanize_changelings"
+			if = {
+				limit = {
+					EQS_princess_celestia = {
+						skill < 9
+					}
+				}
+				EQS_princess_celestia = {
+					add_skill_level = 1
+				}
+			}
 			country_event = equestria_celestia.28
 		}
 	}
@@ -2767,6 +2781,7 @@ EQS_breakaway_diplomacy_category = {
 				exists = no
 			}
 			owns_state = 712
+			has_completed_focus = EQS_with_fire_and_vengeance
 		}
 		visible = {
 			BAT = {
@@ -2781,6 +2796,16 @@ EQS_breakaway_diplomacy_category = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_obliterate_chiropterra"
+			if = {
+				limit = {
+					EQS_princess_celestia = {
+						skill < 9
+					}
+				}
+				EQS_princess_celestia = {
+					add_skill_level = 1
+				}
+			}
 			country_event = equestria_celestia.44
 		}
 	}
@@ -3416,6 +3441,7 @@ EQS_breakaway_diplomacy_category = {
 			}
 			owns_state = 1165
 			has_war = no
+			has_completed_focus = EQS_friends_on_mount_aris
 		}
 		visible = {
 			HIP = {
@@ -3430,6 +3456,16 @@ EQS_breakaway_diplomacy_category = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_HIP_decision"
+			if = {
+				limit = {
+					EQS_princess_celestia = {
+						skill < 9
+					}
+				}
+				EQS_princess_celestia = {
+					add_skill_level = 1
+				}
+			}
 			every_state = {
 				limit = {
 					OR = {
@@ -3709,11 +3745,697 @@ EQS_breakaway_diplomacy_category = {
 				target = CTH
 				autonomy_state = autonomy_dominion
 			}
+			CTH = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_character = CTH_zaphod_zarca
+						}
+					}
+					every_possible_country = {
+						limit = {
+							has_character = CTH_zaphod_zarca
+						}
+						CTH_zaphod_zarca = {
+							set_nationality = ROOT 
+						}
+					}
+				}
+				add_country_leader_role = {
+					character = CTH_zaphod_zarca
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = liberalism
+						desc = POLITICS_ZAPHOD_SMILE_DESC
+					}
+					promote_leader = yes
+				}
+			}
 			if = {
 				limit = {
 					has_completed_focus = EQS_equestrian_economic_integration
 				}
 				CTH = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
+		}
+	}
+	EQS_release_ABY_decision = {
+		icon = celestia
+		available = {
+			ABY = {
+				exists = no
+			}
+			KLG = {
+				exists = no
+			}
+			owns_state = 775
+			has_war = no
+		}
+		visible = {
+			ABY = {
+				exists = no
+			}
+			owns_state = 775
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_ABY_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 293
+						region = 294
+						AND = {
+							region = 292
+							NOT = {
+								state = 739
+								state = 765
+							}
+						}
+						state = 786
+						state = 780
+						state = 784
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+						NOT = {
+							tag = MGY
+						}
+					}
+				}
+				ABY = {
+					transfer_state = PREV
+				}
+			}
+			set_autonomy = {
+				target = ABY
+				autonomy_state = autonomy_dominion
+			}
+			KLG = {
+				KLG_capper = {
+					set_nationality = ABY
+				}
+			}
+			ABY = {
+				hidden_effect = {
+					set_popularities = {
+						democratic = 70
+						fascism = 5
+						communism = 5
+						neutrality = 20
+					}
+				}
+				promote_character = {
+					character = KLG_capper
+					ideology = harmonic_libertarianism
+				}
+				set_country_leader_ideology = harmonic_constitutionalism
+				set_country_leader_description = {
+					ideology = democratic
+					desc = POLITICS_CAPPER_SMILE_DESC
+				}
+				set_party_name = {
+					ideology = democratic
+					long_name = ABY_EQS_democratic_party_long
+					name = ABY_EQS_democratic_party
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				ABY = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
+		}
+	}
+	EQS_release_STM_decision = {
+		icon = celestia
+		available = {
+			STM = {
+				exists = no
+			}
+			GYZ = {
+				exists = no
+			}
+			THU = {
+				exists = no
+			}
+			SLC = {
+				exists = no
+			}
+			owns_state = 982
+			has_war = no
+		}
+		visible = {
+			STM = {
+				exists = no
+			}
+			GYZ = {
+				exists = no
+			}
+			THU = {
+				exists = no
+			}
+			SLC = {
+				exists = no
+			}
+			owns_state = 982
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_STM_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 328
+						AND = {
+							region = 15
+							NOT = {
+								state = 1035
+							}
+						}
+						state = 1028
+						state = 1032
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				STM = {
+					transfer_state = PREV
+				}
+			}
+			set_autonomy = {
+				target = STM
+				autonomy_state = autonomy_dominion
+			}
+			EQS_grubber = {
+				set_nationality = STM
+			}
+			STM = {
+				hidden_effect = {
+					set_popularities = {
+						democratic = 40
+						fascism = 40
+						communism = 1
+						neutrality = 19
+					}
+				}
+				add_country_leader_role = {
+					character = EQS_grubber
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = harmonic_constitutionalism
+						desc = POLITICS_GRUBBER_SMILE_DESC
+					}
+					promote_leader = yes
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				STM = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
+		}
+	}
+	EQS_release_MCW_decision = {
+		icon = celestia
+		available = {
+			MCW = {
+				exists = no
+			}
+			HRV = {
+				exists = no
+			}
+			owns_state = 721
+			has_war = no
+		}
+		visible = {
+			MCW = {
+				exists = no
+			}
+			owns_state = 721
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_MCW_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 245
+						region = 246
+						state = 806
+						state = 720
+						state = 719
+						state = 717
+						state = 718
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				MCW = {
+					transfer_state = PREV
+				}
+			}
+			set_autonomy = {
+				target = MCW
+				autonomy_state = autonomy_dominion
+			}
+			HRV = {
+				HRV_captain_celeano = {
+					set_nationality = MCW
+				}
+			}
+			MCW = {
+				hidden_effect = {
+					set_popularities = {
+						democratic = 70
+						fascism = 5
+						communism = 5
+						neutrality = 20
+					}
+				}
+				promote_character = {
+					character = HRV_captain_celeano
+					ideology = social_banditry
+				}
+				set_party_name = {
+					ideology = democratic
+					long_name = MCW_EQS_democratic_party_long
+					name = MCW_EQS_democratic_party
+				}
+				set_country_leader_description = {
+					ideology = democratic
+					desc = POLITICS_CELAENO_SMILE_DESC
+				}
+				HRV_captain_celeano = {
+					set_character_name = EQS_pirate_queen_celaeno
+				}
+				set_cosmetic_tag = MCW_EQS_celaeno
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				MCW = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
+		}
+	}
+	EQS_release_BOI_decision = {
+		icon = celestia
+		available = {
+			BOI = {
+				exists = no
+			}
+			owns_state = 389
+			has_war = no
+		}
+		visible = {
+			BOI = {
+				exists = no
+			}
+			owns_state = 389
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_BOI_decision"
+			every_state = {
+				limit = {
+					OR = {
+						AND = {
+							region = 217
+							NOT = {
+								state = 408
+							}
+						}
+						AND = {
+							region = 175
+							NOT = {
+								state = 392
+							}
+						}
+						AND = {
+							region = 181
+							NOT = {
+								state = 446
+							}
+						}
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				BOI = {
+					transfer_state = PREV
+				}
+			}
+			383 = {
+				add_core_of = BOI
+			}
+			set_autonomy = {
+				target = BOI
+				autonomy_state = autonomy_dominion
+			}
+			BOI = {
+				set_country_leader_description = {
+					ideology = democratic
+					desc = POLITICS_GILDA_SMILE_DESC
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				BOI = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
+		}
+	}
+	EQS_release_NTR_decision = {
+		icon = celestia
+		available = {
+			NTR = {
+				exists = no
+			}
+			owns_state = 562
+			has_war = no
+		}
+		visible = {
+			NTR = {
+				exists = no
+			}
+			owns_state = 562
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_NTR_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 163
+						region = 162
+						state = 542
+						state = 585
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				NTR = {
+					transfer_state = PREV
+				}
+				add_core_of = NTR
+			}
+			set_autonomy = {
+				target = NTR
+				autonomy_state = autonomy_dominion
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				NTR = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
+		}
+	}
+	EQS_release_KIR_decision = {
+		icon = celestia
+		available = {
+			KIR = {
+				exists = no
+			}
+			owns_state = 1059
+			has_war = no
+		}
+		visible = {
+			KIR = {
+				exists = no
+			}
+			owns_state = 1059
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_KIR_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 283
+						region = 82
+						region = 79
+						region = 31
+						state = 926
+						state = 1065
+						region = 85
+						region = 94
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				KIR = {
+					transfer_state = PREV
+				}
+				add_core_of = KIR
+			}
+			set_autonomy = {
+				target = KIR
+				autonomy_state = autonomy_dominion
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				KIR = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
+		}
+	}
+	EQS_release_MTO_decision = {
+		icon = celestia
+		available = {
+			MTO = {
+				exists = no
+			}
+			owns_state = 999
+			has_war = no
+		}
+		visible = {
+			MTO = {
+				exists = no
+			}
+			owns_state = 999
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_MTO_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 223
+						region = 329
+						region = 152
+						AND = {
+							region = 212
+							NOT = {
+								state = 1010
+							}
+						}
+						state = 873
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				MTO = {
+					transfer_state = PREV
+				}
+				add_core_of = MTO
+			}
+			set_autonomy = {
+				target = MTO
+				autonomy_state = autonomy_dominion
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				MTO = {
+					EQS_add_economic_imperialism = yes
+				}
+			}
+		}
+	}
+	EQS_release_SDL_decision = {
+		icon = celestia
+		available = {
+			SDL = {
+				exists = no
+			}
+			SDC = {
+				exists = no
+			}
+			SDS = {
+				exists = no
+			}
+			SDF = {
+				exists = no
+			}
+			owns_state = 868
+			has_war = no
+		}
+		visible = {
+			SDL = {
+				exists = no
+			}
+			SDC = {
+				exists = no
+			}
+			SDS = {
+				exists = no
+			}
+			SDF = {
+				exists = no
+			}
+			owns_state = 868
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_SDL_decision"
+			every_state = {
+				limit = {
+					OR = {
+						region = 301
+						region = 304
+						region = 302
+						region = 305
+						region = 303
+						region = 307
+						AND = {
+							region = 306
+							NOT = {
+								state = 827
+								state = 828
+								state = 812
+							}
+						}
+						state = 837
+						state = 860
+						state = 846
+						state = 872
+						state = 989
+					}
+					owner = {
+						OR = {
+							tag = EQS
+							is_subject_of = EQS
+						}
+					}
+				}
+				SDL = {
+					transfer_state = PREV
+				}
+			}
+			set_autonomy = {
+				target = SDL
+				autonomy_state = autonomy_dominion
+			}
+			EQS_amira = {
+				set_nationality = SDL
+			}
+			SDL = {
+				hidden_effect = {
+					set_popularities = {
+						democratic = 70
+						fascism = 5
+						communism = 5
+						neutrality = 20
+					}
+				}
+				add_country_leader_role = {
+					character = EQS_amira
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = harmonic_constitutionalism
+					}
+					promote_leader = yes
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = EQS_equestrian_economic_integration
+				}
+				SDL = {
 					EQS_add_economic_imperialism = yes
 				}
 			}

@@ -4315,8 +4315,15 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_equestrian_armored_development"
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = EQS_equestrian_tank_program
+		if = {
+			limit = {
+				NOT = {
+					has_dlc = "Arms Against Tyranny"
+				}
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = EQS_equestrian_tank_program
+		}
 		add_tech_bonus = {
 			name = armor_bonus
 			bonus = 1.0
@@ -4354,9 +4361,20 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_military_codebreakers"
-		swap_ideas = {
-			remove_idea = EQS_smile_empowered
-			add_idea = EQS_smile_empowered_army
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+			}
+			swap_ideas = {
+				remove_idea = EQS_smile_empowered
+				add_idea = EQS_smile_empowered_army_LAR
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = EQS_smile_empowered
+				add_idea = EQS_smile_empowered_army
+			}
 		}
 		add_tech_bonus = {
 			name = computer_bonus
@@ -4387,6 +4405,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_doctrinal_innovation"
+		add_research_slot = 1
 		add_doctrine_cost_reduction = {
 			name = land_doc_bonus
 			cost_reduction = 0.5
