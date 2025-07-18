@@ -533,6 +533,7 @@ recruit_character = EQS_blueblood_extra
 recruit_character = EQS_fizzlepop_extra
 recruit_character = EQS_grubber
 recruit_character = EQS_amira
+recruit_character = EQS_olympia
 
 recruit_character = EQS_sentinel
 recruit_character = EQS_swift_wing

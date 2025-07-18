@@ -4270,68 +4270,6 @@ EQS_breakaway_diplomacy_category = {
 			}
 		}
 	}
-	EQS_release_MTO_decision = {
-		icon = celestia
-		available = {
-			MTO = {
-				exists = no
-			}
-			owns_state = 999
-			has_war = no
-		}
-		visible = {
-			MTO = {
-				exists = no
-			}
-			owns_state = 999
-		}
-		cost = 0
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_MTO_decision"
-			every_state = {
-				limit = {
-					OR = {
-						region = 223
-						region = 329
-						region = 152
-						AND = {
-							region = 212
-							NOT = {
-								state = 1010
-							}
-						}
-						state = 873
-					}
-					owner = {
-						OR = {
-							tag = EQS
-							is_subject_of = EQS
-						}
-					}
-				}
-				MTO = {
-					transfer_state = PREV
-				}
-				add_core_of = MTO
-			}
-			set_autonomy = {
-				target = MTO
-				autonomy_state = autonomy_dominion
-			}
-			if = {
-				limit = {
-					has_completed_focus = EQS_equestrian_economic_integration
-				}
-				MTO = {
-					EQS_add_economic_imperialism = yes
-				}
-			}
-		}
-	}
 	EQS_release_SDL_decision = {
 		icon = celestia
 		available = {
@@ -4372,71 +4310,205 @@ EQS_breakaway_diplomacy_category = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_SDL_decision"
-			every_state = {
-				limit = {
-					OR = {
-						region = 301
-						region = 304
-						region = 302
-						region = 305
-						region = 303
-						region = 307
-						AND = {
-							region = 306
-							NOT = {
-								state = 827
-								state = 828
-								state = 812
+			custom_effect_tooltip = EQS_release_saddlearabia_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							region = 301
+							region = 304
+							region = 302
+							region = 305
+							region = 303
+							region = 307
+							AND = {
+								region = 306
+								NOT = {
+									state = 827
+									state = 828
+									state = 812
+								}
+							}
+							state = 837
+							state = 860
+							state = 846
+							state = 872
+							state = 989
+						}
+						owner = {
+							OR = {
+								tag = EQS
+								is_subject_of = EQS
 							}
 						}
-						state = 837
-						state = 860
-						state = 846
-						state = 872
-						state = 989
 					}
-					owner = {
+					SDL = {
+						transfer_state = PREV
+					}
+				}
+				set_autonomy = {
+					target = SDL
+					autonomy_state = autonomy_dominion
+				}
+				EQS_amira = {
+					set_nationality = SDL
+				}
+				SDL = {
+					add_country_leader_role = {
+						character = EQS_amira
+						country_leader = {
+							expire = "1965.1.1"
+							ideology = conservatism
+							desc = POLITICS_AMIRA_SMILE_DESC
+						}
+						promote_leader = yes
+					}
+					set_cosmetic_tag = SDL_EQS_amira
+				}
+				if = {
+					limit = {
+						has_completed_focus = EQS_equestrian_economic_integration
+					}
+					SDL = {
+						EQS_add_economic_imperialism = yes
+					}
+				}
+			}
+		}
+	}
+	EQS_release_MTO_decision = {
+		icon = celestia
+		available = {
+			MTO = {
+				exists = no
+			}
+			owns_state = 999
+			has_war = no
+		}
+		visible = {
+			MTO = {
+				exists = no
+			}
+			owns_state = 999
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_MTO_decision"
+			custom_effect_tooltip = EQS_release_maretonia_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
 						OR = {
-							tag = EQS
-							is_subject_of = EQS
+							region = 223
+							region = 329
+							region = 152
+							AND = {
+								region = 212
+								NOT = {
+									state = 1010
+								}
+							}
+							state = 873
+							state = 1012
+						}
+						owner = {
+							OR = {
+								tag = EQS
+								is_subject_of = EQS
+							}
 						}
 					}
+					MTO = {
+						transfer_state = PREV
+					}
+					add_core_of = MTO
 				}
-				SDL = {
-					transfer_state = PREV
+				set_autonomy = {
+					target = MTO
+					autonomy_state = autonomy_dominion
 				}
-			}
-			set_autonomy = {
-				target = SDL
-				autonomy_state = autonomy_dominion
-			}
-			EQS_amira = {
-				set_nationality = SDL
-			}
-			SDL = {
-				hidden_effect = {
-					set_popularities = {
-						democratic = 70
-						fascism = 5
-						communism = 5
-						neutrality = 20
+				if = {
+					limit = {
+						has_completed_focus = EQS_equestrian_economic_integration
+					}
+					MTO = {
+						EQS_add_economic_imperialism = yes
 					}
 				}
-				add_country_leader_role = {
-					character = EQS_amira
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = harmonic_constitutionalism
-					}
-					promote_leader = yes
-				}
 			}
-			if = {
-				limit = {
-					has_completed_focus = EQS_equestrian_economic_integration
+		}
+	}
+	EQS_release_KAR_decision = {
+		icon = celestia
+		available = {
+			KAR = {
+				exists = no
+			}
+			owns_state = 1009
+			has_war = no
+		}
+		visible = {
+			KAR = {
+				exists = no
+			}
+			owns_state = 1009
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_release_KAR_decision"
+			custom_effect_tooltip = EQS_release_karkadannistan_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							region = 257
+							state = 1010
+						}
+						owner = {
+							OR = {
+								tag = EQS
+								is_subject_of = EQS
+							}
+						}
+					}
+					KAR = {
+						transfer_state = PREV
+					}
 				}
-				SDL = {
-					EQS_add_economic_imperialism = yes
+				set_autonomy = {
+					target = KAR
+					autonomy_state = autonomy_dominion
+				}
+				EQS_olympia = {
+					set_nationality = KAR
+				}
+				KAR = {
+					add_country_leader_role = {
+						character = EQS_olympia
+						country_leader = {
+							expire = "1965.1.1"
+							ideology = conservatism
+							desc = POLITICS_OLYMPIA_SMILE_DESC
+						}
+						promote_leader = yes
+					}
+					set_cosmetic_tag = KAR_EQS_olympia
+				}
+				if = {
+					limit = {
+						has_completed_focus = EQS_equestrian_economic_integration
+					}
+					KAR = {
+						EQS_add_economic_imperialism = yes
+					}
 				}
 			}
 		}
