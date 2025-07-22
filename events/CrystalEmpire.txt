@@ -4084,7 +4084,6 @@ country_event = {
 		name = crystalemp.10.a
 		add_political_power = -50
 		#remove_ideas = royalfamily_imprisioned
-		set_global_flag = free_the_old_royalty
 		event_target:equestria = {
 			add_opinion_modifier  = { target = ROOT modifier = cry_accepted_demmands }
 			country_event = { id = equestria.46 days = 1 }
@@ -4585,6 +4584,7 @@ country_event = { ## Communist Crystal Ponies # Elections
 				id = crycom.9 hours = 3
 			}
 			set_global_flag = free_the_old_royalty
+			#news_event = { id = news.cry.1 days = 1 }
 			clr_global_flag = continue_imprisonment
 			EQS = {
 				country_event = {

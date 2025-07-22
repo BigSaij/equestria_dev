@@ -1908,11 +1908,10 @@ focus_tree = {
 		}
 		bypass = {
 			EQS = {
-				exists = no
 				OR = {
 					is_subject_of = ROOT
 					is_in_faction_with = ROOT
-					exists = yes
+					exists = no
 				}
 			}
 		}
@@ -2278,6 +2277,9 @@ focus_tree = {
 						is_core_of = CRY
 					}
 					state_population > 100000
+					NOT = {
+						has_state_flag = flag_CHN_moved_ponies_from_here
+					}
 				}
 				add_manpower = -100000
 				set_state_flag = flag_CHN_moved_ponies_from_here
@@ -2289,9 +2291,11 @@ focus_tree = {
 						is_core_of = CRY
 					}
 					state_population > 100000
+					NOT = {
+						has_state_flag = flag_CHN_moved_ponies_from_here
+					}
 				}
 				add_manpower = -100000
-				set_state_flag = flag_CHN_moved_ponies_from_here
 			}
 			restore_previous_manpower = yes
 			random_owned_controlled_state = {
@@ -2306,6 +2310,9 @@ focus_tree = {
 				limit = {
 					is_core_of = CHN
 					is_owned_and_controlled_by = CHN
+					NOT = {
+						has_state_flag = flag_CHN_moved_ponies_here
+					}
 				}
 				add_manpower = 100000
 				set_state_flag = flag_CHN_moved_ponies_here
@@ -2314,9 +2321,11 @@ focus_tree = {
 				limit = {
 					is_core_of = CHN
 					is_owned_and_controlled_by = CHN
+					NOT = {
+						has_state_flag = flag_CHN_moved_ponies_here
+					}
 				}
 				add_manpower = 100000
-				set_state_flag = flag_CHN_moved_ponies_here
 			}
 			add_ideas = CHN_ponies_work
 		}
