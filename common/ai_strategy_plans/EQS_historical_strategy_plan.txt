@@ -15,11 +15,6 @@ EQS_historical = {
 					option = DEFAULT
 				}
 			}
-			has_country_flag = EQS_AI_DEMOCRATIC_HISTORICAL 
-			has_game_rule = {
-				rule = EQS_ai_behavior
-				option = DEMOCRATIC_HISTORICAL
-			}
 		}
 	}
 	abort = {
@@ -94,11 +89,6 @@ EQS_historical_adaptive = {
 					rule = EQS_ai_behavior
 					option = DEFAULT
 				}
-			}
-			has_country_flag = EQS_AI_DEMOCRATIC_HISTORICAL 
-			has_game_rule = {
-				rule = EQS_ai_behavior
-				option = DEMOCRATIC_HISTORICAL
 			}
 		}
 		OR = {

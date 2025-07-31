@@ -582,6 +582,7 @@ country_event = {
 				country_event = bat.16
 			}
 		}
+		custom_effect_tooltip = EQS_PHOENIX_UNRELEASED_ENDING_tt
 	}
 }
 

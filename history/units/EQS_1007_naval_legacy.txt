@@ -15,9 +15,9 @@ units = {
 			
 			#Cruisers
 			ship = { name = "ERNS Diamond" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { heavy_cruiser_1 = { amount = 1 owner = EQS } } }
-			ship = { name = "ERNS Sapphire" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { heavy_cruiser_1 = { amount = 1 owner = EQS  } } }
+			ship = { name = "ERNS Sapphire" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { heavy_cruiser_1 = { amount = 1 owner = EQS } } }
 			
-			ship = { name = "ERNS Scorpius" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
+			ship = { name = "ERNS Scorpius" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
 			ship = { name = "ERNS Crux" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
 			ship = { name = "ERNS Cancer" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
 			ship = { name = "ERNS Leo" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
@@ -50,10 +50,10 @@ units = {
 			ship = { name = "ERNS Aquamarine" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { heavy_cruiser_1 = { amount = 1 owner = EQS } } }
 			ship = { name = "ERNS Amethyst" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { heavy_cruiser_1 = { amount = 1 owner = EQS } } }
 			
-			ship = { name = "ERNS Antila" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Caelum" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Carina" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Libra" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
+			ship = { name = "ERNS Antila" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Caelum" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Carina" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Libra" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
 			
 			#Destroyers
 			ship = { name = "ERNS Revati" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS } } }
@@ -68,8 +68,8 @@ units = {
 			ship = { name = "ERNS Flurry Heart" definition = battle_cruiser start_experience_factor = 0.3 equipment = { battle_cruiser_1 = { amount = 1 owner = EQS } } }
 			
 			#Cruisers
-			ship = { name = "ERNS Pyxis" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Volans" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
+			ship = { name = "ERNS Pyxis" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Volans" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
 			
 			#Destroyers
 			ship = { name = "ERNS Mimosa" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS } } }
@@ -107,12 +107,12 @@ units = {
 			ship = { name = "ERNS Emerald" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { heavy_cruiser_1 = { amount = 1 owner = EQS } } }
 			ship = { name = "ERNS Pearl" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { heavy_cruiser_1 = { amount = 1 owner = EQS } } }
 			
-			ship = { name = "ERNS Orion" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Virgo" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Ursa Minor" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Ursa Major" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Serpens" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Pisces" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
+			ship = { name = "ERNS Orion" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Virgo" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Ursa Minor" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Ursa Major" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Serpens" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Pisces" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
 			
 			#Destroyers
 			ship = { name = "ERNS Alya" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS } } }
@@ -136,18 +136,18 @@ units = {
 			ship = { name = "ERNS Garnet" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { heavy_cruiser_1 = { amount = 1 owner = EQS } } }
 			ship = { name = "ERNS Onyx" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { heavy_cruiser_1 = { amount = 1 owner = EQS } } }
 			
-			ship = { name = "ERNS Corona Australis" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Corona Borealis" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Equuleus" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Cetus" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS  } } }
+			ship = { name = "ERNS Corona Australis" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Corona Borealis" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Equuleus" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Cetus" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = EQS } } }
 			
 			#Destroyers
-			ship = { name = "ERNS Acrux" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Felis" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Lilii Borea" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Sceptrum" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Regulus" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS  } } }
-			ship = { name = "ERNS Procyon" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS  } } }
+			ship = { name = "ERNS Acrux" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Felis" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Lilii Borea" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Sceptrum" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Regulus" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS } } }
+			ship = { name = "ERNS Procyon" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_1 = { amount = 1 owner = EQS } } }
 		}
 	}
 	fleet = {
