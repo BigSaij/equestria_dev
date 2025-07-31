@@ -2630,8 +2630,16 @@ EQS_breakaway_diplomacy_category = {
 			controls_state = 76
 		}
 		available = {
-			NOT = {
-				controls_state = 76
+			OR = {
+				NOT = {
+					controls_state = 76
+				}
+				NOT = {
+					has_war_with = CHN
+				}
+				OLE = {
+					is_subject_of = EQS
+				}
 			}
 		}
 		cancel_trigger = {
@@ -2645,7 +2653,17 @@ EQS_breakaway_diplomacy_category = {
 		days_mission_timeout = 150
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_olenian_protectorate_collapse"
-			country_event = equestria_celestia.202
+			if = {
+				limit = {
+					has_war_with = CHN
+					OLE = {
+						NOT = {
+							is_subject_of = EQS
+						}
+					}
+				}
+				country_event = equestria_celestia.202
+			}
 		}
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout EQS_olenian_protectorate_collapse"
