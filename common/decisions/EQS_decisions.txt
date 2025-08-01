@@ -3779,7 +3779,7 @@ EQS_breakaway_diplomacy_category = {
 							has_character = CTH_zaphod_zarca
 						}
 						CTH_zaphod_zarca = {
-							set_nationality = ROOT 
+							set_nationality = CTH
 						}
 					}
 				}
