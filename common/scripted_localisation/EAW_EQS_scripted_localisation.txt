@@ -270,3 +270,42 @@ defined_text = { #Absolestia BAT Focus Desc
 		localization_key = EQS_with_fire_and_vengeance_desc2
 	}
 }
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP15
+	text = {
+		trigger = {
+			has_army_experience > 14
+		}
+		localization_key = decision_cost_army_xp_15
+	}
+	text = {
+		localization_key = decision_cost_army_xp_15_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostArmyXP40
+	text = {
+		trigger = {
+			has_army_experience > 39
+		}
+		localization_key = decision_cost_army_xp_40
+	}
+	text = {
+		localization_key = decision_cost_army_xp_40_blocked
+	}
+}
+
+defined_text = { # Country
+	name = GetDecisionCostAirXP10
+	text = {
+		trigger = {
+			has_air_experience > 9
+		}
+		localization_key = decision_cost_air_xp_10
+	}
+	text = {
+		localization_key = decision_cost_air_xp_10_blocked
+	}
+}

@@ -9841,6 +9841,9 @@ country_event = { #Gommie grover event
 
 	option = {
 		name = aquileia.251.a
+		EQS = {
+			country_event = equestria_celestia.203
+		}
 	}
 }
 

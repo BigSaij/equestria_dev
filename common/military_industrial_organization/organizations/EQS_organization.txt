@@ -7,95 +7,25 @@
    ##    ##     ## ##   ### ##   ##  ##    ## 
    ##    ##     ## ##    ## ##    ##  ######  
 
-EQS_stallion_organization = {
-	name = EQS_stallion
-	include = generic_medium_tank_organization
-	icon = GFX_idea_EQS_shoof
+EQS_equestrian_tank_program_organization = {
+	name = EQS_equestrian_tank_program
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_EQS_mustang
 	allowed = {	
 		original_tag = EQS
 		has_dlc = "Arms Against Tyranny"
 	}
-
+	available = {
+		owner = {
+			has_completed_focus = EQS_equestrian_armored_development
+		}
+	}
 	initial_trait = {
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.05
 		}
-		equipment_bonus = {
-			maximum_speed = 0.1
-			reliability = 0.05
-			armor_value = -0.1
-		}
-	}
-
-	add_trait = { 
-		token = EQS_mio_trait_expanded_turret_capacity
-		name = ENG_mio_trait_expanded_turret_capacity
-		icon = GFX_generic_mio_department_icon_tank_medium_tank_engine
-		special_trait_background = yes
-
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_all_round_cupola
-
-		any_parent = { generic_mio_trait_all_round_cupola }
-		limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
-
-		equipment_bonus = {
-			reliability = 0.05
-			armor_value = 0.05
-			breakthrough = 0.05
-		}
-	}
-
-	add_trait = { 
-		token = EQS_mio_trait_expanded_production_facilities
-		name = ENG_mio_trait_expanded_production_facilities
-		icon = GFX_generic_mio_department_icon_tank_medium_tank_technology
-		special_trait_background = yes
-
-		position = { x=2 y=1 }
-		relative_position_id = generic_mio_trait_simplified_turret_design
-
-		all_parents = { generic_mio_trait_simplified_turret_design generic_mio_trait_armor_steel_working }
-		production_bonus = {
-			production_efficiency_cap_factor = 0.1
-			production_efficiency_gain_factor = 0.1
-		}
-		
 	}
 }
-
-EQS_mustang_organization = {
-	name = EQS_mustang
-	include = generic_mobile_tank_organization
-	icon = GFX_idea_EQS_mustang
-	allowed = {
-		original_tag = EQS
-		has_dlc = "Arms Against Tyranny"
-	}
-	initial_trait = {
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.03
-		}
-	}
-}
-
-EQS_sirius_organization = {
-	name = EQS_sirius
-	include = generic_heavy_tank_organization
-	icon = GFX_idea_EQS_sirius
-	allowed = {
-		original_tag = EQS
-		has_dlc = "Arms Against Tyranny"
-	}
-	initial_trait = {
-		equipment_bonus = {
-			armor_value = 0.1
-			build_cost_ic = -0.075
-			maximum_speed = -0.05
-		}
-	}
-}
-
 
  ######  ##     ## #### ########   ######  
 ##    ## ##     ##  ##  ##     ## ##    ## 
@@ -376,8 +306,8 @@ EQS_stratus_organization = {
 	}
 }
 
-EQS_cloudsdale_aircraft_organization = {
-	name = EQS_cloudsdale_aircraft
+EQS_marechester_organization = {
+	name = EQS_marechester
 	include = generic_medium_aircraft_organization
 	icon = GFX_idea_EQS_cloudsdale_research
 	allowed = {	
@@ -386,19 +316,19 @@ EQS_cloudsdale_aircraft_organization = {
 	}
 }
 
-EQS_northern_organization = {
-	name = EQS_northern
+EQS_trotland_organization = {
+	name = EQS_trotland
 	include = generic_heavy_aircraft_organization
-	icon = GFX_idea_EQS_northern
+	icon = GFX_idea_generic_air_manufacturer_2
 	allowed = {	
 		original_tag = EQS
 		has_dlc = "Arms Against Tyranny"
 	}
 }
-EQS_ultramarine_organization = {
-	name = EQS_ultramarine
+EQS_acadia_organization = {
+	name = EQS_acadia
 	include = generic_naval_aircraft_organization
-	icon = GFX_idea_EQS_ultramarine
+	icon = GFX_idea_generic_naval_manufacturer_2
 	allowed = {	
 		original_tag = EQS
 		has_dlc = "Arms Against Tyranny"
@@ -487,8 +417,8 @@ EQS_star_energy_organization = {
 		}
 	}
 }
-EQS_whinnyapolis_logistics_organization = {
-	name = EQS_whinnyapolis_logistics
+EQS_whinnyapolis_organization = {
+	name = EQS_whinnyapolis
 	include = generic_support_equipment_organization
 	icon = GFX_idea_army_ordnance_department
 	allowed = {

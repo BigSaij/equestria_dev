@@ -443,6 +443,9 @@ EQS_applejack_civwar_event:0 "Applejack - The Worker"
 EQS_pinkiepie_civwar_event:0 "Pinkie Pie - The Lost"
 EQS_twilight_civwar_event:0 "Twilight Sparkle - The Princess"
 
+EQS_extra_militia_decision:0 "Conscript Additional Militia"
+EQS_extra_militia_decision_desc:0 "With our emergency situation, the military can conscript additional Equestrians to serve as militia and defend the frontline against the forces of the Nightmare. While we may be able to justify this now, it will certainly cause issues once this war is over..."
+
 EQS_acornage_line:0 "Construct the Acornage Line"
 EQS_acornage_line_desc:0 "While the White river makes a natural defensive line in the west as does the Acorn River in the east, the cities of Cirruspolis and Acornage itself sit vulnerable at the central part of the border with the Changeling Queendom. Expectations of holding the Heer there are considered woefully optimistic at best, but preliminary defenses may be able to stall the changelings long enough for other defensive positions to be erected, and cover an orderly retreat when the time comes."
 EQS_fairflanks_diamondflake_line:0 "Construct the Fairflanks-Diamondflake Line"
@@ -530,6 +533,24 @@ EQS_improve_tank:0 "Modernize Military Theory"
 EQS_improve_tank2:0 "Modernize Military Theory"
 EQS_improve_tank3:0 "Modernize Military Theory"
 
+EQS_unlock_seabreeze_design:0 "Design the Seabreeze"
+EQS_unlock_seabreeze_design_desc:0 "The Seabreeze was in essence a modernized Breezie tank, given a larger gun able to penetrate armor and better protection to defend against similar light tanks while still remaining light and fast. The Seabreezes that were deployed in the Great War proved to be effective at fighting off changeling infantry offensives, but stood little chance against larger and more modern tank designs like the Panzers the Heer was already mass producing."
+EQS_unlock_bugbear_design:0 "Design the Bugbear"
+EQS_unlock_bugbear_design_desc:0 "While Equestrian designers focused on light and cost-efficient designs due to the limited resources of the military, an ambitious project for a much larger tank was drawn up in the years leading up to the Great War. Named the Bugbear, it carried armor believed to be impenetrable at the time and a larger gun with side turrets at the expense of being extremely expensive and slow. These critical issues kept it from being mass-produced, instead finding use in static defensive positions."
+EQS_unlock_cragadile_design:0 "Design the Cragadile"
+EQS_unlock_cragadile_design_desc:0 "With the Seabreeze standing no match against the tank designs the changelings were fielding in the Great War and the Bugbear being a dead end for the moment, Equestria quickly realized that a middle ground that combined speed, protection and penetration would be required. This concept became the Cragadile, an all-round tank with a respectable gun, engine and armor. Though not the most cost-efficient design, it was the first tank that could stand up to the Heer's armor and weaponry."
+EQS_unlock_magi_cragadile:0 "Design the Cragadile-M"
+EQS_unlock_magi_cragadile_desc:0 "The Cragadile-M was a magi-tech redesign of the original Cragadile, utilizing an experimental magical cannon capable of firing spells more potent than any explosive shell. While Field Marshal Shimmer pushed hard for its induction into the Equestrian armored forces, the originally planned petrol-eletric engine proved incapable of reliably keeping the tank operational. It did outclass the Cragadile in most aspects upon exiting prototyping, though the model drew heavy criticism from many for its high production cost."
+EQS_unlock_cerberus_design:0 "Design the Cerberus"
+EQS_unlock_cerberus_design_desc:0 "With real experience from armored warfare and a need for a heavier weapon to complement the planned Timberwolf in spearheads and breakthroughs, the Cerberus took the initial concept presented by the Bugbear and modernized it for practical use. Carrying a large gun effective against emplacements and enemy tanks alike, it remained cost-prohibitive and sluggish in speed but was far more effective than its predecessor in nearly all other regards."
+EQS_unlock_magi_cerberus:0 "Design the Cerberus-M"
+EQS_unlock_magi_cerberus_desc:0 "The successes of the original Cerberus on the field prompted an exploratory design of a magi-tech equivalent, one which would become the Cerberus-M. Unfortunately, the Spellray cannon fitted as its primary armament was still a prototype at the time of its creation, and despite its impressive visuals was too unstable to fire at full power. This meant that the Cerberus's traditional cannon was more effective, but the Cerberus-M still pioneered Equestrian tank improvements such as stabilizers and armor skirts."
+EQS_unlock_vapor:0 "Design the Vapor"
+EQS_unlock_vapor_desc:0 "As conflict with the Changeling Queendom seemed ever more certain, the Wonderbolt Design Bureau began work on their first monoplane model, the Vapor. With a stronger frame and engine capable of reaching speeds only the most talented pegasi could hope to match, it performed admirably in the Great War despite its reduced agility and lackluster production numbers due to disagreements between the Wonderbolts and the Royal Guard on funding."
+EQS_unlock_wildfire:0 "Design the Wildfire"
+EQS_unlock_wildfire_desc:0 "Given the long history of pegasi working in tandem with ground forces, designs for a battlefield support aircraft were quickly drawn up and assigned to the Stratusburg branch of the Wonderbolt Design Bureau. The Wildfire did prove effective in the few instances where it was deployed in the Great War, but was not produced in large numbers due to early changeling dominance in the skies rendering close air support infeasible."
+
+
 ##NEW IDEAS##
 
 EQS_harmonic_stagnation:0 "Harmonic Stagnation"
@@ -604,6 +625,9 @@ EQS_equestria_fractured:0 "A Fractured Nation"
 EQS_equestria_fractured_2:0 "A Fractured Nation"
 EQS_equestria_fractured_3:0 "A Fractured Nation"
 EQS_equestria_fractured_4:0 "A Fractured Nation"
+EQS_war_exhaustion_mild:0 "War Exhaustion"
+EQS_war_exhaustion_moderate:0 "War Exhaustion"
+EQS_war_exhaustion_heavy:0 "War Exhaustion"
 EQS_equestrian_reconstruction_effort:0 "Equestrian Reconstruction Effort"
 EQS_reorg_administration:0 "Reorganizing Administration"
 EQS_smile_empowered:0 "The S.M.I.L.E. State"
@@ -702,7 +726,7 @@ equestria_moonshine.8.t:0 "Nightmares Made Manifest"
 equestria_moonshine.8.d:0 "Luna had returned to Canterlot, in the normal sense. The train had arrived a few hours ago, and she had been safely escorted to the palace, avoiding the small protest of thestrals in the palace courtyard. She had nodded when Celestia said everything was going to be alright. But Luna's spirit was nowhere to be seen. Her movements were slow. She rarely spoke, and only followed in her sister's shadow through the halls of the palace.\n\nSo when Luna paused at one of the stained glass windows to look up at it, illuminated by moonlight, Celestia paused as well. It was one depicting the defeat of the Nightmare by the Element Bearers. "Come now Luna, you need sleep," the elder sister gently pressed. "There's no need to dwell on the past right now."\n\n"...Is this all I am meant to be, sister?" The Princess of the Night's attention remained fixated on the image of her alter-ego. "I wanted to lead like you, to find my own place in Equestria, only to be used by others anyway. I cannot even save my own thestrals without becoming a tool to destroy you. Are we destined to fight no matter what we try?"\n\n"No," Celestia shook her head and stepped forward with wing outstretched. The moasic exploded, glass spraying across the hall as Celestia used her wing to shield her muzzle in reflex. An explosion rocked the palace, smoke and flames climbing high from the courtyard beyond the shattered window. The screams came next. Celestia lowered her wing to check on her sister.\n\nLuna turned to look at Celestia with weeping slit pupils. "Yes."\n\nDarkness and shadows began pulling at the air. Celestia did not need time to understand what it meant; she rushed forward, pulling Luna into a tight embrace even as she grew taller and her coat darkened. "Please..." she whispered as tears began to fall, "...don't leave me again. I'm sorry you have to pay for my mistakes. I love you, Luna."\n\nThe shadows seemed to recede for a moment, and Luna - Nightmare Moon stiffly returned the hug with a single foreleg. "Oh, sister," came the gentle, archaic reply, "We love you too. But it is far too late for both of us."\n\nA wave of darkness blasted Celestia back across the room, slamming her into the wall hard enough to crack stone. Her vision blurring, she watched as her sister took one last look at her before flying off through the broken window. Celestia could only watch the full moon rising in front of her, remembering that fateful day over a thousand years prior. She had told Luna that it was her duty to lower the moon. That she would not fight her.\n\nCelestia had lied twice that night."
 equestria_moonshine.8.a:0 ""It was never your fault," the alicorn sobbed."
 equestria_moonshine.9.t:0 "Moon Over Manehattan"
-equestria_moonshine.9.d:0 "Everything was set. Tonight was the night when it all came together, here in the city of Manehattan. The stage had been prepared hours ago, the crowd had been steadily building all day, and Luna's team had double checked that everything was ready to go. Here, in the city that never sleeps, all that they had worked so hard for would come to fruition. And yet, as Princess Luna looked out the curtain to see the crowd of ponies stretching as far down the road as she could see, she could feel some of her old self-doubt seeping in again.\n\nRarity seemed to notice it at well. "Darling, there's no reason to be afraid," she said trotting up next to the alicorn in her night-themed attire. "Everypony out there came because they look up to you. They're not here to see you be perfect, they're here to see you for who you are."\n\n"I know, Rarity," Luna answered, her eyes focused elsewhere. "And I am not afraid of mistakes anymore. I..." Her breath hitched. "Ever since I returned I have been asking myself who I am. Where I belong in Equestria. Working with all of you has been wonderful, and yet I wonder... what will I do after this is over? Who will I be then?"\n\nRarity adjusted one of the jewels on Luna's dress with her magic before responding. "A Princess of Equestria, dear. Ponies aren't going to just forget about all of this once it's over. All of us have gotten to see you gain a confidence to rival any other's, and it was our pleasure to help you along the way."\n\nThe lights went on outside the curtain. "Oh, it seems that it's time. Go on, this is your moment." Rarity gave Luna a slight nudge and a smile. "Be the leader we know you are. I'll be right behind you."\n\nLuna nodded and stepped through the curtain. Ponies roared their approval at the sight of their Princess, echoing across the buildings and the night sky. It was everything she had ever wanted, Luna reflected, everything she could have dreamed of over a thousand years ago. Now her dreams were becoming reality, just as so many others were.\n\nAs she stepped forward into the light shining from a glorious full moon with the cheers of thousands of ponies in her ears, Luna knew that this was the start of a new age not just for Eqeustria, but for her.\n\nAnd then the bomb beneath the stage exploded."
+equestria_moonshine.9.d:0 "Everything was set. Tonight was the night when it all came together, here in the city of Manehattan. The stage had been prepared hours ago, the crowd had been steadily building all day, and Luna's team had double checked that everything was ready to go. Here, in the city that never sleeps, all that they had worked so hard for would come to fruition. And yet, as Princess Luna looked out the curtain to see the crowd of ponies stretching as far down the road as she could see, she could feel some of her old self-doubt seeping in again.\n\nRarity seemed to notice it at well. "Darling, there's no reason to be afraid," she said trotting up next to the alicorn in her night-themed attire. "Everypony out there came because they look up to you. They're not here to see you be perfect, they're here to see you for who you are."\n\n"I know, Rarity," Luna answered, her eyes focused elsewhere. "And I am not afraid of mistakes anymore. I..." Her breath hitched. "Ever since I returned I have been asking myself who I am. Where I belong in Equestria. Working with all of you has been wonderful, and yet I wonder... what will I do after this is over? Who will I be then?"\n\nRarity adjusted one of the jewels on Luna's dress with her magic before responding. "A Princess of Equestria, dear. Ponies aren't going to just forget about all of this once it's over. All of us have gotten to see you gain a confidence to rival any other's, and it was our pleasure to help you along the way."\n\nThe lights went on outside the curtain. "Oh, it seems that it's time. Go on, this is your moment." Rarity gave Luna a slight nudge and a smile. "Be the leader we know you are. I'll be right behind you."\n\nLuna nodded and stepped through the curtain. Ponies roared their approval at the sight of their Princess, echoing across the buildings and the night sky. It was everything she had ever wanted, Luna reflected, everything she could have dreamed of over a thousand years ago. Now her dreams were becoming reality, just as so many others were.\n\nAs she stepped forward into the light shining from a glorious full moon with the cheers of thousands of ponies in her ears, Luna knew that this was the start of a new age not just for Equestria, but for her.\n\nAnd then the bomb beneath the stage exploded."
 equestria_moonshine.9.a:0 "Wait, what?"
 equestria_moonshine.10.t:0 "The Nightmare" #Writer: Indigo
 equestria_moonshine.10.d:0 "Luna awoke in a pile of rubble, limbs wracked with pain and a ringing in her ears. Ponies screamed, voices distant and tinny. Some shouted and whinnied. Dust clouded her eyes, or the remnants of her ragged starry mane. She shoved her way through broken boards and stood. As an alicorn she was far more resilient than others, and the blast had come from behind, closer to...\n\nLuna's eyes cleared as she stumbled over a young thestral's burnt corpse. She found Rarity beneath a body. Her pristine coat was marred with blood and soot; the left side of her muzzle suffering burns too painful to focus on. Her breath was shallow. Fear crept into the Princess' mind as she stumbled back onto four hooves. She turned back to the herd and banners rising from a terrified crowd. The whining in her ears faded to a familiar call.\n\n"For the Nightmare!"\n\nIt was her banner, the symbols she took based on her marred mark over a thousand years ago. Her guards were scattered; some fought above the crowd. Some joined the others, screaming of threats, violence. Solarists. Assassination. The ponies of Manehattan rallied beneath the Mare in the Moon in panic, fear, and growing anger. And when they looked to their bloody Princess, she could only stand there in despair while her friend died.\n\n"You were always weak," the voice in her mind said. "A thousand years, and nothing has changed. They will always remember. In their hearts and in their dreams, they desire a leader who will seize change and act to save what they love. And that is not you. Not yet. Be who you were meant to be."\n\nLuna shook her head. "No." She could still stop this. She could say something. Rarity's breath faded. A gunshot echoed over the screaming crowd.\n\n"Yes," the voice said. "There is no going back. The Thestrals will suffer and your friend will die. You will be a shadow, abandoned even by your so-called sister. Where is she now?" The moon shuddered overhead, light and shadow spiraling around the Princess of the Night. The crowd stilled. Luna wanted to weep. The silence was worse than the screams.\n\n"Let me in," the Nightmare whispered."
@@ -1090,6 +1114,10 @@ equestria_celestia.202.t:0 "A Flash Freeze of Freedom"
 equestria_celestia.202.d:0 "S.M.I.L.E. AFTER ACTION REPORT\n\nOPERATION: CERVID FREEZE\n\nSTATUS: FAILURE\n\nPRO-EQUESTRIAN FORCES HAVE BEEN PUSHED OUT OF THE OLENIAN PENINSULA. EFFORTS TO REINSTATE VELVET AS RIGHTFUL RULER HAVE FAILED. THE DIRECTOR HAS ORDERED ALL RESOURCES FORMERLY ALLOCATED TO THE OPERATION TO BE REDISTRIBUTED TO MORE VITAL AREAS IN THE WAR EFFORT\n\nQUEEN VELVET REPORTEDLY NOT AMUSED"
 equestria_celestia.202.a:0 "..."
 
+equestria_celestia.203.t:0 "The Eagle and the Sun"
+equestria_celestia.203.d:0 ""Princess Sun will see you now," Princess Twilight Sparkle said, rapidly flipping through her Ponish to Griffish dictionary. Her accent was very thick, though she had kind eyes. The purple alicorn descended into an explanation in Ponish with a wide smile that Grover did not understand, but he nodded along and clutched a thick satchel of books tighter under one wing. Grover von Griefenstein had heard many stories about Equestria and its ponies. True to them, Princess Twilight was naked. But the armed guards reminded Grover far more of Griffenheim than his picture book. She stopped outside the doors to the throne room and realized she was speaking the wrong language from the blush. "You will do good. I mean well."\n\nGrover tried to puff up his feathers and took a deep breath. He might be an exile on a foreign shore without a crown, but he was still descended from the greatest griffon to ever live. He would not be afraid. The young griffon followed Princess Twilight as she introduced him in her language, saying his name without his title and stepping aside with a waved wing. Grover looked up to the raised dais, and flinched.\n\nA tall white alicorn in gilded war armor had turned her cold eyes to him. "I met your ancestor in Talouse as his armies crushed the Wingbardians." She stood beneath two raised thrones and streaming banners of a sun and moon, speaking Griffish with an ancient accent like Eros. "I came unarmed, to show my intent for peace. He was the one to bring steel. Centuries later, it seems our roles have changed. Grover of Griffonstone, I welcome you to my court. In peace." The Sun descended upon him and passed a wing over his head. "I will make no promise to restore your crown or throne. Princess Twilight will see to your care and enrollment at the School of Friendship." She switched to Ponish again as she passed, speaking some aside to the other alicorn. She left and shut the doors to the throne room herself with a burst of golden light.\n\n"I..." Princess Twilight attempted to smile and nudged his side with her wing. "There is a room at my school. With many books. For you." She checked her dictionary again and licked her lips. "Everything will be alright."\n\n"That is what they said to me before they took my crown," Grover finally answered. Princess Twilight's eyes were kind and she smiled, but she pretended not to understand."
+equestria_celestia.203.a:0 "He'll be a good student."
+
 
 
 
@@ -1408,9 +1436,6 @@ EQS_olympia:0 "Duchess Olympia"
 #DESIGNERS
 
 EQS_equestrian_tank_program:0 "Equestrian Tank Development Program"
-EQS_mustang:0 "Mustang Developments"
-EQS_stallion:0 "Stallion Company"
-EQS_sirius:0 "Sirius Metal Works"
 
 EQS_baltimare:0 "Baltimare Designs"
 EQS_seaward_shoals:0 "Seaward Shoals Dockyard"
@@ -1419,16 +1444,19 @@ EQS_ichthys:0 "Ichthys Dockyards"
 
 EQS_wonderbolt:0 "Wonderbolt Design Bureau"
 EQS_wonderbolt_desc:0 "An offshoot of the Wonderbolts established by official order of the Crown and staffed with more intellectually-mined pegasi, the primary branch of the design bureau focuses on the development of light fighters and support aircraft. Due to its close nature to the traditional methods and style of the Wonderbolts, it primarily focuses on improving speed and agility the same way standard Wonderbolt training does."
-EQS_cloudsdale_aircraft:0 "Cloudsdale Airtech"
-EQS_northern:0 "Northern Development Bureau"
-EQS_ultramarine:0 "Ultramarine"
 EQS_stratus:0 "Stratusburg Design Bureau"
 EQS_stratus_desc:0 "The Stratusburg branch of the Wonderbolt Design Bureau focuses on the improvement of close air support on the battlefield with ground forces. Closely affiliated with the primary bureau due to overlapping design goals, it often provides prototypes with more powerful armaments and stronger frames compared to its Canterlot-based counterpart. Due to its eastern location, it also has the highest proportion of thestrals in its research staff."
+EQS_marechester:0 "Marechester Design Bureau"
+EQS_marechester_desc:0 "The Marechester branch of the Wonderbolt Design Bureau focuses on larger plane models fit for heavy fighters and tactical bombers. Featuring a staff comprised primarily of earth ponies with dreams of flight, results tend to be practical and reliable aircraft that trade speed and power for dependability. Most rural Equestrians consider this bureau to be the future of flight, as opposed to 'featherbrain designs who care about speed over safety'."
+EQS_trotland:0 "Trotland Design Bureau"
+EQS_trotland_desc:0 ""
+EQS_acadia:0 "Acadia Design Bureau"
+EQS_acadia_desc:0 ""
 
 EQS_star_energy:0 "Star Energy"
 EQS_macintosh:0 "Macintosh Factory"
 EQS_fillydelphia:0 "Fillydelphia Motors"
-EQS_whinnyapolis_logistics:0 "Whinnyapolis Logistics"
+EQS_whinnyapolis:0 "Whinnyapolis Logistics"
 
 EQS_cloudsdale_factory:0 "Cloudsdale Weather Factory"
 EQS_cloudsdale_factory_desc:0 "Though individual pegasi have the ability to manipulate weather through activities such as cloud-busting, it is through the weather factories that everything from snowflakes and clouds to rainbows themselves are created. The Cloudsdale Weather Factory is the first and most famous of these facilities floating in the skies, allowing for the mass manipulation and control of weather across entire regions of Equestria. Though the factory in many ways operates far differently than most others in Equestria, thanks to consistent funding from the Crown it has remained at the forefront of industrial innovation and techniques."
@@ -1540,6 +1568,10 @@ EQS_solarist_militia_tt:0 "Four divisions of §YSolarist Militia§! will form."
 EQS_celestial_state_divisions_tt:0 "Completing this focus will send §Cthree divisions§! of §YEquestrian Volunteers§! to the §YCelestial Resistance§!."
 EQS_CES_volunteers_tt:0 "Three divisions of §YEquestrian Volunteers§! will form."
 
+EQS_militia_three_times_tt:0 "§YThis decision has been taken less than three times.§!"
+EQS_civwar_militia_decision_tt:0 "We will muster up six §YEquestrian Militia§! divisions.\n\n§RThis will increase the effects of the§! §YWar Exhaustion§! §Rdebuff post-war!§!"
+EQS_civfall_militia_spawn_tt:0 "\n§RRefugees§! from the city will form into six §YEquestrian Militia§! divisions."
+
 EQS_celestia_stat_increases_tt:0 "§YCelestia§! will have further stat increases available through the §Rmilitary§! and §Creunification§! trees."
 EQS_ROC_wardelay_tt:0 "War with the §YRock Union§! will be delayed until the war with §RStalliongrad§!."
 EQS_SCS_wardelay_tt:0 "War with the §YConfederation of Southern States§! will be delayed until the war with the §GChangeling Queendom§!."
@@ -1570,6 +1602,7 @@ EQS_southwest_secured_req_tt:0 "We have secured the entirety of the §YEquestria
 
 EQS_doctor_hooves_unlocked_tt:0 "§YDoctor Hooves§! will become §Gavailable§! as a §YNuclear Scientist§!."
 EQS_major_city_nuclear_reactors_tt:0 "§YNuclear Reactors§! will be §Cconstructed§! in the cities of §YCanterlot§!, §YManehattan§! and §YFillydelphia§!."
+EQS_commercial_nuclear_available_tt:0 "If we complete the §YCommercial Nuclear Reactor§! §Cspecial project§!, this focus will build §Civilian Nuclear Reactors§! instead."
 
 EQS_army_modification_unlocked_tt:0 "§GWill unlock unit training, disbanding and editing templates!§!"
 EQS_high_command_reform_tt:0 "Completing this focus will §Cunlock§! new §Ymilitary high command§!."
@@ -1757,7 +1790,7 @@ EQS_light_tank_equipment_2:0 "Seabreeze"
 EQS_light_tank_equipment_2_desc:0 "The Seabreeze was in essence a modernized Breezie tank, given a larger gun able to penetrate armor and better protection to defend against similar light tanks while still remaining light and fast. The Seabreezes that were deployed in the Great War proved to be effective at fighting off changeling infantry offensives, but stood little chance against larger and more modern tank designs like the Panzers the Heer was already mass producing."
 EQS_light_tank_equipment_2_short:0 "Seabreeze"
 EQS_light_tank_equipment_3:0 "Parasprite"
-EQS_light_tank_equipment_3_desc:0 "Initially a Muletilda replacement, the Rainbow's development was massively delayed due to its design being 'appropriated and adjusted' for the Timberwolf, a temporary Twilight stand-in. When the lighter Rainbow design was finally ready, it was arguably already obsolete, as Equestria struggled to repel the seemingly endless tide of well armoured Changeling Panzers."
+#EQS_light_tank_equipment_3_desc:0 "Initially a Muletilda replacement, the Rainbow's development was massively delayed due to its design being 'appropriated and adjusted' for the Timberwolf, a temporary Twilight stand-in. When the lighter Rainbow design was finally ready, it was arguably already obsolete, as Equestria struggled to repel the seemingly endless tide of well armoured Changeling Panzers."
 EQS_light_tank_equipment_3_short:0 "Parasprite"
 EQS_light_tank_equipment_x:0 "Twittermite"
 EQS_light_tank_equipment_x_short:0 "Twittermite"
@@ -2006,3 +2039,15 @@ EQS_sp_nuclear_bomb:0 "Project Phoenix"
 
 ### RANDOM SHIT EAW FORCED ME TO KEEP ###
 CZE_war_college_effect_2_tt:0 "If we already have §Yfive§! §CResearch Slots§! we will §Rnot receive§! another!\n\n"
+
+decision_cost_army_xp_15:0 "£army_experience  §Y15§!"
+decision_cost_army_xp_15_blocked:0 "£army_experience  §R15§!"
+decision_cost_army_xp_15_tooltip:0 "It costs [This.GetDecisionCostArmyXP15] to take the decision"
+
+decision_cost_army_xp_40:0 "£army_experience  §Y40§!"
+decision_cost_army_xp_40_blocked:0 "£army_experience  §R40§!"
+decision_cost_army_xp_40_tooltip:0 "It costs [This.GetDecisionCostArmyXP40] to take the decision"
+
+decision_cost_air_xp_10:0 "£air_experience  §Y10§!"
+decision_cost_air_xp_10_blocked:0 "£air_experience  §R10§!"
+decision_cost_air_xp_10_tooltip:0 "It costs [This.GetDecisionCostAirXP10] to take the decision"

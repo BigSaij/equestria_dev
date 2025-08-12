@@ -7,9 +7,9 @@
 		}
 	}
 	"NMRNS Princess of New Mareland" = {
-		cv_fighter_equipment_0 = { owner = "EQS" amount = 10 }
-		cv_fighter_equipment_0 = { owner = "EQS" amount = 10 }
-		cv_nav_bomber_equipment_1 = { owner = "EQS" amount = 10 }
-		cv_nav_bomber_equipment_1 = { owner = "EQS" amount = 10 }
+		cv_fighter_equipment_0 = { owner = "EQC" amount = 10 }
+		cv_fighter_equipment_0 = { owner = "EQC" amount = 10 }
+		cv_nav_bomber_equipment_1 = { owner = "EQC" amount = 10 }
+		cv_nav_bomber_equipment_1 = { owner = "EQC" amount = 10 }
 	}
 }

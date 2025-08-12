@@ -4796,6 +4796,9 @@ country_event = { #Grover Povner
 
 	option = {
 		name = longsword.188.a
+		EQS = {
+			country_event = equestria_celestia.203
+		}
 	}
 }
 

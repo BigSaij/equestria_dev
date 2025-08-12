@@ -1058,6 +1058,60 @@ ideas = {
 				can_not_declare_war = yes
 			}
 		}
+		EQS_war_exhaustion_mild = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				has_war_with_major = no
+			}
+			removal_cost = -1
+			picture = unhappy_army
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				conscription_factor = -0.1
+			}
+		}
+		EQS_war_exhaustion_moderate = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				has_war_with_major = no
+			}
+			removal_cost = -1
+			picture = unhappy_army_2
+			modifier = {
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				conscription_factor = -0.2
+			}
+		}
+		EQS_war_exhaustion_heavy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				has_war_with_major = no
+			}
+			removal_cost = -1
+			picture = unhappy_army_3
+			modifier = {
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.3
+				conscription_factor = -0.3
+			}
+		}
 		EQS_equestrian_reconstruction_effort = {
 			allowed = {
 				always = no
@@ -1548,42 +1602,12 @@ ideas = {
 			traits = { light_aircraft_manufacturer }
 			picture = EQS_wonderbolt_concern
 		}
-		EQS_cloudsdale_aircraft = {
+		EQS_stratus = {
 			allowed = {
 				original_tag = EQS
 			}
 			available = {
-				owns_state = 68
-			}
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			traits = { medium_aircraft_manufacturer }
-			picture = EQS_cloudsdale_research
-		}
-		EQS_northern = {
-			allowed = {
-				original_tag = EQS
-			}
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			traits = { heavy_aircraft_manufacturer }
-			picture = EQS_northern
-		}
-		EQS_ultramarine = {
-			allowed = {
-				original_tag = EQS
-			}
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			traits = { naval_aircraft_manufacturer }
-			picture = EQS_ultramarine
-		}
-		EQS_stratus = {
-			allowed = {
-				original_tag = EQS
+				owns_state = 226
 			}
 			research_bonus = {
 				air_equipment = 0.15
@@ -1591,9 +1615,58 @@ ideas = {
 			traits = { CAS_manufacturer }
 			picture = EQS_stratus
 		}
+		EQS_marechester = {
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				owns_state = 170
+			}
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { medium_aircraft_manufacturer }
+			picture = EQS_cloudsdale_research
+		}
+		EQS_trotland = {
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				owns_state = 121
+			}
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			picture = generic_air_manufacturer_2
+			traits = { heavy_aircraft_manufacturer }
+		}
+		EQS_acadia = {
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				owns_state = 45
+			}
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			traits = { naval_aircraft_manufacturer }
+			picture = generic_naval_manufacturer_2
+		}
 	}
 	materiel_manufacturer = {
 		designer = yes
+		EQS_macintosh = {
+			allowed = {
+				original_tag = EQS
+			}
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			traits = { infantry_equipment_manufacturer }
+			picture = EQS_macintosh
+		}
 		EQS_star_energy = {
 			allowed = {
 				original_tag = EQS
@@ -1606,16 +1679,6 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-		}
-		EQS_macintosh = {
-			allowed = {
-				original_tag = EQS
-			}
-			research_bonus = {
-				infantry_weapons = 0.15
-			}
-			traits = { infantry_equipment_manufacturer }
-			picture = EQS_macintosh
 		}
 		EQS_fillydelphia = {
 			allowed = {
@@ -1630,6 +1693,19 @@ ideas = {
 			}
 			traits = { motorized_equipment_manufacturer }
 			picture = EQS_fillydelphia_arms
+		}
+		EQS_whinnyapolis = {
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				owns_state = 70
+			}
+			research_bonus = {
+				support_tech = 0.15
+			}
+			traits = { motorized_equipment_manufacturer }
+			picture = army_ordnance_department
 		}
 	}
 	industrial_concern = {

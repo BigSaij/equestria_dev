@@ -5021,6 +5021,7 @@ military_training_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_reform_smile"
 			country_event = equestria_prewar.5
 		}
 	}
@@ -5044,6 +5045,7 @@ military_training_category = {
 		custom_cost_text = decision_cost_army_xp_10
 		fire_only_once = yes
 		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_improve_tank"
 			swap_ideas = {
 				remove_idea = EQS_bad_tanks
 				add_idea = EQS_bad_tanks2
@@ -5073,6 +5075,7 @@ military_training_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_improve_tank2"
 			swap_ideas = {
 				remove_idea = EQS_bad_tanks2
 				add_idea = EQS_bad_tanks3
@@ -5102,10 +5105,461 @@ military_training_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_improve_tank3"
 			remove_ideas = EQS_bad_tanks3
 			hidden_effect = {
 				army_experience = -30
 			}
+		}
+	}
+	EQS_unlock_seabreeze_design = {
+		icon = GFX_decision_generic_tank
+		allowed = {
+			original_tag = EQS
+			has_dlc = "No Step Back"
+		}
+		available = {
+			has_tech = improved_light_tank_chassis
+			has_tech = interwar_artillery
+		}
+		visible = {
+			NOT = {
+				has_tech = advanced_light_tank_chassis
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 14
+		}
+		custom_cost_text = decision_cost_army_xp_15
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_unlock_seabreeze_design"
+			create_equipment_variant = {
+				name = "Seabreeze"
+				type = light_tank_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_small_cannon_2
+					turret_type_slot = tank_light_three_man_tank_turret
+					suspension_type_slot = tank_christie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+					special_type_slot_2 = secondary_turret_hmg
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 3
+					tank_nsb_armor_upgrade = 3
+				}
+				icon = "GFX_commonwealth_2d_improved_light_tank_medium"
+			}
+			hidden_effect = {
+				army_experience = -15
+			}
+		}
+	}
+	EQS_unlock_bugbear_design = {
+		icon = GFX_decision_generic_tank
+		allowed = {
+			original_tag = EQS
+			has_dlc = "No Step Back"
+		}
+		available = {
+			has_tech = basic_heavy_tank_chassis
+		}
+		visible = {
+			NOT = {
+				has_tech = improved_heavy_tank_chassis
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 9
+		}
+		custom_cost_text = decision_cost_army_xp_10
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_unlock_bugbear_design"
+			create_equipment_variant = {
+				name = "Bugbear"
+				type = heavy_tank_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_heavy_cannon
+					turret_type_slot = tank_heavy_three_man_tank_turret
+					suspension_type_slot = tank_torsion_bar_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_1
+					special_type_slot_2 = additional_machine_guns
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 3
+					tank_nsb_armor_upgrade = 3
+				}
+				icon = "GFX_commonwealth_2d_basic_heavy_tank_medium"
+			}
+			hidden_effect = {
+				army_experience = -10
+			}
+		}
+	}
+	EQS_unlock_cragadile_design = {
+		icon = GFX_decision_generic_tank
+		allowed = {
+			original_tag = EQS
+			has_dlc = "No Step Back"
+		}
+		available = {
+			has_tech = basic_medium_tank_chassis
+			has_tech = improved_radio
+			OR = {
+				has_tech = artillery1
+				has_tech = antitank1
+			}
+			has_tech = tech_maintenance_company2
+			
+		}
+		visible = {
+			NOT = {
+				has_tech = improved_medium_tank_chassis
+			}
+			has_completed_focus = EQS_equestrian_armored_development
+			has_completed_focus = EQS_blueblood_doctrine
+		}
+		custom_cost_trigger = {
+			has_army_experience > 39
+		}
+		custom_cost_text = decision_cost_army_xp_40
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_unlock_cragadile_design"
+			create_equipment_variant = {
+				name = "Cragadile"
+				type = medium_tank_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_medium_cannon
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_torsion_bar_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_2
+					special_type_slot_2 = easy_maintenance
+					special_type_slot_3 = extra_ammo_storage
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 3
+				}
+				icon = "GFX_commonwealth_2d_basic_heavy_tank_medium"
+			}
+			hidden_effect = {
+				army_experience = -40
+			}
+		}
+	}
+	EQS_unlock_magi_cragadile = {
+		icon = GFX_decision_generic_tank
+		allowed = {
+			original_tag = EQS
+			has_dlc = "No Step Back"
+		}
+		available = {
+			has_tech = basic_medium_tank_chassis
+			has_tech = improved_radio
+			has_tech = magical_weapons
+			has_tech = armor_tech_1
+			
+		}
+		visible = {
+			NOT = {
+				has_tech = improved_medium_tank_chassis
+			}
+			has_completed_focus = EQS_equestrian_armored_development
+			has_completed_focus = EQS_sunset_doctrine
+		}
+		custom_cost_trigger = {
+			has_army_experience > 19
+		}
+		custom_cost_text = decision_cost_army_xp_20
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_unlock_magi_cragadile"
+			create_equipment_variant = {
+				name = "Cragadile-M"
+				type = medium_tank_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_magic_medium_cannon
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_2
+					special_type_slot_2 = smoke_launchers
+					special_type_slot_3 = additional_machine_guns
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 4
+				}
+				icon = "GFX_commonwealth_2d_basic_heavy_tank_medium"
+			}
+			hidden_effect = {
+				army_experience = -20
+			}
+		}
+	}
+	EQS_unlock_cerberus_design = {
+		icon = GFX_decision_generic_tank
+		allowed = {
+			original_tag = EQS
+			has_dlc = "No Step Back"
+		}
+		available = {
+			has_tech = improved_heavy_tank_chassis
+			has_tech = advanced_radio
+			OR = {
+				has_tech = antiair3
+				has_tech = antitank2
+			}
+			has_tech = armor_tech_1
+			has_tech = engine_tech_1
+		}
+		visible = {
+			NOT = {
+				has_tech = advanced_heavy_tank_chassis
+			}
+			has_completed_focus = EQS_equestrian_armored_development
+			has_completed_focus = EQS_blueblood_doctrine
+		}
+		custom_cost_trigger = {
+			has_army_experience > 19
+		}
+		custom_cost_text = decision_cost_army_xp_20
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_unlock_cerberus_design"
+			create_equipment_variant = {
+				name = "Cerberus"
+				type = heavy_tank_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_heavy_cannon_2
+					turret_type_slot = tank_heavy_two_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = wet_ammo_storage
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 7
+					tank_nsb_armor_upgrade = 8
+				}
+				icon = "GFX_commonwealth_2d_improved_heavy_tank_medium"
+			}
+			hidden_effect = {
+				army_experience = -20
+			}
+		}
+	}
+	EQS_unlock_magi_cerberus = {
+		icon = GFX_decision_generic_tank
+		allowed = {
+			original_tag = EQS
+			has_dlc = "No Step Back"
+		}
+		available = {
+			has_tech = improved_heavy_tank_chassis
+			has_tech = advanced_radio
+			has_tech = improved_computing_machine
+			has_tech = magical_weapons
+			has_tech = armor_tech_2
+			has_tech = engine_tech_1
+		}
+		visible = {
+			NOT = {
+				has_tech = advanced_heavy_tank_chassis
+			}
+			has_completed_focus = EQS_equestrian_armored_development
+			has_completed_focus = EQS_sunset_doctrine
+		}
+		custom_cost_trigger = {
+			has_army_experience > 29
+		}
+		custom_cost_text = decision_cost_army_xp_30
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_unlock_magi_cerberus"
+			create_equipment_variant = {
+				name = "Cerberus-M"
+				type = heavy_tank_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_magic_heavy_cannon
+					turret_type_slot = tank_heavy_three_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = stabilizer
+					special_type_slot_3 = armor_skirts
+					special_type_slot_4 = wet_ammo_storage
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 9
+					tank_nsb_armor_upgrade = 8
+				}
+				icon = "GFX_commonwealth_2d_improved_heavy_tank_medium"
+			}
+			hidden_effect = {
+				army_experience = -30
+			}
+		}
+	}
+	EQS_unlock_vapor = {
+		icon = GFX_decision_generic_air
+		allowed = {
+			original_tag = EQS
+			has_dlc = "By Blood Alone"
+		}
+		available = {
+			has_tech = basic_small_airframe
+			has_tech = radio
+			has_tech = range_improvements
+		}
+		visible = {
+			NOT = {
+				has_tech = improved_small_airframe
+			}
+		}
+		custom_cost_trigger = {
+			has_air_experience > 9
+		}
+		custom_cost_text = decision_cost_air_xp_10
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_unlock_vapor"
+			create_equipment_variant = {
+				name = "Wonderbolt Vapor"
+				type = small_plane_airframe_1
+				design_team = mio:EQS_wonderbolt_organization
+				modules = {
+					fixed_main_weapon_slot = light_mg_4x
+					fixed_auxiliary_weapon_slot_1 = empty
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = radio_navigation_1
+					special_type_slot_2 = drop_tanks
+				}
+			}
+			hidden_effect = {
+				air_experience = -10
+			}
+		}
+	}
+	EQS_unlock_wildfire = {
+		icon = GFX_decision_generic_air
+		allowed = {
+			original_tag = EQS
+			has_dlc = "By Blood Alone"
+		}
+		available = {
+			has_tech = basic_small_airframe
+			has_tech = radio
+		}
+		visible = {
+			NOT = {
+				has_tech = improved_small_airframe
+			}
+		}
+		custom_cost_trigger = {
+			has_air_experience > 9
+		}
+		custom_cost_text = decision_cost_air_xp_10
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_unlock_wildfire"
+			create_equipment_variant = {
+				name = "Stratusburg Wildfire"
+				type = small_plane_airframe_1
+				design_team = mio:EQS_stratus_organization
+				modules = {
+					fixed_main_weapon_slot = bomb_locks
+					fixed_auxiliary_weapon_slot_1 = light_mg_2x
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = radio_navigation_1
+					special_type_slot_2 = dive_brakes_small
+				}
+			}
+			hidden_effect = {
+				air_experience = -10
+			}
+		}
+	}
+}
+
+war_measures = {
+	EQS_extra_militia_decision = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			original_tag = EQS
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EQS_militia_three_times_tt
+				check_variable = { EQS_militia_decision_counter < 3 }
+			}
+		}
+		visible = {
+			check_variable = { EQS_militia_decision_counter < 3 }
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = no
+		days_remove = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_extra_militia_decision"
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = EQS_civwar_militia_template_set
+						}
+					}
+					load_oob = "EQS_civwar_militia_setup"
+					set_country_flag = EQS_civwar_militia_template_set
+				}
+				load_oob = "EQS_civwar_cityfall_militia"
+			}
+			custom_effect_tooltip = EQS_civwar_militia_decision_tt
+			add_to_variable = { EQS_militia_decision_counter = 1 }
 		}
 	}
 }

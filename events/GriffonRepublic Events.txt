@@ -5477,12 +5477,18 @@ country_event = {
 			days = 3
 			id = griffonRepublic.241
 		}
+		ai_chance = {
+			factor = 0
+		}
 	}
 	option = {
 		name = griffonRepublic.242.b
 		country_event = {
 			days = 3
 			id = griffonRepublic.243
+		}
+		ai_chance = {
+			factor = 100
 		}
 	}
 }
@@ -5503,6 +5509,9 @@ country_event = {
 		name = griffonRepublic.243.a
 		add_stability = -0.025
 		add_political_power = 50
+		EQS = {
+			country_event = equestria_celestia.203
+		}
 	}
 }
 

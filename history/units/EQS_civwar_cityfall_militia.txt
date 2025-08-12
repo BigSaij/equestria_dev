@@ -1,0 +1,32 @@
+﻿units = {
+	division = {
+		location = 9806
+		division_template = "Equestrian Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 9806
+		division_template = "Equestrian Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 9806
+		division_template = "Equestrian Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 9806
+		division_template = "Equestrian Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 9806
+		division_template = "Equestrian Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		location = 9806
+		division_template = "Equestrian Militia"
+		start_experience_factor = 0.1
+	}
+}

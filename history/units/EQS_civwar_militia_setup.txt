@@ -1,0 +1,16 @@
+﻿division_template = {
+	name = "Equestrian Militia"	#Infantry Division
+	is_locked = yes
+	division_names_group = EQS_INF_01
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+	}
+
+	support = {
+	}
+}

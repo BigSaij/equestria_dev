@@ -1231,6 +1231,7 @@ shared_focus = {
 		}
 		custom_effect_tooltip = EQS_army_modification_unlocked_tt
 		country_event = equestria_civwar.10
+		set_variable = { EQS_militia_decision_counter = 0 }
 	}
 }
 
@@ -3869,64 +3870,166 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_nuclear_power_proliferation"
 		if = {
 			limit = {
-				has_tech = nuclear_reactor
+				has_dlc = "Gotterdammerung"
 			}
-			3 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = nuclear_reactor
-					level = 1
-					instant_build = yes
+			if = {
+				limit = {
+					NOT = {
+						has_tech = commercial_nuclear_reactor_tech
+					}
 				}
-			}
-			75 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = nuclear_reactor
-					level = 1
-					instant_build = yes
+				if = {
+					limit = {
+						has_tech = nuclear_reactor
+					}
+					3 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = nuclear_reactor
+							level = 1
+							instant_build = yes
+						}
+					}
+					75 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = nuclear_reactor
+							level = 1
+							instant_build = yes
+						}
+					}
+					12 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = nuclear_reactor
+							level = 1
+							instant_build = yes
+						}
+					}
 				}
-			}
-			12 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = nuclear_reactor
-					level = 1
-					instant_build = yes
+				else_if = {
+					limit = {
+						has_tech = nuclear_reactor_heavy_water
+					}
+					3 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = nuclear_reactor_heavy_water
+							level = 1
+							instant_build = yes
+						}
+					}
+					75 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = nuclear_reactor_heavy_water
+							level = 1
+							instant_build = yes
+						}
+					}
+					12 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = nuclear_reactor_heavy_water
+							level = 1
+							instant_build = yes
+						}
+					}
 				}
-			}
-		}
-		else_if = {
-			limit = {
-				has_tech = nuclear_reactor_heavy_water
-			}
-			3 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = nuclear_reactor_heavy_water
-					level = 1
-					instant_build = yes
+				else = {
+					custom_effect_tooltip = EQS_major_city_nuclear_reactors_tt
 				}
+				custom_effect_tooltip = EQS_commercial_nuclear_available_tt
 			}
-			75 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = nuclear_reactor_heavy_water
-					level = 1
-					instant_build = yes
+			else = {
+				3 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = commercial_nuclear_reactor
+						level = 1
+						instant_build = yes
+					}
 				}
-			}
-			12 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = nuclear_reactor_heavy_water
-					level = 1
-					instant_build = yes
+				75 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = commercial_nuclear_reactor
+						level = 1
+						instant_build = yes
+					}
+				}
+				12 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = commercial_nuclear_reactor
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
 		}
 		else = {
-			custom_effect_tooltip = EQS_major_city_nuclear_reactors_tt
+			if = {
+				limit = {
+					has_tech = nuclear_reactor
+				}
+				3 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = nuclear_reactor
+						level = 1
+						instant_build = yes
+					}
+				}
+				75 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = nuclear_reactor
+						level = 1
+						instant_build = yes
+					}
+				}
+				12 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = nuclear_reactor
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = nuclear_reactor_heavy_water
+				}
+				3 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = nuclear_reactor_heavy_water
+						level = 1
+						instant_build = yes
+					}
+				}
+				75 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = nuclear_reactor_heavy_water
+						level = 1
+						instant_build = yes
+					}
+				}
+				12 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = nuclear_reactor_heavy_water
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = EQS_major_city_nuclear_reactors_tt
+			}
 		}
 	}
 }
@@ -4317,10 +4420,15 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_equestrian_armored_development"
 		if = {
 			limit = {
-				NOT = {
-					has_dlc = "Arms Against Tyranny"
-				}
+				has_dlc = "Arms Against Tyranny"
+			}    
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = EQS_equestrian_tank_program_organization
+			mio:EQS_equestrian_tank_program_organization = {
+				add_mio_funds = 800
 			}
+		}
+		else = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = EQS_equestrian_tank_program
 		}

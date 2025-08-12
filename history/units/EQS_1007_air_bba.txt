@@ -3,7 +3,7 @@
 		small_plane_airframe_0 = {
 			owner = "EQS" 
 			amount = 100
-			version_name = "Hollow Shades Fury"
+			version_name = "Wonderbolt Stinger"
 		}
 		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
 			modifier="fighter_genius"
@@ -17,7 +17,7 @@
 		small_plane_airframe_0 = {
 			owner = "EQS" 
 			amount = 50
-			version_name = "Hollow Shades Fury"
+			version_name = "Wonderbolt Stinger"
 		}
 		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
 			modifier="fighter_unique"
@@ -31,7 +31,7 @@
 		small_plane_airframe_0 = {
 			owner = "EQS" 
 			amount = 25
-			version_name = "Hollow Shades Fury"
+			version_name = "Wonderbolt Stinger Prototype"
 		}
 		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
 			modifier="fighter_unique"
@@ -46,7 +46,7 @@
 		small_plane_airframe_0 = {
 			owner = "EQS" 
 			amount = 25
-			version_name = "Hollow Shades Fury"
+			version_name = "Wonderbolt Stinger Prototype"
 		}
 		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
 			modifier="fighter_good"
@@ -64,7 +64,7 @@ instant_effect = {
 		equipment = {
 			type = small_plane_airframe_0
 			creator = "EQS" 
-			version_name = "Gelding Gladiator"
+			version_name = "Wonderbolt Stinger"
 		}
 		requested_factories = 1
 		progress = 0.15
