@@ -64,6 +64,10 @@ SDL_EQS_amira_democratic:0 "Principality of Saddle Arabia"
 SDL_EQS_amira_democratic_DEF:0 "the Principality of Saddle Arabia"
 SDL_EQS_amira_democratic_ADJ:0 "Saddle Arabian"
 
+FAT_EQS_cloudbury_democratic:0 "Duchy of Cloudbury"
+FAT_EQS_cloudbury_democratic_DEF:0 "the Duchy of Cloudbury"
+FAT_EQS_cloudbury_democratic_ADJ:0 "Cloudburian"
+
 CHN_VES_EQS_harmony_party:0 "Throraxian-Equestrian Administration"
 CHN_VES_EQS_harmony_party_long:0 "The Joint Thoraxian-Equestrian Administration"
 CHN_DIT_harmony_party:0 "Crown of Ditrys"
@@ -518,6 +522,8 @@ EQS_release_KIR_decision:0 "Restore the Realm of Kiria"
 EQS_release_SDL_decision:0 "Re-establish the Principality of Saddle Arabia"
 EQS_release_MTO_decision:0 "Restore the Duchy of Maretonia"
 EQS_release_KAR_decision:0 "Create the Duchy of Karkadannistan"
+EQS_release_JER_decision:0 "Restore the Kingdom of Aquileia"
+EQS_release_FAT_decision:0 "Restore the Duchy of Cloudbury"
 
 
 EQS_integrate_CES_commanders:0 "Reintegrate Daring Do's Command Staff"
@@ -1118,6 +1124,10 @@ equestria_celestia.203.t:0 "The Eagle and the Sun"
 equestria_celestia.203.d:0 ""Princess Sun will see you now," Princess Twilight Sparkle said, rapidly flipping through her Ponish to Griffish dictionary. Her accent was very thick, though she had kind eyes. The purple alicorn descended into an explanation in Ponish with a wide smile that Grover did not understand, but he nodded along and clutched a thick satchel of books tighter under one wing. Grover von Griefenstein had heard many stories about Equestria and its ponies. True to them, Princess Twilight was naked. But the armed guards reminded Grover far more of Griffenheim than his picture book. She stopped outside the doors to the throne room and realized she was speaking the wrong language from the blush. "You will do good. I mean well."\n\nGrover tried to puff up his feathers and took a deep breath. He might be an exile on a foreign shore without a crown, but he was still descended from the greatest griffon to ever live. He would not be afraid. The young griffon followed Princess Twilight as she introduced him in her language, saying his name without his title and stepping aside with a waved wing. Grover looked up to the raised dais, and flinched.\n\nA tall white alicorn in gilded war armor had turned her cold eyes to him. "I met your ancestor in Talouse as his armies crushed the Wingbardians." She stood beneath two raised thrones and streaming banners of a sun and moon, speaking Griffish with an ancient accent like Eros. "I came unarmed, to show my intent for peace. He was the one to bring steel. Centuries later, it seems our roles have changed. Grover of Griffonstone, I welcome you to my court. In peace." The Sun descended upon him and passed a wing over his head. "I will make no promise to restore your crown or throne. Princess Twilight will see to your care and enrollment at the School of Friendship." She switched to Ponish again as she passed, speaking some aside to the other alicorn. She left and shut the doors to the throne room herself with a burst of golden light.\n\n"I..." Princess Twilight attempted to smile and nudged his side with her wing. "There is a room at my school. With many books. For you." She checked her dictionary again and licked her lips. "Everything will be alright."\n\n"That is what they said to me before they took my crown," Grover finally answered. Princess Twilight's eyes were kind and she smiled, but she pretended not to understand."
 equestria_celestia.203.a:0 "He'll be a good student."
 
+equestria_celestia.204.t:0 "The Wingbardian Plea"
+equestria_celestia.204.d:0 "Griffons were prideful, stubborn creatures. They desired dominance over others, the ability to enforce their will upon the world around them. There was the rare exception here and there, but the Wingbardians fit the stereotype to the letter. They arrogantly sought New Mareland, a land fairly and freely given centuries ago to satisfy their own egos.\n\nAnd yet, there was no courage behind that bluster. Once the tide had turned against them, the griffons had come seeking peace and mercy from Equestria. A return to the borders pre-war, and an agreement to pay extensive war reparations to both New Mareland and Equestria. The diplomats had still given threats, promises of endless resistance and retribution should the war continue, but all involved knew they were empty. Ultimately, their fate was left to the Princess.\n\nA past Celestia would have accepted the treaty without question. Too much blood had been shed over land already, and to prolong the war would mean nothing more than more bodies to send back home. There were certainly geopolitical reasons as well; Equestria had remained distant from the violence of Griffonian affairs for a good reason, and to strike too deep into Wingbardy would earn the ire of many. To wipe her hooves clean of this mess would be the safer, reasonable option.\n\nNothing about this war was reasonable. They had attacked Equestria, attacked Harmony, and now they believed they could avoid any real retribution with mere words. That the lives lost in the pursuit of their ambitions meant nothing, and that they could return to oppressing those too weak to stand against them. How Celestia longed to put them in their place, to shatter their arrogance and build something new upon its pieces no matter the consequences.\n\nThe treaty was in her hooves, even as her soldiers fought on. Would she end it now? Or see it to its inevitable conclusion?"
+equestria_celestia.204.a:0 "A phoenix feather quill brings peace."
+equestria_celestia.204.b:0 "A scroll turned to ash perpetuates war."
 
 
 
@@ -1349,6 +1359,7 @@ POLITICS_GILDA_SMILE_DESC:0 "§YSMILE DIRECTIVE NO# 42\nFOR ASSET 'FLYING FALCON
 POLITICS_AMIRA_SMILE_DESC:0 "§YSMILE DIRECTIVE NO# 113\nFOR ASSET 'DESERT FLOWER' ONLY§!\n\nDespite the end of the civil war in Saddle Arabia, countless political divisions and radical republican extremists have made attempts to stabilize the peninsula extremely costly. The Sa'adle family has proven itself too inept to rule effectively, but contacts report that faith in monarchy would be restored should normalcy return to the region. You will serve as Princess and use your noble connections to provide legitimacy to the new regime being instated. Primary efforts should be focused on restoring public opinion and ensuring oil fields remain out of enemy hooves. Any reports of hedonism will be dealt with severely. Good luck, Princess.\n\n§RTHIS DRAGONFIRE MESSAGE WILL IMMOLATE IN TEN SECONDS§!"
 #POLITICS_KYRIPPOS_SMILE_DESC:0 "§YSMILE DIRECTIVE NO# 105\nFOR ASSET 'HORSE LORD' ONLY§!\n\n...\n\n§RTHIS DRAGONFIRE MESSAGE WILL IMMOLATE IN TEN SECONDS§!"
 POLITICS_OLYMPIA_SMILE_DESC:0 "§YSMILE DIRECTIVE NO# 106\nFOR ASSET 'LADY SNAKE' ONLY§!\n\nThe tribes of Karkadannistan have proven notoriously difficult to govern effectively under a single authority, and continue to defy any attempt at maintain peace in the region. Due to a lack of local collaborators to form an effective government, we have chosen to crown you as Duchess over the horse-inhabited lands of Hestraya. Your task will be to ensure that no warlord is able to rise and attempt another conquest of the peninsula. While military force is authorized, we expect any animosity from previous events to not cloud judgement. Visits to Suhmane will be allowed with 48 hour advance notice to the relevant agent. Good luck, Duchess.\n\n§RTHIS DRAGONFIRE MESSAGE WILL IMMOLATE IN TEN SECONDS§!"
+POLITICS_OSKAR_SMILE_DESC:0 ""
 
 EQS_princess_celestia_and_luna:0 "Princesses Celestia and Luna"
 
@@ -1690,6 +1701,9 @@ EQS_friendship_journal_relocked_tt:0 "The §PFriendship Journal§! §Ydecision t
 EQS_release_maretonia_tt:0 "The §YDuchy of Maretonia§! will be released under §YDuke Kyrippos II§! with every original core state of §CMaretonia§!, §CAestlonia§! and the §CIce Dragons§! that §Ywe or a subject§! own."
 EQS_release_karkadannistan_tt:0 "§YKarkadannistan§! will be released under §YDuchess Olympia§! with every original §CHorse-Majority§! core state of §CKarkadannistan§! that §Ywe or a subject§! own."
 EQS_release_saddlearabia_tt:0 "The §YPrincipality of Saddle Arabia§! will be released under §YPrincess Amira§! with every original core state of §CSaddle Arabia§! that §Ywe or a subject§! own."
+EQS_release_kiria_tt:0 "The §YRealm of Kiria§! will be released under §YAutumn Blaze§! with every §CKirin-Majority§! state that §Ywe or a subject§! own."
+EQS_release_aquileia_tt:0 "The §YKingdom of Aquileia§! will be released under §YQueen Vivienne§! with every state of §CGreater Aquileia§! that §Ywe or a subject§! own. §YLes Meridiennes§! will be §Yannexed§! and become §Gcore states§!."
+EQS_release_cloudbury_tt:0 "The §YDuchy of Cloudbury§! will be released under §YOskar I§! with every original core state of the §CGriffonian Republic§! and the §CSunstriker Clan§! that §Ywe or a subject§! own."
 
 
 EQS_PHOENIX_UNRELEASED_tt:0 "§RContent for this option is undeveloped. It is highly suggested that you do not take it.§!"
