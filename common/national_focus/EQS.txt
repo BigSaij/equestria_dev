@@ -3568,24 +3568,24 @@ shared_focus = {
 	}
 }
 
-#shared_focus = {
-	#id = EQS_foreign_magical_studies
-	#icon = GFX_goal_news
-	#x = -1
-	#y = 1
-	#relative_position_id = EQS_integrate_EEA
-	#cost = 4
-	#prerequisite = {
-		#focus = EQS_integrate_EEA
-	#}
-	#ai_will_do = {
-		#factor = 5
-	#}
-	#completion_reward = {
-		#log = "[GetDateText]: [Root.GetName]: Focus EQS_foreign_magical_studies"
-		#custom_effect_tooltip = EQS_foreign_magic_tech_tt
-	#}
-#}
+shared_focus = {
+	id = EQS_foreign_magical_studies
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_integrate_EEA
+	cost = 4
+	prerequisite = {
+		focus = EQS_integrate_EEA
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_foreign_magical_studies"
+		custom_effect_tooltip = EQS_foreign_magic_tech_tt
+	}
+}
 
 shared_focus = {
 	id = EQS_celestial_economic_miracle

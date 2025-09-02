@@ -38,6 +38,10 @@ HAU_EQS = {
 	color = rgb { 142 232 153 }
 	color_ui = rgb { 142 232 153 }
 }
+FAT_EQS_cloudbury = {
+	color = rgb { 104 107 156 }
+	color_ui = rgb { 104 107 156 }
+}
 FAT_Monarchy = {
 	color = rgb { 104 107 156 }
 	color_ui = rgb { 104 107 156 }

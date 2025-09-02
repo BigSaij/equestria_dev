@@ -95,6 +95,9 @@ ABY_EQS_democratic_party_long:0 "Abyssinian Friendship Party"
 MCW_EQS_democratic_party:0 "Celaeno's Crew"
 MCW_EQS_democratic_party_long:0 "The Pirate Crew of Queen Celaeno"
 
+FAT_EQS_democratic_party:0 "Plumenjar Dynasty"
+FAT_EQS_democratic_party_long:0 "The Dynasty of House Plumenjar"
+
 EQS_harmonic_accord:0 "Harmonic Accord"
 
 #PARTIES
@@ -450,6 +453,13 @@ EQS_twilight_civwar_event:0 "Twilight Sparkle - The Princess"
 EQS_extra_militia_decision:0 "Conscript Additional Militia"
 EQS_extra_militia_decision_desc:0 "With our emergency situation, the military can conscript additional Equestrians to serve as militia and defend the frontline against the forces of the Nightmare. While we may be able to justify this now, it will certainly cause issues once this war is over..."
 
+EQS_foreign_magic_studies_category:0 "The Foreign Magical Studies Department"
+EQS_olenian_seer_tech:0 "Study Olenian Foresight"
+EQS_changeling_fuel_tech:0 ""Study Changeling Fuel Techniques"
+EQS_griffon_enchantment_tech:0 "Study Griffon Enchanting"
+EQS_dragon_equipment_tech:0 "Study Draconic Weaponry"
+EQS_hippogriff_water_tech:0 "Study Hippogriff Waterproof Designing"
+
 EQS_acornage_line:0 "Construct the Acornage Line"
 EQS_acornage_line_desc:0 "While the White river makes a natural defensive line in the west as does the Acorn River in the east, the cities of Cirruspolis and Acornage itself sit vulnerable at the central part of the border with the Changeling Queendom. Expectations of holding the Heer there are considered woefully optimistic at best, but preliminary defenses may be able to stall the changelings long enough for other defensive positions to be erected, and cover an orderly retreat when the time comes."
 EQS_fairflanks_diamondflake_line:0 "Construct the Fairflanks-Diamondflake Line"
@@ -525,6 +535,8 @@ EQS_release_KAR_decision:0 "Create the Duchy of Karkadannistan"
 EQS_release_JER_decision:0 "Restore the Kingdom of Aquileia"
 EQS_release_FAT_decision:0 "Restore the Duchy of Cloudbury"
 
+EQS_release_HAU_decision:0 "The Matter of Haukland"
+
 
 EQS_integrate_CES_commanders:0 "Reintegrate Daring Do's Command Staff"
 
@@ -556,6 +568,16 @@ EQS_unlock_vapor_desc:0 "As conflict with the Changeling Queendom seemed ever mo
 EQS_unlock_wildfire:0 "Design the Wildfire"
 EQS_unlock_wildfire_desc:0 "Given the long history of pegasi working in tandem with ground forces, designs for a battlefield support aircraft were quickly drawn up and assigned to the Stratusburg branch of the Wonderbolt Design Bureau. The Wildfire did prove effective in the few instances where it was deployed in the Great War, but was not produced in large numbers due to early changeling dominance in the skies rendering close air support infeasible."
 
+WNG_EQS_offer_peace:0 "Sue for Peace"
+WNG_EQS_offer_peace_desc:0 "The war has not developed to Wingbardy's advantage, and we risk losing everything to the Equestrians. If we are to survive, we must beg for peace and hope that the Princess' mercy is not mere fairytales from a faraway land."
+WNG_EQS_peace_deal_tt:0 "Should Equestria accept, we will maintain our territorial integrity but be forced to provide war reparations. Equestria will also be given resource rights to Wrobert. If we have no other wars, we will additionally be forced to demilitarize our nation and Wrobert."
+EQS_wingbardian_peace_settlement_tt:0 "We will gain §Cresource rights§! to §YWrobert§! as well as §Cwar reparations§! from §YWingbardy§!. Should they not be at §Rwar§! with any other nation, they will additionally be §Odemilitarized§!."
+
+WNG_EQS_war_reparations:0 "War Reparation Payments"
+EQS_WNG_war_reparations:0 "Wingbardian War Reparations"
+
+EQS_griffon_return_NTR_states:0 "Obey the Hauklandish Agreement"
+EQS_NTR_join_equestria:0 "Join the Harmonic Accord"
 
 ##NEW IDEAS##
 
@@ -1108,6 +1130,17 @@ equestria_misc.3.t:0 "The Queen of Ice"
 equestria_misc.3.d:0 "Velvet supposed that Vanhoover was not the worst city to take refuge in. It was north enough to receive regular snowfall, even with the strange forms of weather control the ponies used. The large deer minority ranged from sympathetic to supportive of her claim to the Olenian throne and her acceptance of harmony. There was even an excellent view of the icy Luna Bay, quite similar to the one that Vaverfront possessed. With a bit of imagination, one could still imagine that they were in Olenia.\n\nShe hated that. Velvet did not need reminders of the land that was lost to the changelings. They were in this city too, but knew to give her a wide berth; the ice queen was more than willing to freeze solid any bug who dared approach her. Experience had given her a sharp intuition; that was how she knew the pony following her from behind was no ordinary citizen. "Speak," she said as cold air blew through the street. "I have other matters to attend to."\n\n"We both know that's a lie." The mare with a white coat stepped forward. "Agent Foxtrot. I'm sure you know why Equestria sent me."\n\n"Perhaps. It is too late to offer aid to Olenia, however." Velvet turned as the temperature dropped several degrees. "Equestria certainly seemed content to watch, and now you come to me for help?"\n\n"Yes. We both know Chrysalis will not stop at Olenia. Equestria is next, and if we lose that war then there will be nothing left to stop the changelings. We want Olenia freed just as much as you do. Work with S.M.I.L.E. on establishing contacts with the Olenian resistance, and help us organize any exiles willing to fight into proper divisions. We'll need all the volunteers we can get, and having you act as a leader for the deer here is vital for mobilizing them against the bugs."\n\nVelvet trotted forward to stand in front of Agent Foxtrot, her eyes cold as ice as she stared down at the mare. "Very well," she finally said as the icy winds died down. "But the exiles will serve under my command, not yours. I am the rightful Queen of Olenia, and they are my subjects. I will lead deerkind to reclaim my throne, not sit and watch as others claim a crown in my name."\n\nFoxtrot nodded. "I'm sure that can be arranged.""
 equestria_misc.3.a:0 "Anything to stop the coming storm."
 
+equestria_celestia.104.t:0 "The Matter of Haukland"
+equestria_celestia.104.d:0 "S.M.I.L.E. REPORT #423 - ON THE HAUKLANDISH ISLES\n\nEquestrian administration of Haukland is proceeding as expected. Local resistance has been subdued, and the majority of the native population has accepted the new regime, if only temporarily. As requested by order of the Princess, S.M.I.L.E. has worked with Prince Blueblood to compile a list of possible opportunities custodianship over the isles grants.\n\nThe Griffonian Republic is the best candidate. While they have publicly stated their opposition to the reign of the Princess, particularly following the return of the Nightmare, agents believe their desire for international legitimacy will force them to the table should we offer official recognition. The Riverlands have been deemed too volatile to be worth extracting any concessions; the northern ponies have maintained a harmonic monarchy and may prove a useful Equestrian ally on the Griffonian continent.\n\nThe primary alternative is the Herzlandic regime, or the Griffonian Empire. Despite being debatably more hostile to Equestrian than the republicans, the court would more than likely prefer avoiding a war with Equestria over the isles. Similar concessions involving the northern ponies are viable, as they care little for the desolate tundras. The Prince has volunteered to lead any negotiations involving the Empire.\n\nWe can also maintain a permanent administration over the island. Enough natives have proven willing to collaborate with us to the point any attempted sabotage can be handled locally. However, this situation is likely to garner negative attention from the nations of Griffonia, particularly those with aspirations of a pan-Griffonian state. Prince Blueblood has recommended against maintaining Equestrian control over the islands, to avoid entanglement in Griffonian geopolitical affairs.\n\nThe agency awaits your command, Princess.\n\nFOR THE DEFENSE OF EQUESTRIA"
+equestria_celestia.104.a:0 "Let's see if the Republicans are willing to strike a deal."
+equestria_celestia.104.b:0 "The Imperials should agree to a fair trade."
+equestria_celestia.104.c:0 "Haukland will remain tied with Equestria."
+
+equestria_celestia.105.t:0 "The Haukland Agreement"
+equestria_celestia.105.d:0 "An envoy has arrived from Equestria with an offer for us. Recently they have come into possession of the isles of Haukland, territory that we claim as part of our pan-Griffonian aims. However, they do not seek conflict with us; on the contrary, they are willing to hoof over administration of the isles in return for certain minor concessions. These include permanent embassies and dropping all claims to the far north, specifically the tundras inhabited by ponies. The territorial integrity and independence of the tribals as well as accepting their eventual entrance into the Harmonic Accord, in return for Equestria's implicit support for our ambitions. Though many believe this to be a worthwhile trade, some still seek vengeance against the Skynavians and consider the land to be rightfully Griffonian through settlement. Should we accept this deal?"
+equestria_celestia.105.a:0 "Tell the Equestrians they have a deal."
+equestria_celestia.105.b:0 "We will not allow any meddling in our affairs."
+
 
 equestria_celestia.200.t:0 "Liberation Calls"
 equestria_celestia.200.d:0 ""Is it time?"\n\nThe S.M.I.L.E. operative, a snow-white pony who had given the name 'Foxtrot' to the Olenians checked her watch. "One more minute," she said as the hands approached midnight. "Have you made sure everypony is ready?"\n\n"Everydeer," the Olenian corrected, "and we've been ready for weeks." Taking a hold of his rifle, he pulled back the bolt to let the next round slide into the chamber. "Though we all owe you a great debt for helping us secure these changeling weapons and keeping communication between cells open. The collaborators are incompetent, but the Heer is effective at keeping us spread thin."\n\n"Fighting the bugs is payment enough. Once you seize Hjortland, Equestria will ship supplies and reinforcements in to secure the peninsula. Queen Velvet will arrive to establish a new government when it is safe enough to do so."\n\nThe stag nodded. "I suppose there is some irony in these things," he commented as moonlight began breaking through the treeline. "The changelings have done what no Olenian has before, and bought unity to all deer against a common enemy. I supported King Johan before, you know. My father was a noble threatened by Velvet's reforms, so she was the enemy. But better a doe upon the throne than a foreigner."\n\n"Fair enough." Foxtrot checked her watch again. "It's midnight. Are you ready?"\n\nPulling out a flare gun, the stag grinned. "Of course. We have been waiting a long time for this."\n\nAnd as the flares rose over the sea of trees, the first echoes of gunfire rang through the Hjortland Peninsula."
@@ -1359,7 +1392,10 @@ POLITICS_GILDA_SMILE_DESC:0 "§YSMILE DIRECTIVE NO# 42\nFOR ASSET 'FLYING FALCON
 POLITICS_AMIRA_SMILE_DESC:0 "§YSMILE DIRECTIVE NO# 113\nFOR ASSET 'DESERT FLOWER' ONLY§!\n\nDespite the end of the civil war in Saddle Arabia, countless political divisions and radical republican extremists have made attempts to stabilize the peninsula extremely costly. The Sa'adle family has proven itself too inept to rule effectively, but contacts report that faith in monarchy would be restored should normalcy return to the region. You will serve as Princess and use your noble connections to provide legitimacy to the new regime being instated. Primary efforts should be focused on restoring public opinion and ensuring oil fields remain out of enemy hooves. Any reports of hedonism will be dealt with severely. Good luck, Princess.\n\n§RTHIS DRAGONFIRE MESSAGE WILL IMMOLATE IN TEN SECONDS§!"
 #POLITICS_KYRIPPOS_SMILE_DESC:0 "§YSMILE DIRECTIVE NO# 105\nFOR ASSET 'HORSE LORD' ONLY§!\n\n...\n\n§RTHIS DRAGONFIRE MESSAGE WILL IMMOLATE IN TEN SECONDS§!"
 POLITICS_OLYMPIA_SMILE_DESC:0 "§YSMILE DIRECTIVE NO# 106\nFOR ASSET 'LADY SNAKE' ONLY§!\n\nThe tribes of Karkadannistan have proven notoriously difficult to govern effectively under a single authority, and continue to defy any attempt at maintain peace in the region. Due to a lack of local collaborators to form an effective government, we have chosen to crown you as Duchess over the horse-inhabited lands of Hestraya. Your task will be to ensure that no warlord is able to rise and attempt another conquest of the peninsula. While military force is authorized, we expect any animosity from previous events to not cloud judgement. Visits to Suhmane will be allowed with 48 hour advance notice to the relevant agent. Good luck, Duchess.\n\n§RTHIS DRAGONFIRE MESSAGE WILL IMMOLATE IN TEN SECONDS§!"
-POLITICS_OSKAR_SMILE_DESC:0 ""
+POLITICS_OSKAR_SMILE_DESC:0 "§YSMILE DIRECTIVE NO# 152\nFOR ASSET 'PEACEFUL PIGEON' ONLY§!\n\nThe situation in the former Duchy of Cloudsbury has remained politically unstable ever since the Republican takeover. While their goal may have been idealistic, the rampant factionalism and warlordism has proved them unsuitable for governance. As a Cloudburian, you will rebuild the legitimacy of the monarchy through acting as a public figurehead. We also understand you have made many ties with the ponies to the north; they may aid you if necessary. The republicans should be kept pacified if possible, but military force is authorized should their efforts turn violent. Your daughter's education will be provided at our expense if results are satisfactory. Good luck, Duke.\n\n§RTHIS DRAGONFIRE MESSAGE WILL IMMOLATE IN TEN SECONDS§!"
+
+POLITICS_VIVIENNE_PUPPET_DESC:0 "§YSMILE DIRECTIVE NO# 73\nFOR ASSET 'LOVE BIRD' ONLY§!\n\n...\n\n§RTHIS DRAGONFIRE MESSAGE WILL IMMOLATE IN TEN SECONDS§!"
+POLITICS_VIVIENNE_PUPPET_ALT_DESC:0 "§YSMILE DIRECTIVE NO# 73\nFOR ASSET 'LOVE BIRD' ONLY§!\n\n...\n\n§RTHIS DRAGONFIRE MESSAGE WILL IMMOLATE IN TEN SECONDS§!"
 
 EQS_princess_celestia_and_luna:0 "Princesses Celestia and Luna"
 
@@ -1611,16 +1647,20 @@ EQS_for_every_subject_tt:0 "§YEvery subject will receive the following§!:"
 EQS_economic_imperialism_unlocked_tt:0 "All of our future §Csubjects§! will gain this §Ynational spirit§! and be locked to §YFree Trade§!."
 EQS_southwest_secured_req_tt:0 "We have secured the entirety of the §YEquestrian Southwest§!."
 
+EQS_velvet_sheltered_tt:0 "§YQueen Velvet§! has taken shelter in Equestria."
+EQS_thorax_sheltered_tt:0 "§YThorax§! has taken shelter in Equestria."
+
 EQS_doctor_hooves_unlocked_tt:0 "§YDoctor Hooves§! will become §Gavailable§! as a §YNuclear Scientist§!."
 EQS_major_city_nuclear_reactors_tt:0 "§YNuclear Reactors§! will be §Cconstructed§! in the cities of §YCanterlot§!, §YManehattan§! and §YFillydelphia§!."
-EQS_commercial_nuclear_available_tt:0 "If we complete the §YCommercial Nuclear Reactor§! §Cspecial project§!, this focus will build §Civilian Nuclear Reactors§! instead."
+EQS_commercial_nuclear_available_tt:0 "If we complete the §YCommercial Nuclear Reactor§! §Cspecial project§!, this focus will build §CCivilian Nuclear Reactors§! instead."
 
 EQS_army_modification_unlocked_tt:0 "§GWill unlock unit training, disbanding and editing templates!§!"
 EQS_high_command_reform_tt:0 "Completing this focus will §Cunlock§! new §Ymilitary high command§!."
 
 EQS_griffonian_involvement_tt:0 "§RThis may irreversibly involve us in Griffonian affairs!§!"
-EQS_griffonian_hauklandish_agreement_tt:0 "Should this nation §Gaccept§!, they will §Rannex§! §YHaukland§! immediately and agree to §Ccede§! any §Ycores§! or §Yclaims§! of the §YNorthern Tribes§! they own §Cnow or in the future§!.\nThe §YNorthern Tribes§! will join the §PHarmonic Accord§! if their remaining §Yclaims§! are returned this way."
+EQS_griffonian_hauklandish_agreement_tt:0 "Should this nation §Gaccept§!, they will §Rannex§! §YHaukland§! immediately and agree to §Ccede§! any §Ycores§! or §Yclaims§! of the §YNorthern Tribes§! they own §Cnow or in the future§!. The §YNorthern Tribes§! will join the §PHarmonic Accord§! if their remaining §Yclaims§! are returned this way.\n\nIf they §Rrefuse§!, we will establish an §Yautonomous Haukland§! under our rule."
 EQS_hauklandish_agreement_tt:0 "We will §Rcede§! any territory the §YNorthern Tribes§! has §Yclaims§! or §Ycores§! on to them should we own any in the future."
+EQS_lost_haukland_chance_tt:0 "The §PEquestrians§! will establish an §Yautonomous Hauklandish§! state. Should we desire it in the future, our only option will be §Rwar with Equestria§!."
 
 EQS_possible_CCN_war_tt:0 "Should §CThorax§! refuse to §Yjoin our faction§!, we will §Rdeclare war§!."
 EQS_new_mareland_reclaimation_tt:0 "Completing this focus will §Cunlock§! a §Ydecision§! to §Rdeclare war§! on §YNew Mareland§!, or the nations owning §YSunset§! and §YNew Manehattan§! if it does not exist."

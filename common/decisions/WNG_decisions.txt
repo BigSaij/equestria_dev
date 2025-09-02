@@ -3038,6 +3038,32 @@ WNG_mafia_decisions_cat ={
 }
 
 political_actions = {
+	WNG_EQS_offer_peace = {
+		icon = generic_political_discourse
+		allowed = {
+			original_tag = WNG
+		}
+		available = {
+			has_offensive_war_with = EQS
+			surrender_progress > 0.24
+		}
+		visible = {
+			has_war_with = EQS
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 400
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision WNG_EQS_offer_peace"
+			custom_effect_tooltip = WNG_EQS_peace_deal_tt
+			EQS = {
+				country_event = equestria_celestia.204
+			}
+		}
+	}
+		
 	WNG_counter_commie_propaganda = {
 		icon = anti_communist
 

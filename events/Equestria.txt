@@ -4381,54 +4381,20 @@ country_event = {
 	option = {
 		name = equestria_celestia.104.a
 		trigger = {
-			OR = {
-				FAT = {
-					AND = {
-						exists = yes
-						is_subject = no
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
-				FAW = {
-					AND = {
-						exists = yes
-						is_subject = no
-						NOT = {
-							has_government = fascism
-						}
-					}
-				}
-			}
-			NTR = {
-				OR = {
-					exists = no
-					is_subject = no
-					is_subject_of = FAT
-					is_subject_of = FAW
-				}
-			}
-		}
-		if = {
-			limit = {
-				FAT = {
-					exists = yes
-				}
-			}
 			FAT = {
-				country_event = {
-					id = equestria_celestia.105
-					days = 2
+				AND = {
+					exists = yes
+					is_subject = no
+					NOT = {
+						has_government = communism
+					}
 				}
 			}
 		}
-		else = {
-			FAW = {
-				country_event = {
-					id = equestria_celestia.105
-					days = 2
-				}
+		FAT = {
+			country_event = {
+				id = equestria_celestia.105
+				days = 2
 			}
 		}
 		custom_effect_tooltip = EQS_griffonian_hauklandish_agreement_tt
@@ -4463,24 +4429,34 @@ country_event = {
 			target = HAU
 			autonomy_state = autonomy_dominion
 		}
-		HAU = {
-			set_cosmetic_tag = HAU_EQS
-			set_party_name = {
-				ideology = democratic
-				long_name = HAU_EQS_harmony_party_long
-				name = HAU_EQS_harmony_party
+		if = {
+			limit = {
+				has_completed_focus = EQS_equestrian_economic_integration
 			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
+			HAU = {
+				EQS_add_economic_imperialism = yes
 			}
-			set_popularities = {
-				democratic = 85
-				fascism = 4
-				communism = 1
-				neutrality = 10
+		}
+		hidden_effect = {
+			HAU = {
+				set_cosmetic_tag = HAU_EQS
+				set_party_name = {
+					ideology = democratic
+					long_name = HAU_EQS_harmony_party_long
+					name = HAU_EQS_harmony_party
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				set_popularities = {
+					democratic = 85
+					fascism = 4
+					communism = 1
+					neutrality = 10
+				}
+				load_focus_tree = { tree = generic_focus keep_completed = yes }
 			}
-			load_focus_tree = { tree = generic_focus keep_completed = yes }
 		}
 	}
 }
@@ -4522,17 +4498,74 @@ country_event = {
 				end_puppet_this = yes
 			}
 		}
+		if = {
+			limit = {
+				NTR = {
+					exists = yes
+					NOT = { has_country_flag = EQS_will_join_accord }
+				}
+			}
+			NTR = {
+				set_country_flag = EQS_will_join_accord
+			}
+		}
 		EQS = {
 			every_owned_state = {
 				limit = {
 					is_core_of = HAU
+					NOT = {
+						is_core_of = DRG
+					}
 				}
 				transfer_state_to = ROOT
 			}
 		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 	option = {
 		name = equestria_celestia.105.b
+		custom_effect_tooltip = EQS_lost_haukland_chance_tt
+		hidden_effect = {
+			EQS = {
+				release_puppet = HAU
+				set_autonomy = {
+					target = HAU
+					autonomy_state = autonomy_dominion
+				}
+				if = {
+					limit = {
+						has_completed_focus = EQS_equestrian_economic_integration
+					}
+					HAU = {
+						EQS_add_economic_imperialism = yes
+					}
+				}
+			}
+			HAU = {
+				set_cosmetic_tag = HAU_EQS
+				set_party_name = {
+					ideology = democratic
+					long_name = HAU_EQS_harmony_party_long
+					name = HAU_EQS_harmony_party
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+				set_popularities = {
+					democratic = 85
+					fascism = 4
+					communism = 1
+					neutrality = 10
+				}
+				load_focus_tree = { tree = generic_focus keep_completed = yes }
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 
@@ -4646,6 +4679,79 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestria_celestia.203.a
+	}
+}
+
+country_event = {
+	id = equestria_celestia.204
+	immediate = { log = "[GetDateText]: [Root.GetName]: event equestria_celestia.204" }
+	title = equestria_celestia.204.t
+	desc = equestria_celestia.204.d
+	#picture = GFX_event_celestia_poster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestria_celestia.204.a
+		custom_effect_tooltip = EQS_wingbardian_peace_settlement_tt
+		hidden_effect = {
+			every_possible_country = {
+				limit = {
+					OR = {
+						original_tag = EQS
+						is_in_faction_with = EQS
+					}
+					has_war_with = WNG
+				}
+				white_peace = WNG
+				set_truce = {
+					target = WNG
+					days = 730
+				}
+			}
+			every_possible_country = {
+				limit = {
+					OR = {
+						original_tag = WNG
+						is_in_faction_with = WNG
+					}
+					has_war_with = EQS
+				}
+				white_peace = EQS
+				set_truce = {
+					target = EQS
+					days = 730
+				}
+			}
+			WNG = {
+				give_resource_rights = { receiver = EQS state = 369 }
+				if = {
+					limit = {
+						has_war = no
+					}
+					369 = { set_demilitarized_zone = yes }
+					add_ideas = volunteer_only
+					add_ideas = civilian_economy
+				}
+				add_timed_idea = {
+					idea = WNG_EQS_war_reparations
+					days = 730
+				}
+			}
+			add_timed_idea = {
+				idea = EQS_WNG_war_reparations
+				days = 730
+			}
+		}
+		ai_chance = {
+			factor = 500
+		}
+	}
+	option = {
+		name = equestria_celestia.204.b
+		custom_effect_tooltip = EQS_griffonian_involvement_tt
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 
