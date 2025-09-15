@@ -1625,6 +1625,349 @@ EQS_construction_projects_category = {
 			}
 		}
 	}
+	EQS_integrate_southwest_economy = {
+		icon = generic_construction
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EQS_southwest_secured_req_tt
+				LSP = { all_core_state = { is_owned_by = ROOT } }
+				ROC = { all_core_state = { is_owned_by = ROOT } }
+				SCS = { all_core_state = { is_owned_by = ROOT } }
+				BUF = { all_core_state = { is_owned_by = ROOT } }
+			}
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		cost = 100
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = EQS_celestial_economic_miracle
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 38
+			}
+		}
+		modifier = {
+			civilian_factory_use = 10
+			consumer_goods_factor = 0.2
+			political_power_cost = 0.2
+		}
+		days_remove = 200
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_integrate_southwest_economy"
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = SCS
+						is_core_of = BUF
+						is_core_of = LSP
+						is_core_of = ROC
+					}
+					infrastructure < 3
+					NOT = {
+						impassable = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = SCS
+						is_core_of = BUF
+						is_core_of = LSP
+						is_core_of = ROC
+					}
+					NOT = {
+						impassable = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 19
+						state = 21
+						state = 22
+						state = 38
+					}
+				}
+				add_manpower = 60000
+			}
+			38 = {
+				add_resource = {
+					type = crystals
+					amount = 14
+				}
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+			add_to_variable = { EQS_monthly_population_var = 0.15 }
+			add_to_variable = { EQS_fuel_gain_var = 0.1 }
+			custom_effect_tooltip = EQS_absolestia_economy2_tt
+		}
+	}
+	EQS_integrate_southeast_economy = {
+		icon = generic_construction
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EQS_southeast_secured_req_tt
+				NMS = { all_core_state = { is_owned_by = ROOT } }
+				CES = { all_core_state = { is_owned_by = ROOT } }
+				BAL = { all_core_state = { is_owned_by = ROOT } }
+				JUN = { all_core_state = { is_owned_by = ROOT } }
+			}
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		cost = 100
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = EQS_celestial_economic_miracle
+			CES = {
+				exists = no
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 16
+			}
+		}
+		modifier = {
+			civilian_factory_use = 10
+			consumer_goods_factor = 0.2
+			political_power_cost = 0.2
+		}
+		days_remove = 200
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_integrate_southeast_economy"
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = NMS
+						is_core_of = CES
+						is_core_of = BAL
+						is_core_of = JUN
+					}
+					infrastructure < 3
+					NOT = {
+						impassable = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = NMS
+						is_core_of = CES
+						is_core_of = BAL
+						is_core_of = JUN
+					}
+					NOT = {
+						impassable = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			13 = {
+				add_manpower = 50000
+			}
+			15 = {
+				add_manpower = 50000
+			}
+			350 = {
+				add_resource = {
+					type = rubber
+					amount = 12
+				}
+			}
+			36 = {
+				add_resource = {
+					type = oil
+					amount = 9
+				}
+			}
+			37 = {
+				add_resource = {
+					type = crystals
+					amount = 6
+				}
+			}
+			add_to_variable = { EQS_resources_var = 0.1 }
+			custom_effect_tooltip = EQS_absolestia_economy3_tt
+		}
+	}
+	EQS_integrate_severyana_economy = {
+		icon = generic_construction
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EQS_severyana_secured_req_tt
+				STG = {
+					all_core_state = {
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		cost = 100
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = EQS_celestial_economic_miracle
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 153
+			}
+		}
+		modifier = {
+			civilian_factory_use = 10
+			consumer_goods_factor = 0.2
+			political_power_cost = 0.2
+		}
+		days_remove = 200
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_integrate_severyana_economy"
+			every_owned_state = {
+				limit = {
+					is_core_of = STG
+					infrastructure < 3
+					NOT = {
+						impassable = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = STG
+					NOT = {
+						impassable = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			153 = {
+				add_manpower = 50000
+			}
+			235 = {
+				add_resource = {
+					type = steel
+					amount = 7
+				}
+			}
+			add_to_variable = { EQS_building_slots_var = 0.1 }
+			custom_effect_tooltip = EQS_absolestia_economy4_tt
+		}
+	}
+	EQS_integrate_crystal_economy_decision = {
+		icon = generic_construction
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EQS_empire_secured_req_tt
+				CRY = {
+					all_core_state = {
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		cost = 100
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = EQS_celestial_economic_miracle
+			CRY = {
+				exists = no
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 344
+			}
+		}
+		modifier = {
+			civilian_factory_use = 10
+			consumer_goods_factor = 0.2
+			political_power_cost = 0.2
+		}
+		days_remove = 200
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_integrate_crystal_economy_decision"
+			every_owned_state = {
+				limit = {
+					is_core_of = CRY
+					infrastructure < 3
+					NOT = {
+						impassable = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = CRY
+					NOT = {
+						impassable = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			145 = {
+				add_resource = {
+					type = crystals
+					amount = 7
+				}
+			}
+			141 = {
+				add_resource = {
+					type = crystals
+					amount = 15
+				}
+			}
+			150 = {
+				add_resource = {
+					type = tungsten
+					amount = 9
+				}
+			}
+			add_to_variable = { EQS_resource_penalty_var = -0.1 }
+			custom_effect_tooltip = EQS_absolestia_economy5_tt
+		}
+	}
 	EQS_acornage_line = {
 		icon = bunker
 		available = {
@@ -1634,6 +1977,7 @@ EQS_construction_projects_category = {
 			137 = {
 				is_fully_controlled_by = EQS
 			}
+			num_of_civilian_factories_available_for_projects > 4
 		}
 		cost = 30
 		ai_will_do = {
@@ -1643,6 +1987,7 @@ EQS_construction_projects_category = {
 		visible = {
 			has_country_flag = EQS_defensive_infrastructure_unlocked
 			CHN = {
+				exists = yes
 				has_government = fascism
 			}
 		}
@@ -1770,6 +2115,7 @@ EQS_construction_projects_category = {
 			138 = {
 				is_controlled_by = EQS
 			}
+			num_of_civilian_factories_available_for_projects > 4
 		}
 		cost = 30
 		ai_will_do = {
@@ -1779,6 +2125,7 @@ EQS_construction_projects_category = {
 		visible = {
 			has_country_flag = EQS_defensive_infrastructure_unlocked
 			CHN = {
+				exists = yes
 				has_government = fascism
 			}
 		}
@@ -1962,6 +2309,7 @@ EQS_construction_projects_category = {
 			48 = {
 				is_fully_controlled_by = EQS
 			}
+			num_of_civilian_factories_available_for_projects > 4
 		}
 		cost = 30
 		ai_will_do = {
@@ -1971,6 +2319,7 @@ EQS_construction_projects_category = {
 		visible = {
 			has_country_flag = EQS_defensive_infrastructure_unlocked
 			CHN = {
+				exists = yes
 				has_government = fascism
 			}
 		}
@@ -2143,6 +2492,1004 @@ EQS_construction_projects_category = {
 					is_special_project_completed = sp:sp_air_radar
 				}
 				46 = {
+					add_building_construction = {
+						type = radar_station
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = EQS_radar_research_reward_tt
+			}
+		}
+	}
+	EQS_mead_lake_line = {
+		icon = bunker
+		available = {
+			96 = {
+				is_fully_controlled_by = EQS
+			}
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		cost = 20
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+		visible = {
+			has_country_flag = EQS_defensive_infrastructure_unlocked
+			CHN = {
+				exists = yes
+				has_government = fascism
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 96
+			}
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		days_remove = 50
+		remove_effect = {
+			96 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9362
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11231
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11311
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_tech = cavity_magnatron
+				}
+				96 = {
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_special_project_completed = sp:sp_air_radar
+				}
+				96 = {
+					add_building_construction = {
+						type = radar_station
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = EQS_radar_research_reward_tt
+			}
+		}
+	}
+	EQS_peach_river_line = {
+		icon = bunker
+		available = {
+			125 = {
+				is_controlled_by = EQS
+			}
+			99 = {
+				is_fully_controlled_by = EQS
+			}
+			95 = {
+				is_controlled_by = EQS
+			}num_of_civilian_factories_available_for_projects > 3
+		}
+		cost = 35
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+		visible = {
+			has_country_flag = EQS_defensive_infrastructure_unlocked
+			CHN = {
+				exists = yes
+				has_government = fascism
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 95
+			}
+		}
+		modifier = {
+			civilian_factory_use = 4
+		}
+		days_remove = 70
+		remove_effect = {
+			125 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9051
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 130
+					instant_build = yes
+				}
+			}
+			99 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9306
+					instant_build = yes
+				}
+			}
+			95 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9252
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6236
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9470
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					119 = {
+						is_fully_controlled_by = EQS
+					}
+				}
+				119 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 17
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9521
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 12680
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6259
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6576
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					66 = {
+						is_fully_controlled_by = EQS
+					}
+				}
+				66 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6562
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 6120
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 11151
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 69
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_tech = cavity_magnatron
+					66 = {
+						is_fully_controlled_by = EQS
+					}
+				}
+				66 = {
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_special_project_completed = sp:sp_air_radar
+					66 = {
+						is_fully_controlled_by = EQS
+					}
+				}
+				66 = {
+					add_building_construction = {
+						type = radar_station
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = EQS_radar_research_reward_tt
+			}
+		}
+	}
+	EQS_unicorn_line = {
+		icon = bunker
+		available = {
+			130 = {
+				is_fully_controlled_by = EQS
+			}
+			132 = {
+				is_fully_controlled_by = EQS
+			}
+			169 = {
+				is_controlled_by = EQS
+			}
+			131 = {
+				is_fully_controlled_by = EQS
+			}
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+		visible = {
+			has_country_flag = EQS_defensive_infrastructure_unlocked
+			CHN = {
+				exists = yes
+				has_government = fascism
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 132
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		days_remove = 100
+		remove_effect = {
+			130 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 981
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6992
+					instant_build = yes
+				}
+			}
+			132 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10038
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11310
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11337
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11337
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6603
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9844
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11839
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9871
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3982
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 387
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			169 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3278
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11336
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6359
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11285
+					instant_build = yes
+				}
+			}
+			131 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3267
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10855
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6589
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6340
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_tech = cavity_magnatron
+				}
+				132 = {
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_special_project_completed = sp:sp_air_radar
+				}
+				132 = {
+					add_building_construction = {
+						type = radar_station
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = EQS_radar_research_reward_tt
+			}
+		}
+	}
+	EQS_solar_line = {
+		icon = bunker
+		available = {
+			129 = {
+				is_fully_controlled_by = EQS
+			}
+			171 = {
+				is_fully_controlled_by = EQS
+			}
+			170 = {
+				is_controlled_by = EQS
+			}
+			131 = {
+				is_controlled_by = EQS
+			}
+			num_of_civilian_factories_available_for_projects > 5
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+		visible = {
+			has_country_flag = EQS_defensive_infrastructure_unlocked
+			CHN = {
+				exists = yes
+				has_government = fascism
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 132
+			}
+		}
+		modifier = {
+			civilian_factory_use = 6
+		}
+		days_remove = 115
+		remove_effect = {
+			129 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11767
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 841
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6900
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 974
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3893
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 878
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			132 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9716
+					instant_build = yes
+				}
+			}
+			170 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3757
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9423
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11686
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3707
+					instant_build = yes
+				}
+			}
+			131 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3759
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11341
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9359
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_tech = cavity_magnatron
+				}
+				129 = {
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_special_project_completed = sp:sp_air_radar
+				}
+				129 = {
+					add_building_construction = {
+						type = radar_station
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = EQS_radar_research_reward_tt
+			}
+		}
+	}
+	EQS_twilight_line = {
+		icon = bunker
+		available = {
+			104 = {
+				is_controlled_by = EQS
+			}
+			74 = {
+				is_controlled_by = EQS
+			}
+			178 = {
+				is_fully_controlled_by = EQS
+			}
+			70 = {
+				is_fully_controlled_by = EQS
+			}
+			num_of_civilian_factories_available_for_projects > 8
+		}
+		cost = 75
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+		visible = {
+			has_country_flag = EQS_defensive_infrastructure_unlocked
+			CHN = {
+				exists = yes
+				has_government = fascism
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 74
+			}
+		}
+		modifier = {
+			civilian_factory_use = 9
+		}
+		days_remove = 115
+		remove_effect = {
+			104 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 611
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 13270
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3096
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 13271
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3022
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3111
+					instant_build = yes
+				}
+			}
+			74 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 168
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9154
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3162
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			178 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6038
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 13282
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 849
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7361
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6375
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11245
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11898
+					instant_build = yes
+				}
+			}
+			70 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6550
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9799
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9887
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9481
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 476
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_tech = cavity_magnatron
+				}
+				70 = {
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_special_project_completed = sp:sp_air_radar
+				}
+				70 = {
+					add_building_construction = {
+						type = radar_station
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = EQS_radar_research_reward_tt
+			}
+		}
+	}
+	EQS_mountain_pass_lines = {
+		icon = bunker
+		available = {
+			99 = {
+				is_fully_controlled_by = EQS
+			}
+			68 = {
+				is_fully_controlled_by = EQS
+			}
+			3 = {
+				is_fully_controlled_by = EQS
+			}
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+		visible = {
+			has_country_flag = EQS_defensive_infrastructure_unlocked
+			CHN = {
+				exists = yes
+				has_government = fascism
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 3
+			}
+		}
+		modifier = {
+			civilian_factory_use = 4
+		}
+		days_remove = 45
+		remove_effect = {
+			99 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11414
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1655
+					instant_build = yes
+				}
+			}
+			68 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3959
+					instant_build = yes
+				}
+			}
+			3 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3928
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 13058
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1173
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_tech = cavity_magnatron
+				}
+				3 = {
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_special_project_completed = sp:sp_air_radar
+				}
+				3 = {
 					add_building_construction = {
 						type = radar_station
 						level = 1

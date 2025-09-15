@@ -3609,29 +3609,29 @@ shared_focus = {
 			idea = EQS_economic_resurgence
 			days = 365
 		}
-		#custom_effect_tooltip = EQS_regional_economic_development_tt
+		custom_effect_tooltip = EQS_regional_economic_development_tt
 	}
 }
 
-#shared_focus = {
-	#id = EQS_defensive_infrastructure
-	#icon = GFX_goal_news
-	#x = 1
-	#y = 1
-	#relative_position_id = EQS_military_rd_facilities
-	#cost = 4
-	#prerequisite = {
-		#focus = EQS_military_rd_facilities
-	#}
-	#ai_will_do = {
-		#factor = 5
-	#}
-	#completion_reward = {
-		#log = "[GetDateText]: [Root.GetName]: Focus EQS_defensive_infrastructure"
-		#custom_effect_tooltip = EQS_defensive_lines_unlocked_tt
-		#set_country_flag = EQS_defensive_infrastructure_unlocked
-	#}
-#}
+shared_focus = {
+	id = EQS_defensive_infrastructure
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_military_rd_facilities
+	cost = 4
+	prerequisite = {
+		focus = EQS_military_rd_facilities
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_defensive_infrastructure"
+		custom_effect_tooltip = EQS_defensive_lines_unlocked_tt
+		set_country_flag = EQS_defensive_infrastructure_unlocked
+	}
+}
 
 shared_focus = {
 	id = EQS_utilize_changeling_innovation
@@ -4056,213 +4056,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_might_of_the_sun"
 		add_ideas = EQS_power_of_sun
-	}
-}
-
-shared_focus = {
-	id = EQS_tame_frontier
-	icon = GFX_goal_news
-	x = -5
-	y = 1
-	relative_position_id = EQS_celestial_economic_miracle
-	cost = 5
-	allow_branch = {
-		always = no
-	}
-	prerequisite = {
-		focus = EQS_celestial_economic_miracle
-	}
-	available = {
-		custom_trigger_tooltip = {
-			tooltip = EQS_southwest_secured_req_tt
-			LSP = { all_core_state = { is_owned_by = ROOT } }
-			ROC = { all_core_state = { is_owned_by = ROOT } }
-			SCS = { all_core_state = { is_owned_by = ROOT } }
-			BUF = { all_core_state = { is_owned_by = ROOT } }
-		}
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_tame_frontier"
-		every_owned_state = {
-			limit = {
-				OR = {
-					is_core_of = SCS
-					is_core_of = BUF
-					is_core_of = LSP
-					is_core_of = ROC
-				}
-				infrastructure < 3
-				NOT = {
-					impassable = yes
-				}
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		every_owned_state = {
-			limit = {
-				OR = {
-					is_core_of = SCS
-					is_core_of = BUF
-					is_core_of = LSP
-					is_core_of = ROC
-				}
-				NOT = {
-					impassable = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 1
-		}
-	}
-}
-
-shared_focus = {
-	id = EQS_the_loyal_farmponies
-	icon = GFX_goal_news
-	x = -1
-	y = 1
-	relative_position_id = EQS_tame_frontier
-	cost = 5
-	prerequisite = {
-		focus = EQS_tame_frontier
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_the_loyal_farmponies"
-		add_manpower = 50000
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 19
-					state = 21
-					state = 22
-					state = 38
-				}
-			}
-			add_manpower = 60000
-		}
-		38 = {
-			add_resource = {
-				type = crystals
-				amount = 14
-			}
-			#add_resource = {
-				#type = aluminum
-				#amount = 12
-			#}
-		}
-		add_to_variable = { EQS_monthly_population_var = 0.15 }
-		custom_effect_tooltip = EQS_absolestia_economy2_tt
-	}
-}
-
-shared_focus = {
-	id = EQS_shatter_monopolies
-	icon = GFX_goal_news
-	x = 1
-	y = 1
-	relative_position_id = EQS_tame_frontier
-	cost = 5
-	prerequisite = {
-		focus = EQS_tame_frontier
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_shatter_monopolies"
-	}
-}
-
-shared_focus = {
-	id = EQS_lifeblood_of_war
-	icon = GFX_goal_news
-	x = 1
-	y = 1
-	relative_position_id = EQS_the_loyal_farmponies
-	cost = 5
-	prerequisite = {
-		focus = EQS_the_loyal_farmponies
-	}
-	prerequisite = {
-		focus = EQS_shatter_monopolies
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_lifeblood_of_war"
-	}
-}
-
-shared_focus = {
-	id = EQS_connect_jungles
-	icon = GFX_goal_news
-	x = -2
-	y = 1
-	relative_position_id = EQS_celestial_economic_miracle
-	cost = 5
-	allow_branch = {
-		always = no
-	}
-	prerequisite = {
-		focus = EQS_celestial_economic_miracle
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_connect_jungles"
-	}
-}
-
-shared_focus = {
-	id = EQS_equestria_crystal_rail_lines
-	icon = GFX_goal_news
-	x = 2
-	y = 1
-	relative_position_id = EQS_celestial_economic_miracle
-	cost = 5
-	allow_branch = {
-		always = no
-	}
-	prerequisite = {
-		focus = EQS_celestial_economic_miracle
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_equestria_crystal_rail_lines"
-	}
-}
-
-shared_focus = {
-	id = EQS_severyana_investments
-	icon = GFX_goal_news
-	x = 5
-	y = 1
-	relative_position_id = EQS_celestial_economic_miracle
-	cost = 5
-	allow_branch = {
-		always = no
-	}
-	prerequisite = {
-		focus = EQS_celestial_economic_miracle
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_severyana_investments"
 	}
 }
 
