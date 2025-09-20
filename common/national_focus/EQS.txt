@@ -4062,7 +4062,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_new_equestrian_military
 	icon = GFX_goal_ELF_army
-	x = 40
+	x = 45
 	y = 0
 	cost = 5
 	available = {
@@ -4685,6 +4685,168 @@ shared_focus = {
 			add_idea = EQS_limited_conscription_blueblood
 		}
 		#custom_effect_tooltip = EQS_army_decay_reduction_tt
+	}
+}
+
+shared_focus = {
+	id = EQS_royal_equestrian_air_force
+	icon = GFX_goal_news
+	x = -5
+	y = 1
+	relative_position_id = EQS_new_equestrian_military
+	cost = 5
+	prerequisite = {
+		focus = EQS_new_equestrian_military
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_royal_equestrian_air_force"
+		add_doctrine_cost_reduction = {
+			name = air_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = air_doctrine
+		}
+	}
+}
+
+shared_focus = {
+	id = EQS_establish_air_bases
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_royal_equestrian_air_force
+	cost = 5
+	prerequisite = {
+		focus = EQS_royal_equestrian_air_force
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_establish_air_bases"
+	}
+}
+
+shared_focus = {
+	id = EQS_spitfire_project
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_royal_equestrian_air_force
+	cost = 5
+	prerequisite = {
+		focus = EQS_royal_equestrian_air_force
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_spitfire_project"
+	}
+}
+
+shared_focus = {
+	id = EQS_bombing_campaigns
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_establish_air_bases
+	cost = 5
+	prerequisite = {
+		focus = EQS_establish_air_bases
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_bombing_campaigns"
+	}
+}
+
+shared_focus = {
+	id = EQS_faster_than_sound
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_establish_air_bases
+	cost = 5
+	prerequisite = {
+		focus = EQS_establish_air_bases
+	}
+	prerequisite = {
+		focus = EQS_spitfire_project
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_faster_than_sound"
+	}
+}
+
+shared_focus = {
+	id = EQS_looking_to_the_stars
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_bombing_campaigns
+	cost = 5
+	prerequisite = {
+		focus = EQS_bombing_campaigns
+	}
+	prerequisite = {
+		focus = EQS_faster_than_sound
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_looking_to_the_stars"
+	}
+}
+
+shared_focus = {
+	id = EQS_wonderbolt_oversight
+	icon = GFX_goal_news
+	x = -1
+	y = 1
+	relative_position_id = EQS_looking_to_the_stars
+	cost = 5
+	prerequisite = {
+		focus = EQS_looking_to_the_stars
+	}
+	mutually_exclusive = {
+		focus = EQS_independent_air_force
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_wonderbolt_oversight"
+	}
+}
+
+shared_focus = {
+	id = EQS_independent_air_force
+	icon = GFX_goal_news
+	x = 1
+	y = 1
+	relative_position_id = EQS_looking_to_the_stars
+	cost = 5
+	prerequisite = {
+		focus = EQS_looking_to_the_stars
+	}
+	mutually_exclusive = {
+		focus = EQS_wonderbolt_oversight
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_independent_air_force"
 	}
 }
 
