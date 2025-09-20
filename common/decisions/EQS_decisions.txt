@@ -4976,10 +4976,14 @@ political_actions = {
 				has_country_flag = HIP_siren_takeover
 			}
 			owns_state = 153
+			owns_state = 235
+			owns_state = 168
 		}
 		highlight_states = {
 			highlight_state_targets = {
 				state = 153
+				state = 235
+				state = 168
 			}
 		}
 		fire_only_once = yes
