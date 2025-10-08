@@ -2691,6 +2691,7 @@ focus_tree = {
 			if = {
 				limit = {
 					is_in_faction = no
+					is_subject = no
 				}
 				set_rule = {
 					can_create_factions = yes
@@ -8208,6 +8209,7 @@ shared_focus = {
 			if = {
 				limit = {
 					is_in_faction = no
+					is_subject = no
 				}
 				set_rule = { can_create_factions = yes }
 				create_faction = NORTH_ZEBRICAN_COALITION
@@ -9131,10 +9133,16 @@ shared_focus = {
 
 		completion_reward = {
 			add_country_leader_trait = internationalist_nationalist
-			set_rule = {
-				can_create_factions = yes
+			if = {
+				limit = {
+					is_in_faction = no
+					is_subject = no
+				}
+				set_rule = {
+					can_create_factions = yes
+				}
+				create_faction = HIP_hegemony_faction
 			}
-			create_faction = HIP_hegemony_faction
 			hidden_effect = {
 				country_event = {
 					id = arisfirst.91
@@ -12752,6 +12760,8 @@ shared_focus = {
 					WAR = {
 						has_government = communism
 					}
+					is_in_faction = no
+					is_subject = no
 				}
 				set_rule = {
 					can_create_factions = yes
@@ -14003,14 +14013,20 @@ shared_focus = {
 						}
 					}
 				}
-				set_rule = {
-					can_create_factions = yes
-				}
-				create_faction = HIP_middle_sea_treaty
-				CTH = {
-					country_event = {
-						id = hippocommie.67
-						days = 1
+				if = {
+					limit = {
+						is_in_faction = no
+						is_subject = no
+					}
+					set_rule = {
+						can_create_factions = yes
+					}
+					create_faction = HIP_middle_sea_treaty
+					CTH = {
+						country_event = {
+							id = hippocommie.67
+							days = 1
+						}
 					}
 				}
 			}
@@ -14066,14 +14082,20 @@ shared_focus = {
 						}
 					}
 				}
-				set_rule = {
-					can_create_factions = yes
-				}
-				create_faction = HIP_middle_sea_treaty
-				CVA = {
-					country_event = {
-						id = hippocommie.67
-						days = 1
+				if = {
+					limit = {
+						is_subject = no
+						is_in_faction = no
+					}
+					set_rule = {
+						can_create_factions = yes
+					}
+					create_faction = HIP_middle_sea_treaty
+					CVA = {
+						country_event = {
+							id = hippocommie.67
+							days = 1
+						}
 					}
 				}
 			}
@@ -16834,10 +16856,16 @@ shared_focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			set_rule = {
-				can_create_factions = yes
+			if = {
+				limit = {
+					is_in_faction = no
+					is_subject = no
+				}
+				set_rule = {
+					can_create_factions = yes
+				}
+				create_faction = HIP_comintern
 			}
-			create_faction = HIP_comintern
 			add_to_tech_sharing_group = HIP_comintern_research
 			unlock_decision_tooltip = HIP_comintern_associate_status
 			unlock_decision_tooltip = HIP_comintern_full_status
@@ -26363,6 +26391,7 @@ shared_focus = {
 		NOT = {
 			has_country_flag = HIP_SIR_has_deficit
 		}
+		is_subject = no
 	}
 
 	ai_will_do = {
