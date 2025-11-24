@@ -52,6 +52,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { CHN CCN }
@@ -81,6 +82,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { STG STL }
@@ -109,6 +111,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { EQS NLR ROC LSP NMS BAL JUN TEM CES SCS ELF }
@@ -136,6 +139,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { HIP WIN }
@@ -162,6 +166,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { GRI STW ANG FEA BRZ PYT YAL KAT ROU FAT FAW }
@@ -187,6 +192,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { CTH CDR CVA HIE TRO }
@@ -213,6 +219,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { CRY }
@@ -238,6 +245,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { YAK JAK }
@@ -263,6 +271,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { DRG IDT }
@@ -289,6 +298,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { DED EWI }
@@ -314,6 +324,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { HLR }
@@ -341,6 +352,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { RCT }
@@ -366,6 +378,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { ARA FAL SIC WNG TAL FRN }
@@ -391,6 +404,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { KIR KIS KIC }
@@ -416,6 +430,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { THU STM SLC GYZ }
@@ -442,6 +457,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { MGY }
@@ -468,6 +484,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { HLR ANG ARA JFT LAK BAN FLO CYA FRN AET LNS JEB TAL VIN FAL YAN SIC ROU HEL GRU FEA PYT GFF GRI GRW GRY HAU AVI ERI EYR KAT JER BRF BOI VED WNG MER JRR GRF HLQ POM LUS TRD SRS STW MNC FEZ YAL JEV JGF JHZ JKR FAW JNG JOS LSM JES } ### need to add all griffon race tags to this
@@ -493,6 +510,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { JER JEB JRR VIN JFT HLR }
@@ -519,6 +537,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { HLQ LNS LSC LSM }
@@ -544,6 +563,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { WIT BAR }
@@ -569,6 +589,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { LCT }
@@ -594,6 +615,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { ZES }
@@ -619,6 +641,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { NIM }
@@ -644,6 +667,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { GRY GRU LUS GRW BRF BAN }
@@ -669,6 +693,7 @@ buildings = {
 			# province_max = 1
 		# }
 		# always_shown = yes
+		# drawn_at_distance = yes
 		# show_modifier = yes
 		# country_modifiers = {
 			# enable_for_controllers = { MIT }
@@ -695,6 +720,7 @@ buildings = {
 			# province_max = 1
 		# }
 		# always_shown = yes
+		# drawn_at_distance = yes
 		# show_modifier = yes
 		# country_modifiers = {
 			# enable_for_controllers = { SIC }
@@ -721,6 +747,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { TIM ALO MSH SON MAZ MSS ZWA ZEL ZUG HAY } ### All Great Lakes unifiers
@@ -746,6 +773,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { ROU }
@@ -771,6 +799,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { GRI }
@@ -796,6 +825,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { CTH }
@@ -823,6 +853,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { KTZ }
@@ -851,6 +882,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { KTZ }
@@ -878,6 +910,7 @@ buildings = {
 			province_max = 1
 		}
 		always_shown = yes
+		drawn_at_distance = yes
 		show_modifier = yes
 		country_modifiers = {
 			enable_for_controllers = { TBK }

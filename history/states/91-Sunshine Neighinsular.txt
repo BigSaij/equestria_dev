@@ -14,5 +14,9 @@ state={
 		owner = EQS
 		add_core_of = BUF
 		add_claim_by = EQS
+		victory_points = { 646 1 }
+		buildings = {
+			infrastructure = 1
+		}
 	}
 }

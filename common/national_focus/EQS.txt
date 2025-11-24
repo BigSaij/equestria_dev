@@ -3750,6 +3750,12 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = air 
+			name = Support_aircraft_research
+		}
 		add_doctrine_cost_reduction = {
 			name = naval_doc_bonus
 			cost_reduction = 0.5

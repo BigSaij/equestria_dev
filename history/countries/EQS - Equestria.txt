@@ -33,6 +33,8 @@ set_technology = {
 	fuel_silos = 1
 	tech_pegasi = 1
 }
+
+set_grand_doctrine = new_fleet_in_being
 actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
 
 add_opinion_modifier = { modifier = equestrian_kindness target = BUF }
@@ -184,10 +186,6 @@ if = {
 	}
 }
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
 	set_technology = {
 		early_ship_hull_light = 1
 		basic_ship_hull_light = 1
@@ -454,22 +452,6 @@ if = {
 		}
 	}
 	set_naval_oob = "EQS_1007_naval"
-	else = {
-		set_technology = {
-			early_destroyer = 1
-			basic_destroyer = 1
-			early_light_cruiser = 1
-			basic_light_cruiser = 1
-			early_heavy_cruiser = 1
-			early_battleship = 1
-			early_battlecruiser = 1
-			early_carrier = 1
-			early_light_carrier = 1
-			transport = 1
-		}
-		set_naval_oob = "EQS_1007_naval_legacy"
-	}
-}
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
@@ -689,7 +671,7 @@ recruit_character = ERE_lyra_heartstrings
 recruit_character = ERE_dandy_charms
 recruit_character = ERE_vinyl_scratch
 
-create_faction = "EQS_harmonic_accord"
+create_faction_from_template = faction_template_all_ponies_front
 add_to_faction = CRY
 add_to_faction = EQC
 add_to_faction = PCB
@@ -700,3 +682,7 @@ set_rule = {
 	can_generate_female_country_leaders = yes
 }
 
+### Variants ###
+#equestrian_breakaways_tanks = yes
+#equestrian_breakaways_planes = yes
+#equestrian_breakaways_ships = yes
