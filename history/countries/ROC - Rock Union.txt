@@ -268,8 +268,7 @@ if = {
 	}
 }
 
-if = {
-	limit = { has_dlc = "Man the Guns" }
+
 	### Variants ###
 	# Submarines #
 	create_equipment_variant = {
@@ -562,4 +561,3 @@ if = {
 			mid_1_custom_slot = ship_armor_carrier_deck
 		}
 	}
-}
