@@ -671,7 +671,7 @@ recruit_character = ERE_lyra_heartstrings
 recruit_character = ERE_dandy_charms
 recruit_character = ERE_vinyl_scratch
 
-create_faction_from_template = faction_template_all_ponies_front
+create_faction_from_template = faction_template_harmonic_accord
 add_to_faction = CRY
 add_to_faction = EQC
 add_to_faction = PCB
