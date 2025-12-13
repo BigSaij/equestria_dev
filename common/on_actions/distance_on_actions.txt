@@ -30,7 +30,13 @@ on_actions = {
 				log = "Updating distances for [Root.GetTag] and [From.GetTag] after exchanging [From.From.GetName]..."
 			}
 			every_other_country = {
-				set_temp_variable = { current_minimum = @MAX_DISTANCE }
+				if = {
+					limit = { has_variable = closest_distance_to@PREV }
+					set_temp_variable = { current_minimum = closest_distance_to@PREV }
+				}
+				else = {
+					set_temp_variable = { current_minimum = @MAX_DISTANCE }
+				}
 				if = {
 					limit = { has_global_flag = distance_debug_logs }
 					log = "		 Iterating over states belonging to [This.GetName]..."
