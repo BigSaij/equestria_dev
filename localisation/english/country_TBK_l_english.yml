@@ -4317,7 +4317,7 @@ TBK_filter_money_better:0 "Sunset Bank Inc. Scheme"
 TBK_filter_money_better_tp:0 "Filter £coin_text §Y20 million§! money and place §Y10 million§! to overseas funds."
 
 TBK_leftover_bribes_money:0 "The Leftover Money"
-TBK_leftover_bribes_money_desc:0 "As Pea Shooter extracted every bit of wealth from the arsenals and transferred the money to overseas holding, not all made it fully out. As part of his plan, the gunrunner had to spend parts of his dirty, earned money on various bribes, salaries and transportation costs inside Tobuck. The new regime has discovered parts of these trails and managed to recover some of these assets, even if they are only a fraction of what the gunrunner managed to steal.\n\nRight now, the current amount of this additional money is £coin_text §Y[?TBK_bonus_money].§!"
+TBK_leftover_bribes_money_desc:0 "As Pea Shooter extracted every bit of wealth from the arsenals and transferred the money to overseas holding, not all made it fully out. As part of his plan, the gunrunner had to spend parts of his dirty, earned money on various bribes, salaries and transportation costs inside Tobuck. The new regime has discovered parts of these trails and managed to recover some of these assets, even if they are only a fraction of what the gunrunner managed to steal.\n\nRight now, the current amount of this additional money is £coin_text §Y[?TBK_bonus_money] million.§!"
 TBK_purchase_stability:0 "Rebuild State Apparatus"
 TBK_purchase_popularity:0 "Bribe the Populace"
 TBK_purchase_modern_guns:0 "Purchase Guns From Skyfall"
