@@ -59,113 +59,138 @@ STORM_dont_help_the_ones_who_hurt_us = {
 		id = "THU"
 		value = -200
 	}
-	
 	ai_strategy = {
-		type = alliance
-		id = "GYZ"
-		value = -500
-	}
-	ai_strategy = {
-		type = befriend
-		id = "GYZ"
-		value = -50
-	}
-	ai_strategy = {
-		type = equipment_market_trade_desire
-		id = "GYZ"
-		value = -50
-	}
-	ai_strategy = {
-		type = support
-		id = "GYZ"
-		value = -200
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "GYZ"
-		value = -200
-	}
-
-	ai_strategy = {
-		type = alliance
-		id = "STM"
-		value = -500
-	}
-	ai_strategy = {
-		type = befriend
-		id = "STM"
-		value = -50
-	}
-	ai_strategy = {
-		type = equipment_market_trade_desire
-		id = "STM"
-		value = -50
-	}
-	ai_strategy = {
-		type = support
-		id = "STM"
-		value = -200
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "STM"
-		value = -200
-	}
-
-	ai_strategy = {
-		type = alliance
-		id = "SLC"
-		value = -500
-	}
-	ai_strategy = {
-		type = befriend
-		id = "SLC"
-		value = -50
-	}
-	ai_strategy = {
-		type = equipment_market_trade_desire
-		id = "SLC"
-		value = -50
-	}
-	ai_strategy = {
-		type = support
-		id = "SLC"
-		value = -200
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "SLC"
-		value = -200
-	}
-
-	ai_strategy = {
-		type = alliance
-		id = "CZR"
-		value = -500
-	}
-	ai_strategy = {
-		type = befriend
-		id = "CZR"
-		value = -50
-	}
-	ai_strategy = {
-		type = equipment_market_trade_desire
-		id = "CZR"
-		value = -50
-	}
-	ai_strategy = {
-		type = support
-		id = "CZR"
-		value = -200
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "CZR"
+		type = send_lend_lease_desire
+		id = "THU"
 		value = -200
 	}
 	
 	ai_strategy = {
 		type = alliance
+		id = "GYZ"
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = "GYZ"
+		value = -50
+	}
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = "GYZ"
+		value = -50
+	}
+	ai_strategy = {
+		type = support
+		id = "GYZ"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GYZ"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = "GYZ"
+		value = -200
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "STM"
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = "STM"
+		value = -50
+	}
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = "STM"
+		value = -50
+	}
+	ai_strategy = {
+		type = support
+		id = "STM"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "STM"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = "STM"
+		value = -200
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "SLC"
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SLC"
+		value = -50
+	}
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = "SLC"
+		value = -50
+	}
+	ai_strategy = {
+		type = support
+		id = "SLC"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SLC"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = "SLC"
+		value = -200
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "CZR"
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = "CZR"
+		value = -50
+	}
+	ai_strategy = {
+		type = equipment_market_trade_desire
+		id = "CZR"
+		value = -50
+	}
+	ai_strategy = {
+		type = support
+		id = "CZR"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "CZR"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = "CZR"
+		value = -200
+	}
+	
+	ai_strategy = {
+		type = alliance
 		id = "BLT"
 		value = -500
 	}
@@ -186,6 +211,11 @@ STORM_dont_help_the_ones_who_hurt_us = {
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
+		id = "BLT"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
 		id = "BLT"
 		value = -200
 	}
