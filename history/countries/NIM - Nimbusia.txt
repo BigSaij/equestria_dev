@@ -17,9 +17,20 @@ set_technology = {
 	tech_mountaineers = 1
 	tech_pegasi = 1
 	tech_pegasi2 = 1
-	tech_special_forces = 1
 	marines = 1
 	basic_train = 1
+}
+if = {
+	limit = { has_dlc = "Arms Against Tyranny" }
+
+	set_technology = {
+		racial_specforce_start = 1
+	}
+	else = {
+		set_technology = {
+			tech_special_forces = 1
+		}
+	}
 }
 set_technology = {
 	early_ship_hull_submarine = 1
