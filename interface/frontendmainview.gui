@@ -93,7 +93,7 @@ guiTypes = {
 		#		name = "Background"
 		#		quadTextureSprite ="GFX_frontend_bg_luna"
 		#	}
-		}
+		#}
 	}
 
 	containerWindowType = {
