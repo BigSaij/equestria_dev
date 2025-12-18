@@ -89,10 +89,10 @@ guiTypes = {
 			Origo = center
 			clipping = no
 
-		#	background = {
-		#		name = "Background"
-		#		quadTextureSprite ="GFX_frontend_bg_luna"
-		#	}
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_frontend_bg_luna"
+			}
 		}
 	}
 
