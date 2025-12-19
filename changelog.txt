@@ -55,7 +55,7 @@
 	- Adelart:
 		- Fixed templates for No Compromise, No Surrender DLC.
 		- Bypassing Skyfall wargoal focuses still allows for Skyfall integration.
-		- Jaume can only get good opinion mod with Republics.
+		- Jaume can only get good opinion modifier with Republics.
 	- Aquileia:
 		- Conquest decisions no longer target the wrong countries.
 	- Asterion:
