@@ -5,7 +5,8 @@ music_station = "eaw"
 music = {
 	song = "maintheme" #Evening Star - Land of Equestria Instrumental
 	chance = {
-		factor = 2
+		factor = 4
+		
 		modifier = {
 			factor = 2
 			original_tag = EQS
@@ -170,25 +171,25 @@ music = {
 		}
 	}
 }
-#music = {
-#	song = "Resonant_Tonality-Quiet_Land"
-#
-#	chance = {
-#		factor = 1
-#		
-#		modifier = {
-#			factor = 0.5
-#			has_war = yes
-#		}
-#		modifier = {
-#			factor = 2
-#			OR = {
-#				has_government = democratic
-#				has_government = neutrality
-#			}
-#		}
-#	}
-#}
+music = {
+	song = "Resonant_Tonality-Quiet_Land"
+
+	chance = {
+		factor = 1
+		
+		modifier = {
+			factor = 0.5
+			has_war = yes
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+	}
+}
 music = {
 	song = "Resonant_Tonality-Do_Not_Fear"
 
@@ -865,18 +866,18 @@ music = {
 		}
 	}
 }
-music = {
-	song = "Resonant_Tonality-Hearth's_Warming_War"
-
-	chance = {
-		factor = 1
-		
-		modifier = {
-			factor = 0
-			has_war = yes
-		}
-	}
-}
+#music = {
+#	song = "Resonant_Tonality-Hearth's_Warming_War"
+#
+#	chance = {
+#		factor = 1
+#		
+#		modifier = {
+#			factor = 0
+#			has_war = yes
+#		}
+#	}
+#}
 music = {
 	song = "Resonant_Tonality-Land_And_Culture"
 
