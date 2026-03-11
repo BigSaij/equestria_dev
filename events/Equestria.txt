@@ -8148,7 +8148,14 @@ country_event = {
 			factor = 100
 			modifier = {
 				factor = 0
-				NOT = { has_global_flag = EQS_evil_celestia }
+				OR = {
+					has_game_rule = {
+						rule = JUN_ai_behavior
+						option = JOIN_UPA_JUN
+					}
+					NOT = { has_global_flag = EQS_evil_celestia }
+				}
+				
 			}
 		}
 	}
@@ -8584,7 +8591,7 @@ country_event = { ## Renaming Stalliongrad
 		name = equestria.133.a
 		trigger = { is_EQS_SOL = yes }
 		153 = { set_state_name = EQS_vp_solargrad }
-		235 = { set_state_name = EQS_vp_ladimir }
+		rename_stalliongrad_states = yes
 		set_country_flag = stg_renamed_eqs
 		ai_chance = {
 			factor = 10000
@@ -8593,7 +8600,7 @@ country_event = { ## Renaming Stalliongrad
 	option = {
 		name = equestria.133.c
 		153 = { set_state_name = EQS_vp_princessyn }
-		235 = { set_state_name = EQS_vp_ladimir }
+		rename_stalliongrad_states = yes
 		set_country_flag = stg_renamed_eqs
 		ai_chance = { factor = 1 }
 	}
@@ -8601,7 +8608,7 @@ country_event = { ## Renaming Stalliongrad
 		name = equestria.133.e
 		trigger = { is_EQS_SOL = no }
 		153 = { set_state_name = EQS_vp_trottersburg }
-		235 = { set_state_name = EQS_vp_ladimir }
+		rename_stalliongrad_states = yes
 		set_country_flag = stg_renamed_eqs
 		ai_chance = { factor = 0 }
 	}
@@ -8629,6 +8636,16 @@ country_event = { ## Renaming Stalliongrad
 				type = infrastructure
 				level = 2
 			}
+			remove_building = {
+				type = land_facility
+				level = 1
+				province = 6507
+			}
+			remove_building = {
+				type = landmark_palace_of_the_soviets
+				level = 1
+				province = 488
+			}
 		}
 		set_victory_points = {
 			province = 488
@@ -8639,7 +8656,7 @@ country_event = { ## Renaming Stalliongrad
 			news_event = { id = news.208 days = 2 }
 		}
 		add_political_power = 200
-		235 = { set_state_name = EQS_vp_ladimir }
+		rename_stalliongrad_states = yes
 		ai_chance = {
 			factor = 100
 		}

@@ -41,7 +41,7 @@ areas = {
 			319 # Zerghana Valley
 		}
 	}
-
+	
 	continental_north_zebrica = { # includes a little bit of Azir and Camelkand
 		strategic_regions = {
 			148 # Coltva
@@ -75,6 +75,7 @@ areas = {
 			128 # Maglibing
 			131 # Zongo
 			125 # Tanaihga
+			274 # Melahaka
 		}
 	}
 
@@ -86,6 +87,17 @@ areas = {
 			185 #Lushi
 			199 #Coast of Grifus
 			200 #Grifus highlands
+		}
+	}
+	
+	zebrica_great_lakes = { 
+		strategic_regions = {
+			321 #Zar-Hay
+			322 #Zenegaal
+			323 #Great Lakes
+			324 #Mazwi
+			325 #Zwahile
+			326 #Lower Hayzebland
 		}
 	}
 }

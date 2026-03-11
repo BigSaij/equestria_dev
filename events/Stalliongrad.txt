@@ -103,10 +103,10 @@ country_event = {
 							option = DEFAULT
 						}
 					}
-					has_country_flag = STG_AI_VASILY_HISTORICAL
+					has_country_flag = STG_AI_HISTORICAL
 					has_game_rule = {
 						rule = STG_ai_behavior
-						option = VASILY_HISTORICAL
+						option = HISTORICAL
 					}
 				}
 			}
@@ -144,10 +144,10 @@ country_event = {
 							option = DEFAULT
 						}
 					}
-					has_country_flag = STG_AI_VASILY_HISTORICAL
+					has_country_flag = STG_AI_HISTORICAL
 					has_game_rule = {
 						rule = STG_ai_behavior
-						option = VASILY_HISTORICAL
+						option = HISTORICAL
 					}
 				}
 			}
@@ -214,12 +214,24 @@ country_event = {
 			uses = 1
 			category = land_doctrine
 		}
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 180
+			folder = land 
+			name = stalliongrad.4.t
+		}
 		FROM = {
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
+			}
+			add_mastery_bonus = {
+				bonus = 0.2
+				days = 180
+				folder = land 
+				name = stalliongrad.4.t
 			}
 			every_unit_leader = {
 				add_defense = 1
@@ -787,10 +799,10 @@ country_event = { ## Выборы - Только старые админы ке�
 							option = DEFAULT
 						}
 					}
-					has_country_flag = STG_AI_VASILY_HISTORICAL
+					has_country_flag = STG_AI_HISTORICAL
 					has_game_rule = {
 						rule = STG_ai_behavior
-						option = VASILY_HISTORICAL
+						option = HISTORICAL
 					}
 				}
 			}
@@ -860,10 +872,10 @@ country_event = { ## Выборы - Compromise Path Elections
 							option = DEFAULT
 						}
 					}
-					has_country_flag = STG_AI_VASILY_HISTORICAL
+					has_country_flag = STG_AI_HISTORICAL
 					has_game_rule = {
 						rule = STG_ai_behavior
-						option = VASILY_HISTORICAL
+						option = HISTORICAL
 					}
 					has_country_flag = STG_AI_DARKWING_ALTERNATE
 					has_game_rule = {
@@ -997,10 +1009,10 @@ country_event = { ## 10 условий
 							option = DEFAULT
 						}
 					}
-					has_country_flag = STG_AI_VASILY_HISTORICAL
+					has_country_flag = STG_AI_HISTORICAL
 					has_game_rule = {
 						rule = STG_ai_behavior
-						option = VASILY_HISTORICAL
+						option = HISTORICAL
 					}
 				}
 			}
@@ -1222,7 +1234,7 @@ country_event = { ## Creation of Socialist Union Faction
 		name = stalliongrad.45.a
 		add_political_power = 50
 		hidden_effect = { news_event = { id = news.24 days = 1 } }
-		create_faction = "Socialist_Union"
+		create_faction_from_template = faction_template_socialist_union
 		set_country_flag = has_faction
 		ai_chance = {
 			base = 75
@@ -2492,7 +2504,7 @@ country_event = { ## Rename Konzan to Sinistergrad
 	is_triggered_only = yes
 	option = {
 		name = stalliongrad.97.a
-		set_province_name = { id = 200 name = "Sinistergrad"}
+		set_province_name = { id = 200 name = STG_sinistergrad_vp }
 	}
 	option = {
 		name = stalliongrad.97.b
@@ -3707,7 +3719,7 @@ country_event = {
 			limit = {
 				is_faction_leader = no
 			}
-			create_faction = "Socialist_Union"
+			create_faction_from_template = faction_template_socialist_union
 			set_country_flag = has_faction
 		}
 		GRW = {

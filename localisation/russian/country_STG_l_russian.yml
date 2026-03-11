@@ -66,7 +66,7 @@ industrialize_the_north:0 "Развивать северную промышле�
 industrialize_the_north_desc:0 "Мы должны сосредоточить наши усилия на севере и огромном промышленном потенциале, которым он обладает."
 new_fuel_experiments:0 "Синтетическое топливо"
 new_fuel_experiments_desc:0 "Наша страна переживает топливный кризис, однако наши ученые предлагают новый способ добычи топлива. Стоит ли вкладываться в этот проект?"
-take_down_STL:0 ""Наш город""
+take_down_STL:0 ""Наш Город""
 take_down_STL_desc:0 "Городок Старлайт на севере всегда был частью нашей нации, нужно лишь официально признать это."
 hegemonic_doctrine:0 "Доктрина гегемонии"
 hegemonic_doctrine_desc:0 "Теперь, когда мы закончили революцию в нашей стране, наступило время для Мировой революции!"
@@ -261,7 +261,8 @@ statue_obtained:0 "Статуя для дворца создана."
 STG_foreign_affairs:0 "Внешняя политика"
 claimed_EQS_territory_already:0 "Есть претензия на нац. провинции."
 STG_protection:0 "Оборона Родины"
-palace_project_abandoned:0 "Проект дворца заброшен"
+palace_project_abandoned:0 "Проект дворца заброшен."
+the_palace_constructed:0 "Проект дворца завершён."
 STG_abandon_construction_of_palace:0 "Отказаться от строительства"
 STG_abandon_construction_of_palace_desc:0 "[Root.AbandonConstructionWarOrNoWar]"
 STG_abandon_construction_of_palace_war_time:0 "Отказаться от строительства"
@@ -281,6 +282,7 @@ VICTORY_POINT_COLTISYN:0 "Кольтсин"
 VICTORY_POINT_ZVEZDOGRAD:0 "Звездоград"
 VICTORY_POINT_SEVERYANSK:0 "Северянск"
 VICTORY_POINT_STARGOROD:0 "Старгород"
+STG_sinistergrad_vp: "Синистерград"
 
 STG_remove_huner_other_ideologies:0 "Борьба с нехваткой продовольствия"
 STG_incomplete_industry_other_ideologies:0 "Решение проблемы неполной индустриализации"
@@ -963,6 +965,8 @@ STG_puppets_us:0 "§R[STG.GetName] сделает нас марионеткой!
 STG_gains_wargoal_against_us:0 "§R[STG.GetName] получит цель войны против нас!\n§!"
 
 Advisors_gone_to_GRW:0 "Военная миссия в ОАП"
+STG_promote_young_blood_tt:0 "Три новых многообещающих командира будут повышены из академии. §GЭппл Фриттер§!, §gБлоссомфорт§! и §CСаншауэр Рейндропс§! присоединятся к армейскому командованию!"
+
 
 ###### EQUIPMENT ######
  STG_EQUIPMENT_VERSION_10:0 "C-1"

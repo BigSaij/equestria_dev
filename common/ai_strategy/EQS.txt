@@ -970,7 +970,6 @@ EQC_patriation_strategy = {
 
 EQS_naval_role_ratios_historical = {
 	allowed = {
-		has_dlc = "Man the Guns"
 		OR = {
 			original_tag = EQS
 			original_tag = NLR
@@ -1056,7 +1055,6 @@ EQS_naval_role_ratios_historical = {
 
 EQS_naval_role_ratios_anti_submarines = {
 	allowed = {
-		has_dlc = "Man the Guns"
 		OR = {
 			original_tag = EQS
 			original_tag = NLR

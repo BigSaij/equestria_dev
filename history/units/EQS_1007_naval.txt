@@ -78,7 +78,7 @@ units = {
 			ship = { name = "ERNS Intercrus" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_2 = { amount = 1 owner = EQS version_name = "Shield Class" } } }
 		}
 		task_force = {
-			name = "Trottingham Fleet"
+			name = "Trottingham Scout Fleet"
 			location = 9484 # Trottingham
 			#Cruisers
 			ship = { name = "ERNS Ruby" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = EQS version_name = "Fillydelphia Class" } } }
@@ -201,7 +201,7 @@ instant_effect = {
 		equipment = {
 			type = ship_hull_carrier_conversion_bb
 			creator = "EQS" 
-			version_name = "Pegasopolis Class"
+			version_name = "Dirtville Class"
 		}
 		requested_factories = 3
 		progress = 0.34

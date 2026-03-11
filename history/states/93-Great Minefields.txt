@@ -15,7 +15,7 @@ state={
 		add_core_of = BUF
 		add_claim_by = EQS
 
-		victory_points = { 3631 3 }
+		victory_points = { 3631 2 }
 		victory_points = { 11580 1 }
 	}
 

@@ -1220,7 +1220,7 @@ is_eqs_civil_war_tag_tag = {
 		original_tag = ROC
 		original_tag = SCS
 		original_tag = LSP
-		original_tag = ZRS
+		original_tag = TEM
 	}
 }
 
@@ -1579,6 +1579,17 @@ is_bandit_nation = {
 any_controlled_state_is_coastal = {
 	any_controlled_state = {
 		is_coastal = yes
+	}
+}
+
+
+has_large_town_or_higher = { # in state scope
+	OR = {
+		has_state_category = large_town
+		has_state_category = city
+		has_state_category = large_city
+		has_state_category = metropolis
+		has_state_category = megalopolis
 	}
 }
 
@@ -2009,6 +2020,7 @@ has_puppet_cosmetic_flag = {
 		has_country_flag = OLE_CHN_puppet
 		has_country_flag = is_FAT_puppet
 		has_country_flag = is_luna_puppet
+		has_country_flag = is_changeling_puppet
 	}
 }
 
@@ -2186,4 +2198,40 @@ ai_is_doing_border_war_as_THIS_with_FROM_appropriate = {
 			}
 		}
 	}
+}
+
+# Country Scope - Whether a country is suitable for wargoal declaration #
+exists_outside_sphere_of_influence = {
+	custom_trigger_tooltip = {
+		tooltip = exists_outside_sphere_of_influence_tt
+		exists = yes
+		NOT = {
+			is_in_faction_with = ROOT
+			is_subject_of = ROOT
+			has_war_with = ROOT
+		}
+	}
+}
+
+# Country Scope - Tests whether the country in question is on historical AI behaviour
+has_historical_ai_behaviour = {
+    meta_trigger = {
+        text = {
+            OR = {
+                AND = {
+                    is_historical_focus_on = yes
+                    has_game_rule = {
+                        rule = [TAG]_ai_behavior
+                        option = DEFAULT
+                    }
+                }
+                has_country_flag = [TAG]_AI_HISTORICAL
+                has_game_rule = {
+                    rule = [TAG]_ai_behavior
+                    option = HISTORICAL
+                }
+            }
+        }
+         TAG = "[THIS.GetTag]"
+    }
 }

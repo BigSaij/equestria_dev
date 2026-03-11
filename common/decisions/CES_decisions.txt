@@ -725,14 +725,20 @@ CES_resistance_category = {
 		fire_only_once = yes
 		days_remove = 14
 		war_with_target_on_remove = yes
+
+		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
+		}
 		targets = { BAT }
 		targets_dynamic = yes
 		target_trigger = {
 			FROM = { tag = BAT }
+			can_declare_war_on = FROM
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CES_resistance_war_against_chiropterra target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			declare_war_on = {
 				target = BAT
 				type = annex_everything
@@ -1136,9 +1142,11 @@ foreign_politics = {
 		targets_dynamic = yes
 		target_trigger = {
 			FROM = { tag = MER }
+			can_declare_war_on = FROM
 		}
 
 		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1155,6 +1163,7 @@ foreign_politics = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CES_take_the_meridiennes target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1207,9 +1216,11 @@ foreign_politics = {
 		targets_dynamic = yes
 		target_trigger = {
 			FROM = { tag = PCB }
+			can_declare_war_on = FROM
 		}
 
 		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1225,6 +1236,7 @@ foreign_politics = {
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CES_attack_puerto_caballo target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1280,9 +1292,11 @@ foreign_politics = {
 		targets_dynamic = yes
 		target_trigger = {
 			FROM = { tag = ROC }
+			can_declare_war_on = FROM
 		}
 
 		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1299,6 +1313,7 @@ foreign_politics = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CES_attack_vanhoover target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1375,9 +1390,11 @@ foreign_politics = {
 		targets_dynamic = yes
 		target_trigger = {
 			FROM = { tag = STG }
+			can_declare_war_on = FROM
 		}
 
 		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1394,6 +1411,7 @@ foreign_politics = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CES_attack_stalliongrad target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1484,6 +1502,7 @@ foreign_politics = {
 		targets_dynamic = yes
 		target_trigger = {
 			FROM = { original_tag = CRY }
+			can_declare_war_on = FROM
 		}
 
 		war_with_target_on_remove = yes
@@ -1514,6 +1533,7 @@ foreign_politics = {
 		}
 		days_remove = 30
 		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1529,6 +1549,7 @@ foreign_politics = {
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CES_attack_sombra target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1578,9 +1599,11 @@ foreign_politics = {
 		targets_dynamic = yes
 		target_trigger = {
 			FROM = { tag = DRG }
+			can_declare_war_on = FROM
 		}
 
 		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1596,6 +1619,7 @@ foreign_politics = {
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CES_the_dragon_isles target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1648,9 +1672,11 @@ foreign_politics = {
 		targets_dynamic = yes
 		target_trigger = {
 			FROM = { tag = BAT }
+			can_declare_war_on = FROM
 		}
 
 		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1666,6 +1692,7 @@ foreign_politics = {
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CES_the_chiropterrans_independent target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1713,14 +1740,20 @@ foreign_politics = {
 		fire_only_once = yes
 		days_remove = 35
 		war_with_target_on_remove = yes
+
+		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
+		}
 		targets = { BAT }
 		targets_dynamic = yes
 		target_trigger = {
 			FROM = { tag = BAT }
+			can_declare_war_on = FROM
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CES_the_chiropterrans_subject target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			BAT = {
 				overlord = {
 					country_event = daring_solar.7
@@ -1761,13 +1794,19 @@ foreign_politics = {
 		days_remove = 35
 		war_with_target_on_remove = yes
 		targets_dynamic = yes
+
+		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
+		}
 		targets = { 712.owner }
 		target_trigger = {
 			FROM = { owns_state = 712 }
+			can_declare_war_on = FROM
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CES_the_chiropterrans_annexed target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			var:712.owner = {
 				country_event = daring_solar.7
 			}
@@ -1802,9 +1841,11 @@ foreign_politics = {
 		targets_dynamic = yes
 		target_trigger = {
 			FROM = { owns_state = 712 }
+			can_declare_war_on = FROM
 		}
 
 		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -1820,6 +1861,7 @@ foreign_politics = {
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CES_the_chiropterrans_late_war target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			add_ai_strategy = {
                 type = prepare_for_war
                 id = FROM
@@ -2204,6 +2246,7 @@ CES_shadow_category = {
 		target_array = neighbors
 		targets_dynamic = yes
 		target_trigger = { #will check only neighbors
+			can_declare_war_on = FROM
 			FROM = {
 				is_neighbor_of = ROOT #can be replaced with always = yes, but leave for 1.6.1 compatibility
 				NOT = {
@@ -2261,6 +2304,7 @@ CES_shadow_category = {
 
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout CES_shadow_declaration target: [From.GetName]"
+			eaw_clear_alert_imminent_declaration_of_war_FROM = yes
 			ROOT = {
 				hidden_effect = {
 					create_wargoal = {
@@ -2276,6 +2320,10 @@ CES_shadow_category = {
 					}
 				}
 			}
+		}
+
+		complete_effect = {
+			eaw_alert_send_imminent_declaration_of_war_FROM = yes
 		}
 	}
 
