@@ -5,8 +5,7 @@ music_station = "eaw"
 music = {
 	song = "maintheme" #Evening Star - Land of Equestria Instrumental
 	chance = {
-		factor = 4
-		
+		factor = 2
 		modifier = {
 			factor = 2
 			original_tag = EQS
@@ -14,6 +13,10 @@ music = {
 		modifier = {
 			factor = 0.5
 			has_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_war = no
 		}
 	}
 }
@@ -866,18 +869,80 @@ music = {
 		}
 	}
 }
-#music = {
-#	song = "Resonant_Tonality-Hearth's_Warming_War"
-#
-#	chance = {
-#		factor = 1
-#		
-#		modifier = {
-#			factor = 0
-#			has_war = yes
-#		}
-#	}
-#}
+music = {
+	song = "Resonant_Tonality-Hearth's_Warming_War"
+
+	chance = {
+		factor = 1
+		
+		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					date > 1007.12.1
+					date < 1008.1.1
+				}
+				AND = {
+					date > 1008.12.1
+					date < 1009.1.1
+				}
+				AND = {
+					date > 1009.12.1
+					date < 1010.1.1
+				}
+				AND = {
+					date > 1010.12.1
+					date < 1011.1.1
+				}
+				AND = {
+					date > 1011.12.1
+					date < 1012.1.1
+				}
+				AND = {
+					date > 1012.12.1
+					date < 1013.1.1
+				}
+				AND = {
+					date > 1013.12.1
+					date < 1014.1.1
+				}
+				AND = {
+					date > 1014.12.1
+					date < 1015.1.1
+				}
+				AND = {
+					date > 1015.12.1
+					date < 1016.1.1
+				}
+				AND = {
+					date > 1016.12.1
+					date < 1017.1.1
+				}
+				AND = {
+					date > 1017.12.1
+					date < 1018.1.1
+				}
+				AND = {
+					date > 1018.12.1
+					date < 1019.1.1
+				}
+				AND = {
+					date > 1019.12.1
+					date < 1020.1.1
+				}
+				AND = {
+					date > 1020.12.1
+					date < 1021.1.1
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			has_war = yes
+		}
+	}
+}
 music = {
 	song = "Resonant_Tonality-Land_And_Culture"
 
@@ -1111,6 +1176,40 @@ music = {
 			add = 8
 			has_war_with = KTZ
 			has_global_flag = KTZ_musicflag
+		}
+	}
+}
+#music = {
+#	song = "Zvykar-Fire_Trek"
+#
+#	chance = {
+#		factor = 1
+#		modifier = {
+#			factor = 2
+#			is_kirin_race = yes
+#		}
+#		modifier = {
+#			factor = 2
+#			has_war = yes
+#		}
+#		modifier = {
+#			factor = 0.5
+#			has_war = no
+#		}
+#	}
+#}
+music = {
+	song = "Zvykar-March_of_Old_and_New"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			is_zebra_race = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_zebra_race = no
 		}
 	}
 }
