@@ -4727,6 +4727,25 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_establish_air_bases"
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 46
+					state = 132
+					state = 70
+					state = 74
+					state = 3
+					state = 66
+					state = 12
+					state = 75
+				}
+			}
+			add_building_construction = {
+				type = air_base
+				level = 3
+				instant_build = yes
+			}
+		}
 	}
 }
 
@@ -4745,6 +4764,31 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_spitfire_project"
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			if = {
+				limit = {
+					has_tech = improved_small_airframe
+				}
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 1.0
+					uses = 1
+					ahead_reduction = 2
+					category = light_fighter
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 1.0
+					uses = 2
+					category = light_fighter
+				}
+			}
+		}
 	}
 }
 
