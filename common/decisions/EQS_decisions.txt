@@ -7060,6 +7060,44 @@ military_training_category = {
 			}
 		}
 	}
+	EQS_utilize_spitfire = {
+		icon = GFX_decision_generic_air
+		allowed = {
+			original_tag = EQS
+		}
+		available = {
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				has_tech = advanced_small_airframe
+			}
+			else = {
+				has_tech = fighter3
+			}
+			NOT = {
+				has_tech = jet_engines
+			}
+			has_war = yes
+		}
+		visible = {
+			has_completed_focus = EQS_spitfire_project
+			NOT = {
+				has_tech = jet_engines
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_utilize_spitfire"
+			add_timed_idea = {
+				idea = EQS_spitfire_utilized
+				days = 180
+			}
+		}
+	}
 	EQS_unlock_seabreeze_design = {
 		icon = GFX_decision_generic_tank
 		allowed = {
