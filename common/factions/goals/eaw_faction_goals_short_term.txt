@@ -76,7 +76,12 @@ faction_goal_delay_the_changelings = {
 				is_subject_of = CHN
 			}
 		}
-		date > 1010.7.1
+		OR = {
+			date > 1010.7.1
+			CHN = {
+				is_ally_with = ROOT
+			}
+		}
 	}
 	available = {
 		date < 1010.7.2
@@ -581,6 +586,8 @@ faction_goal_deploy_special_forces = {
 				add_to_temp_variable = { temp_special_units = num_battalions_with_type@tatzlwurm }
 				add_to_temp_variable = { temp_special_units = num_battalions_with_type@windigo_horrors }
 				add_to_temp_variable = { temp_special_units = num_battalions_with_type@spirit_warriors }
+				add_to_temp_variable = { temp_special_units = num_battalions_with_type@dervishes }
+				add_to_temp_variable = { temp_special_units = num_battalions_with_type@storm_creatures }
 				all_allied_country = {
 					add_to_temp_variable = { temp_special_units = num_battalions_with_type@marine }
 					add_to_temp_variable = { temp_special_units = num_battalions_with_type@marine_commando }
@@ -600,6 +607,8 @@ faction_goal_deploy_special_forces = {
 					add_to_temp_variable = { temp_special_units = num_battalions_with_type@tatzlwurm }
 					add_to_temp_variable = { temp_special_units = num_battalions_with_type@windigo_horrors }
 					add_to_temp_variable = { temp_special_units = num_battalions_with_type@spirit_warriors }
+					add_to_temp_variable = { temp_special_units = num_battalions_with_type@dervishes }
+					add_to_temp_variable = { temp_special_units = num_battalions_with_type@storm_creatures }
 				}
 			}
 			set_temp_variable = { temp_special_units_tt = temp_special_units }
@@ -621,6 +630,8 @@ faction_goal_deploy_special_forces = {
 			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@tatzlwurm }
 			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@windigo_horrors }
 			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@spirit_warriors }
+			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@dervishes }
+			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@storm_creatures }
 			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@marine }
 			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@marine_commando }
 			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@amphibious_mechanized }
@@ -639,6 +650,8 @@ faction_goal_deploy_special_forces = {
 			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@tatzlwurm }
 			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@windigo_horrors }
 			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@spirit_warriors }
+			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@dervishes }
+			subtract_from_temp_variable = { temp_special_units_tt = num_battalions_with_type@storm_creatures }
 			custom_trigger_tooltip = {
 				tooltip = faction_goal_deploy_special_forces_tt
 				check_variable = { temp_special_units > 39 }
@@ -997,5 +1010,21 @@ faction_goal_ensure_advanced_r_d = {
 	}
 	ai_will_do = {
 		base = 1
+	}
+}
+
+faction_goal_blocker_short = {
+
+	name = faction_goal_blocker_short
+	description = faction_goal_blocker_short_desc
+	category = short_term
+	group = FOCUS_FILTER_ANNEXATION
+	allowed = {
+		tag = ZZZ
+	}
+	completed = {
+		always = no
+	}
+	complete_effect = {
 	}
 }

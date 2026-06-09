@@ -2467,6 +2467,7 @@ shared_focus = {
 	y = 13
 	cost = 7.20
 	prerequisite = { focus = GRI_empire_rising }
+	bypass = { FAW_is_imperial_vassal = yes }
 	available = {
 		is_subject = no
 	}
@@ -2569,6 +2570,7 @@ shared_focus = {
 	x = 11
 	y = 14
 	cost = 7.20
+	bypass = { FAW_is_imperial_vassal = yes }
 	prerequisite = { focus = GRI_strike_north }
 	available = {
 		is_subject = no
@@ -2621,6 +2623,7 @@ shared_focus = {
 	y = 14
 	cost = 7.20
 	prerequisite = { focus = GRI_strike_north }
+	bypass = { FAW_is_imperial_vassal = yes }
 	available = {
 	    is_subject = no
 	    custom_trigger_tooltip = {
@@ -2771,7 +2774,7 @@ shared_focus = {
 		has_political_power > 50
 	}
 	cancel_if_invalid = no
-
+	bypass = { FAW_is_imperial_vassal = yes }
 	ai_will_do = {
 		factor = 50
 	}
@@ -3589,6 +3592,7 @@ shared_focus = {
 	will_lead_to_war_with = LUS
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus GRI_strike_frontier"
+		hidden_effect = { set_country_flag = griffon_can_demand_east_frontier }
 		create_wargoal = { type = annex_everything target = HLQ }
 		create_wargoal = { type = annex_everything target = LNS }
 		create_wargoal = { type = annex_everything target = LSC }
@@ -4897,12 +4901,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus GRI_naval_aviation_experimentation"
-		add_doctrine_cost_reduction = {
-			name = cat_base_strike
-			cost_reduction = 0.5
-			uses = 1
-			category = naval_doctrine #was cat_base_strike
-		}
+		naval_carrier_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -4941,12 +4940,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus GRI_surface_fleet_f"
-		add_doctrine_cost_reduction = {
-			name = cat_fleet_in_being
-			cost_reduction = 0.5
-			uses = 1
-			category = naval_doctrine #was cat_fleet_in_being
-		}
+		naval_capships_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -5257,12 +5251,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus GRI_doctrinal_adaptation"
-		add_doctrine_cost_reduction = {
-			name = land_doc_bonus
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine
-		}
+		land_operations_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -5431,12 +5420,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus GRI_joint_wargames"
 		army_experience = 15
-		add_doctrine_cost_reduction = {
-			name = land_doc_bonus
-			cost_reduction = 0.75
-			uses = 1
-			category = land_doctrine
-		}
+		land_operations_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -5880,12 +5864,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus GRI_strat_destruction"
-		add_doctrine_cost_reduction = {
-			name = strategic_destruction_tree
-			cost_reduction = 0.5
-			uses = 1
-			category = strategic_destruction_tree
-		}
+		air_strat_bombers_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -5911,12 +5890,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus GRI_air_superior"
-		add_doctrine_cost_reduction = {
-			name = cat_battlefield_support
-			cost_reduction = 0.5
-			uses = 1
-			category = air_doctrine #was cat_battlefield_support
-		}
+		air_cas_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -6221,12 +6195,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus GRI_encourage_experimentality"
-		add_doctrine_cost_reduction = {
-			name = air_doc_bonus
-			cost_reduction = 0.5
-			uses = 1
-			category = air_doctrine
-		}
+		air_fighter_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -9495,7 +9464,7 @@ shared_focus = {
 	}
 
 	ai_will_do = {
-		factor = 14
+		base = 14
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus GRI_hear_them_out"
@@ -10026,6 +9995,10 @@ shared_focus = {
 
 	ai_will_do = {
 		factor = 35
+		modifier = {
+			factor = 0
+			has_country_flag = GRD_influence_towards_constitutionalism
+		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus GRI_send_in_the_tanks"

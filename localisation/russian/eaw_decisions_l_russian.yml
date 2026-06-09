@@ -21,6 +21,12 @@ anti_neutral_raids:0 "Антитрадиционалистские рейды"
 anti_neutral_raids_desc:0 "Мы должны расправиться с традиционалистскими и монархистскими элементами в нашей стране ради долгосрочной внутренней стабильности. Их влияние слишком велико и потенциально может стать проблемой для правительства."
 seize_some_trucks_woo:0 "Реквизировать гражданский автотранспорт"
 seize_some_trucks_woo_desc:0 "Коммерческие автомобильные компании обладают существенным влиянием на нашу инфраструктуру. В условиях надвигающейся войны мы имеем право реквизировать технику для государственного пользования."
+build_1144_supply_hub:0 "Построить узел снабжения в регионе [1144.GetName]"
+build_1154_supply_hub:0 "Построить узел снабжения в регионе [1154.GetName]"
+build_1149_supply_hub:0 "Построить узел снабжения в регионе [1149.GetName]"
+build_763_supply_hub: "Построить узел снабжения в регионе [763.GetName]"
+build_1039_supply_hub: "Построить узел снабжения в регионе [1039.GetName]"
+build_905_supply_hub: "Построить узел снабжения в регионе [905.GetName]"
 
 reclaim_the_everfree_forest_decision:0 "Возвратить Вечнодикий Лес"
 
@@ -61,7 +67,7 @@ beak_mine_expansion:0 "Расширить Клювовые шахты"
 northern_steel_expansion:0 "Шахты в глубинах Низерана"
 jem_mines:0 "Разработка Кейхольмских кристальных шахт"
 tainaholm_aluminium:0 "Тайнахольские алюминиевые шахты"
-develop_celestia_rubber_plantations:0 "Создать каучуковые плантации имени Селестии"
+develop_celestia_rubber_plantations:0 "Создать каучуковые плантации в регионе [354.GetName]"
 develop_northern_cross_tungsten_deposits_1:0 "Разработка вольфрамовых месторождений Северного Сечения"
 develop_northern_cross_tungsten_deposits_2:0 "Расширить вольфрамовых месторождений Северного Сечения"
 develop_karthin_oil_fields:0 "Расширить карфинские нефтяные месторождения"
@@ -160,11 +166,11 @@ develop_zamfara_oil:0 "Чёрное золото Замфары"
 develop_gelion_oil:0 "Насосы Гелиона"
 develop_modnihendi_oil:0 "Скважины Моднихенди"
 develop_karen_steel:0 "Железный рудник Карена"
-develop_zwahile_steel:0 "Металлургические заводы Звахиле"
+develop_zwahile_steel:0 "Металлургические заводы Зуахили"
 develop_wetbanks_aluminium:0 "Авиазавод Уэтбэнкса"
 expand_brown_coal_mining_in_the_orta_valley:0 "Расширение добычи бурого угля в Орта Яйла"
 expand_the_rainguard_coal_mines:0 "Расширение угольных шахт Рэйнгарда"
-develop_thunderpoint_aluminium:0 "Нефтеперерабатывающий завод Тандер Поинта"
+develop_thunderpoint_aluminium:0 "Алюминиевый завод Тандер Поинта"
 develop_eye_of_the_storm_tungsten:0 "Вольфрамовый рудник Глаза Бури"
 develop_eye_of_the_storm_crystals1:0 "Кристаллы в Глазе Бури"
 develop_eye_of_the_storm_crystals2:0 "Больше кристаллов в Глазе Бури"
@@ -182,9 +188,6 @@ develop_plissa_tungsten:0 "Расширение вольфрамовых шах�
 tap_the_sarygam_coal_reserves:0 "Начать осваивать угольные ресурсы Саригама"
 explore_coal_seams_near_zhlaha_zasha:0 "Исследовать угольные пласты возле Жлаха Заша"
 open_the_memphis_coal_mines:0 "Открыть мейнфисские угольные шахты"
-build_1144_supply_hub:0 "Узел снабжения провинции [1144.GetName]"
-build_1154_supply_hub:0 "Узел снабжения провинции [1154.GetName]"
-build_1149_supply_hub:0 "Узел снабжения провинции [1149.GetName]"
 increase_crystal_mining_in_bardzr_zhayrr:0 "Увеличить добычу кристаллов в Бардзр Жайрре"
 prospect_for_iron_in_apastanats_trots:0 "Разведка железа в Апастанатс Тсотс"
 upgrade_steel_mills_in_the_qerbi_tepelikler:0 "Модернизировать сталелитейные заводы в Керби Тепеликлер"
@@ -216,6 +219,8 @@ increase_rubber_production_in_wezuli:0 "Увеличить производст�
 plant_additional_rubber_in_patay_na_bantayog:0 "Посадить дополнительные каучуковые деревья в Патай-на-Бантайоге"
 invest_in_additional_rubber_plantations_for_amalanhig_hinni:0 "Инвестировать в дополнительные каучуковые плантации Амаланхиг-хинни"
 expand_tungsten_mines_at_the_ziragongo:0 "Расширить вольфрамовые шахты в Зирагонго"
+open_tungsten_mines_in_birthplace:0 "Открыть вольфрамовые шахты в Родине"
+construct_aluminium_smelters_in_falconia:0 "Построить алюминиевые заводы в Фэлконии"
 
 GRW_internal_affairs:0 "Внешняя политика"
 GRW_move_capital_Sydia:0 "Перенести столицу в Сидию"
@@ -259,6 +264,16 @@ decision_cost_CP_30_pp_25_tooltip:0 "Стоимость принятия реш�
 #decision_cost_CP_30_blocked:0 "£command_power  §R30§!"
 #decision_cost_CP_30_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostCP30]"
 
+
+decision_cost_CP_hayzeb:0 "£command_power  §Y[?ROOT.GYZ_infiltrate_hayzeb_cost]§!"
+decision_cost_CP_hayzeb_blocked:0 "£command_power  §R[?ROOT.GYZ_infiltrate_hayzeb_cost]§!"
+decision_cost_CP_hayzeb_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostCPHayzeb]"
+
+
+decision_cost_manpower_hayzeb:0 "£manpower_icon  §Y[?ROOT.GYZ_crackdown_hayzeb_cost]§!"
+decision_cost_manpower_hayzeb_blocked:0 "£manpower_icon  §R[?ROOT.GYZ_crackdown_hayzeb_cost]§!"
+decision_cost_manpower_hayzeb_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostManpowerHayzeb]"
+
 decision_cost_CP_100:0 "£command_power  §Y100§!"
 decision_cost_CP_100_blocked:0 "£command_power  §R100§!"
 decision_cost_CP_100_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostCP100]"
@@ -279,6 +294,10 @@ decision_cost_CP_35_pp_35_tooltip:0 "Стоимость принятия реш�
 decision_cost_CP_35_pp_75:0 "£command_power  §Y35§! £pol_power  §Y75§!"
 decision_cost_CP_35_pp_75_blocked:0 "£command_power  §R35§! £pol_power  §R75§!"
 decision_cost_CP_35_pp_75_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostCP35PP75]"
+
+decision_cost_manpower_10000_infequip_600:0 "£manpower_icon  §Y10000§! £infequip_text §Y600§!"
+decision_cost_manpower_10000_infequip_600_blocked:0 "£manpower_icon  §R10000§! £infequip_text  §R600§!"
+decision_cost_manpower_10000_infequip_600_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostManpower8000]"
 
 decision_cost_pp_50_manpower_2000:0 "£manpower_icon  §Y2000§! £pol_power  §Y50§!"
 decision_cost_pp_50_manpower_2000_blocked:0 "£manpower_icon  §R2000§! £pol_power  §R50§!"
@@ -371,6 +390,10 @@ decision_cost_250_infantry_10k_fuel_tooltip:0 "Стоимость приняти
 decision_cost_200_infantry_2000_manpower_20_cp:0 "£infequip_text §Y200§! £manpower_icon §Y2000§! £command_power §Y20§!"
 decision_cost_200_infantry_2000_manpower_20_cp_blocked:0 "£infequip_text §R200§! £manpower_icon §R2000§! £command_power §R20§!"
 decision_cost_200_infantry_2000_manpower_20_cp_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostInfEq200Manpower2kCP20]"
+
+decision_cost_150_infantry_1500_manpower_30_pp: "£infequip_text §Y150§! £manpower_icon §Y1500§! £pol_power §Y30§!"
+decision_cost_150_infantry_1500_manpower_30_pp_blocked: "£infequip_text §Y150§! £manpower_icon §Y1500§! £pol_power §Y30§!"
+decision_cost_150_infantry_1500_manpower_30_pp_tooltip: "Стоимость принятия решения: [This.GetDecisionCostInfEq150Manpower1500PP30]"
 
 decision_cost_600_infantry_12_artillery_25_support_6800_manpower:0 "£infequip_text §Y600§! £unit_category_support_artillery_icon_small §Y12§! £support_eq_texticon §Y25§! £manpower_icon §Y6800§!"
 decision_cost_600_infantry_12_artillery_25_support_6800_manpower_blocked:0 "£infequip_text §R600§! £unit_category_support_artillery_icon_small §R12§! £support_eq_texticon §R25§! £manpower_icon §R6800§!"
@@ -546,6 +569,24 @@ decision_cost_500_guns_50_pp_tooltip:0 "Стоимость принятия ре
 decision_cost_500_guns_100_pp:0 "£infequip_text  §Y500§! £pol_power  §Y100§!"
 decision_cost_500_guns_100_pp_blocked:0 "£infequip_text  §R500§! £pol_power  §R100§!"
 decision_cost_500_guns_100_pp_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostEquipment500PP100]"
+
+decision_cost_1000_guns_100_cp:0 "£infequip_text  §Y1000§! £command_power  §Y100§!"
+decision_cost_1000_guns_100_cp_blocked:0 "£infequip_text  §R1000§! £command_power  §R100§!"
+decision_cost_1000_guns_100_cp_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostEquipment1000CP100]"
+
+
+decision_cost_400_guns_40_cp:0 "£infequip_text  §Y400§! £command_power  §Y40§!"
+decision_cost_400_guns_40_cp_blocked:0 "£infequip_text  §R400§! £command_power  §R40§!"
+decision_cost_400_guns_40_cp_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostEquipment400CP40]"
+
+
+decision_cost_500_supp_100_pp:0 "£support_eq_texticon  §Y500§! £pol_power  §Y100§!"
+decision_cost_500_supp_100_pp_blocked:0 "£support_eq_texticon  §R500§! £pol_power  §R100§!"
+decision_cost_500_supp_100_pp_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostSuppEquipment500PP100]"
+
+decision_cost_200_supp_40_pp:0 "£support_eq_texticon  §Y200§! £pol_power  §Y40§!"
+decision_cost_200_supp_40_pp_blocked:0 "£support_eq_texticon  §R20§! £pol_power  §R40§!"
+decision_cost_200_supp_40_pp_tooltip:0 "Стоимость принятия решения: [This.GetDecisionCostSuppEquipment200PP40]"
 
 decision_cost_750_guns_50_pp:0 "£infequip_text  §Y750§! £pol_power  §Y50§!"
 decision_cost_750_guns_50_pp_blocked:0 "£infequip_text  §R750§! £pol_power  §R50§!"
@@ -739,6 +780,20 @@ our_struggle:0 "Наша борьба"
 our_cause:0 "Наше дело"
 equal_burdens:0 "Равное бремя"
 
+a_storm_creatures_path:0 "Путь существа шторма"
+tales_of_the_white_death:0 "Сказ о белой смерти"
+home_before_funny_hat_day:0 "Дома до Дня смешной шляпы"
+semi_jacketed_hollow_point:0 "Наконечник полой пули"
+beyond_scorched_skies:0 "За опалёнными небесами"
+it_cant_rain_all_the_time:0 "Дождь когда-нибудь закончится"
+the_legionary:0 "Легионер"
+out_of_whose_womb_came_the_ice:0 "Из какой утробы явился лёд?"
+hydrophobia:0 "Гидрофобия"
+operation_blackout:0 "Операция "Блэкаут""
+a_cold_reason_to_fight:0 "Холодная причина для борьбы"
+hand_on_heart_finger_on_trigger:0 "Рука на сердце, палец на спусковом крючке"
+
+
 ### Zebrican Bats ###
 decision_cost_7500_test_subject:0 "£research_icon  §Y7500§!"
 decision_cost_7500_test_subject_blocked:0 "£research_icon  §R7500§!"
@@ -831,3 +886,4 @@ HIN_sell_off_family_jewels:0 "Продать фамильные драгоцен
 HIN_sell_off_family_jewels_desc:0 ""
 KAR_attack_west_cat:0 "Расширение на запад"
 placeholder_KAR_war_decision:0 "Атаковать государство [From.GetNameDef]"
+placeholder_KAR_formable_decision: "Объединить мыс Хестрая"

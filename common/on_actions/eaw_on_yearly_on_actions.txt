@@ -6,9 +6,10 @@ on_actions = {
 		}
 	}
 
-	# Months counter
+	# ROOT is country, this is ran for every country
 	on_monthly = {
 		effect = {
+			# Months counter
 			if = {
 				limit = {
 					NOT = { has_global_flag = on_monthly_done }
@@ -41,12 +42,6 @@ on_actions = {
 					}
 				}
 			}
-		}
-	}
-
-	# ROOT is country, this is ran for every country
-	on_monthly = {
-		effect = {
 			# Disbanding land units, trigger inside
 			country_event = { id = utility.14 days = 1 random = 480 }
 
@@ -87,7 +82,6 @@ on_actions = {
 							exists = yes
 						}
 					}
-					log = "[GetDateText]: ROOT: [Root.GetName] on_yearly_TBK"
 					TBK = { #place effects for tbk in here to simulate on_yearly_tbk
 						if = {
 							limit = {
@@ -173,7 +167,6 @@ on_actions = {
 					original_tag = ABY
 					has_war = yes
 				}
-				log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_ABY_2"
 				if = {
 					limit = {
 						NOT = {
@@ -197,6 +190,205 @@ on_actions = {
 			}
 		}
 	}
+
+	
+	# ROOT is country, this is ran for every country
+	on_weekly = {
+		effect = {
+			handle_cosmetic_tag_and_puppet_change_weekly = yes
+			miscellaneous_on_weekly_effects = yes
+			miniaturized_nukes_increased_production_effect = yes
+			if = { ## Children of Concord
+				limit = {
+					original_tag = KIC
+					has_country_flag = KIC_children_of_concord_flag
+				}
+				if = {
+					limit = {
+						check_variable = {
+							var = COC_power_struggle_DR_var
+							value = 2
+							compare = greater_than_or_equals
+						}
+					}
+					add_ideas = COC_PS_DR_hidden_buffs_1
+				}
+				if = {
+					limit = {
+						check_variable = {
+							var = COC_power_struggle_DR_var
+							value = 4
+							compare = greater_than_or_equals
+						}
+					}
+					add_ideas = COC_PS_DR_hidden_buffs_2
+					if = {
+						limit = {
+							EQS = { exists = yes is_subject = no }
+						}
+						country_event = { id = kirin_council.320 hours = 1 }
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							var = COC_power_struggle_KF_var
+							value = 2
+							compare = greater_than_or_equals
+						}
+					}
+					add_ideas = COC_PS_KF_hidden_buffs_1
+				}
+				if = {
+					limit = {
+						check_variable = {
+							var = COC_power_struggle_KF_var
+							value = 4
+							compare = greater_than_or_equals
+						}
+					}
+					add_ideas = COC_PS_KF_hidden_buffs_2
+					if = {
+						limit = {
+							OR = {
+								STG = { exists = yes is_subject = no }
+								SRS = { exists = yes is_subject = no }
+								GRW = { exists = yes is_subject = no }
+							}
+						}
+						country_event = { id = kirin_council.319 hours = 1 }
+					}
+				}
+			}
+
+			if = { ## CFR
+				limit = {
+					country_exists = CFR
+					tag = CFR
+				}
+				CFR = {
+					if = {
+						limit = {
+							has_country_flag = CFR_imago_parastatal_available
+						}
+						for_each_scope_loop = {
+							array = CFR.CFR_infiltrated_countries_array
+							if = {
+								limit = {
+									num_of_military_factories > 9
+								}
+								set_variable = { CFR_fraudulent_arms_contract_AGENTS_REQ = num_of_military_factories }
+								divide_variable = { CFR_fraudulent_arms_contract_AGENTS_REQ = 10 }
+								multiply_variable = { CFR_fraudulent_arms_contract_AGENTS_REQ = 5 }
+								round_variable = CFR_fraudulent_arms_contract_AGENTS_REQ
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = CFR_just_fuck_my_shit_up_darling_available
+						}
+						for_each_scope_loop = {
+							array = CFR.CFR_infiltrated_countries_array
+							if = {
+								limit = {
+									num_divisions > 9
+								}
+								set_variable = { CFR_provoke_army_defections_AGENTS_REQ = num_divisions }
+								divide_variable = { CFR_provoke_army_defections_AGENTS_REQ = 10 }
+								round_variable = CFR_provoke_army_defections_AGENTS_REQ
+								set_variable = { CFR_provoke_army_defections_DIVISIONS = CFR_provoke_army_defections_AGENTS_REQ }
+								multiply_variable = { CFR_provoke_army_defections_AGENTS_REQ = 15 }
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = CFR_weekly_five_infiltrators_flag
+						}
+						add_to_variable = { infiltrators_var = 5 } ## Why does it add 770???
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOT = {
+						is_zebrican_continent_country = yes
+					}
+					OR = {
+						AND = {
+							surrender_progress > 0.19
+							has_war = yes
+						}
+						AND = {
+							any_occupied_country = {
+								original_tag = ABY
+							}
+							core_resistance = {
+								occupied_country_tag = ABY
+								value > 79
+							}
+						}
+					}
+					OR = {
+						AND = {
+							ABY = {
+								exists = no
+							}
+							any_occupied_country = {
+								original_tag = ABY
+							}
+							775 = {
+								is_owned_and_controlled_by = ROOT
+							}
+							OR = {
+								779 = {
+									is_owned_and_controlled_by = ROOT
+								}
+								777 = {
+									is_owned_and_controlled_by = ROOT
+								}
+								778 = {
+									is_owned_and_controlled_by = ROOT
+								}
+								780 = {
+									is_owned_and_controlled_by = ROOT
+								}
+								774 = {
+									is_owned_and_controlled_by = ROOT
+								}
+								782 = {
+									is_owned_and_controlled_by = ROOT
+								}
+							}
+						}
+						ABY = {
+							is_subject_of = ROOT
+							has_capitulated = no
+						}
+					}
+				}
+				country_event = abyssinia.124
+			}
+			
+			if = {
+				limit = {
+					#has_government = communism
+					has_country_flag = SON_ABY_war_white_peace_flag_2
+					has_war = yes
+					controls_state = 775
+					#controls_state = 1200
+					
+				}
+				775 = {
+					owner = {
+						country_event = zarhay.155
+					}
+				}
+			}
+		}
+    }
 	
 	on_weekly_EQS = {
 		effect = {
@@ -266,7 +458,6 @@ on_actions = {
 
 	on_weekly_CHN = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_CHN"
 			if = {
 				limit = {
 					has_active_mission = CHN_acornage_colonisation_decision
@@ -413,7 +604,6 @@ on_actions = {
 
 	on_monthly_EQS = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_EQS"
 			if = {
 				limit = {
 					original_tag = EQS
@@ -424,6 +614,12 @@ on_actions = {
 					}
 					NOT = {
 						has_country_flag = EQS_sunset_shimmer_arrived
+					}
+					NOT = {
+						has_game_rule = { # AF26
+							rule = eqc_april_fool
+							option = EQC_APRIL_FOOL
+						}
 					}
 				}
 				country_event = equestria.188
@@ -457,7 +653,6 @@ on_actions = {
 	}
 	on_monthly_BRZ = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_BRZ"
 			if = {
 				limit = {
 					has_country_flag = BRZ_revenge_griffon_laws_enacted  
@@ -1034,7 +1229,6 @@ on_actions = {
 	
 	on_weekly_BRZ = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_BRZ"
 			if = {
 				limit = {
 					has_country_flag = BRZ_noble_virtue_active
@@ -1157,7 +1351,6 @@ on_actions = {
 
 	on_weekly_MAN = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_MAN"
 			if = {
 				limit = {
 					has_country_flag = MAN_continuous_love_distribution_country_flag
@@ -1217,7 +1410,6 @@ on_actions = {
 
 	on_weekly_ELF = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_ELF"
 			if = {
 				limit = {
 					has_country_flag = ELF_bits_gun_weekly_shipments
@@ -1233,7 +1425,6 @@ on_actions = {
 	}
 	on_weekly_CTH = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_CTH"
 			if = {
 				limit = {
 					has_country_flag = CTH_colthage_zarcaid
@@ -1259,7 +1450,6 @@ on_actions = {
 	}
 	on_monthly_CTH = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_CTH"
 			#If PDX ever adds on_state_ownership_changed, move this there
 			if = {
 				limit = {
@@ -1463,7 +1653,6 @@ on_actions = {
 	}
 	on_weekly_PLB = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_PLB"
 			if = {
 				limit = {
 					has_country_flag = PLB_gun_weekly_shipments
@@ -1483,7 +1672,6 @@ on_actions = {
 	}
 	on_weekly_BAT = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_BAT"
 			if = {
 				limit = {
 					has_country_flag = BAT_ZAR_limited_war
@@ -1598,7 +1786,6 @@ on_actions = {
 	}
 	on_monthly_CVA = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_CVA"
 			if = {
 				limit = {
 					NOT = { has_country_flag = fired_line_cut_short_event }
@@ -1707,12 +1894,10 @@ on_actions = {
 	}
 	on_weekly_CVA = {
 	    effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_CVA"
 			if = {
 				limit = {
 					has_country_flag = CVA_crisis_of_authority_flag
 				}
-				log = "[GetDateText]: ROOT: [Root.GetName] CVA_crisis_of_authority_flag"
 				if = {
 					limit = {
 						has_idea = CVA_CTH_collapsed_authority
@@ -2633,7 +2818,6 @@ on_actions = {
     }
 	on_weekly_HIP = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_HIP"
 			if = {
 				limit = {
 					has_completed_focus = HIP_power_of_the_sun
@@ -2678,7 +2862,6 @@ on_actions = {
 	}
 	on_weekly_EQS = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_EQS"
 			if = {
 				limit = {
 					has_country_flag = EQS_HIP_elements_sent
@@ -2701,11 +2884,33 @@ on_actions = {
 				}
 				set_country_flag = JUN_troops_arrived
 			}
+			if = { # AF26
+				limit = {
+					has_country_flag = EQS_ED_harmony_magic_enabled
+				}
+				add_to_variable = { EQS_ED_friendship_power_current = EQS_ED_friendship_power_gain }
+				clamp_variable = { var = EQS_ED_friendship_power_current min = 0 max = 100 }
+			}
+			if = { # AF26
+				limit = {
+					has_dynamic_modifier = {
+						modifier = EQS_ED_centre_for_artefact_research
+					}
+				}
+				ED_recalculate_centre_for_artefact_research_vars = yes
+			}
+			if = { # AF26
+				limit = {
+					has_dynamic_modifier = {
+						modifier = ED_magic_balance_effect
+					}
+				}
+				ED_decay_magical_balance_effect = yes 
+			}
 		}
 	}
 	on_monthly_CTL = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_CTL"
 			if = {
 				limit = {
 					has_war = no
@@ -2791,7 +2996,6 @@ on_actions = {
 
 	on_monthly_BAR = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_BAR"
 			if = {
 				limit = {
 					original_tag = BAR
@@ -3073,7 +3277,6 @@ on_actions = {
 
 	on_monthly_JUN = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_JUN"
 			if = {
 				limit = {
 					has_completed_focus = JUN_right_4
@@ -3093,7 +3296,6 @@ on_actions = {
 	}
 	on_monthly_CES = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_CES"
 			if = {
 				limit = {
 					original_tag = CES
@@ -3122,7 +3324,6 @@ on_actions = {
 	
 	on_monthly_DEL = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_DEL"
 			if = {
 				limit = {
 					is_subject_of = KIR
@@ -3135,7 +3336,6 @@ on_actions = {
 
 	on_weekly_TBK = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_TBK"
 			if = {
 				limit = {
 					TBK = {
@@ -3163,7 +3363,6 @@ on_actions = {
 
 	on_weekly_ZAR = {
         effect = {
-            log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_ZAR"
             if = {
                 limit = {
                     has_idea = ZAR_trans_zebharan_caravans
@@ -3246,224 +3445,6 @@ on_actions = {
 			}
 		}
 	}
-
-	on_weekly = {
-		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly"
-			handle_cosmetic_tag_and_puppet_change_weekly = yes
-			miscellaneous_on_weekly_effects = yes
-			miniaturized_nukes_increased_production_effect = yes
-			if = { ## Children of Concord
-				limit = {
-					original_tag = KIC
-					has_country_flag = KIC_children_of_concord_flag
-				}
-				if = {
-					limit = {
-						check_variable = {
-							var = COC_power_struggle_DR_var
-							value = 2
-							compare = greater_than_or_equals
-						}
-					}
-					add_ideas = COC_PS_DR_hidden_buffs_1
-				}
-				if = {
-					limit = {
-						check_variable = {
-							var = COC_power_struggle_DR_var
-							value = 4
-							compare = greater_than_or_equals
-						}
-					}
-					add_ideas = COC_PS_DR_hidden_buffs_2
-					if = {
-						limit = {
-							EQS = { exists = yes is_subject = no }
-						}
-						country_event = { id = kirin_council.320 hours = 1 }
-					}
-				}
-				if = {
-					limit = {
-						check_variable = {
-							var = COC_power_struggle_KF_var
-							value = 2
-							compare = greater_than_or_equals
-						}
-					}
-					add_ideas = COC_PS_KF_hidden_buffs_1
-				}
-				if = {
-					limit = {
-						check_variable = {
-							var = COC_power_struggle_KF_var
-							value = 4
-							compare = greater_than_or_equals
-						}
-					}
-					add_ideas = COC_PS_KF_hidden_buffs_2
-					if = {
-						limit = {
-							OR = {
-								STG = { exists = yes is_subject = no }
-								SRS = { exists = yes is_subject = no }
-								GRW = { exists = yes is_subject = no }
-							}
-						}
-						country_event = { id = kirin_council.319 hours = 1 }
-					}
-				}
-			}
-
-			if = { ## CFR
-				limit = {
-					country_exists = CFR
-					tag = CFR
-				}
-				CFR = {
-					if = {
-						limit = {
-							has_country_flag = CFR_imago_parastatal_available
-						}
-						for_each_scope_loop = {
-							array = CFR.CFR_infiltrated_countries_array
-							if = {
-								limit = {
-									num_of_military_factories > 9
-								}
-								set_variable = { CFR_fraudulent_arms_contract_AGENTS_REQ = num_of_military_factories }
-								divide_variable = { CFR_fraudulent_arms_contract_AGENTS_REQ = 10 }
-								multiply_variable = { CFR_fraudulent_arms_contract_AGENTS_REQ = 5 }
-								round_variable = CFR_fraudulent_arms_contract_AGENTS_REQ
-							}
-						}
-					}
-					if = {
-						limit = {
-							has_country_flag = CFR_just_fuck_my_shit_up_darling_available
-						}
-						for_each_scope_loop = {
-							array = CFR.CFR_infiltrated_countries_array
-							if = {
-								limit = {
-									num_divisions > 9
-								}
-								set_variable = { CFR_provoke_army_defections_AGENTS_REQ = num_divisions }
-								divide_variable = { CFR_provoke_army_defections_AGENTS_REQ = 10 }
-								round_variable = CFR_provoke_army_defections_AGENTS_REQ
-								set_variable = { CFR_provoke_army_defections_DIVISIONS = CFR_provoke_army_defections_AGENTS_REQ }
-								multiply_variable = { CFR_provoke_army_defections_AGENTS_REQ = 15 }
-							}
-						}
-					}
-					if = {
-						limit = {
-							has_country_flag = CFR_weekly_five_infiltrators_flag
-						}
-						add_to_variable = { infiltrators_var = 5 } ## Why does it add 770???
-					}
-				}
-			}
-
-			#if = {
-			#	limit = {
-			#		NOT = {
-			#			has_completed_focus = ZAR_emerald_fields
-			#		}
-			#	}
-			#	every_owned_state = {
-			#		limit = {
-			#			has_dynamic_modifier = {
-			#				modifier = ZAR_the_flowering
-			#			}
-			#		}
-			#		ROOT = {
-			#			 if = {
-			#				limit = {
-			#					has_completed_focus = ZAR_emerald_fields
-			#					NOT = {
-			#						has_completed_focus = ZAR_the_desert_blossoms
-			#					}
-			#				}
-			#				add_manpower = 100
-			#			}
-			#			else_if = {
-			#				limit = {
-			#					has_completed_focus = ZAR_the_desert_blossoms
-			#				}
-			#				add_manpower = 200
-			#			}
-			#			else = {
-			#				add_manpower = 50
-			#			}
-			#		}
-			#	}
-			#}
-			
-			if = {
-				limit = {
-					NOT = {
-						is_zebrican_continent_country = yes
-					}
-					OR = {
-						AND = {
-							surrender_progress > 0.19
-							has_war = yes
-						}
-						AND = {
-							any_occupied_country = {
-								original_tag = ABY
-							}
-							core_resistance = {
-								occupied_country_tag = ABY
-								value > 79
-							}
-						}
-					}
-					OR = {
-						AND = {
-							ABY = {
-								exists = no
-							}
-							any_occupied_country = {
-								original_tag = ABY
-							}
-							775 = {
-								is_owned_and_controlled_by = ROOT
-							}
-							OR = {
-								779 = {
-									is_owned_and_controlled_by = ROOT
-								}
-								777 = {
-									is_owned_and_controlled_by = ROOT
-								}
-								778 = {
-									is_owned_and_controlled_by = ROOT
-								}
-								780 = {
-									is_owned_and_controlled_by = ROOT
-								}
-								774 = {
-									is_owned_and_controlled_by = ROOT
-								}
-								782 = {
-									is_owned_and_controlled_by = ROOT
-								}
-							}
-						}
-						ABY = {
-							is_subject_of = ROOT
-							has_capitulated = no
-						}
-					}
-				}
-				country_event = abyssinia.124
-			}
-
-		}
-    }
 	on_monthly_HIE = {
 		effect = {
 			if = {
@@ -3748,6 +3729,7 @@ on_actions = {
         	}
 		}
 	}
+	
 	on_monthly_ZAR = {
 		effect = {
 			if = {
@@ -3871,7 +3853,6 @@ on_actions = {
 	}
 	on_monthly_ABY = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_ABY"
 			if = {
 				limit = {
 					has_war = yes
@@ -4069,7 +4050,6 @@ on_actions = {
 	}
 	on_weekly_ZAI = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_ZAI"
 			if = {
 				limit = {
 					OR = {
@@ -4133,7 +4113,6 @@ on_actions = {
 	}
 	on_monthly_ZAI = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_ZAI"
 			if = {
 				limit = {
 					OR = {
@@ -4148,6 +4127,7 @@ on_actions = {
 						limit = {
 							NOT = {
 								original_tag = ZAI
+								original_tag = ZZZ
 							}
 						}
 						add_opinion_modifier = { target = ZAI modifier = mortal_enemies }
@@ -4161,10 +4141,216 @@ on_actions = {
 			}
 		}
 	}
+	on_weekly_SON = {
+		effect = {
+			if = {
+				limit = {
+					has_government = democratic
+					has_country_flag = SON_unlock_zughe_relatives_advisors
+				}
+				add_to_variable = { SON_muza_loyalty = modifier@SON_muza_loyalty_drift }
+				clamp_variable = {
+					var = SON_muza_loyalty
+					min = 0
+					max = 100
+				}
+				add_to_variable = { SON_zin_loyalty = modifier@SON_zin_loyalty_drift }
+				clamp_variable = {
+					var = SON_zin_loyalty
+					min = 0
+					max = 100
+				}
+				add_to_variable = { SON_bene_loyalty = modifier@SON_bene_loyalty_drift }
+				clamp_variable = {
+					var = SON_bene_loyalty
+					min = 0
+					max = 100
+				}
+				if = {
+					limit = {
+						is_ai = no
+					}
+					if = {
+						limit = {
+							check_variable = { SON_muza_loyalty < 20 }
+						}
+						random_list = {
+							10 = {
+								modifier = {
+									factor = 2
+									check_variable = { SON_muza_influence > 39 }
+								}
+								modifier = {
+									factor = 2
+									check_variable = { SON_muza_influence > 59 }
+								}
+								modifier = {
+									factor = 2
+									check_variable = { SON_muza_influence > 79 }
+								}
+								country_event = zarhay.87
+							}
+							90 = {
+								
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { SON_zin_loyalty < 20 }
+						}
+						random_list = {
+							10 = {
+								modifier = {
+									factor = 2
+									check_variable = { SON_zin_influence > 39 }
+								}
+								modifier = {
+									factor = 2
+									check_variable = { SON_zin_influence > 59 }
+								}
+								modifier = {
+									factor = 2
+									check_variable = { SON_zin_influence > 79 }
+								}
+								country_event = zarhay.88
+							}
+							90 = {
+								
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { SON_bene_loyalty < 20 }
+						}
+						random_list = {
+							10 = {
+								modifier = {
+									factor = 2
+									check_variable = { SON_bene_influence > 39 }
+								}
+								modifier = {
+									factor = 2
+									check_variable = { SON_bene_influence > 59 }
+								}
+								modifier = {
+									factor = 2
+									check_variable = { SON_bene_influence > 79 }
+								}
+								country_event = zarhay.89
+							}
+							90 = {
+								
+							}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+	on_monthly_HYE = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = HYE_reconnect_with_the_underworld
+						has_completed_focus = HYE_our_sisters_under_the_soil
+						has_completed_focus = HYE_formal_invitation_to_the_underworld
+					}
+				}
+
+				HYE_underground_population_increase = yes
+			}
+		}
+	}
+	on_weekly_HYE = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = HYE_reconnect_with_the_underworld
+						has_completed_focus = HYE_our_sisters_under_the_soil
+						has_completed_focus = HYE_formal_invitation_to_the_underworld
+					}
+				}
+
+				HYE_underground_conscription_weekly = yes
+			}
+		}
+	}
+	
+	on_weekly_SLC = {
+    	effect = {
+			if = {
+				limit = {
+					has_completed_focus = SLC_cant_refuse
+				}
+				for_each_scope_loop = {
+					array = SLC:SLC_tag_arms_dealing_array
+					add_equipment_to_stockpile = {
+						type = infantry_equipment 
+						amount = 30
+						producer = SLC
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 10
+						producer = SLC
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment_1
+						amount = 5
+						producer = SLC
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 5
+						producer = SLC
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					has_country_flag = SLC_cbc_fervour_activated
+				}
+
+				set_temp_variable = { i_fervour = modifier@SLC_cbc_weekly_fervour }
+				SLC_cbc_modify_fervour = yes
+				set_variable = { SLC_display_weekly_fervour = modifier@SLC_cbc_weekly_fervour }
+			}
+
+			if = {
+				limit = {
+					has_war_with = UZE
+					has_war_with = HYE
+					has_war_with = GAR
+					has_war_with = CNT
+				}
+				
+				set_country_flag = SLC_im_better_flag
+			}
+
+			if = {
+				limit = {
+					original_tag = SLC
+					has_completed_focus = SLC_force_application_not_projection
+					check_variable = {
+						SLC_cbc_fervour < 0.001
+					}
+					check_variable = { SLC.occupied_countries^num > 0 }
+				}
+				FROM = {
+					country_event = { id = SLC_commie_collapse_tree.1 }
+				}
+			}
+		}
+    }
 
 	on_weekly_ZOO = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_ZOO"
 			# Outside and constantly calculated so as to make the variable available to display prior to the first 'real' weekly pulse.
 			set_variable = { ZOO_map_gui_next_construction = global.date }
 			add_to_variable = { ZOO_map_gui_next_construction = 0.00168 }
@@ -4270,7 +4456,6 @@ on_actions = {
 	}
 	on_weekly_KXN = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_weekly_KXN"
 			if = {
 				limit = {
 					any_occupied_country = {
@@ -4751,7 +4936,6 @@ on_actions = {
 	}
 	on_monthly_KXN = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_KXN"
 			if = {
 				limit = {
 					is_ai = no
@@ -4889,6 +5073,54 @@ on_actions = {
 					is_subject = no
 				}
 				GRF_recalc_mercs = yes
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					has_navy_size = {
+    					size > 1
+    					type = capital_ship
+					}
+				}
+				set_temp_variable = { capital_ships_temp_var = num_ships_with_type@capital }
+				add_to_temp_variable = { capital_ships_temp_var = num_ships_with_type@carrier }
+				log = "[GetDateText]: [Root.GetName]: Capital ships Num [?capital_ships_temp_var|R]"
+				set_temp_variable = { screening_ships_temp_var = num_ships_with_type@screen }
+				log = "[GetDateText]: [Root.GetName]: Screening ships Num [?screening_ships_temp_var|R]"
+				subtract_from_temp_variable = { capital_ships_temp_var = capital_ships_var }
+				subtract_from_temp_variable = { screening_ships_temp_var = screening_ships_var }
+				divide_temp_variable = { screening_ships_temp_var = capital_ships_temp_var }
+				log = "[GetDateText]: [Root.GetName]: Screens/Capitals Ratio: [?screening_ships_temp_var|R]"
+				if = {
+					limit = {
+						OR = {
+							check_variable = {
+								screening_ships_temp_var < 4 
+							}
+						}
+					}
+					log = "[GetDateText]: [Root.GetName]: Build screens"
+					set_country_flag = AI_build_more_screens
+				}
+				else = {
+					log = "[GetDateText]: [Root.GetName]: Build capital"
+					clr_country_flag = AI_build_more_screens
+				}
+			}
+		}
+	}
+	on_weekly_EQC = {
+		effect = {
+			if = { # AF26
+				limit = {
+					has_dynamic_modifier = {
+						modifier = ED_magic_balance_effect
+					}
+				}
+				ED_decay_magical_balance_effect = yes 
 			}
 		}
 	}
