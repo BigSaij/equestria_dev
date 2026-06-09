@@ -548,9 +548,6 @@ EQS_equestrian_railway_organization = {
 		position = { x=0 y=0 }
 
 		available = {
-			FROM = {
-				has_completed_focus = Extreme_war_comittee
-			}
 		}
 
 		limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
@@ -598,9 +595,6 @@ EQS_equestrian_railway_organization = {
 
 
 		available = {
-			FROM = {
-				has_completed_focus = Extreme_measures
-			}
 		}
 
 
@@ -692,9 +686,6 @@ EQS_equestrian_railway_organization = {
 
 
 		available = {
-			FROM = {
-				has_completed_focus = Extreme_war_comittee
-			}
 		}
 
 		limit_to_equipment_type = { support_equipment }

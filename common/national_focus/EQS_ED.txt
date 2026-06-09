@@ -547,7 +547,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_ED_the_magic_of_friendship"
 		
 		swap_ideas = {
-			remove_idea = friendly_harmony
+			remove_idea = EQS_friendship_magic
 			add_idea = EQS_ED_magic_of_friendship # Our Own Magic of Friendship :)
 		}
 	}

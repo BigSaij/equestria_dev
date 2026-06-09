@@ -329,14 +329,6 @@ shared_focus = {
 				}
 				if = {
 					limit = {
-						has_character = EQS_SOL_red_rocket
-					}
-					EQS_SOL_red_rocket = {
-						set_nationality = ROOT
-					}
-				}
-				if = {
-					limit = {
 						has_character = EQS_sunrise_moonshadow
 					}
 					EQS_sunrise_moonshadow = {

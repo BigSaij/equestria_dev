@@ -199,17 +199,6 @@ instant_effect = {
 	### Ships Under Contruction ###
 	add_equipment_production = {
 		equipment = {
-			type = ship_hull_carrier_conversion_bb
-			creator = "EQS" 
-			version_name = "Dirtville Class"
-		}
-		requested_factories = 3
-		progress = 0.34
-		amount = 1
-		industrial_manufacturer = mio:EQS_seaward_shoals_organization
-	}
-	add_equipment_production = {
-		equipment = {
 			type = ship_hull_heavy_1
 			creator = "EQS" 
 			version_name = "Celestia Class"
