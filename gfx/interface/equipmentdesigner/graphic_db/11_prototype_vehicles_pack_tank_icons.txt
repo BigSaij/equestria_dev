@@ -612,7 +612,7 @@ LSP = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	light_tank_chassis = { 
 		pool = {
 			weight = 0.5

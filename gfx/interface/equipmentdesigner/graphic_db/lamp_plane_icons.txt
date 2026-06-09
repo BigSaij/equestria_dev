@@ -8215,7 +8215,7 @@ SCS = {
 	#)#
 
 }
-VAN = {
+ROC = {
 
     #(British IW Small Frame
 	small_plane_airframe_0 = {

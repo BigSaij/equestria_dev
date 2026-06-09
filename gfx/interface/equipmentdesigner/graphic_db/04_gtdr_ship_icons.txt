@@ -113,7 +113,7 @@ NMS = {
 	}
 
 }
-VAN = {
+ROC = {
 
 # Nuclear Submarine
 	ship_hull_nuclear_submarine = {

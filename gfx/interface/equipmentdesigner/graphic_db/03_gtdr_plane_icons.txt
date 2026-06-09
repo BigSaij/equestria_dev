@@ -477,7 +477,7 @@ LSP = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	small_plane_airframe_5 = {
 		pool = {
 			weight = 5503 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
@@ -5463,7 +5463,7 @@ JUN = {
 		}
 	}
 }
-VAN = {
+ROC = {
 	small_plane_airframe = {
 		pool = {
 			icons = {
