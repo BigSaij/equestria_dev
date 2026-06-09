@@ -702,11 +702,7 @@ on_actions = {
 						has_war_with = CHN
 						is_subject = no
 						has_capitulated = no
-						#OR = {
-						#	original_tag = KIR
-						#	original_tag = KIC
-						#	original_tag = KIS
-						#}
+						capital_scope = { is_on_continent = africa }
 					}
 					CHN = {
 						exists = yes
@@ -844,6 +840,54 @@ on_actions = {
 						}
 					}
 					ROOT = {
+						if = {
+							limit = {
+								has_country_flag = KXN_Vermilion_Flag
+							}
+							set_cosmetic_tag = KXN_Vermilion
+						}
+						else_if = {
+							limit = {
+								has_country_flag = KXN_Exarchate_Flag
+							}
+							set_cosmetic_tag = KXN_Exarchate
+						}
+						else_if = {
+							limit = {
+								has_country_flag = KXN_Fragrance_Flag
+							}
+							set_cosmetic_tag = KXN_Fragrance
+						}
+						else_if = {
+							limit = {
+								has_country_flag = KXN_Eparchy_Flag
+							}
+							set_cosmetic_tag = KXN_Eparchy
+						}
+						else_if = {
+							limit = {
+								has_country_flag = KXN_Marshalcy_Flag
+							}
+							set_cosmetic_tag = KXN_Marshalcy
+						}
+						else_if = {
+							limit = {
+								has_country_flag = KXN_Equatorarchy_Flag
+							}
+							set_cosmetic_tag = KXN_Equatorarchy
+						}
+						else_if = {
+							limit = {
+								has_country_flag = KXN_Occident_Flag
+							}
+							set_cosmetic_tag = KXN_Occident
+						}
+						else_if = {
+							limit = {
+								has_country_flag = KXN_Satellite_Flag
+							}
+							set_cosmetic_tag = KXN_Satellite
+						}
 						every_allied_country = {
 							limit = {
 								original_tag = KXN
@@ -2611,10 +2655,10 @@ on_actions = {
 							}
 							OR = {
 								is_neighbor_of = KIR
-								check_variable = { closest_distance_to@KIR < 800 }
 								AND = {
 									KIR = { is_ai = no }
 									OR = {
+										check_variable = { closest_distance_to@KIR < 750 }
 										any_neighbor_country = {
 											OR = {
 												is_in_array = {

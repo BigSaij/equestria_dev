@@ -1459,7 +1459,10 @@ characters = {
 			logistics_skill = 1
 			legacy_id = 790
 			visible = {
-				original_tag = NLR
+				OR = {
+					has_country_flag = EQC_AF_selenite
+					original_tag = NLR
+				}
 			}
 		}
 		gender = female
@@ -2118,6 +2121,7 @@ characters = {
 				has_country_flag = SOL_extra_characters_flag
 			}
 		}
+		gender = female
 	}
 	EQS_SOL_furlong = {
 		name = EQS_SOL_furlong

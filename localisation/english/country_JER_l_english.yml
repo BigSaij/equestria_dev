@@ -2693,10 +2693,10 @@
  JER_all_TRD_states_owned_tp:0 "§YSkyfall§!, §YVleugeland§!, §YOldebeken§!, §YAiwle§! and §YGriffton§! are all under the §GDirect§! control of §gAquileia§!\n\n"
  JER_all_FEA_states_owned_tp:0 "§YRottendestaat§!, §YAiwle§!, §YBuckmour§!, §YMirabelle§!, §YDe Vleugels§!, §YCentral Plain§!, §YLuxwingburg§!, §YReitscheid§! and §YRima§! are all under the §GDirect§! control of §gAquileia§!\n\n"
  JER_all_PYT_states_owned_tp:0 "§YOldwingburg§!, §YNortfome§! and §YThurwingen§! are all under the §GDirect§! control of §gAquileia§!\n\n"
- JER_finish_aquileisation_tp:0 "§GCompleting§! this §Cfocus§! will unlock £decision_icon_small §Cdecisions§! which will allow us to §Gcore§! §YSkyfall§!, §YVleugeland§!, §YOldbeken§!, §YAiwle§!, §YGriffton§!, §YRottendestaat§!, §YBuckmour§!, §YMirabelle§!, §YDe Vleugels§!, §YCentral Plain§!, §YLuxwingburg§!, §YReitscheid§!, §YRima§!, §YOldwingburg§!, §YNortfome§! and §YThurwingen§! once they complete the third phase of §CAquilisation§!\n\n"
- JER_begin_aquilification_tp:0 "§GCompleting§! this §Cfocus§! will unlock £decision_icon_small §Cdecisions§! which will allow us to §Gcore§! §YSkyfall§!, §YVleugeland§!, §YOldbeken§!, §YAiwle§! and §YGriffton§! once they complete the third phase of §CAquilisation§!\n\n"
+ JER_finish_aquileisation_tp:0 "§GCompleting§! this §Cfocus§! will unlock £decision_icon_small §Cdecisions§! which will allow us to §Gcore§! §YSkyfall§!, §YVleugeland§!, §YOldebeken§!, §YAiwle§!, §YGriffton§!, §YRottendestaat§!, §YBuckmour§!, §YMirabelle§!, §YDe Vleugels§!, §YCentral Plain§!, §YLuxwingburg§!, §YReitscheid§!, §YRima§!, §YOldwingburg§!, §YNortfome§! and §YThurwingen§! once they complete the third phase of §CAquilisation§!\n\n"
+ JER_begin_aquilification_tp:0 "§GCompleting§! this §Cfocus§! will unlock £decision_icon_small §Cdecisions§! which will allow us to §Gcore§! §YSkyfall§!, §YVleugeland§!, §YOldebeken§!, §YAiwle§! and §YGriffton§! once they complete the third phase of §CAquilisation§!\n\n"
  JER_economic_regulations_tp:0 "§YSkyfall§!, §YVleugeland§!, §YOldebeken§!, §YAiwle§! and §YGriffton§! Add The Following:\nCompliance Growth Speed: §G+5%§!\nLocal Supplies: §G+5%§!\nRequired Garrisons: §G+10%§!\n\n"
- JER_free_economic_zone_tp:0 "§YSkyfall§!, §YVleugeland§!, §YOldbeken§!, §YAiwle§! and §YGriffton§! Add The Following:\nMax Factories in State: §G+1§!\nLocal Construction Speed: §G+10%§!\n\n"
+ JER_free_economic_zone_tp:0 "§YSkyfall§!, §YVleugeland§!, §YOldebeken§!, §YAiwle§! and §YGriffton§! Add The Following:\nMax Factories in State: §G+1§!\nLocal Construction Speed: §G+10%§!\n\n"
  JER_protect_local_farms_tp:0 "§YOldwingburg§!, §YNortfome§! and §YThurwingen§! Add The Following:\nLocal Resources: §R-10%§!\nLocal Ponypower: §G+5%§!\nCompliance Growth Speed: §G+5%§!\n\n"
  JER_consolidate_the_land_tp:0 "§YOldwingburg§!, §YNortfome§! and §YThurwingen§! Add The Following:\nLocal Resources: §G+10%§!\nMax Factories in State: §G1§!\nCompliance Growth Speed: §R-5%§!\n\n"
  JER_proclaim_greater_aquileia_tp:0 "A new §CPolitical§! §YFocus Branch§! will be loaded\n\nThe §gHerzland§! will be released as a §Gpuppet§!\n"
@@ -2946,6 +2946,8 @@ JER_sapphire_shadows: "Sapphire Shadows"
 JER_sapphire_shadows_desc: "§YBorn:§! \n\n§YBiography:§! \n\n§YPortrait by:§! Opal Radiance"
 JER_bernard_delisle: "Bernard Delisle"
 JER_bernard_delisle_desc: "§YBorn:§! 957\n\n§YBiography:§! Bernard Delisle was born and raised in Pridea to a family with a proud naval tradition, one that he was all too eager to continue.\n\nBy the time of the First Revolution, he was in command of the armored cruiser Solferino, escaping with the rest of the royal navy when the war was lost by the monarchists. He then took part in the counter-revolution, being assigned to the flotilla that was under the command of Dennis Discret when it bombarded Pridea to the ground. \n\nFollowing being forced to practically flatten his home city, Delisle became disillusioned with the Monarchy. He didn't let it show in his service, though, eventually rising to the command of the battleship Borda. At some point over the years he was contacted by revolutionary elements within Aquila, where the Borda's fleet was moored, and swore his allegiance to them.\n\n§YPortrait by:§! Opal Radiance"
+JER_prophetoffire:0 "Samuelle de Champlain"
+JER_prophetoffire_desc:0 "§YBorn:§! \n\n§YBiography:§! \n\n§YPortrait by:§! BunnyShrubby"
 
 ##########################
 ### Puppet Characters ####

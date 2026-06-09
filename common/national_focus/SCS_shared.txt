@@ -977,12 +977,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SCS_mass_doctrine"
-		add_doctrine_cost_reduction = {
-			name = cat_mass_assault
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine #was cat_mass_assault
-		}
+		land_infantry_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -1066,12 +1061,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SCS_mobile_doctrine"
-		add_doctrine_cost_reduction = {
-			name = cat_mobile_warfare
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine #was cat_mobile_warfare
-		}
+		land_armor_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -1164,12 +1154,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SCS_bigguns_doctrine"
-		add_doctrine_cost_reduction = {
-			name = cat_superior_firepower
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine #was cat_superior_firepower
-		}
+		land_support_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -1255,12 +1240,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SCS_dugout_doctrine"
-		add_doctrine_cost_reduction = {
-			name = cat_grand_battle_plan
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine #was cat_grand_battle_plan
-		}
+		land_operations_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -1997,12 +1977,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SCS_evolved_tactics"
-		add_doctrine_cost_reduction = {
-			name = land_doc_bonus
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine
-		}
+		land_operations_mastery_doctrine_50 = yes
 		add_mastery = {
 			amount = 10
 			folder = land 
@@ -2162,12 +2137,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SCS_naval_doctrines"
-		add_doctrine_cost_reduction = {
-			name = naval_doc_bonus
-			cost_reduction = 0.5
-			uses = 2
-			category = naval_doctrine
-		}
+		naval_screen_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
@@ -2427,12 +2397,7 @@ shared_focus = {
 		}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SCS_air_doctrine_bonus"
-		add_doctrine_cost_reduction = {
-			name = air_doc_bonus
-			cost_reduction = 0.5
-			uses = 1
-			category = air_doctrine
-		}
+		air_fighter_mastery_doctrine_50 = yes
 		add_mastery_bonus = {
 			bonus = 0.2
 			days = 180
