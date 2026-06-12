@@ -1067,19 +1067,19 @@ focus_tree = {
 					}
 				}
 			}
-			if = {
-				limit = { controls_state = 20 }
-				20 = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = {
-							all_provinces = yes
-							limit_to_border = yes
-						}
-					}
-				}
-			}
+			#if = {
+			#	limit = { controls_state = 20 }
+			#	20 = {
+			#		add_building_construction = {
+			#			type = bunker
+			#			level = 2
+			#			province = {
+			#				all_provinces = yes
+			#				limit_to_border = yes
+			#			}
+			#		}
+			#	}
+			#}
 			if = {
 				limit = { controls_state = 21 }
 				21 = {

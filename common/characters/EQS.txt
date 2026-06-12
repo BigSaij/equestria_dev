@@ -2102,6 +2102,7 @@ characters = {
 	}
 	EQS_SOL_ksen_autumn = {
 		name = EQS_SOL_ksen_autumn
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/EQS/Ksen_Autumn.tga"
@@ -2249,6 +2250,7 @@ characters = {
 	#TWILIGHT THEORY
 	EUS_country_leader = {
 		name = EUS_country_leader
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/EQS/Gutriosa.tga"
@@ -2258,6 +2260,7 @@ characters = {
 	}
 	UESR_berry_punch = {
 		name = UESR_berry_punch
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/Pony/unknown_pony.dds"
@@ -2267,6 +2270,7 @@ characters = {
 	}
 	UESR_bonbon = {
 		name = EQS_sweetie_drops
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/Pony/unknown_pony.dds"
@@ -2397,6 +2401,7 @@ characters = {
 	}
 	UESR_bordiclaw = {
 		name="WNG_Griffmadeo_bordiga"
+		can_be_captured = no
 		portraits={
 			army={
 				small="GFX_idea_WNG_Griffmadeo_bordiga"
@@ -2429,6 +2434,7 @@ characters = {
 	}
 	UESR_party_flavour = {
 		name = party_flavour
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				small = "GFX_idea_STL_party_favour"
@@ -2448,6 +2454,7 @@ characters = {
 	}
 	UESR_cheese_sandwich = {
 		name = UESR_cheese_sandwich_name
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				small = "GFX_idea_UESR_cheese_sandwich"
@@ -2471,6 +2478,7 @@ characters = {
 				has_dlc = "La Resistance"
 			}
 			name=berry1
+			can_be_captured = no
 			portraits={
 				civilian={
 					small="GFX_idea_BAL_larry"
@@ -2507,6 +2515,7 @@ characters = {
 				}
 			}
 			name=berry1
+			can_be_captured = no
 			portraits={
 				civilian={
 					small="GFX_idea_BAL_larry"
@@ -2539,6 +2548,7 @@ characters = {
 	}
 	UESR_jorge_orellana = {
 		name=SIC_advisor_8
+		can_be_captured = no
 		portraits={
 			civilian={
 				small="GFX_idea_SIC_Birb_Orwell"
@@ -2566,6 +2576,7 @@ characters = {
 	}
 	POE_country_leader = {
 		name = POE_country_leader
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/EQS/Platinum_II.tga"
@@ -2575,6 +2586,7 @@ characters = {
 	}
 	POE_prince_silver = {
 		name = POE_prince_silver
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/Pony/unknown_pony.dds"
@@ -2583,6 +2595,7 @@ characters = {
 	}
 	POE_princess_gold = {
 		name = POE_princess_gold
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/Pony/unknown_pony.dds"
@@ -2592,6 +2605,7 @@ characters = {
 	}
 	POE_council = {
 		name = POE_council
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/BAL/completeanarchy.tga"
@@ -2600,6 +2614,7 @@ characters = {
 	}
 	ERE_country_leader = {
 		name = ERE_country_leader
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/EQS/Shostavia.tga"
@@ -2609,6 +2624,7 @@ characters = {
 	}
 	ERE_lyra_heartstrings = {
 		name = ERE_lyra_heartstrings
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/Pony/unknown_pony.dds"
@@ -2618,6 +2634,7 @@ characters = {
 	}
 	ERE_dandy_charms = {
 		name = ERE_dandy_charms
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/Pony/unknown_pony.dds"
@@ -2626,6 +2643,7 @@ characters = {
 	}
 	ERE_vinyl_scratch = {
 		name=ERE_vinyl_scratch
+		can_be_captured = no
 		portraits={
 			civilian={
 				small="GFX_idea_unknown_advisor"
@@ -2648,6 +2666,7 @@ characters = {
 	}
 	EQS_SOL_batcouncil = {
 		name = EQS_SOL_batcouncil
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/SOL/SOLBAT.tga"

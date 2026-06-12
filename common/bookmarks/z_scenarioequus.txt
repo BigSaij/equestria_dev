@@ -10,6 +10,7 @@ bookmarks = {
 		"YAK"={
 			history = "YAK_GATHERING_STORM_DESC"
 			ideology = democratic
+			label = { pony_race_filter }
 			ideas = {
 				YAK_resilience
 				YAK_banner_army
@@ -37,6 +38,7 @@ bookmarks = {
 		"CRY"={
 			history = "CRY_GATHERING_STORM_DESC"
 			ideology = democratic
+			label = { pony_race_filter }
 			ideas = {
 				crystal_heart
 				royal_family
@@ -65,6 +67,7 @@ bookmarks = {
 		"CHN"={
 			history = "CHN_GATHERING_STORM_DESC"
 			ideology = fascism
+			label = { changeling_race_filter }
 			ideas = {
 				canterlot_defeat
 				political_divisions
@@ -79,6 +82,7 @@ bookmarks = {
 		"OLE"={
 			history = "OLE_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { deer_race_filter }
 			ideas = {
 				OLE_currupt_government
 				OLE_raising_dissent
@@ -92,6 +96,7 @@ bookmarks = {
 		"GRF"={
 			history = "GRF_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				GRF_colonial_economy
 				GRF_falcons_of_griffinstone
@@ -112,6 +117,7 @@ bookmarks = {
 			minor = yes
 			history = "JAK_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { yak_race_filter }
 			ideas = {
 				YAK_resilience
 				YAK_banner_army
@@ -127,6 +133,7 @@ bookmarks = {
 			minor = yes
 			history = "GFF_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				GFF_bandits
 				GFF_cannibals
@@ -157,6 +164,7 @@ bookmarks = {
 			minor = yes
 			history = "PNG_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { penguin_race_filter }
 			ideas = {
 			}
 			focuses = {
