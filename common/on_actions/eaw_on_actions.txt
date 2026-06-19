@@ -256,17 +256,6 @@ on_actions = {
 			}
 
 			handle_cosmetic_tag_and_puppet_change_on_puppet = yes
-			if = {
-				limit = {
-					FROM = {
-						original_tag = EQS
-						has_completed_focus = EQS_equestrian_economic_integration
-					}
-				}
-				add_ideas = EQS_economic_imperialism
-				add_ideas = free_trade
-				set_country_flag = trade_laws_blocked
-			}
 			set_AI_strategies_on_every_possible_country_delayed = yes
 
 			#JUN_handle_puppet = yes
@@ -287,17 +276,6 @@ on_actions = {
 			if = {
 				limit = { always_retains_focus_tree_as_puppet = no }
 				revert_puppet_to_generic_focus_tree = yes
-			}
-			if = {
-				limit = {
-					FROM = {
-						original_tag = EQS
-						has_completed_focus = EQS_equestrian_economic_integration
-					}
-				}
-				add_ideas = EQS_economic_imperialism
-				add_ideas = free_trade
-				set_country_flag = trade_laws_blocked
 			}
 
 			set_AI_strategies_on_every_possible_country_delayed = yes

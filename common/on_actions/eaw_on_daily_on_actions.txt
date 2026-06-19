@@ -226,23 +226,6 @@ on_actions = {
 					EQS = { save_global_event_target_as = equestria }
 				}
 			}
-			if = {
-				limit = {
-					original_tag = EQS
-					tag = event_target:solar_empire
-					OR = {
-						is_subject = yes
-						NOT = { has_government = fascism }
-					}
-				}
-				kill_ideology_leader = fascism
-				if = {
-					limit = { event_target:equestria = { exists = no } }
-					save_global_event_target_as = equestria
-				}
-				SOL = { save_global_event_target_as = solar_empire }
-				country_event = { id = solarempire.1018 }
-			}
 			else_if = {
 				limit = {
 					original_tag = MAN
