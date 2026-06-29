@@ -41,6 +41,7 @@ division_template = {
 	}
 
 	support = {
+		unicorn_company = { x = 0 y = 0 }
 	}
 	priority = 2
 }
