@@ -210,6 +210,28 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
+			type = ship_hull_heavy_2
+			creator = "EQS" 
+			version_name = "Healing Class"
+		}
+		requested_factories = 3
+		progress = 0.45
+		amount = 1
+		industrial_manufacturer = mio:EQS_baltimare_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_2
+			creator = "EQS" 
+			version_name = "Healing Class"
+		}
+		requested_factories = 3
+		progress = 0.4
+		amount = 1
+		industrial_manufacturer = mio:EQS_baltimare_organization
+	}
+	add_equipment_production = {
+		equipment = {
 			type = ship_hull_cruiser_2
 			creator = "EQS" 
 			version_name = "Cloudsdale Class"
@@ -226,7 +248,18 @@ instant_effect = {
 			version_name = "Cloudsdale Class"
 		}
 		requested_factories = 1
-		progress = 0.12
+		progress = 0.67
+		amount = 4
+		industrial_manufacturer = mio:EQS_ichthys_docyard_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			creator = "EQS" 
+			version_name = "Marigold Class"
+		}
+		requested_factories = 1
+		progress = 0.55
 		amount = 4
 		industrial_manufacturer = mio:EQS_ichthys_organization
 	}
@@ -240,5 +273,16 @@ instant_effect = {
 		progress = 0.18
 		amount = 12
 		industrial_manufacturer = mio:EQS_mustangia_organization
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "EQS" 
+			version_name = "Twilight Class"
+		}
+		requested_factories = 1
+		progress = 0.24
+		amount = 12
+		industrial_manufacturer = mio:EQS_mustangia_shipyards_organization
 	}
 }
