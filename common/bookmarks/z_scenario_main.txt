@@ -34,7 +34,6 @@ bookmarks = {
 			history = "EQS_GATHERING_STORM_DESC"
 			ideology = democratic
 			label = { CSS_EquestriaFilter }
-			# label = { pony_race_filter }
 			ideas = {
 				home_of_ponies
 				alicorn_sisters
@@ -119,14 +118,7 @@ bookmarks = {
 				GRF_free_elections
 			}
 		}
-		#"---"={
-		#	history = "OTHER_GATHERING_STORM_DESC"
-		#}
-
-
-		# minors ####
 		"YAK"={
-			minor = yes
 			history = "YAK_GATHERING_STORM_DESC"
 			ideology = democratic
 			label = { CSS_EquestriaFilter }
@@ -141,6 +133,12 @@ bookmarks = {
 				YAK_popular_revolution
 			}
 		}
+		#"---"={
+		#	history = "OTHER_GATHERING_STORM_DESC"
+		#}
+
+
+		# minors ####
 		"JAK"={
 			minor = yes
 			history = "JAK_GATHERING_STORM_DESC"
@@ -201,37 +199,6 @@ bookmarks = {
 				PNG_summit_at_dachaigh
 				PNG_emperor_of_the_ice
 				PNG_remove_the_monarchy
-			}
-		}
-		"BUF"={
-			minor = yes
-			history = "BUF_GATHERING_STORM_DESC"
-			ideology = neutrality
-			label = { CSS_EquestriaFilter }
-			ideas = {
-				BUF_stubborness
-				BUF_workshop
-				equestrian_influence
-			}
-			focuses = {
-				BUF_support_the_elder
-				BUF_chieftess_proposition
-				BUF_the_new_council
-			}
-		}
-		"STL"={
-			minor = yes
-			history = "STL_GATHERING_STORM_DESC"
-			ideology = communism
-			label = { CSS_EquestriaFilter }
-			ideas = {
-				STL_city_state
-				STL_equality_past
-			}
-			focuses = {
-				STL_neighbors_help
-				STL_twilight_teaching
-				STL_demand_griffon_land
 			}
 		}
 
@@ -842,9 +809,4 @@ bookmarks = {
 			#123 = { rain_light = yes }
 		}
 	}
-	# bookmark = {
-	# 	name = "dummy"
-	# 	desc = "dummy"
-	# 	date = 9999.1.1.12
-	# }
 }
